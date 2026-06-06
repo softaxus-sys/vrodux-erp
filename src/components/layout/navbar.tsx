@@ -166,14 +166,16 @@ export function Navbar() {
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-          <Image
-            src="/images/vrodux_logo.png"
-            alt="Vrodux ERP"
-            width={40}
-            height={40}
-            className="h-10 w-auto object-contain"
-            priority
-          />
+          <div className="rounded-xl px-2.5 py-1 dark:bg-white/95 transition-colors">
+            <Image
+              src="/images/vrodux_logo.png"
+              alt="Vrodux ERP"
+              width={120}
+              height={40}
+              className="h-8 w-auto object-contain"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -237,13 +239,15 @@ export function Navbar() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
                   <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2">
-                    <Image
-                      src="/images/vrodux_logo.png"
-                      alt="Vrodux ERP"
-                      width={32}
-                      height={32}
-                      className="h-8 w-auto object-contain"
-                    />
+                    <div className="rounded-lg px-2 py-0.5 dark:bg-white/95 transition-colors">
+                      <Image
+                        src="/images/vrodux_logo.png"
+                        alt="Vrodux ERP"
+                        width={96}
+                        height={32}
+                        className="h-7 w-auto object-contain"
+                      />
+                    </div>
                   </Link>
                 </div>
                 <div className="flex-1 overflow-y-auto p-4 space-y-1">

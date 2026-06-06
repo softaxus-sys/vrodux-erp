@@ -56,14 +56,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Image
-                src="/images/vrodux_logo.png"
-                alt="Vrodux ERP"
-                width={120}
-                height={40}
-                className="h-10 w-auto object-contain"
-              />
+            <Link href="/" className="inline-flex items-center gap-2 mb-4">
+              <div className="rounded-xl px-2.5 py-1 dark:bg-white/95 transition-colors">
+                <Image
+                  src="/images/vrodux_logo.png"
+                  alt="Vrodux ERP"
+                  width={120}
+                  height={40}
+                  className="h-9 w-auto object-contain"
+                />
+              </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-5">
               The complete enterprise ERP platform for modern businesses. Built by SoftAxis Technologies LLC.
