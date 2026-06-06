@@ -168,10 +168,15 @@ export function Navbar() {
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-600 to-brand-400 flex items-center justify-center shadow-glow-sm">
             <LayoutDashboard className="w-4 h-4 text-white" />
           </div>
-          <span className="text-xl font-bold">
-            <span className="text-gradient">Vrodux</span>
-            <span className="text-foreground"> ERP</span>
-          </span>
+          <div className="flex flex-col leading-none">
+            <span className="text-xl font-bold">
+              <span className="text-gradient">Vrodux</span>
+              <span className="text-foreground"> ERP</span>
+            </span>
+            <span className="text-[10px] tracking-widest text-muted-foreground uppercase hidden sm:block">
+              The Digital Axis of Your Enterprise
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

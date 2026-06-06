@@ -59,7 +59,12 @@ export function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-600 to-brand-400 flex items-center justify-center shadow-glow-sm">
                 <LayoutDashboard className="w-4 h-4 text-white" />
               </div>
+              <div className="flex flex-col leading-none">
               <span className="text-lg font-bold text-gradient">Vrodux ERP</span>
+              <span className="text-[10px] tracking-widest text-muted-foreground uppercase mt-0.5">
+                The Digital Axis of Your Enterprise
+              </span>
+            </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-5">
               The complete enterprise ERP platform for modern businesses. Built by SoftAxis Technologies LLC.

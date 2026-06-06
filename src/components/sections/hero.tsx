@@ -188,6 +188,12 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 lg:py-24">
           {/* Content */}
           <motion.div variants={containerVariants} initial="hidden" animate="visible">
+            <motion.div variants={itemVariants} className="mb-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-500">
+                The Digital Axis of Your Enterprise
+              </p>
+            </motion.div>
+
             <motion.div variants={itemVariants}>
               <Badge variant="brand" className="mb-6 gap-2 px-4 py-1.5 text-sm">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

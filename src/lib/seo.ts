@@ -3,7 +3,7 @@ import { Metadata } from "next";
 const siteConfig = {
   name: "Vrodux ERP",
   description:
-    "The complete enterprise ERP platform for modern businesses. Finance, HR, Inventory, Sales, CRM, POS, Hospitality, Real Estate, and more — all in one powerful platform.",
+    "The Digital Axis of Your Enterprise. Complete ERP for Finance, HR, Inventory, Sales, CRM, POS, Hospitality, Real Estate, and more — all in one powerful platform.",
   url: "https://vrodux.com",
   ogImage: "https://vrodux.com/og-image.jpg",
   twitter: "@vroduxerp",
