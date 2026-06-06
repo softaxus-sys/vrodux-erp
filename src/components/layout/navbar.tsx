@@ -170,9 +170,9 @@ export function Navbar() {
             <Image
               src="/images/vrodux_logo.png"
               alt="Vrodux ERP"
-              width={180}
-              height={60}
-              className="h-12 w-auto object-contain"
+              width={130}
+              height={44}
+              className="h-9 w-auto object-contain"
               priority
             />
           </div>
@@ -243,9 +243,9 @@ export function Navbar() {
                       <Image
                         src="/images/vrodux_logo.png"
                         alt="Vrodux ERP"
-                        width={160}
-                        height={52}
-                        className="h-11 w-auto object-contain"
+                        width={110}
+                        height={36}
+                        className="h-8 w-auto object-contain"
                       />
                     </div>
                   </Link>
