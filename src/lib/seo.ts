@@ -72,7 +72,7 @@ export function generateJsonLd(type: "organization" | "product" | "faq", data?: 
       "@type": "Organization",
       name: siteConfig.company,
       url: siteConfig.url,
-      logo: `${siteConfig.url}/logo.png`,
+      logo: `${siteConfig.url}/images/vrodux_logo.png`,
       description: siteConfig.description,
       contactPoint: {
         "@type": "ContactPoint",

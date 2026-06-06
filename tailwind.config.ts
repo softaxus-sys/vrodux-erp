@@ -50,22 +50,22 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         brand: {
-          50: "#eef2ff",
-          100: "#e0e7ff",
-          200: "#c7d2fe",
-          300: "#a5b4fc",
-          400: "#818cf8",
-          500: "#6366f1",
-          600: "#4f46e5",
-          700: "#4338ca",
-          800: "#3730a3",
-          900: "#312e81",
-          950: "#1e1b4b",
+          50: "#eef5fe",
+          100: "#d6e8fd",
+          200: "#aed0f9",
+          300: "#7ab4f5",
+          400: "#4395F1",
+          500: "#388BF1",
+          600: "#1a6fd4",
+          700: "#1557ab",
+          800: "#0B1D57",
+          900: "#06174E",
+          950: "#040f35",
         },
-        gold: {
-          400: "#fbbf24",
-          500: "#f59e0b",
-          600: "#d97706",
+        charcoal: {
+          400: "#6b6b6d",
+          500: "#39383A",
+          600: "#2a292b",
         },
       },
       borderRadius: {
@@ -111,8 +111,8 @@ const config: Config = {
           to: { backgroundPosition: "200% 0" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 0 0 hsl(239 84% 67% / 0.4)" },
-          "50%": { boxShadow: "0 0 0 16px hsl(239 84% 67% / 0)" },
+          "0%, 100%": { boxShadow: "0 0 0 0 hsl(212 86% 60% / 0.4)" },
+          "50%": { boxShadow: "0 0 0 16px hsl(212 86% 60% / 0)" },
         },
         "gradient-xy": {
           "0%, 100%": {
@@ -141,11 +141,11 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "mesh-pattern":
-          "radial-gradient(at 40% 20%, hsla(239,84%,67%,0.15) 0, transparent 50%), radial-gradient(at 80% 0%, hsla(206,94%,66%,0.1) 0, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,0.05) 0, transparent 50%)",
+          "radial-gradient(at 40% 20%, hsla(212,86%,60%,0.15) 0, transparent 50%), radial-gradient(at 80% 0%, hsla(213,87%,58%,0.1) 0, transparent 50%), radial-gradient(at 0% 50%, hsla(226,85%,16%,0.06) 0, transparent 50%)",
       },
       boxShadow: {
-        glow: "0 0 60px -15px hsl(239 84% 67% / 0.5)",
-        "glow-sm": "0 0 30px -10px hsl(239 84% 67% / 0.3)",
+        glow: "0 0 60px -15px hsl(212 86% 60% / 0.5)",
+        "glow-sm": "0 0 30px -10px hsl(212 86% 60% / 0.3)",
         premium: "0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.05)",
       },
     },

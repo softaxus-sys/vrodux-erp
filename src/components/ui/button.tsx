@@ -23,7 +23,7 @@ const buttonVariants = cva(
           "bg-gradient-to-r from-brand-600 to-brand-500 text-white shadow hover:from-brand-700 hover:to-brand-600 hover:shadow-glow-sm active:scale-[0.98]",
         "gradient-outline":
           "border border-brand-500/50 text-brand-400 hover:bg-brand-500/10 bg-transparent",
-        gold: "bg-gradient-to-r from-gold-500 to-amber-500 text-white shadow hover:from-gold-600 hover:to-amber-600 active:scale-[0.98]",
+        gold: "bg-gradient-to-r from-brand-500 to-brand-400 text-white shadow hover:from-brand-600 hover:to-brand-500 active:scale-[0.98]",
       },
       size: {
         default: "h-10 px-5 py-2",

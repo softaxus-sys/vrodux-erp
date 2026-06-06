@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -165,18 +166,14 @@ export function Navbar() {
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-600 to-brand-400 flex items-center justify-center shadow-glow-sm">
-            <LayoutDashboard className="w-4 h-4 text-white" />
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="text-xl font-bold">
-              <span className="text-gradient">Vrodux</span>
-              <span className="text-foreground"> ERP</span>
-            </span>
-            <span className="text-[10px] tracking-widest text-muted-foreground uppercase hidden sm:block">
-              The Digital Axis of Your Enterprise
-            </span>
-          </div>
+          <Image
+            src="/images/vrodux_logo.png"
+            alt="Vrodux ERP"
+            width={40}
+            height={40}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -240,10 +237,13 @@ export function Navbar() {
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b">
                   <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-600 to-brand-400 flex items-center justify-center">
-                      <LayoutDashboard className="w-3.5 h-3.5 text-white" />
-                    </div>
-                    <span className="font-bold text-gradient">Vrodux ERP</span>
+                    <Image
+                      src="/images/vrodux_logo.png"
+                      alt="Vrodux ERP"
+                      width={32}
+                      height={32}
+                      className="h-8 w-auto object-contain"
+                    />
                   </Link>
                 </div>
                 <div className="flex-1 overflow-y-auto p-4 space-y-1">

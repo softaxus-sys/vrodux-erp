@@ -20,7 +20,7 @@ const badgeVariants = cva(
           "border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
         warning:
           "border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-400",
-        gold: "border-gold-500/30 bg-gold-500/10 text-gold-600 dark:text-gold-400",
+        gold: "border-brand-500/30 bg-brand-500/10 text-brand-600 dark:text-brand-400",
       },
     },
     defaultVariants: {

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { LayoutDashboard, Mail, Phone, MapPin, Linkedin, Twitter, Youtube, Facebook, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube, Facebook, ExternalLink } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const products = [
@@ -56,15 +57,13 @@ export function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-600 to-brand-400 flex items-center justify-center shadow-glow-sm">
-                <LayoutDashboard className="w-4 h-4 text-white" />
-              </div>
-              <div className="flex flex-col leading-none">
-              <span className="text-lg font-bold text-gradient">Vrodux ERP</span>
-              <span className="text-[10px] tracking-widest text-muted-foreground uppercase mt-0.5">
-                The Digital Axis of Your Enterprise
-              </span>
-            </div>
+              <Image
+                src="/images/vrodux_logo.png"
+                alt="Vrodux ERP"
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed mb-5">
               The complete enterprise ERP platform for modern businesses. Built by SoftAxis Technologies LLC.
