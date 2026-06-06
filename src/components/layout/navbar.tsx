@@ -163,10 +163,10 @@ export function Navbar() {
           : "bg-transparent"
       )}
     >
-      <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-          <div className="rounded-xl px-2.5 py-1 dark:bg-white/95 transition-colors">
+          <div className="rounded-xl px-3 py-2 dark:bg-white/95 transition-colors">
             <Image
               src="/images/vrodux_logo.png"
               alt="Vrodux ERP"

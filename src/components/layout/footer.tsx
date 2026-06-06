@@ -57,7 +57,7 @@ export function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2 mb-4">
-              <div className="rounded-xl px-2.5 py-1 dark:bg-white/95 transition-colors">
+              <div className="rounded-xl px-3 py-2 dark:bg-white/95 transition-colors">
                 <Image
                   src="/images/vrodux_logo.png"
                   alt="Vrodux ERP"
