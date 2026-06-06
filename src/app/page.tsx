@@ -5,6 +5,7 @@ import { StatsSection } from "@/components/sections/stats";
 import { ModulesOverview } from "@/components/sections/modules-overview";
 import { IndustriesPreview } from "@/components/sections/industries-preview";
 import { WhyVrodux } from "@/components/sections/why-vrodux";
+import { AiChatSection } from "@/components/sections/ai-chat";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { ImplementationProcess } from "@/components/sections/implementation-process";
 import { PricingPreview } from "@/components/sections/pricing-preview";
@@ -36,6 +37,7 @@ export default function HomePage() {
       <ModulesOverview />
       <IndustriesPreview />
       <WhyVrodux />
+      <AiChatSection />
       <TestimonialsSection />
       <ImplementationProcess />
       <PricingPreview />

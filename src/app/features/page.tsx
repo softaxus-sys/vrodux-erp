@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/shared/page-hero";
 import { ModulesOverview } from "@/components/sections/modules-overview";
+import { AiChatSection } from "@/components/sections/ai-chat";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers } from "lucide-react";
@@ -33,6 +34,11 @@ export default function FeaturesPage() {
       />
 
       <ModulesOverview />
+
+      {/* AI Chat */}
+      <div id="ai-chat">
+        <AiChatSection />
+      </div>
 
       {/* Platform Capabilities */}
       <section className="py-20 bg-muted/20">
