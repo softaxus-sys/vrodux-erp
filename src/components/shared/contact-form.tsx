@@ -58,7 +58,7 @@ export function ContactForm() {
         <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mb-4">
           <CheckCircle2 className="w-8 h-8 text-emerald-500" />
         </div>
-        <h2 className="text-2xl font-bold mb-2">Message Sent!</h2>
+        <h2 className="text-2xl font-semibold mb-2">Message Sent!</h2>
         <p className="text-muted-foreground max-w-sm">
           Thank you for reaching out. Our team will get back to you within 1-2 business days.
         </p>

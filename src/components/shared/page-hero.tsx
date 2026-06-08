@@ -44,7 +44,7 @@ export function PageHero({
               {badge}
             </Badge>
           )}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6">
             {highlightedWord ? (
               <>
                 {parts[0]}

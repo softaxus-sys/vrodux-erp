@@ -70,7 +70,7 @@ export function DemoForm() {
         <div className="grid lg:grid-cols-3 gap-10">
           {/* Benefits */}
           <div className="space-y-4">
-            <h2 className="font-bold text-xl">What to Expect</h2>
+            <h2 className="font-semibold text-xl">What to Expect</h2>
             {[
               { title: "Personalized Walkthrough", desc: "We tailor the demo to your specific industry and business challenges." },
               { title: "Live Q&A", desc: "Ask any questions about features, pricing, or implementation." },
@@ -91,7 +91,7 @@ export function DemoForm() {
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
-                <span className="text-sm font-bold ml-1">4.9/5</span>
+                <span className="text-sm font-semibold ml-1">4.9/5</span>
               </div>
               <div className="text-xs text-muted-foreground mt-1">From 200+ demos</div>
             </div>
@@ -108,7 +108,7 @@ export function DemoForm() {
                 <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mb-4">
                   <CheckCircle2 className="w-8 h-8 text-emerald-500" />
                 </div>
-                <h2 className="text-2xl font-bold mb-2">Demo Booked!</h2>
+                <h2 className="text-2xl font-semibold mb-2">Demo Booked!</h2>
                 <p className="text-muted-foreground max-w-sm">
                   Our team will confirm your demo time and send you a meeting link within 2 business hours.
                 </p>

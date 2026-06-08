@@ -134,15 +134,14 @@ export function ModulesOverview() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-500 text-sm font-medium mb-4">
             12 Integrated Modules
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             Everything Your Business{" "}
             <span className="text-gradient">Needs in One Platform</span>
           </h2>
@@ -157,8 +156,7 @@ export function ModulesOverview() {
             <motion.div
               key={module.id}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
             >
               <Link
@@ -190,8 +188,7 @@ export function ModulesOverview() {
 
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           className="mt-12 text-center"
         >
           <Button size="lg" asChild className="group">

@@ -166,9 +166,9 @@ export default function PricingPage() {
                   <tier.icon className={`w-5 h-5 ${tier.color}`} />
                 </div>
 
-                <h3 className="text-2xl font-bold mb-1">{tier.name}</h3>
+                <h3 className="text-2xl font-semibold mb-1">{tier.name}</h3>
                 <div className="flex items-baseline gap-1 mb-1">
-                  <span className="text-4xl font-extrabold">{tier.price}</span>
+                  <span className="text-4xl font-bold">{tier.price}</span>
                   <span className="text-muted-foreground text-sm">{tier.period}</span>
                 </div>
                 <p className="text-xs text-muted-foreground mb-2">{tier.annualNote}</p>
@@ -222,7 +222,7 @@ export default function PricingPage() {
       {/* Comparison Table */}
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">Full Feature Comparison</h2>
+          <h2 className="text-2xl font-semibold text-center mb-8">Full Feature Comparison</h2>
           <div className="overflow-x-auto rounded-2xl border">
             <table className="w-full text-sm">
               <thead>
@@ -257,7 +257,7 @@ export default function PricingPage() {
       {/* On-Premise pricing */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-2xl text-center">
-          <h2 className="text-2xl font-bold mb-4">Need On-Premise Deployment?</h2>
+          <h2 className="text-2xl font-semibold mb-4">Need On-Premise Deployment?</h2>
           <p className="text-muted-foreground mb-6">
             Vrodux ERP is available for on-premise deployment with perpetual license or annual subscription pricing.
             Get in touch with our sales team for a custom quote based on your infrastructure requirements.

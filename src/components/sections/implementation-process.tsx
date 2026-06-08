@@ -62,11 +62,10 @@ export function ImplementationProcess() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             From Contract to{" "}
             <span className="text-gradient">Go-Live in Weeks</span>
           </h2>
@@ -85,8 +84,7 @@ export function ImplementationProcess() {
               <motion.div
                 key={step.step}
                 initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className={`relative lg:flex lg:gap-8 lg:items-start ${
                   i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
@@ -109,7 +107,7 @@ export function ImplementationProcess() {
 
                 {/* Center dot */}
                 <div className="hidden lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2 top-6 w-10 h-10 rounded-full bg-card border-2 border-brand-500/50 items-center justify-center z-10">
-                  <span className={`text-sm font-bold ${step.color}`}>{step.step}</span>
+                  <span className={`text-sm font-semibold ${step.color}`}>{step.step}</span>
                 </div>
 
                 <div className="lg:w-1/2" />

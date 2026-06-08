@@ -44,7 +44,7 @@ export default function FeaturesPage() {
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
               Platform <span className="text-gradient">Capabilities</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
@@ -73,7 +73,7 @@ export default function FeaturesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
               Flexible <span className="text-gradient">Deployment Options</span>
             </h2>
           </div>
@@ -94,7 +94,7 @@ export default function FeaturesPage() {
             ].map((option) => (
               <div key={option.title} className={`p-6 rounded-2xl border ${option.color}`}>
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-bold text-xl">{option.title}</h3>
+                  <h3 className="font-semibold text-xl">{option.title}</h3>
                   <Badge variant="brand">{option.badge}</Badge>
                 </div>
                 <ul className="space-y-2">

@@ -31,7 +31,7 @@ export default function PrivacyPage() {
               { title: "9. Contact Us", content: "For questions about this Privacy Policy or our privacy practices, contact us at: SoftAxis Technologies LLC, Dubai, United Arab Emirates. Email: privacy@vrodux.com" },
             ].map((section) => (
               <div key={section.title}>
-                <h2 className="text-xl font-bold mb-3">{section.title}</h2>
+                <h2 className="text-xl font-semibold mb-3">{section.title}</h2>
                 <p className="text-muted-foreground leading-relaxed">{section.content}</p>
               </div>
             ))}

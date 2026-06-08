@@ -17,8 +17,7 @@ export function FinalCTA() {
       <div className="relative container mx-auto px-4 text-center text-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6 backdrop-blur-sm">
@@ -26,7 +25,7 @@ export function FinalCTA() {
             Limited Onboarding Slots Available
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Start Your ERP Journey{" "}
             <span className="block opacity-90">Today</span>
           </h2>
@@ -39,7 +38,7 @@ export function FinalCTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button
               size="xl"
-              className="bg-white text-brand-600 hover:bg-white/90 shadow-premium font-bold group"
+              className="bg-white text-brand-600 hover:bg-white/90 shadow-premium font-semibold group"
               asChild
             >
               <Link href="/book-demo">

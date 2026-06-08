@@ -125,7 +125,7 @@ export default function BlogPage() {
                     <Badge variant="brand">{featured.category}</Badge>
                     <Badge variant="outline">Featured</Badge>
                   </div>
-                  <h2 className="text-2xl font-bold mb-3 group-hover:text-brand-500 transition-colors">
+                  <h2 className="text-2xl font-semibold mb-3 group-hover:text-brand-500 transition-colors">
                     {featured.title}
                   </h2>
                   <p className="text-muted-foreground mb-4">{featured.excerpt}</p>
@@ -150,7 +150,7 @@ export default function BlogPage() {
                       post.category === "Construction" ? "🏗️" : "📊"}
                   </div>
                   <Badge variant="outline" className="w-fit mb-3 text-xs">{post.category}</Badge>
-                  <h3 className="font-bold mb-2 group-hover:text-brand-500 transition-colors leading-snug">
+                  <h3 className="font-semibold mb-2 group-hover:text-brand-500 transition-colors leading-snug">
                     {post.title}
                   </h3>
                   <p className="text-sm text-muted-foreground flex-1 mb-4">{post.excerpt}</p>

@@ -31,7 +31,7 @@ export default function TermsPage() {
               { title: "10. Governing Law", content: "These terms are governed by the laws of the United Arab Emirates. Any disputes shall be resolved through the courts of Dubai, UAE. By using our services, you consent to this jurisdiction." },
             ].map((section) => (
               <div key={section.title}>
-                <h2 className="text-xl font-bold mb-3">{section.title}</h2>
+                <h2 className="text-xl font-semibold mb-3">{section.title}</h2>
                 <p className="text-muted-foreground leading-relaxed">{section.content}</p>
               </div>
             ))}

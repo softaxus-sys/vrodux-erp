@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/sections/hero";
 import { TrustedBySection } from "@/components/sections/trusted-by";
 import { StatsSection } from "@/components/sections/stats";
 import { ModulesOverview } from "@/components/sections/modules-overview";
+import { ProductShowcase } from "@/components/sections/product-showcase";
 import { IndustriesPreview } from "@/components/sections/industries-preview";
 import { WhyVrodux } from "@/components/sections/why-vrodux";
 import { AiChatSection } from "@/components/sections/ai-chat";
@@ -35,6 +36,7 @@ export default function HomePage() {
       <TrustedBySection />
       <StatsSection />
       <ModulesOverview />
+      <ProductShowcase />
       <IndustriesPreview />
       <WhyVrodux />
       <AiChatSection />

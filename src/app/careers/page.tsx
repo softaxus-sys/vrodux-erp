@@ -46,7 +46,7 @@ export default function CareersPage() {
       {/* Why join us */}
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center mb-8">Why Join Vrodux?</h2>
+          <h2 className="text-2xl font-semibold text-center mb-8">Why Join Vrodux?</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {perks.map((perk) => (
               <div key={perk} className="p-4 rounded-xl border bg-card text-sm text-center">
@@ -60,7 +60,7 @@ export default function CareersPage() {
       {/* Openings */}
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-2xl font-bold mb-8">Open Positions</h2>
+          <h2 className="text-2xl font-semibold mb-8">Open Positions</h2>
           <div className="space-y-3">
             {openings.map((job) => (
               <div key={job.title} className="flex flex-col sm:flex-row sm:items-center justify-between p-5 rounded-xl border bg-card hover:shadow-sm transition-shadow gap-4">
@@ -85,7 +85,7 @@ export default function CareersPage() {
           </div>
 
           <div className="mt-10 p-6 rounded-2xl border bg-brand-500/5 border-brand-500/20 text-center">
-            <h3 className="font-bold mb-2">Don't see your role?</h3>
+            <h3 className="font-semibold mb-2">Don't see your role?</h3>
             <p className="text-muted-foreground text-sm mb-4">We're always looking for exceptional talent. Send us your CV.</p>
             <Button variant="outline" asChild>
               <Link href="/contact?subject=Open+Application">Send Open Application</Link>

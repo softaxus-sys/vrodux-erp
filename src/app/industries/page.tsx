@@ -190,7 +190,7 @@ export default function IndustriesPage() {
                     <ind.icon className="w-6 h-6 text-white" />
                   </div>
                   <Badge variant="outline" className="mb-3">{ind.name}</Badge>
-                  <h2 className="text-3xl font-bold mb-3">{ind.headline}</h2>
+                  <h2 className="text-3xl font-semibold mb-3">{ind.headline}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">{ind.description}</p>
 
                   <div className="space-y-2 mb-6">
@@ -217,7 +217,7 @@ export default function IndustriesPage() {
                     <div className="grid grid-cols-3 gap-4">
                       {ind.stats.map((stat) => (
                         <div key={stat.label} className="text-center">
-                          <div className="text-3xl font-extrabold mb-1">{stat.value}</div>
+                          <div className="text-3xl font-bold mb-1">{stat.value}</div>
                           <div className="text-xs opacity-80">{stat.label}</div>
                         </div>
                       ))}

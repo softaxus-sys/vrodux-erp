@@ -56,7 +56,7 @@ export default function ImplementationPage() {
             ].map((stat) => (
               <div key={stat.label}>
                 <stat.icon className="w-6 h-6 text-brand-500 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-gradient">{stat.value}</div>
+                <div className="text-2xl font-semibold text-gradient">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
@@ -68,14 +68,14 @@ export default function ImplementationPage() {
 
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl font-semibold text-center mb-10">
             Implementation <span className="text-gradient">Packages</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {packages.map((pkg, i) => (
               <div key={pkg.name} className={`p-7 rounded-2xl border bg-card flex flex-col ${i === 1 ? "border-brand-500 shadow-glow-sm" : ""}`}>
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold">{pkg.name}</h3>
+                  <h3 className="text-xl font-semibold">{pkg.name}</h3>
                   <div className="text-brand-500 font-semibold mt-1">{pkg.duration}</div>
                   <p className="text-sm text-muted-foreground mt-2">{pkg.description}</p>
                 </div>
@@ -87,7 +87,7 @@ export default function ImplementationPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="text-lg font-bold mb-3">{pkg.price}</div>
+                <div className="text-lg font-semibold mb-3">{pkg.price}</div>
                 <Button asChild variant={i === 1 ? "default" : "outline"}>
                   <Link href="/contact?subject=Implementation+Services">
                     Get a Quote <ArrowRight className="ml-2 w-4 h-4" />

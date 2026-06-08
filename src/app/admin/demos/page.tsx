@@ -22,7 +22,7 @@ export default async function DemosAdminPage() {
   return (
     <div className="p-6">
       <div className="mb-6">
-        <h1 className="text-xl font-bold">Demo Requests</h1>
+        <h1 className="text-xl font-semibold">Demo Requests</h1>
         <p className="text-sm text-muted-foreground">{demos.length} total requests</p>
       </div>
 

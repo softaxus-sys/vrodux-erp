@@ -40,7 +40,7 @@ export function NewsletterSection() {
         <div className="w-12 h-12 rounded-2xl bg-brand-500/10 flex items-center justify-center mx-auto mb-4">
           <Mail className="w-6 h-6 text-brand-500" />
         </div>
-        <h2 className="text-2xl font-bold mb-2">Stay Ahead of the Curve</h2>
+        <h2 className="text-2xl font-semibold mb-2">Stay Ahead of the Curve</h2>
         <p className="text-muted-foreground mb-6">
           Get ERP insights, product updates, and industry trends delivered to your inbox.
         </p>

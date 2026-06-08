@@ -98,11 +98,11 @@ export default function CaseStudiesPage() {
               >
                 <div className={i % 2 === 1 ? "lg:col-start-2" : ""}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className={`w-12 h-12 rounded-xl ${study.color} flex items-center justify-center text-white font-bold`}>
+                    <div className={`w-12 h-12 rounded-xl ${study.color} flex items-center justify-center text-white font-semibold`}>
                       {study.logo}
                     </div>
                     <div>
-                      <div className="font-bold">{study.company}</div>
+                      <div className="font-semibold">{study.company}</div>
                       <div className="text-sm text-muted-foreground">{study.industry} · {study.country}</div>
                     </div>
                   </div>
@@ -132,7 +132,7 @@ export default function CaseStudiesPage() {
                     <div className="grid grid-cols-3 gap-4 text-center mb-6">
                       {study.results.map((r) => (
                         <div key={r.label} className="p-3 rounded-xl bg-muted/50">
-                          <div className="text-xl font-extrabold text-gradient">{r.metric}</div>
+                          <div className="text-xl font-bold text-gradient">{r.metric}</div>
                           <div className="text-xs text-muted-foreground mt-1">{r.label}</div>
                         </div>
                       ))}

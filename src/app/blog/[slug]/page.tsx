@@ -129,7 +129,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <Badge variant="brand" className="mb-4">{post.category}</Badge>
 
-          <h1 className="text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
             {post.title}
           </h1>
 
@@ -154,7 +154,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="prose prose-gray dark:prose-invert max-w-none">
           {post.content.split("\n").map((line, i) => {
             if (line.startsWith("## ")) {
-              return <h2 key={i} className="text-2xl font-bold mt-8 mb-4">{line.slice(3)}</h2>;
+              return <h2 key={i} className="text-2xl font-semibold mt-8 mb-4">{line.slice(3)}</h2>;
             }
             if (line.startsWith("### ")) {
               return <h3 key={i} className="text-xl font-semibold mt-6 mb-3">{line.slice(4)}</h3>;
@@ -179,7 +179,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         <div className="mt-10 p-6 rounded-2xl border bg-brand-500/5 border-brand-500/20 text-center">
-          <h3 className="font-bold text-lg mb-2">Ready to Transform Your Business?</h3>
+          <h3 className="font-semibold text-lg mb-2">Ready to Transform Your Business?</h3>
           <p className="text-muted-foreground text-sm mb-4">Book a free demo and see how Vrodux ERP can solve your specific challenges.</p>
           <Button asChild>
             <Link href="/book-demo">Book a Demo</Link>

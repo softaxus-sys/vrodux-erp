@@ -31,7 +31,7 @@ export default async function AdminPage() {
   return (
     <div className="p-6">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">Admin Dashboard</h1>
+        <h1 className="text-2xl font-semibold">Admin Dashboard</h1>
         <p className="text-muted-foreground text-sm">Manage your Vrodux ERP website content and leads.</p>
       </div>
 
@@ -41,7 +41,7 @@ export default async function AdminPage() {
             <div className={`w-10 h-10 rounded-lg ${card.bg} flex items-center justify-center mb-3`}>
               <card.icon className={`w-5 h-5 ${card.color}`} />
             </div>
-            <div className="text-3xl font-bold mb-1">{card.value}</div>
+            <div className="text-3xl font-semibold mb-1">{card.value}</div>
             <div className="text-sm text-muted-foreground">{card.label}</div>
           </Link>
         ))}

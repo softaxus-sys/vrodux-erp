@@ -89,7 +89,7 @@ export default function SolutionsPage() {
       {/* Deployment Options */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl font-semibold text-center mb-10">
             Choose Your <span className="text-gradient">Deployment Model</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -101,7 +101,7 @@ export default function SolutionsPage() {
                   </div>
                   <Badge variant="brand">{option.badge}</Badge>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{option.title}</h3>
+                <h3 className="text-xl font-semibold mb-2">{option.title}</h3>
                 <p className="text-muted-foreground mb-5 flex-1">{option.description}</p>
                 <ul className="space-y-2 mb-6">
                   {option.benefits.map((b) => (
@@ -126,7 +126,7 @@ export default function SolutionsPage() {
       {/* Capabilities */}
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-10">
+          <h2 className="text-3xl font-semibold text-center mb-10">
             Platform <span className="text-gradient">Capabilities</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -136,7 +136,7 @@ export default function SolutionsPage() {
                   <div className="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center">
                     <cap.icon className="w-5 h-5 text-brand-500" />
                   </div>
-                  <h3 className="font-bold text-lg">{cap.title}</h3>
+                  <h3 className="font-semibold text-lg">{cap.title}</h3>
                 </div>
                 <p className="text-muted-foreground text-sm mb-4">{cap.description}</p>
                 <div className="flex flex-wrap gap-2">

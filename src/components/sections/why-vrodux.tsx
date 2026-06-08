@@ -51,11 +51,10 @@ export function WhyVrodux() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             Why Businesses Choose{" "}
             <span className="text-gradient">Vrodux Over Others</span>
           </h2>
@@ -69,8 +68,7 @@ export function WhyVrodux() {
           {/* Comparison table */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className="rounded-2xl border overflow-hidden shadow-sm"
           >
@@ -83,8 +81,7 @@ export function WhyVrodux() {
               <motion.div
                 key={row.feature}
                 initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1 }}
                 transition={{ delay: i * 0.04 }}
                 className="grid grid-cols-3 px-4 py-3 border-b last:border-0 hover:bg-muted/20 transition-colors"
               >
@@ -113,8 +110,7 @@ export function WhyVrodux() {
               <motion.div
                 key={adv.title}
                 initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="flex gap-4 p-5 rounded-2xl border bg-card hover:shadow-sm transition-shadow"
               >

@@ -114,7 +114,7 @@ export default function FaqPage() {
           ))}
 
           <div className="mt-12 text-center p-8 rounded-2xl border bg-brand-500/5 border-brand-500/20">
-            <h3 className="font-bold text-xl mb-2">Still have questions?</h3>
+            <h3 className="font-semibold text-xl mb-2">Still have questions?</h3>
             <p className="text-muted-foreground mb-6">Our team of experts is ready to answer any specific questions about your ERP needs.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button asChild>

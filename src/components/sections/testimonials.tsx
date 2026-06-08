@@ -72,11 +72,10 @@ export function TestimonialsSection() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             Loved by Businesses{" "}
             <span className="text-gradient">Across Industries</span>
           </h2>
@@ -97,8 +96,7 @@ export function TestimonialsSection() {
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
               className="relative p-6 rounded-2xl border bg-card hover:shadow-md transition-all duration-300"
             >
@@ -112,7 +110,7 @@ export function TestimonialsSection() {
                 "{t.content}"
               </p>
               <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-white text-sm font-bold flex-shrink-0`}>
+                <div className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-white text-sm font-semibold flex-shrink-0`}>
                   {t.initials}
                 </div>
                 <div>

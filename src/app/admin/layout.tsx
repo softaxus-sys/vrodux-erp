@@ -20,7 +20,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-600 to-brand-400 flex items-center justify-center">
               <LayoutDashboard className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="font-bold text-sm">Vrodux Admin</span>
+            <span className="font-semibold text-sm">Vrodux Admin</span>
           </Link>
         </div>
         <nav className="flex-1 p-3 space-y-1">

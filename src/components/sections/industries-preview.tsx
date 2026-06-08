@@ -22,11 +22,10 @@ export function IndustriesPreview() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           className="text-center mb-14"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             Built for Your <span className="text-gradient">Industry</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -40,8 +39,7 @@ export function IndustriesPreview() {
             <motion.div
               key={ind.name}
               initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
             >
               <Link
@@ -59,8 +57,7 @@ export function IndustriesPreview() {
 
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           className="text-center"
         >
           <Button size="lg" variant="outline" asChild className="group">

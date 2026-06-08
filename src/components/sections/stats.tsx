@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { TrendingUp, Globe, Users, Clock } from "lucide-react";
 
 const stats = [
@@ -13,11 +13,8 @@ const stats = [
 
 function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
 
   useEffect(() => {
-    if (!inView) return;
     const duration = 2000;
     const steps = 60;
     const increment = value / steps;
@@ -32,10 +29,10 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
       }
     }, duration / steps);
     return () => clearInterval(timer);
-  }, [inView, value]);
+  }, [value]);
 
   return (
-    <span ref={ref}>
+    <span>
       {value % 1 !== 0 ? count.toFixed(1) : count}
       {suffix}
     </span>
@@ -48,12 +45,11 @@ export function StatsSection() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-4">
             Numbers That <span className="text-gradient">Speak for Themselves</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -66,15 +62,14 @@ export function StatsSection() {
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="relative group p-8 rounded-2xl border bg-card hover:shadow-glow-sm transition-all duration-300 text-center"
             >
               <div className={`w-12 h-12 rounded-xl bg-current/10 flex items-center justify-center mx-auto mb-4 ${stat.color}`}>
                 <stat.icon className="w-6 h-6" />
               </div>
-              <div className={`text-4xl lg:text-5xl font-extrabold mb-2 ${stat.color}`}>
+              <div className={`text-4xl lg:text-5xl font-bold mb-2 ${stat.color}`}>
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />
               </div>
               <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>

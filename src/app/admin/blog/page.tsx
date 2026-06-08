@@ -25,7 +25,7 @@ export default async function BlogAdminPage() {
     <div className="p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-xl font-bold">Blog Posts</h1>
+          <h1 className="text-xl font-semibold">Blog Posts</h1>
           <p className="text-sm text-muted-foreground">{posts.length} posts</p>
         </div>
         <Button size="sm">

@@ -58,7 +58,7 @@ export default function AboutPage() {
               { value: "50+", label: "Team Members" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-4xl font-extrabold text-gradient mb-1">{stat.value}</div>
+                <div className="text-4xl font-bold text-gradient mb-1">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}
@@ -69,7 +69,7 @@ export default function AboutPage() {
       {/* Story */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-bold mb-6">Our Story</h2>
+          <h2 className="text-3xl font-semibold mb-6">Our Story</h2>
           <div className="prose prose-gray dark:prose-invert max-w-none">
             <p className="text-muted-foreground leading-relaxed mb-4">
               SoftAxis Technologies was founded in 2018 in Dubai by a team of experienced enterprise software professionals
@@ -92,14 +92,14 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12">Our Values</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v) => (
               <div key={v.title} className="p-6 rounded-2xl border bg-card text-center hover:shadow-sm transition-shadow">
                 <div className="w-12 h-12 rounded-2xl bg-brand-500/10 flex items-center justify-center mx-auto mb-4">
                   <v.icon className="w-6 h-6 text-brand-500" />
                 </div>
-                <h3 className="font-bold mb-2">{v.title}</h3>
+                <h3 className="font-semibold mb-2">{v.title}</h3>
                 <p className="text-sm text-muted-foreground">{v.description}</p>
               </div>
             ))}
@@ -110,7 +110,7 @@ export default function AboutPage() {
       {/* Timeline */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Journey</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12">Our Journey</h2>
           <div className="relative">
             <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-brand-500/0 via-brand-500/30 to-brand-500/0" />
             <div className="space-y-6">
@@ -133,14 +133,14 @@ export default function AboutPage() {
       {/* Team */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Leadership Team</h2>
+          <h2 className="text-3xl font-semibold text-center mb-12">Leadership Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {team.map((member) => (
               <div key={member.name} className="p-6 rounded-2xl border bg-card text-center hover:shadow-sm transition-shadow">
-                <div className={`w-16 h-16 rounded-2xl ${member.color} flex items-center justify-center text-white text-xl font-bold mx-auto mb-4`}>
+                <div className={`w-16 h-16 rounded-2xl ${member.color} flex items-center justify-center text-white text-xl font-semibold mx-auto mb-4`}>
                   {member.initials}
                 </div>
-                <h3 className="font-bold">{member.name}</h3>
+                <h3 className="font-semibold">{member.name}</h3>
                 <p className="text-xs text-brand-500 font-medium mb-2">{member.role}</p>
                 <p className="text-xs text-muted-foreground">{member.bio}</p>
               </div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center max-w-xl">
-          <h2 className="text-2xl font-bold mb-4">Join Our Team</h2>
+          <h2 className="text-2xl font-semibold mb-4">Join Our Team</h2>
           <p className="text-muted-foreground mb-6">We're always looking for talented people to join our mission of making enterprise ERP accessible to everyone.</p>
           <Button asChild size="lg">
             <Link href="/careers">

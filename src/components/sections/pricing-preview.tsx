@@ -76,11 +76,10 @@ export function PricingPreview() {
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             Simple, Transparent <span className="text-gradient">Pricing</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
@@ -94,8 +93,7 @@ export function PricingPreview() {
             <motion.div
               key={tier.name}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`relative flex flex-col p-7 rounded-2xl border transition-all duration-300 ${
                 tier.highlighted
@@ -113,9 +111,9 @@ export function PricingPreview() {
               )}
 
               <div className="mb-6">
-                <h3 className="text-xl font-bold mb-1">{tier.name}</h3>
+                <h3 className="text-xl font-semibold mb-1">{tier.name}</h3>
                 <div className="flex items-baseline gap-1 mb-2">
-                  <span className="text-4xl font-extrabold">{tier.price}</span>
+                  <span className="text-4xl font-bold">{tier.price}</span>
                   <span className="text-muted-foreground text-sm">{tier.period}</span>
                 </div>
                 <p className="text-sm text-muted-foreground">{tier.description}</p>
@@ -146,8 +144,7 @@ export function PricingPreview() {
 
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1 }}
           className="mt-10 text-center"
         >
           <Button variant="ghost" size="lg" asChild>

@@ -27,7 +27,7 @@ export default function ContactPage() {
             {/* Contact info */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-xl font-bold mb-6">Contact Information</h2>
+                <h2 className="text-xl font-semibold mb-6">Contact Information</h2>
                 <div className="space-y-4">
                   {[
                     { icon: Mail, label: "Email", value: "info@vrodux.com", href: "mailto:info@vrodux.com" },

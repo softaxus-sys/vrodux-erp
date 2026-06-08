@@ -35,7 +35,7 @@ export default function SecurityPage() {
                 <div className={`w-12 h-12 rounded-xl ${feature.bg} flex items-center justify-center mb-4`}>
                   <feature.icon className={`w-6 h-6 ${feature.color}`} />
                 </div>
-                <h3 className="font-bold mb-2">{feature.title}</h3>
+                <h3 className="font-semibold mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground">{feature.description}</p>
               </div>
             ))}
@@ -45,7 +45,7 @@ export default function SecurityPage() {
 
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-2xl font-bold mb-4">Security Policies & Certifications</h2>
+          <h2 className="text-2xl font-semibold mb-4">Security Policies & Certifications</h2>
           <div className="grid sm:grid-cols-3 gap-4">
             {["GDPR Compliant", "ISO 27001 Aligned", "SOC 2 Type II", "PCI DSS Ready", "HIPAA Capable", "UAE PDPL Compliant"].map((cert) => (
               <div key={cert} className="p-4 rounded-xl border bg-card text-sm font-medium flex items-center justify-center gap-2">

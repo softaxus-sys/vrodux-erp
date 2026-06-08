@@ -48,11 +48,10 @@ export function FaqSection() {
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
               Frequently Asked <span className="text-gradient">Questions</span>
             </h2>
             <p className="text-muted-foreground">
@@ -63,8 +62,7 @@ export function FaqSection() {
 
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
             <Accordion type="single" collapsible className="space-y-2">
@@ -83,8 +81,7 @@ export function FaqSection() {
 
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
             className="mt-10 text-center"
           >
             <p className="text-muted-foreground mb-4">Still have questions?</p>

@@ -23,7 +23,7 @@ export default async function ContactsAdminPage() {
     <div className="p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-xl font-bold">Contact Messages</h1>
+          <h1 className="text-xl font-semibold">Contact Messages</h1>
           <p className="text-sm text-muted-foreground">{contacts.length} total messages</p>
         </div>
       </div>

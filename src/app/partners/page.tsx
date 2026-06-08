@@ -59,7 +59,7 @@ export default function PartnersPage() {
                 <div className={`w-12 h-12 rounded-xl ${tier.bg} flex items-center justify-center mb-4`}>
                   <tier.icon className={`w-6 h-6 ${tier.color}`} />
                 </div>
-                <h3 className="font-bold text-xl mb-2">{tier.name}</h3>
+                <h3 className="font-semibold text-xl mb-2">{tier.name}</h3>
                 <p className="text-muted-foreground text-sm mb-5">{tier.description}</p>
 
                 <div className="mb-5">
@@ -100,7 +100,7 @@ export default function PartnersPage() {
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4 max-w-2xl text-center">
           <Handshake className="w-12 h-12 text-brand-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold mb-4">Partner Support</h2>
+          <h2 className="text-2xl font-semibold mb-4">Partner Support</h2>
           <p className="text-muted-foreground mb-6">
             All Vrodux partners receive dedicated support including onboarding, training resources,
             a partner portal, and a dedicated partner success manager.
