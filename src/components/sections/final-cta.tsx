@@ -50,7 +50,7 @@ export function FinalCTA() {
             <Button
               size="xl"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+              className="bg-transparent border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
               asChild
             >
               <Link href="/contact">
