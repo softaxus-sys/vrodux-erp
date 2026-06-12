@@ -4,6 +4,7 @@ import { TrustedBySection } from "@/components/sections/trusted-by";
 import { StatsSection } from "@/components/sections/stats";
 import { ModulesOverview } from "@/components/sections/modules-overview";
 import { ProductShowcase } from "@/components/sections/product-showcase";
+import { HowItWorks } from "@/components/sections/how-it-works";
 import { IndustriesPreview } from "@/components/sections/industries-preview";
 import { WhyVrodux } from "@/components/sections/why-vrodux";
 import { AiChatSection } from "@/components/sections/ai-chat";
@@ -37,6 +38,7 @@ export default function HomePage() {
       <StatsSection />
       <ModulesOverview />
       <ProductShowcase />
+      <HowItWorks />
       <IndustriesPreview />
       <WhyVrodux />
       <AiChatSection />

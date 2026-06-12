@@ -4,7 +4,7 @@ import { ModulesOverview } from "@/components/sections/modules-overview";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers } from "lucide-react";
+import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Features — Complete ERP Platform",
@@ -19,8 +19,17 @@ const platformCapabilities = [
   { icon: Shield, title: "Role-Based Access Control", description: "Granular permission management with custom roles and access levels" },
   { icon: Zap, title: "Workflow Automation", description: "Build approval workflows, automated alerts, and business process automation" },
   { icon: BarChart3, title: "Full Audit Trail", description: "Complete audit log of all system activities for compliance and security" },
-  { icon: CheckCircle2, title: "VAT & GST Compliance", description: "Country-specific tax frameworks for UAE, KSA, India, and more" },
-  { icon: Globe, title: "API Integrations", description: "RESTful API for seamless integration with third-party applications" },
+  { icon: CheckCircle2, title: "VAT Compliance & Tax Reporting", description: "Country-specific VAT frameworks for UAE, Saudi Arabia, and other GCC countries with built-in tax reports" },
+  { icon: Globe, title: "API Access", description: "RESTful API for connecting Vrodux ERP with your other business systems" },
+];
+
+const workspaceAdmin = [
+  { icon: UserCog, title: "User Management & Roles", description: "Create custom roles with field-level permissions and assign them across your team" },
+  { icon: Building2, title: "Multi-Branch Management", description: "Set up and manage multiple branches or outlets from a single workspace" },
+  { icon: FileCheck, title: "WPS-Compliant Payroll", description: "Generate UAE Wages Protection System (WPS) salary files directly from payroll, ready for bank submission" },
+  { icon: ClipboardList, title: "Complete Audit Logs", description: "Every create, update, and delete action is logged with user, timestamp, and details" },
+  { icon: SlidersHorizontal, title: "Master Data & General Settings", description: "Centralized control over currencies, tax rates, numbering series, and system-wide defaults" },
+  { icon: Wallet, title: "Regional Payment Methods", description: "Configure local payment gateways and methods to match each region you operate in" },
 ];
 
 export default function FeaturesPage() {
@@ -54,6 +63,36 @@ export default function FeaturesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {platformCapabilities.map((cap) => (
+              <div
+                key={cap.title}
+                className="p-5 rounded-2xl border bg-card hover:shadow-sm transition-shadow"
+              >
+                <div className="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center mb-3">
+                  <cap.icon className="w-5 h-5 text-brand-500" />
+                </div>
+                <h3 className="font-semibold mb-1.5">{cap.title}</h3>
+                <p className="text-sm text-muted-foreground">{cap.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workspace Admin & Security */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+              Workspace, Admin <span className="text-gradient">& Security</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Stay in control of your data, your people, and your compliance — including UAE WPS payroll
+              submissions — with administration tools built into every workspace.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {workspaceAdmin.map((cap) => (
               <div
                 key={cap.title}
                 className="p-5 rounded-2xl border bg-card hover:shadow-sm transition-shadow"

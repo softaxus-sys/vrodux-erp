@@ -59,7 +59,7 @@ const capabilities = [
   {
     icon: Shield,
     title: "Security & Compliance",
-    description: "Enterprise-grade security with role-based access, full audit trails, and compliance with GDPR, VAT, GST, and local regulations.",
+    description: "Enterprise-grade security with role-based access, full audit trails, and compliance with GDPR, VAT, and local regulations.",
     features: ["RBAC with custom roles", "Full audit trail", "Data encryption", "2FA authentication"],
   },
   {

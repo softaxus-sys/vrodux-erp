@@ -12,41 +12,44 @@ import {
   LayoutDashboard, DollarSign, Users, Package, ShoppingCart,
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
-  CreditCard, Zap, ArrowRight
+  CreditCard, ShieldCheck, ArrowRight
 } from "lucide-react";
 
-const modules = [
+const coreModules = [
   { name: "Finance & Accounting", href: "/features#finance", icon: DollarSign, desc: "GL, AP, AR, Bank Reconciliation" },
   { name: "HR & Payroll", href: "/features#hr", icon: Users, desc: "Employee, Payroll, Leave, Attendance" },
   { name: "Inventory & Procurement", href: "/features#inventory", icon: Package, desc: "Stock, Warehouse, Vendor Mgmt" },
   { name: "Sales Management", href: "/features#sales", icon: ShoppingCart, desc: "Quotations, Orders, Invoicing" },
   { name: "CRM", href: "/features#crm", icon: LayoutDashboard, desc: "Leads, Opportunities, Pipeline" },
   { name: "Point of Sale", href: "/features#pos", icon: CreditCard, desc: "Retail, Barcode, Multi-store" },
+  { name: "Purchase Management", href: "/features#purchase", icon: Truck, desc: "RFQ, Purchase Orders, Evaluation" },
+  { name: "Analytics & BI", href: "/features#analytics", icon: BarChart3, desc: "Dashboards, KPIs, Reports" },
+];
+
+const industryModules = [
   { name: "Restaurant POS", href: "/features#restaurant", icon: UtensilsCrossed, desc: "Tables, KDS, Recipe Mgmt" },
   { name: "Hospitality", href: "/features#hospitality", icon: Hotel, desc: "Reservations, Room, Guest Svc" },
   { name: "Real Estate", href: "/features#realestate", icon: HomeIcon, desc: "Properties, Leasing, Contracts" },
   { name: "Construction", href: "/features#construction", icon: HardHat, desc: "Projects, Resources, Costs" },
-  { name: "Analytics & BI", href: "/features#analytics", icon: BarChart3, desc: "Dashboards, KPIs, Reports" },
-  { name: "Purchase Management", href: "/features#purchase", icon: Truck, desc: "RFQ, Purchase Orders, Evaluation" },
 ];
 
 const industries = [
   { name: "Retail", href: "/industries#retail", icon: ShoppingBag },
-  { name: "Restaurants", href: "/industries#restaurants", icon: UtensilsCrossed },
-  { name: "Hospitality", href: "/industries#hospitality", icon: Hotel },
-  { name: "Manufacturing", href: "/industries#manufacturing", icon: Zap },
-  { name: "Distribution", href: "/industries#distribution", icon: Truck },
+  { name: "Restaurants & F&B", href: "/industries#restaurants", icon: UtensilsCrossed },
+  { name: "Hospitality & Hotels", href: "/industries#hospitality", icon: Hotel },
   { name: "Real Estate", href: "/industries#realestate", icon: HomeIcon },
   { name: "Construction", href: "/industries#construction", icon: HardHat },
   { name: "Healthcare", href: "/industries#healthcare", icon: Stethoscope },
   { name: "Education", href: "/industries#education", icon: GraduationCap },
-  { name: "Professional Services", href: "/industries#services", icon: Building2 },
+  { name: "Insurance", href: "/industries#insurance", icon: ShieldCheck },
+  { name: "B2B & Professional Services", href: "/industries#b2bservices", icon: Building2 },
 ];
 
 const navLinks = [
   { label: "Features", href: "/features", hasMega: "features" as const },
   { label: "Solutions", href: "/solutions" },
   { label: "Industries", href: "/industries", hasMega: "industries" as const },
+  { label: "AI Workforce", href: "/ai-workforce" },
   { label: "Pricing", href: "/pricing" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
@@ -77,11 +80,32 @@ function MegaMenu({ type, onClose }: MegaMenuProps) {
   if (type === "features") {
     return (
       <div className="absolute top-full left-1/2 -translate-x-1/2 w-[900px] mt-2 p-6 bg-background/95 backdrop-blur-xl border rounded-2xl shadow-premium z-50">
-        <div className="mb-4 pb-4 border-b">
-          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">ERP Modules</p>
+        <div className="mb-3">
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Core Business Modules</p>
         </div>
-        <div className="grid grid-cols-3 gap-1">
-          {modules.map((mod) => (
+        <div className="grid grid-cols-4 gap-1 mb-4 pb-4 border-b">
+          {coreModules.map((mod) => (
+            <Link
+              key={mod.name}
+              href={mod.href}
+              onClick={onClose}
+              className="flex items-start gap-3 p-3 rounded-xl hover:bg-brand-500/5 transition-colors group"
+            >
+              <div className="w-8 h-8 rounded-lg bg-brand-500/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-500/20 transition-colors">
+                <mod.icon className="w-4 h-4 text-brand-500" />
+              </div>
+              <div>
+                <div className="text-sm font-medium">{mod.name}</div>
+                <div className="text-xs text-muted-foreground mt-0.5">{mod.desc}</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="mb-3">
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Industry-Specific Modules</p>
+        </div>
+        <div className="grid grid-cols-4 gap-1">
+          {industryModules.map((mod) => (
             <Link
               key={mod.name}
               href={mod.href}

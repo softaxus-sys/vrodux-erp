@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Is VAT and GST compliance included?",
-    a: "Yes. Vrodux ERP includes country-specific VAT configuration for UAE, Saudi Arabia, and other GCC countries, as well as GST support for India and other jurisdictions. Tax reports and e-invoicing are built in.",
+    a: "Yes. Vrodux ERP includes country-specific VAT configuration for UAE, Saudi Arabia, and other GCC countries, with built-in tax reports. GST support for India and e-invoicing frameworks are on our roadmap.",
   },
   {
     q: "Can Vrodux handle multiple companies and branches?",

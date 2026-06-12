@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/features`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/solutions`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/industries`, priority: 0.9, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/ai-workforce`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/pricing`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/about`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/contact`, priority: 0.8, changeFrequency: "monthly" as const },

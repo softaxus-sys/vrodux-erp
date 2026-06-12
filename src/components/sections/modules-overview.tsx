@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, DollarSign, Users, Package, ShoppingCart, BarChart3, CreditCard, UtensilsCrossed, Hotel, Home, HardHat, Zap, Truck } from "lucide-react";
 
-const modules = [
+const coreModules = [
   {
     id: "finance",
     name: "Finance & Accounting",
@@ -57,6 +57,39 @@ const modules = [
     href: "/features#pos",
   },
   {
+    id: "crm",
+    name: "CRM",
+    description: "Manage leads, opportunities, and pipeline with customer communication and activity tracking.",
+    icon: Zap,
+    color: "from-lime-500 to-green-600",
+    bg: "bg-lime-500/10",
+    features: ["Lead Management", "Pipeline View", "Opportunity Tracking", "Customer Comms"],
+    href: "/features#crm",
+  },
+  {
+    id: "purchase",
+    name: "Purchase Management",
+    description: "Streamline purchasing with RFQ management, purchase orders, vendor evaluation, and cost control.",
+    icon: Truck,
+    color: "from-slate-500 to-gray-600",
+    bg: "bg-slate-500/10",
+    features: ["RFQ Management", "Purchase Orders", "Vendor Evaluation", "Cost Control"],
+    href: "/features#purchase",
+  },
+  {
+    id: "analytics",
+    name: "Analytics & Reporting",
+    description: "Executive dashboards, business intelligence reports, and real-time KPI monitoring across all modules.",
+    icon: BarChart3,
+    color: "from-brand-500 to-indigo-600",
+    bg: "bg-brand-500/10",
+    features: ["Executive Dashboards", "BI Reports", "KPI Monitoring", "Custom Reports"],
+    href: "/features#analytics",
+  },
+];
+
+const industryModules = [
+  {
     id: "restaurant",
     name: "Restaurant POS & KDS",
     description: "Complete restaurant management with table ordering, KDS integration, recipe management, and billing.",
@@ -96,36 +129,6 @@ const modules = [
     features: ["Project Planning", "Resource Allocation", "Cost Tracking", "BOQ Management"],
     href: "/features#construction",
   },
-  {
-    id: "crm",
-    name: "CRM",
-    description: "Manage leads, opportunities, and pipeline with customer communication and activity tracking.",
-    icon: Zap,
-    color: "from-lime-500 to-green-600",
-    bg: "bg-lime-500/10",
-    features: ["Lead Management", "Pipeline View", "Opportunity Tracking", "Customer Comms"],
-    href: "/features#crm",
-  },
-  {
-    id: "purchase",
-    name: "Purchase Management",
-    description: "Streamline purchasing with RFQ management, purchase orders, vendor evaluation, and cost control.",
-    icon: Truck,
-    color: "from-slate-500 to-gray-600",
-    bg: "bg-slate-500/10",
-    features: ["RFQ Management", "Purchase Orders", "Vendor Evaluation", "Cost Control"],
-    href: "/features#purchase",
-  },
-  {
-    id: "analytics",
-    name: "Analytics & Reporting",
-    description: "Executive dashboards, business intelligence reports, and real-time KPI monitoring across all modules.",
-    icon: BarChart3,
-    color: "from-brand-500 to-indigo-600",
-    bg: "bg-brand-500/10",
-    features: ["Executive Dashboards", "BI Reports", "KPI Monitoring", "Custom Reports"],
-    href: "/features#analytics",
-  },
 ];
 
 export function ModulesOverview() {
@@ -151,8 +154,53 @@ export function ModulesOverview() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {modules.map((module, i) => (
+        {/* Core Business Modules */}
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold mb-1">Core Business Modules</h3>
+          <p className="text-sm text-muted-foreground">The foundation every business runs on, included in every plan.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+          {coreModules.map((module, i) => (
+            <motion.div
+              key={module.id}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: (i % 4) * 0.08 }}
+            >
+              <Link
+                href={module.href}
+                className="group block h-full p-6 rounded-2xl border bg-card hover:shadow-glow-sm transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className={`w-11 h-11 rounded-xl ${module.bg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <div className={`w-5 h-5 bg-gradient-to-br ${module.color} rounded-md flex items-center justify-center`}>
+                    <module.icon className="w-3 h-3 text-white" />
+                  </div>
+                </div>
+                <h3 className="font-semibold mb-2">{module.name}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{module.description}</p>
+                <ul className="space-y-1">
+                  {module.features.map((f) => (
+                    <li key={f} className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <div className={`w-1 h-1 rounded-full bg-gradient-to-r ${module.color}`} />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-4 flex items-center gap-1 text-xs font-medium text-brand-500 opacity-0 group-hover:opacity-100 transition-opacity">
+                  Learn more <ArrowRight className="w-3 h-3" />
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Industry-Specific Modules */}
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold mb-1">Industry-Specific Modules</h3>
+          <p className="text-sm text-muted-foreground">Deep, tailored functionality activated based on your industry.</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {industryModules.map((module, i) => (
             <motion.div
               key={module.id}
               initial={{ opacity: 0, y: 30 }}

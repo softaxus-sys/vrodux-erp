@@ -17,8 +17,8 @@ const faqCategories = [
   {
     category: "General",
     faqs: [
-      { q: "What is Vrodux ERP?", a: "Vrodux ERP is a comprehensive enterprise resource planning platform developed by SoftAxis Technologies LLC. It includes 12 integrated modules covering Finance, HR, Inventory, Sales, CRM, POS, Restaurant, Hospitality, Real Estate, Construction, and Analytics." },
-      { q: "Who is Vrodux ERP designed for?", a: "Vrodux ERP is designed for small to enterprise-level businesses across various industries including retail, restaurants, hotels, manufacturing, distribution, real estate, construction, healthcare, and professional services." },
+      { q: "What is Vrodux ERP?", a: "Vrodux ERP is a comprehensive enterprise resource planning platform developed by SoftAxis Technologies LLC. It includes 12 integrated modules covering Finance, HR, Inventory, Sales, CRM, Purchase, POS, Restaurant, Hospitality, Real Estate, Construction, and Analytics." },
+      { q: "Who is Vrodux ERP designed for?", a: "Vrodux ERP is designed for small to enterprise-level businesses across various industries including retail, restaurants, hospitality, real estate, construction, healthcare, education, insurance, and B2B services." },
       { q: "Is Vrodux ERP available in Arabic?", a: "Yes. Vrodux ERP has full Arabic language support with RTL (Right-to-Left) interface. Users can switch between Arabic and English interfaces per their preference." },
     ],
   },

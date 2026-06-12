@@ -12,7 +12,7 @@ const comparisons = [
   { feature: "Multi-Company & Branch", vrodux: true, others: true },
   { feature: "Multi-Currency & Language", vrodux: true, others: true },
   { feature: "RTL / Arabic Support", vrodux: true, others: false },
-  { feature: "VAT & GST Compliance", vrodux: true, others: false },
+  { feature: "VAT Compliance & Tax Reporting", vrodux: true, others: false },
   { feature: "SaaS + On-Premise Options", vrodux: true, others: false },
   { feature: "Affordable Pricing", vrodux: true, others: false },
   { feature: "Dedicated Onboarding", vrodux: true, others: false },

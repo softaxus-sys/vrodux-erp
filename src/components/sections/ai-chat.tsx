@@ -207,7 +207,7 @@ export function AiChatSection() {
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/features#ai-chat">Learn More</Link>
+                <Link href="/ai-workforce">Learn More</Link>
               </Button>
             </div>
           </div>

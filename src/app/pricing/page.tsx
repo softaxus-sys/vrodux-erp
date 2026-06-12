@@ -28,7 +28,7 @@ const tiers = [
     features: {
       "Core Modules": [
         "Finance & Accounting",
-        "HR & Payroll (up to 50 employees)",
+        "HR & Payroll with WPS (up to 50 employees)",
         "Basic Inventory Management",
         "Sales & Invoicing",
         "Purchase Management",
@@ -37,6 +37,7 @@ const tiers = [
         "Up to 10 users",
         "Single company",
         "Single currency",
+        "Role-based access control",
         "Standard reports",
         "Email support",
         "SaaS deployment",
@@ -93,7 +94,7 @@ const tiers = [
         "Construction Management",
         "Recipe & Ingredient Mgmt",
         "Kitchen Display System",
-        "Custom integrations",
+        "Custom integration development",
       ],
       "Enterprise Features": [
         "Unlimited users",
@@ -113,6 +114,7 @@ const tiers = [
 const allFeatures = [
   { feature: "Finance & Accounting", starter: true, professional: true, enterprise: true },
   { feature: "HR & Payroll", starter: true, professional: true, enterprise: true },
+  { feature: "WPS-Compliant Payroll (UAE)", starter: true, professional: true, enterprise: true },
   { feature: "Inventory Management", starter: true, professional: true, enterprise: true },
   { feature: "Sales Management", starter: true, professional: true, enterprise: true },
   { feature: "Purchase Management", starter: true, professional: true, enterprise: true },
@@ -123,6 +125,8 @@ const allFeatures = [
   { feature: "Real Estate Management", starter: false, professional: false, enterprise: true },
   { feature: "Construction Management", starter: false, professional: false, enterprise: true },
   { feature: "Advanced Analytics & BI", starter: false, professional: true, enterprise: true },
+  { feature: "Role-Based Access Control", starter: true, professional: true, enterprise: true },
+  { feature: "Complete Audit Logs", starter: true, professional: true, enterprise: true },
   { feature: "Multi-Company", starter: false, professional: true, enterprise: true },
   { feature: "Multi-Currency", starter: false, professional: true, enterprise: true },
   { feature: "API Access", starter: false, professional: true, enterprise: true },

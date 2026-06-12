@@ -22,9 +22,9 @@ const countries = [
 const employeeRanges = ["1-10", "11-50", "51-200", "201-500", "500+"];
 
 const industries = [
-  "Retail", "Restaurants & F&B", "Hospitality & Hotels", "Manufacturing",
-  "Distribution & Wholesale", "Real Estate", "Construction", "Healthcare",
-  "Education", "Professional Services", "Other",
+  "Retail", "Restaurants & F&B", "Hospitality & Hotels", "Real Estate",
+  "Construction", "Healthcare", "Education", "Insurance",
+  "B2B & Professional Services", "Other",
 ];
 
 const timeSlots = [

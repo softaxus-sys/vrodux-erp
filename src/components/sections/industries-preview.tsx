@@ -3,17 +3,18 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Zap, Truck, Home, HardHat, Stethoscope } from "lucide-react";
+import { ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Home, HardHat, Stethoscope, GraduationCap, ShieldCheck, Building2 } from "lucide-react";
 
 const industries = [
-  { name: "Retail", icon: ShoppingBag, href: "/industries#retail", color: "from-pink-500 to-rose-500" },
-  { name: "Restaurants", icon: UtensilsCrossed, href: "/industries#restaurants", color: "from-red-500 to-orange-500" },
-  { name: "Hospitality", icon: Hotel, href: "/industries#hospitality", color: "from-cyan-500 to-blue-500" },
-  { name: "Manufacturing", icon: Zap, href: "/industries#manufacturing", color: "from-amber-500 to-yellow-500" },
-  { name: "Distribution", icon: Truck, href: "/industries#distribution", color: "from-slate-500 to-gray-600" },
-  { name: "Real Estate", icon: Home, href: "/industries#realestate", color: "from-violet-500 to-purple-500" },
-  { name: "Construction", icon: HardHat, href: "/industries#construction", color: "from-yellow-600 to-amber-600" },
-  { name: "Healthcare", icon: Stethoscope, href: "/industries#healthcare", color: "from-emerald-500 to-teal-500" },
+  { name: "Retail", icon: ShoppingBag, href: "/industries#retail", color: "from-pink-500 to-rose-600" },
+  { name: "Restaurants", icon: UtensilsCrossed, href: "/industries#restaurants", color: "from-red-500 to-orange-600" },
+  { name: "Hospitality", icon: Hotel, href: "/industries#hospitality", color: "from-cyan-500 to-blue-600" },
+  { name: "Real Estate", icon: Home, href: "/industries#realestate", color: "from-violet-500 to-purple-600" },
+  { name: "Construction", icon: HardHat, href: "/industries#construction", color: "from-yellow-500 to-amber-600" },
+  { name: "Healthcare", icon: Stethoscope, href: "/industries#healthcare", color: "from-emerald-500 to-teal-600" },
+  { name: "Education", icon: GraduationCap, href: "/industries#education", color: "from-blue-500 to-indigo-600" },
+  { name: "Insurance", icon: ShieldCheck, href: "/industries#insurance", color: "from-indigo-500 to-blue-700" },
+  { name: "B2B Services", icon: Building2, href: "/industries#b2bservices", color: "from-brand-500 to-indigo-600" },
 ];
 
 export function IndustriesPreview() {
@@ -34,7 +35,7 @@ export function IndustriesPreview() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
           {industries.map((ind, i) => (
             <motion.div
               key={ind.name}
