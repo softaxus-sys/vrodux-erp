@@ -3,7 +3,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM_EMAIL = process.env.FROM_EMAIL || "noreply@vrodux.com";
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "info@vrodux.com";
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "hello@softaxis.ae";
 const DEMO_EMAIL = process.env.DEMO_EMAIL || "demo@vrodux.com";
 
 export async function sendContactNotification(data: {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube, Facebook, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Linkedin, Twitter, Youtube, Facebook, ExternalLink } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const products = [
@@ -75,13 +75,22 @@ export function Footer() {
               The complete enterprise ERP platform for modern businesses. Built by SoftAxis Technologies LLC.
             </p>
             <div className="space-y-2.5">
-              <a href="mailto:info@vrodux.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="mailto:hello@softaxis.ae" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Mail className="w-4 h-4 text-brand-500" />
-                info@vrodux.com
+                hello@softaxis.ae
               </a>
-              <a href="tel:+97144000000" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="tel:+971569383079" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Phone className="w-4 h-4 text-brand-500" />
-                +971 4 400 0000
+                +971 56 938 3079
+              </a>
+              <a
+                href="https://wa.me/971569383079"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <MessageCircle className="w-4 h-4 text-brand-500" />
+                +971 56 938 3079
               </a>
               <div className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0" />

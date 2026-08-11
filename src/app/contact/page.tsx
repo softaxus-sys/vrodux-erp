@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { ContactForm } from "@/components/shared/contact-form";
 import { PageHero } from "@/components/shared/page-hero";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -30,8 +30,9 @@ export default function ContactPage() {
                 <h2 className="text-xl font-semibold mb-6">Contact Information</h2>
                 <div className="space-y-4">
                   {[
-                    { icon: Mail, label: "Email", value: "info@vrodux.com", href: "mailto:info@vrodux.com" },
-                    { icon: Phone, label: "Phone", value: "+971 4 400 0000", href: "tel:+97144000000" },
+                    { icon: Mail, label: "Email", value: "hello@softaxis.ae", href: "mailto:hello@softaxis.ae" },
+                    { icon: Phone, label: "Phone", value: "+971 56 938 3079", href: "tel:+971569383079" },
+                    { icon: MessageCircle, label: "WhatsApp", value: "+971 56 938 3079", href: "https://wa.me/971569383079" },
                     { icon: MapPin, label: "Address", value: "Dubai, United Arab Emirates", href: null },
                     { icon: Clock, label: "Hours", value: "Mon–Fri: 9AM–6PM GST", href: null },
                   ].map((item) => (

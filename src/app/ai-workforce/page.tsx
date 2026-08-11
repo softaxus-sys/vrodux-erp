@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/shared/page-hero";
 import { AiChatSection } from "@/components/sections/ai-chat";
+import { TelegramBotSection } from "@/components/sections/telegram-bot";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { CheckCircle2, DollarSign, Users, ShoppingCart, Package, Layers, BarChart3, ShieldCheck, Bot } from "lucide-react";
 
@@ -152,6 +153,11 @@ export default function AiWorkforcePage() {
       {/* Ask Vrodux Anything demo */}
       <div id="ai-chat">
         <AiChatSection />
+      </div>
+
+      {/* Telegram bot */}
+      <div id="telegram">
+        <TelegramBotSection />
       </div>
 
       {/* Guardrails */}

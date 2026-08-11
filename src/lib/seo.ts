@@ -76,7 +76,7 @@ export function generateJsonLd(type: "organization" | "product" | "faq", data?: 
       description: siteConfig.description,
       contactPoint: {
         "@type": "ContactPoint",
-        email: "info@vrodux.com",
+        email: "hello@softaxis.ae",
         contactType: "customer support",
         availableLanguage: ["English", "Arabic"],
       },
