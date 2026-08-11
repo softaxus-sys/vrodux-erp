@@ -291,7 +291,8 @@ export function AiChatSection() {
               </div>
 
               {/* Messages */}
-              <div ref={scrollRef} className="p-5 space-y-4 h-[380px] overflow-y-auto">
+              <div ref={scrollRef} className="p-5 h-[380px] overflow-y-auto">
+                <div className="min-h-full flex flex-col justify-end space-y-4">
                 {script.slice(0, count).map((msg, i) => {
                   if (msg.role === "user") {
                     return (
@@ -388,6 +389,7 @@ export function AiChatSection() {
                     </button>
                   </div>
                 )}
+                </div>
               </div>
 
               {/* Input bar — the question types itself here before it's sent */}

@@ -187,8 +187,9 @@ export function TelegramBotSection() {
                   {/* Messages */}
                   <div
                     ref={scrollRef}
-                    className="h-[400px] overflow-y-auto px-3 py-4 space-y-2.5 bg-gradient-to-b from-[#229ED9]/5 to-brand-500/5"
+                    className="h-[400px] overflow-y-auto px-3 py-4 bg-gradient-to-b from-[#229ED9]/5 to-brand-500/5"
                   >
+                    <div className="min-h-full flex flex-col justify-end space-y-2.5">
                     {thread.slice(0, count).map((msg, i) => (
                       <div
                         key={i}
@@ -242,6 +243,7 @@ export function TelegramBotSection() {
                         </div>
                       </div>
                     )}
+                    </div>
                   </div>
 
                   {/* Telegram input bar */}
@@ -257,7 +259,7 @@ export function TelegramBotSection() {
               </div>
 
               {/* Floating badge */}
-              <div className="absolute -right-3 top-24 hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl bg-card border shadow-lg animate-float">
+              <div className="absolute -right-4 -bottom-4 hidden sm:flex items-center gap-2 px-3 py-2 rounded-xl bg-card border shadow-lg animate-float">
                 <Smartphone className="w-4 h-4 text-[#229ED9]" />
                 <span className="text-xs font-medium">No app to install</span>
               </div>

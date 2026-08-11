@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Link from "next/link";
-import { LayoutDashboard, Users, Calendar, FileText, Settings, LogOut } from "lucide-react";
+import { LayoutDashboard, Users, Calendar, FileText, Settings, ArrowLeft } from "lucide-react";
+import { AdminLogoutButton } from "@/components/shared/admin-logout-button";
 
 const navItems = [
   { label: "Dashboard", href: "/admin", icon: LayoutDashboard },
@@ -35,11 +36,12 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             </Link>
           ))}
         </nav>
-        <div className="p-3 border-t">
-          <Link href="/" className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">
-            <LogOut className="w-4 h-4" />
+        <div className="p-3 border-t space-y-1">
+          <Link href="/" className="flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-colors">
+            <ArrowLeft className="w-4 h-4" />
             Back to Site
           </Link>
+          <AdminLogoutButton />
         </div>
       </aside>
 

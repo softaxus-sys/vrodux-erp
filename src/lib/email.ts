@@ -3,8 +3,27 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM_EMAIL = process.env.FROM_EMAIL || "noreply@vrodux.com";
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "hello@softaxis.ae";
 const DEMO_EMAIL = process.env.DEMO_EMAIL || "demo@vrodux.com";
+
+/**
+ * Everyone who gets a copy of a contact form submission.
+ * Override with a comma-separated CONTACT_EMAIL env var.
+ */
+const DEFAULT_CONTACT_RECIPIENTS = [
+  "hello@softaxis.ae",
+  "husnain@softaxis.ae",
+  "shahbaz@softaxis.ae",
+  "husnain2010@gmail.com",
+  "softax.s@gmail.com",
+];
+
+const CONTACT_RECIPIENTS = (process.env.CONTACT_EMAIL || "")
+  .split(",")
+  .map((address) => address.trim())
+  .filter(Boolean);
+
+const CONTACT_EMAILS =
+  CONTACT_RECIPIENTS.length > 0 ? CONTACT_RECIPIENTS : DEFAULT_CONTACT_RECIPIENTS;
 
 export async function sendContactNotification(data: {
   name: string;
@@ -17,7 +36,8 @@ export async function sendContactNotification(data: {
 }) {
   await resend.emails.send({
     from: FROM_EMAIL,
-    to: CONTACT_EMAIL,
+    to: CONTACT_EMAILS,
+    replyTo: data.email,
     subject: `New Contact: ${data.subject}`,
     html: `
       <h2>New Contact Form Submission</h2>
