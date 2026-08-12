@@ -15,6 +15,8 @@ import {
   CreditCard, ShieldCheck, ArrowRight
 } from "lucide-react";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
+
 const coreModules = [
   { name: "Finance & Accounting", href: "/features#finance", icon: DollarSign, desc: "GL, AP, AR, Bank Reconciliation" },
   { name: "HR & Payroll", href: "/features#hr", icon: Users, desc: "Employee, Payroll, Leave, Attendance" },
@@ -241,7 +243,7 @@ export function Navbar() {
         <div className="hidden lg:flex items-center gap-2">
           <ThemeToggle />
           <Button variant="ghost" size="sm" asChild>
-            <a href="https://erp.vrodux.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5">
+            <a href={`${APP_URL}/auth/login?utm_source=navbar`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5">
               Login <ExternalLink className="w-3 h-3" />
             </a>
           </Button>
@@ -302,7 +304,7 @@ export function Navbar() {
                 </div>
                 <div className="p-4 border-t space-y-2">
                   <Button variant="outline" className="w-full" asChild>
-                    <a href="https://erp.vrodux.com" target="_blank" rel="noopener noreferrer">
+                    <a href={`${APP_URL}/auth/login?utm_source=navbar_mobile`} target="_blank" rel="noopener noreferrer">
                       Login to ERP <ExternalLink className="w-3 h-3 ml-1" />
                     </a>
                   </Button>

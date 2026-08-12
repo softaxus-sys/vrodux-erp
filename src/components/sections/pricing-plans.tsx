@@ -19,7 +19,7 @@ function savingsPercent(monthly: number, annual: number) {
 type Intent = "trial" | "buy";
 
 function appHref(tierId: string, billing: Billing, intent: Intent) {
-  return `${APP_URL}/?plan=${tierId}&billing=${billing}&intent=${intent}&utm_source=pricing`;
+  return `${APP_URL}/trial?plan=${tierId}&billing=${billing}&intent=${intent}&utm_source=pricing`;
 }
 
 const tiers = [

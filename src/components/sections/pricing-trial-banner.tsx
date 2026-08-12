@@ -49,7 +49,7 @@ export function PricingTrialBanner() {
             asChild
           >
             <a
-              href={`${APP_URL}/?intent=trial&utm_source=pricing_trial_banner`}
+              href={`${APP_URL}/trial?intent=trial&utm_source=pricing_trial_banner`}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackEvent("start_free_trial_click", { location: "trial_banner" })}

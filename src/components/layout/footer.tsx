@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Mail, Phone, MapPin, MessageCircle, Linkedin, Twitter, Youtube, Facebook, ExternalLink } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
+
 const products = [
   { label: "Finance & Accounting", href: "/features#finance" },
   { label: "HR & Payroll", href: "/features#hr" },
@@ -173,7 +175,7 @@ export function Footer() {
                 <p className="text-sm font-medium mb-1">Access Your ERP</p>
                 <p className="text-xs text-muted-foreground mb-3">Log in to your Vrodux ERP instance</p>
                 <a
-                  href="https://erp.vrodux.com"
+                  href={`${APP_URL}/auth/login?utm_source=footer`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-medium text-brand-500 hover:underline flex items-center gap-1"

@@ -38,7 +38,7 @@ export function PricingFinalCta() {
               asChild
             >
               <a
-                href={`${APP_URL}/?intent=trial&utm_source=pricing_final_cta`}
+                href={`${APP_URL}/trial?intent=trial&utm_source=pricing_final_cta`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("start_free_trial_click", { location: "final_cta" })}
