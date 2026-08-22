@@ -12,7 +12,7 @@ import {
   LayoutDashboard, DollarSign, Users, Package, ShoppingCart,
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
-  CreditCard, ShieldCheck, ArrowRight
+  CreditCard, ShieldCheck, ArrowRight, Rocket
 } from "lucide-react";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
@@ -247,6 +247,12 @@ export function Navbar() {
               Login <ExternalLink className="w-3 h-3" />
             </a>
           </Button>
+          <Button variant="outline" size="sm" asChild className="border-brand-500/40 text-brand-600 hover:bg-brand-500/10 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300">
+            <a href={`${APP_URL}?utm_source=navbar_launch`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5">
+              <Rocket className="w-3.5 h-3.5" />
+              Launch Vrodux ERP
+            </a>
+          </Button>
           <Button size="sm" asChild className="bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-700 hover:to-brand-600 shadow-glow-sm">
             <Link href="/book-demo">Book Demo</Link>
           </Button>
@@ -303,6 +309,12 @@ export function Navbar() {
                   </div>
                 </div>
                 <div className="p-4 border-t space-y-2">
+                  <Button variant="outline" className="w-full border-brand-500/40 text-brand-600 hover:bg-brand-500/10 hover:text-brand-700 dark:text-brand-400 dark:hover:text-brand-300" asChild>
+                    <a href={`${APP_URL}?utm_source=navbar_mobile_launch`} target="_blank" rel="noopener noreferrer">
+                      <Rocket className="w-3.5 h-3.5 mr-1.5" />
+                      Launch Vrodux ERP
+                    </a>
+                  </Button>
                   <Button variant="outline" className="w-full" asChild>
                     <a href={`${APP_URL}/auth/login?utm_source=navbar_mobile`} target="_blank" rel="noopener noreferrer">
                       Login to ERP <ExternalLink className="w-3 h-3 ml-1" />
