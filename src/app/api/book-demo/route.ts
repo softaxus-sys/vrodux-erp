@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { demoBookingSchema } from "@/lib/validations";
 import { rateLimit, getIpFromRequest } from "@/lib/rate-limit";
+import { verifyTurnstile, checkHoneypot } from "@/lib/captcha";
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,6 +23,17 @@ export async function POST(request: NextRequest) {
         { success: false, error: "Invalid form data.", details: validation.error.flatten() },
         { status: 400 }
       );
+    }
+
+    // Anti-spam: cheap local checks first, then the Turnstile round-trip.
+    const honeypot = checkHoneypot(body);
+    if (!honeypot.success) {
+      return NextResponse.json({ success: false, error: honeypot.error }, { status: 400 });
+    }
+
+    const captcha = await verifyTurnstile(validation.data.captchaToken, ip);
+    if (!captcha.success) {
+      return NextResponse.json({ success: false, error: captcha.error }, { status: 400 });
     }
 
     const data = validation.data;

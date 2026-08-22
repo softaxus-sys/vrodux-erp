@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
@@ -13,6 +13,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { demoBookingSchema, type DemoBookingFormData } from "@/lib/validations";
 import { Calendar, CheckCircle2, Star } from "lucide-react";
+import type { TurnstileInstance } from "@marsidev/react-turnstile";
+import { CaptchaField, captchaEnabled } from "@/components/shared/captcha-field";
+import { HoneypotField } from "@/components/shared/honeypot-field";
 
 const countries = [
   "United Arab Emirates", "Saudi Arabia", "Kuwait", "Qatar", "Bahrain", "Oman",
@@ -36,16 +39,24 @@ const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.c
 
 export function DemoForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string>("");
+  const captchaRef = useRef<TurnstileInstance>(null);
+  const renderedAt = useRef(Date.now());
   const { register, handleSubmit, setValue, formState: { errors, isSubmitting } } = useForm<DemoBookingFormData>({
     resolver: zodResolver(demoBookingSchema),
   });
 
   const onSubmit = async (data: DemoBookingFormData) => {
+    if (captchaEnabled && !captchaToken) {
+      toast.error("Please complete the verification challenge.");
+      return;
+    }
+
     try {
       const res = await fetch("/api/book-demo", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, captchaToken, renderedAt: renderedAt.current }),
       });
       const result = await res.json();
       if (result.success) {
@@ -53,9 +64,14 @@ export function DemoForm() {
         toast.success("Demo booked successfully! Check your email.");
       } else {
         toast.error(result.error || "Something went wrong. Please try again.");
+        // Tokens are single-use — get a fresh one before the next attempt.
+        captchaRef.current?.reset();
+        setCaptchaToken("");
       }
     } catch {
       toast.error("Failed to book demo. Please try again.");
+      captchaRef.current?.reset();
+      setCaptchaToken("");
     }
   };
 
@@ -199,6 +215,14 @@ export function DemoForm() {
                     {...register("notes")}
                   />
                 </div>
+
+                <HoneypotField register={register("website")} />
+
+                <CaptchaField
+                  ref={captchaRef}
+                  onVerify={setCaptchaToken}
+                  onExpire={() => setCaptchaToken("")}
+                />
 
                 <Button type="submit" size="lg" loading={isSubmitting} className="w-full bg-gradient-to-r from-brand-600 to-brand-500">
                   <Calendar className="mr-2 w-4 h-4" />

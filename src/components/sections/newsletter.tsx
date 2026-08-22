@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -8,19 +8,30 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { newsletterSchema, type NewsletterFormData } from "@/lib/validations";
 import { Mail } from "lucide-react";
+import type { TurnstileInstance } from "@marsidev/react-turnstile";
+import { CaptchaField, captchaEnabled } from "@/components/shared/captcha-field";
+import { HoneypotField } from "@/components/shared/honeypot-field";
 
 export function NewsletterSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string>("");
+  const captchaRef = useRef<TurnstileInstance>(null);
+  const renderedAt = useRef(Date.now());
   const { register, handleSubmit, formState: { isSubmitting } } = useForm<NewsletterFormData>({
     resolver: zodResolver(newsletterSchema),
   });
 
   const onSubmit = async (data: NewsletterFormData) => {
+    if (captchaEnabled && !captchaToken) {
+      toast.error("Please complete the verification challenge.");
+      return;
+    }
+
     try {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, captchaToken, renderedAt: renderedAt.current }),
       });
       const result = await res.json();
       if (result.success) {
@@ -28,9 +39,13 @@ export function NewsletterSection() {
         toast.success("Subscribed successfully!");
       } else {
         toast.error(result.error || "Subscription failed.");
+        captchaRef.current?.reset();
+        setCaptchaToken("");
       }
     } catch {
       toast.error("Failed to subscribe. Please try again.");
+      captchaRef.current?.reset();
+      setCaptchaToken("");
     }
   };
 
@@ -47,9 +62,18 @@ export function NewsletterSection() {
         {submitted ? (
           <p className="text-emerald-500 font-medium">You're subscribed! Welcome to the Vrodux community.</p>
         ) : (
-          <form onSubmit={handleSubmit(onSubmit)} className="flex gap-2">
-            <Input placeholder="Enter your email address" type="email" {...register("email")} className="flex-1" />
-            <Button type="submit" loading={isSubmitting}>Subscribe</Button>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-3">
+            <div className="flex gap-2">
+              <Input placeholder="Enter your email address" type="email" {...register("email")} className="flex-1" />
+              <Button type="submit" loading={isSubmitting}>Subscribe</Button>
+            </div>
+            <HoneypotField register={register("website")} />
+            <CaptchaField
+              ref={captchaRef}
+              onVerify={setCaptchaToken}
+              onExpire={() => setCaptchaToken("")}
+              className="flex justify-center"
+            />
           </form>
         )}
         <p className="text-xs text-muted-foreground mt-3">No spam. Unsubscribe anytime.</p>

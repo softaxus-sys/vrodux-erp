@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
@@ -12,6 +12,9 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { contactSchema, type ContactFormData } from "@/lib/validations";
 import { Send, CheckCircle2 } from "lucide-react";
+import type { TurnstileInstance } from "@marsidev/react-turnstile";
+import { CaptchaField, captchaEnabled } from "@/components/shared/captcha-field";
+import { HoneypotField } from "@/components/shared/honeypot-field";
 
 const countries = [
   "United Arab Emirates", "Saudi Arabia", "Kuwait", "Qatar", "Bahrain", "Oman",
@@ -25,16 +28,24 @@ const subjects = [
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string>("");
+  const captchaRef = useRef<TurnstileInstance>(null);
+  const renderedAt = useRef(Date.now());
   const { register, handleSubmit, setValue, formState: { errors, isSubmitting } } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    if (captchaEnabled && !captchaToken) {
+      toast.error("Please complete the verification challenge.");
+      return;
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, captchaToken, renderedAt: renderedAt.current }),
       });
       const result = await res.json();
       if (result.success) {
@@ -42,9 +53,13 @@ export function ContactForm() {
         toast.success("Message sent successfully!");
       } else {
         toast.error(result.error || "Something went wrong. Please try again.");
+        captchaRef.current?.reset();
+        setCaptchaToken("");
       }
     } catch {
       toast.error("Failed to send message. Please try again.");
+      captchaRef.current?.reset();
+      setCaptchaToken("");
     }
   };
 
@@ -135,6 +150,14 @@ export function ContactForm() {
         />
         {errors.message && <p className="text-xs text-destructive">{errors.message.message}</p>}
       </div>
+
+      <HoneypotField register={register("website")} />
+
+      <CaptchaField
+        ref={captchaRef}
+        onVerify={setCaptchaToken}
+        onExpire={() => setCaptchaToken("")}
+      />
 
       <Button type="submit" size="lg" loading={isSubmitting} className="w-full sm:w-auto">
         <Send className="mr-2 w-4 h-4" />
