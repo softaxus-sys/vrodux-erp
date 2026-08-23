@@ -2,20 +2,14 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const FROM_EMAIL = process.env.FROM_EMAIL || "noreply@vrodux.com";
-const DEMO_EMAIL = process.env.DEMO_EMAIL || "hello@softaxis.ae";
+const FROM_EMAIL = process.env.FROM_EMAIL || "vrodux@softaxis.ae";
+const DEMO_EMAIL = process.env.DEMO_EMAIL || "vrodux@softaxis.ae";
 
 /**
  * Everyone who gets a copy of a contact form submission.
  * Override with a comma-separated CONTACT_EMAIL env var.
  */
-const DEFAULT_CONTACT_RECIPIENTS = [
-  "hello@softaxis.ae",
-  "husnain@softaxis.ae",
-  "shahbaz@softaxis.ae",
-  "husnain2010@gmail.com",
-  "softax.s@gmail.com",
-];
+const DEFAULT_CONTACT_RECIPIENTS = ["vrodux@softaxis.ae"];
 
 const CONTACT_RECIPIENTS = (process.env.CONTACT_EMAIL || "")
   .split(",")

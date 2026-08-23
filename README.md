@@ -149,7 +149,7 @@ The Prisma schema includes these models:
 2. Add and verify your domain (e.g., `vrodux.com`)
 3. Create an API key
 4. Add to `.env.local` as `RESEND_API_KEY`
-5. Set `FROM_EMAIL` to `noreply@vrodux.com`
+5. Set `FROM_EMAIL` to `vrodux@softaxis.ae`
 
 ---
 
