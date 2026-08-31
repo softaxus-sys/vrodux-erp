@@ -30,9 +30,9 @@ export default function ContactPage() {
                 <h2 className="text-xl font-semibold mb-6">Contact Information</h2>
                 <div className="space-y-4">
                   {[
-                    { icon: Mail, label: "Email", value: "hello@softaxis.ae", href: "mailto:hello@softaxis.ae" },
+                    { icon: Mail, label: "Email", value: "vrodux@softaxis.ae", href: "mailto:vrodux@softaxis.ae" },
                     { icon: Phone, label: "Phone", value: "+971 56 938 3079", href: "tel:+971569383079" },
-                    { icon: MessageCircle, label: "WhatsApp", value: "+971 56 938 3079", href: "https://wa.me/971569383079" },
+                    { icon: MessageCircle, label: "WhatsApp", value: "+971 58 838 3625", href: "https://wa.me/971588383625" },
                     { icon: MapPin, label: "Address", value: "Dubai, United Arab Emirates", href: null },
                     { icon: Clock, label: "Hours", value: "Mon–Fri: 9AM–6PM GST", href: null },
                   ].map((item) => (

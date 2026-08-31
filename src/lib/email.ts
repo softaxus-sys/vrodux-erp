@@ -2,20 +2,14 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const FROM_EMAIL = process.env.FROM_EMAIL || "noreply@vrodux.com";
-const DEMO_EMAIL = process.env.DEMO_EMAIL || "demo@vrodux.com";
+const FROM_EMAIL = process.env.FROM_EMAIL || "vrodux@softaxis.ae";
+const DEMO_EMAIL = process.env.DEMO_EMAIL || "vrodux@softaxis.ae";
 
 /**
  * Everyone who gets a copy of a contact form submission.
  * Override with a comma-separated CONTACT_EMAIL env var.
  */
-const DEFAULT_CONTACT_RECIPIENTS = [
-  "hello@softaxis.ae",
-  "husnain@softaxis.ae",
-  "shahbaz@softaxis.ae",
-  "husnain2010@gmail.com",
-  "softax.s@gmail.com",
-];
+const DEFAULT_CONTACT_RECIPIENTS = ["vrodux@softaxis.ae"];
 
 const CONTACT_RECIPIENTS = (process.env.CONTACT_EMAIL || "")
   .split(",")
@@ -142,7 +136,7 @@ export async function sendDemoNotification(data: {
           </div>
           <p style="color: #6b7280;">
             Our team will reach out to confirm the exact time slot and send you a meeting link.
-            If you need to reschedule, please contact us at <a href="mailto:demo@vrodux.com" style="color: #4f46e5;">demo@vrodux.com</a>.
+            If you need to reschedule, please contact us at <a href="mailto:${DEMO_EMAIL}" style="color: #4f46e5;">${DEMO_EMAIL}</a>.
           </p>
           <p style="color: #9ca3af; font-size: 14px; margin-top: 32px;">
             Best regards,<br>

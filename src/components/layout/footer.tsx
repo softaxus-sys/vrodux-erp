@@ -77,22 +77,22 @@ export function Footer() {
               The complete enterprise ERP platform for modern businesses. Built by SoftAxis Technologies LLC.
             </p>
             <div className="space-y-2.5">
-              <a href="mailto:hello@softaxis.ae" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="mailto:vrodux@softaxis.ae" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Mail className="w-4 h-4 text-brand-500" />
-                hello@softaxis.ae
+                vrodux@softaxis.ae
               </a>
               <a href="tel:+971569383079" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Phone className="w-4 h-4 text-brand-500" />
                 +971 56 938 3079
               </a>
               <a
-                href="https://wa.me/971569383079"
+                href="https://wa.me/971588383625"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <MessageCircle className="w-4 h-4 text-brand-500" />
-                +971 56 938 3079
+                +971 58 838 3625
               </a>
               <div className="flex items-start gap-2 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0" />
