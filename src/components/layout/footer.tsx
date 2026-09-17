@@ -37,6 +37,7 @@ const solutions = [
 
 const resources = [
   { label: "Blog", href: "/blog" },
+  { label: "Docs", href: "/docs" },
   { label: "FAQ", href: "/faq" },
   { label: "Pricing", href: "/pricing" },
   { label: "Book Demo", href: "/book-demo" },

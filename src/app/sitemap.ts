@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { docsArticles, docsCategories } from "@/components/docs/docs-data";
 
 const baseUrl = "https://vrodux.com";
 
@@ -22,9 +23,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/security`, priority: 0.6, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/privacy`, priority: 0.5, changeFrequency: "yearly" as const },
     { url: `${baseUrl}/terms`, priority: 0.5, changeFrequency: "yearly" as const },
+    { url: `${baseUrl}/docs`, priority: 0.8, changeFrequency: "weekly" as const },
   ];
 
-  return staticPages.map((page) => ({
+  const docsCategoryPages = docsCategories.map((category) => ({
+    url: `${baseUrl}/docs/${category.slug}`,
+    priority: 0.7,
+    changeFrequency: "weekly" as const,
+  }));
+
+  const docsArticlePages = docsArticles.map((article) => ({
+    url: `${baseUrl}/docs/${article.categorySlug}/${article.slug}`,
+    priority: 0.6,
+    changeFrequency: "monthly" as const,
+  }));
+
+  return [...staticPages, ...docsCategoryPages, ...docsArticlePages].map((page) => ({
     url: page.url,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,
