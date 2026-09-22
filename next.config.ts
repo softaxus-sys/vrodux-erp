@@ -25,12 +25,12 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://www.clarity.ms",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://assets.calendly.com https://www.clarity.ms https://challenges.cloudflare.com https://connect.facebook.net",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https:",
-              "connect-src 'self' https://www.google-analytics.com https://api.resend.com https://calendly.com",
-              "frame-src https://calendly.com",
+              "connect-src 'self' https://www.google-analytics.com https://api.resend.com https://calendly.com https://challenges.cloudflare.com https://www.facebook.com",
+              "frame-src https://calendly.com https://challenges.cloudflare.com",
             ].join("; "),
           },
           {

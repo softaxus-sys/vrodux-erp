@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { demoBookingSchema } from "@/lib/validations";
 import { rateLimit, getIpFromRequest } from "@/lib/rate-limit";
 import { verifyTurnstile, checkHoneypot } from "@/lib/captcha";
+import { sendVroduxLead } from "@/lib/vrodux-lead";
 
 export async function POST(request: NextRequest) {
   try {
@@ -81,6 +82,26 @@ export async function POST(request: NextRequest) {
     } catch (emailError) {
       console.warn("Email send failed:", emailError);
     }
+
+    const extraDetails = [
+      data.employees && `Employees: ${data.employees}`,
+      data.preferredDate && `Preferred date: ${data.preferredDate}`,
+      data.preferredTime && `Preferred time: ${data.preferredTime}`,
+      data.notes,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    await sendVroduxLead({
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      company: data.company,
+      country: data.country,
+      interested_in: data.industry,
+      message: extraDetails || undefined,
+      campaign: "vrodux - Demo Form",
+    });
 
     return NextResponse.json({ success: true, message: "Demo booked successfully." });
   } catch (error) {

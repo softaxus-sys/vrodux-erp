@@ -4,47 +4,38 @@ import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, Target, Eye, Heart, Globe } from "lucide-react";
+import { ArrowRight, Code2, Target, Eye, ShieldCheck, Compass, HeartHandshake } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us — SoftAxis Technologies LLC",
+  title: "About Us — Softaxis Technologies LLC",
   description:
-    "Learn about SoftAxis Technologies LLC, the company behind Vrodux ERP. Our mission, values, team, and the story behind building a world-class enterprise ERP platform.",
+    "Learn about Softaxis Technologies LLC, the Dubai-based software engineering company behind Vrodux ERP. Founded in 2019, DET-licensed, and trusted by clients across Canada, the UAE, and the GCC.",
 };
 
 const values = [
-  { icon: Target, title: "Mission-Driven", description: "We exist to empower businesses with enterprise-grade tools that were previously only accessible to Fortune 500 companies." },
-  { icon: Eye, title: "Transparent", description: "No hidden fees, no vendor lock-in, no surprises. We believe in open, honest relationships with our customers." },
-  { icon: Heart, title: "Customer-First", description: "Every feature we build, every decision we make starts with one question: does this make our customers more successful?" },
-  { icon: Globe, title: "Global-Ready", description: "Built from day one for international use with multi-language, multi-currency, and region-specific compliance." },
+  { icon: Code2, title: "Code Quality First", description: "We write maintainable, well-tested code with documentation that your future team can confidently extend." },
+  { icon: Target, title: "Outcome Over Output", description: "We measure success by business results — not lines of code or hours logged. We're invested in your success." },
+  { icon: Eye, title: "Radical Transparency", description: "No surprises. We communicate blockers early, share progress regularly, and never hide behind ambiguity." },
+  { icon: ShieldCheck, title: "Security by Design", description: "Security is not a feature — it's the foundation. Every project is built with threat modelling from day one." },
+  { icon: Compass, title: "Long-term Thinking", description: "We architect for tomorrow — systems that scale, patterns that age well, and choices that reduce future debt." },
+  { icon: HeartHandshake, title: "Client Partnership", description: "We're not a vendor — we're an extension of your team. We care about your product as much as you do." },
 ];
 
 const milestones = [
-  { year: "2018", event: "SoftAxis Technologies founded in Dubai, UAE" },
-  { year: "2019", event: "First version of Vrodux ERP launched" },
-  { year: "2020", event: "Reached 50 enterprise customers across the GCC" },
-  { year: "2021", event: "Launched Restaurant POS and Hospitality modules" },
-  { year: "2022", event: "Expanded to 25 countries with multi-language support" },
-  { year: "2023", event: "500+ businesses and 40+ countries milestone achieved" },
-  { year: "2024", event: "Launched Real Estate and Construction management modules" },
-  { year: "2025", event: "Full platform rewrite with next-generation architecture" },
-];
-
-const team = [
-  { name: "Ahmad Al Sayed", role: "CEO & Co-Founder", bio: "15 years in enterprise software. Former Microsoft and SAP executive.", initials: "AS", color: "bg-brand-500" },
-  { name: "Priya Nair", role: "CTO & Co-Founder", bio: "Built scalable SaaS platforms across fintech and ERP domains.", initials: "PN", color: "bg-purple-500" },
-  { name: "Omar Khalil", role: "VP of Product", bio: "Product leader with deep expertise in ERP and business software.", initials: "OK", color: "bg-emerald-500" },
-  { name: "Sarah Williams", role: "VP of Customer Success", bio: "Led implementation teams at Oracle and helped 100+ ERP deployments.", initials: "SW", color: "bg-orange-500" },
+  { year: "2019", event: "Founded in Dubai under the brand Softaxus, with a clear mission: build software that actually works for the businesses using it" },
+  { year: "2019–2023", event: "Delivered backend revamps, cross-platform mobile apps, cloud migrations, and AI integrations for clients across Canada, the UAE, and beyond" },
+  { year: "2024", event: "Incorporated as Softaxis Technologies LLC in Dubai, UAE, formalizing operations to serve enterprise and government clients across the Gulf" },
+  { year: "2025", event: "Operating as a DET-licensed engineering firm with a 5.0 / 5.0 rating on Clutch, building Vrodux ERP on next-generation architecture" },
 ];
 
 export default function AboutPage() {
   return (
     <>
       <PageHero
-        badge="About SoftAxis Technologies"
-        title="Built by Entrepreneurs, "
-        highlightedWord="For Entrepreneurs"
-        description="We're SoftAxis Technologies LLC — a Dubai-based enterprise software company on a mission to make world-class ERP accessible to every business, everywhere."
+        badge="About Softaxis Technologies"
+        title="Engineering Built "
+        highlightedWord="for the Modern World"
+        description="We're Softaxis Technologies LLC — a Dubai-registered software engineering firm founded in 2019, delivering high-quality digital products for clients across the globe."
       />
 
       {/* Stats */}
@@ -52,10 +43,10 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { value: "2018", label: "Founded" },
-              { value: "500+", label: "Clients Worldwide" },
-              { value: "40+", label: "Countries" },
-              { value: "50+", label: "Team Members" },
+              { value: "2019", label: "Founded" },
+              { value: "10–49", label: "Engineers on Team" },
+              { value: "5.0 / 5.0", label: "Rating on Clutch" },
+              { value: "Global", label: "Client Reach (CA, EU, GCC)" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-4xl font-bold text-gradient mb-1">{stat.value}</div>
@@ -69,21 +60,22 @@ export default function AboutPage() {
       {/* Story */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-semibold mb-6">Our Story</h2>
+          <h2 className="text-3xl font-semibold mb-6">From Softaxus to Softaxis Technologies</h2>
           <div className="prose prose-gray dark:prose-invert max-w-none">
             <p className="text-muted-foreground leading-relaxed mb-4">
-              SoftAxis Technologies was founded in 2018 in Dubai by a team of experienced enterprise software professionals
-              who were frustrated by the status quo of ERP. The big players — SAP, Oracle, Microsoft — were powerful but
-              prohibitively expensive and complex. The cheaper alternatives lacked the depth and industry-specific functionality
-              that serious businesses need.
+              We started in 2019 under the brand Softaxus — a lean engineering team with a clear mission: build software
+              that actually works for the businesses using it. Over the years, we&apos;ve delivered backend revamps,
+              cross-platform mobile apps, cloud migrations, and AI integrations for clients in Canada, the UAE, and beyond.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              We set out to build something different: an enterprise-grade ERP platform that combines the depth of SAP with
-              the usability of modern SaaS applications, at a price point accessible to growing businesses.
+              In 2024, we formalized our operations by incorporating as Softaxis Technologies LLC in Dubai, UAE — a
+              strategic move that reflects our growth and commitment to serving enterprise and government clients across
+              the Gulf region.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Today, Vrodux ERP powers operations for 500+ businesses across 40+ countries — from single-location restaurants
-              in Dubai to multi-national distribution companies across MENA and Southeast Asia.
+              Today, Vrodux ERP is built and maintained by that same team — a DET-licensed software engineering company
+              holding an active Professional Unified Licence (No. EU9732) issued by Dubai&apos;s Department of Economy
+              &amp; Tourism, with a 5.0 / 5.0 rating on Clutch.
             </p>
           </div>
         </div>
@@ -93,7 +85,7 @@ export default function AboutPage() {
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-center mb-12">Our Values</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {values.map((v) => (
               <div key={v.title} className="p-6 rounded-2xl border bg-card text-center hover:shadow-sm transition-shadow">
                 <div className="w-12 h-12 rounded-2xl bg-brand-500/10 flex items-center justify-center mx-auto mb-4">
@@ -126,25 +118,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-semibold text-center mb-12">Leadership Team</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {team.map((member) => (
-              <div key={member.name} className="p-6 rounded-2xl border bg-card text-center hover:shadow-sm transition-shadow">
-                <div className={`w-16 h-16 rounded-2xl ${member.color} flex items-center justify-center text-white text-xl font-semibold mx-auto mb-4`}>
-                  {member.initials}
-                </div>
-                <h3 className="font-semibold">{member.name}</h3>
-                <p className="text-xs text-brand-500 font-medium mb-2">{member.role}</p>
-                <p className="text-xs text-muted-foreground">{member.bio}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
