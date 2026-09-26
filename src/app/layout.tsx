@@ -99,7 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <head>
         <Script
-          src="https://erp.vrodux.com/api/seo/snippet/4f627b729ae0a588698b2fa6f92aea0ff74271d4/tag.js"
+          src="https://erp.vrodux.com/api/seo/snippet/4dbcd622033cb78ed65705635a88f1cd50c2af54/tag.js"
           strategy="afterInteractive"
         />
         {GTM_ID && (
