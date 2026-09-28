@@ -5,65 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, ArrowRight, Zap } from "lucide-react";
-
-const tiers = [
-  {
-    name: "Starter",
-    price: "$249",
-    period: "/ month",
-    description: "Perfect for small businesses getting started with ERP",
-    highlighted: false,
-    features: [
-      "Up to 10 users",
-      "Core ERP, Finance & Accounting",
-      "HR & Payroll",
-      "Inventory & Sales",
-      "Basic CRM & reporting",
-      "Standard support",
-      "Cloud hosting",
-      "30-day free trial",
-    ],
-    cta: "View Plan",
-    href: "/pricing#plans",
-  },
-  {
-    name: "Professional",
-    price: "$699",
-    period: "/ month",
-    description: "For growing businesses that need the full platform",
-    highlighted: true,
-    features: [
-      "Up to 50 users",
-      "Everything in Starter",
-      "Advanced CRM & Sales Pipeline",
-      "POS, Restaurant & KDS",
-      "Multi-company & Multi-Currency",
-      "Advanced Analytics & BI",
-      "API Access & Custom Workflows",
-      "Priority Support",
-    ],
-    cta: "Start Free Trial",
-    href: "/pricing#plans",
-  },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "pricing",
-    description: "For large enterprises with complex requirements",
-    highlighted: false,
-    features: [
-      "Unlimited users & companies",
-      "Everything in Professional",
-      "Advanced permissions & BI",
-      "Custom integrations & development",
-      "Dedicated support & SLA",
-      "On-premise deployment option",
-      "Dedicated account management",
-    ],
-    cta: "Talk to Sales",
-    href: "/contact?plan=enterprise",
-  },
-];
+import { cn } from "@/lib/utils";
+import { pricingTiers as tiers } from "@/lib/pricing-data";
 
 export function PricingPreview() {
   return (
@@ -83,58 +26,77 @@ export function PricingPreview() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {tiers.map((tier, i) => (
-            <motion.div
-              key={tier.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`relative flex flex-col p-7 rounded-2xl border transition-all duration-300 ${
-                tier.highlighted
-                  ? "border-brand-500 bg-brand-500/5 shadow-glow scale-[1.02]"
-                  : "bg-card hover:shadow-md"
-              }`}
-            >
-              {tier.highlighted && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <Badge className="gap-1 bg-brand-500 text-white px-4">
-                    <Zap className="w-3 h-3" />
-                    Most Popular
-                  </Badge>
-                </div>
-              )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-start">
+          {tiers.map((tier, i) => {
+            const isEnterprise = tier.monthly === null;
 
-              <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-1">{tier.name}</h3>
-                <div className="flex items-baseline gap-1 mb-2">
-                  <span className="text-4xl font-bold">{tier.price}</span>
-                  <span className="text-muted-foreground text-sm">{tier.period}</span>
-                </div>
-                <p className="text-sm text-muted-foreground">{tier.description}</p>
-              </div>
-
-              <ul className="space-y-2.5 flex-1 mb-6">
-                {tier.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-sm">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                asChild
-                variant={tier.highlighted ? "default" : "outline"}
-                className={`w-full ${tier.highlighted ? "bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-sm" : ""}`}
+            return (
+              <motion.div
+                key={tier.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className={cn(
+                  "relative flex flex-col p-7 rounded-2xl border transition-all duration-300",
+                  tier.highlighted
+                    ? "border-brand-500 bg-brand-500/5 shadow-glow lg:scale-[1.02]"
+                    : "bg-card hover:shadow-md"
+                )}
               >
-                <Link href={tier.href}>
-                  {tier.cta}
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </Button>
-            </motion.div>
-          ))}
+                {tier.highlighted && (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                    <Badge className="gap-1 bg-brand-500 text-white px-4">
+                      <Zap className="w-3 h-3" />
+                      Most Popular
+                    </Badge>
+                  </div>
+                )}
+
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold mb-1">{tier.name}</h3>
+
+                  {isEnterprise ? (
+                    <div className="mb-2">
+                      <span className="text-4xl font-bold">Custom</span>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="flex items-baseline gap-1 mb-1">
+                        <span className="text-4xl font-bold">${tier.monthly}</span>
+                        <span className="text-muted-foreground text-sm">/ month</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mb-2">
+                        or ${tier.annual}/mo billed annually
+                      </p>
+                    </>
+                  )}
+
+                  <p className="text-sm font-medium text-foreground/80 mb-1">{tier.users}</p>
+                  <p className="text-sm text-muted-foreground">{tier.description}</p>
+                </div>
+
+                <ul className="space-y-2.5 flex-1 mb-6">
+                  {tier.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  asChild
+                  variant={tier.highlighted ? "default" : "outline"}
+                  className={cn("w-full", tier.highlighted && "bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-sm")}
+                >
+                  <Link href={isEnterprise ? "/contact?plan=enterprise" : "/pricing#plans"}>
+                    {isEnterprise ? "Talk to Sales" : tier.highlighted ? "Start Free Trial" : "View Plan"}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </Button>
+              </motion.div>
+            );
+          })}
         </div>
 
         <motion.div
