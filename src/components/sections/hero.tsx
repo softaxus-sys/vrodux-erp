@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Play, CheckCircle2, Bell, Settings } from "lucide-react";
+import { totalModuleCount } from "@/lib/modules-data";
 
 function DashboardMockup() {
   return (
@@ -79,9 +80,9 @@ function DashboardMockup() {
         className="absolute -bottom-4 -left-4 bg-card/90 backdrop-blur-sm rounded-xl border shadow-premium p-3 w-36"
       >
         <div className="text-[9px] text-muted-foreground">Active Modules</div>
-        <div className="text-lg font-semibold text-gradient">12 / 12</div>
+        <div className="text-lg font-semibold text-gradient">{totalModuleCount} / {totalModuleCount}</div>
         <div className="flex gap-0.5 mt-1">
-          {Array.from({ length: 12 }).map((_, i) => (
+          {Array.from({ length: totalModuleCount }).map((_, i) => (
             <div key={i} className="flex-1 h-1 rounded-full bg-brand-500" />
           ))}
         </div>

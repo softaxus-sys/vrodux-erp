@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/shared/page-hero";
 import { ModulesOverview } from "@/components/sections/modules-overview";
+import { totalModuleCount } from "@/lib/modules-data";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
@@ -8,8 +9,7 @@ import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog
 
 export const metadata: Metadata = {
   title: "Features — Complete ERP Platform",
-  description:
-    "Explore all 12 Vrodux ERP modules including Finance, HR, Inventory, CRM, POS, Restaurant, Hospitality, Real Estate, Construction, and more.",
+  description: `Explore all ${totalModuleCount} Vrodux ERP modules including Finance, HR, Inventory, CRM, Project Management, POS, Restaurant, Hospitality, Real Estate, Construction, Healthcare, Education, and more.`,
 };
 
 const platformCapabilities = [
@@ -36,10 +36,10 @@ export default function FeaturesPage() {
   return (
     <>
       <PageHero
-        badge="12 Powerful Modules"
+        badge={`${totalModuleCount} Powerful Modules`}
         title="Everything Your Business Needs, "
         highlightedWord="All in One Platform"
-        description="Vrodux ERP brings Finance, HR, Inventory, Sales, CRM, POS, Restaurant, Hospitality, Real Estate, Construction, and Analytics together in a single, unified platform."
+        description="Vrodux ERP brings Finance, HR, Inventory, Sales, CRM, Project Management, POS, Restaurant, Hospitality, Real Estate, Construction, Healthcare, Education, and more together in a single, unified platform."
       />
 
       <ModulesOverview />
