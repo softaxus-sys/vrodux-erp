@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Home, HardHat, Stethoscope, GraduationCap, ShieldCheck, Building2 } from "lucide-react";
+import { ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Home, HardHat, Stethoscope, GraduationCap, ShieldCheck, Building2, Stamp } from "lucide-react";
 
 const industries = [
   { name: "Retail", icon: ShoppingBag, href: "/industries#retail", color: "from-pink-500 to-rose-600" },
@@ -15,6 +15,7 @@ const industries = [
   { name: "Education", icon: GraduationCap, href: "/industries#education", color: "from-blue-500 to-indigo-600" },
   { name: "Insurance", icon: ShieldCheck, href: "/industries#insurance", color: "from-indigo-500 to-blue-700" },
   { name: "B2B Services", icon: Building2, href: "/industries#b2bservices", color: "from-brand-500 to-indigo-600" },
+  { name: "Visa Services", icon: Stamp, href: "/industries#visa-services", color: "from-fuchsia-500 to-purple-600" },
 ];
 
 export function IndustriesPreview() {
