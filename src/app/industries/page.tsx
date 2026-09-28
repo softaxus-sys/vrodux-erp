@@ -6,13 +6,13 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import {
   ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Home, HardHat,
-  Stethoscope, GraduationCap, ShieldCheck, Building2, CheckCircle2, Sparkles,
+  Stethoscope, GraduationCap, ShieldCheck, Building2, CheckCircle2, Sparkles, Stamp,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Industry Solutions — ERP for Every Sector",
   description:
-    "Vrodux ERP delivers tailored solutions for Retail, Restaurants & F&B, Hospitality, Real Estate, Construction, Healthcare, Education, Insurance, and B2B Services.",
+    "Vrodux ERP delivers tailored solutions for Retail, Restaurants & F&B, Hospitality, Real Estate, Construction, Healthcare, Education, Insurance, B2B Services, and Visa Services.",
 };
 
 const industries = [
@@ -146,6 +146,22 @@ const industries = [
       { value: "30%", label: "Better project profitability" },
       { value: "45%", label: "Faster invoice collection" },
       { value: "25%", label: "Improved utilization rates" },
+    ],
+  },
+  {
+    id: "visa-services",
+    icon: Stamp,
+    name: "Visa Services",
+    status: "live" as const,
+    headline: "Track Every Visa Case From First Contact to Issued",
+    description: "Manage visa cases for a single applicant or an entire family, with auto-generated document checklists per visa type, government submission tracking, and automatic alerts before passports or documents expire.",
+    color: "from-fuchsia-500 to-purple-600",
+    bg: "bg-fuchsia-500/10",
+    modules: ["Case Management", "Document Checklists", "Government Submission Tracking", "Renewals & Expiry Alerts", "CRM & Finance Integration"],
+    stats: [
+      { value: "100%", label: "Document checklist coverage" },
+      { value: "Zero", label: "Missed renewal deadlines" },
+      { value: "3x", label: "Faster case processing" },
     ],
   },
 ];

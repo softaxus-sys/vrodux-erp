@@ -259,7 +259,7 @@ export function AiChatSection() {
                     <span className="truncate">
                       {thinkingAgent
                         ? `${agents[thinkingAgent].name} is working…`
-                        : "4 agents connected to your live ERP data"}
+                        : "6 agents connected to your live ERP data"}
                     </span>
                   </p>
                 </div>

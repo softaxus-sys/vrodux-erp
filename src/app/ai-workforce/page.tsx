@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { PageHero } from "@/components/shared/page-hero";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { TelegramBotSection } from "@/components/sections/telegram-bot";
+import { VoiceAgentSection } from "@/components/sections/voice-agent";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { CheckCircle2, DollarSign, Users, ShoppingCart, Package, Layers, BarChart3, ShieldCheck, Bot } from "lucide-react";
 
@@ -158,6 +159,11 @@ export default function AiWorkforcePage() {
       {/* Telegram bot */}
       <div id="telegram">
         <TelegramBotSection />
+      </div>
+
+      {/* Voice agent */}
+      <div id="voice">
+        <VoiceAgentSection />
       </div>
 
       {/* Guardrails */}
