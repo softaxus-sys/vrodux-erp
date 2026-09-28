@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
-import { Shield, Lock, Eye, Server, RefreshCw, Award } from "lucide-react";
+import { Shield, Lock, Eye, Server, RefreshCw, Award, Fingerprint, MonitorSmartphone, UserCog } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Security & Compliance — Vrodux ERP",
@@ -15,6 +15,15 @@ const securityFeatures = [
   { icon: Server, title: "Infrastructure Security", description: "Hosted on enterprise-grade cloud infrastructure with DDoS protection, WAF, and intrusion detection.", color: "text-orange-500", bg: "bg-orange-500/10" },
   { icon: RefreshCw, title: "Backup & Recovery", description: "Automated daily backups with point-in-time recovery. RTO < 4 hours, RPO < 1 hour.", color: "text-cyan-500", bg: "bg-cyan-500/10" },
   { icon: Award, title: "Compliance", description: "GDPR compliant. VAT compliance for UAE, KSA, and other GCC countries. ISO 27001 aligned practices.", color: "text-amber-500", bg: "bg-amber-500/10" },
+];
+
+const accountSecurityFeatures = [
+  { icon: Fingerprint, title: "Two-Factor Authentication", description: "Every user can enable TOTP-based 2FA with an authenticator app, plus one-time backup codes in case they lose access to it.", color: "text-emerald-500", bg: "bg-emerald-500/10" },
+  { icon: MonitorSmartphone, title: "Per-Device Session Management", description: "A \"My Devices\" screen lists every active session tied to a user's account, so they can remotely sign out any device the moment something looks unfamiliar.", color: "text-blue-500", bg: "bg-blue-500/10" },
+];
+
+const accessControlFeatures = [
+  { icon: UserCog, title: "Per-User Permission Overrides", description: "Roles cover most cases — but when a role almost fits and not quite, admins can grant or withhold a specific permission for an individual user, without creating a one-off role just for them.", color: "text-violet-500", bg: "bg-violet-500/10" },
 ];
 
 export default function SecurityPage() {
@@ -31,6 +40,46 @@ export default function SecurityPage() {
         <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {securityFeatures.map((feature) => (
+              <div key={feature.title} className="p-6 rounded-2xl border bg-card hover:shadow-sm transition-shadow">
+                <div className={`w-12 h-12 rounded-xl ${feature.bg} flex items-center justify-center mb-4`}>
+                  <feature.icon className={`w-6 h-6 ${feature.color}`} />
+                </div>
+                <h3 className="font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-muted/20">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-semibold mb-2 text-center">Account Security</h2>
+          <p className="text-sm text-muted-foreground text-center mb-8">
+            Controls every user manages for their own account.
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {accountSecurityFeatures.map((feature) => (
+              <div key={feature.title} className="p-6 rounded-2xl border bg-card hover:shadow-sm transition-shadow">
+                <div className={`w-12 h-12 rounded-xl ${feature.bg} flex items-center justify-center mb-4`}>
+                  <feature.icon className={`w-6 h-6 ${feature.color}`} />
+                </div>
+                <h3 className="font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-2xl font-semibold mb-2 text-center">Fine-Grained Permissions</h2>
+          <p className="text-sm text-muted-foreground text-center mb-8">
+            Exceptions admins can make on top of standard role-based access.
+          </p>
+          <div className="max-w-xl mx-auto">
+            {accessControlFeatures.map((feature) => (
               <div key={feature.title} className="p-6 rounded-2xl border bg-card hover:shadow-sm transition-shadow">
                 <div className={`w-12 h-12 rounded-xl ${feature.bg} flex items-center justify-center mb-4`}>
                   <feature.icon className={`w-6 h-6 ${feature.color}`} />

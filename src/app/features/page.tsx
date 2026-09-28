@@ -5,12 +5,41 @@ import { totalModuleCount } from "@/lib/modules-data";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet } from "lucide-react";
+import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet, Flame, Lock, Plug } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Features — Complete ERP Platform",
   description: `Explore all ${totalModuleCount} Vrodux ERP modules including Finance, HR, Inventory, CRM, Project Management, POS, Restaurant, Hospitality, Real Estate, Construction, Healthcare, Education, and more.`,
 };
+
+const crmReports = [
+  "Sales Pipeline",
+  "Win/Loss Trends",
+  "Lead Source ROI",
+  "Lead-to-Customer Conversion Funnel",
+  "Sales Velocity",
+  "Team Performance",
+  "Account Revenue",
+  "Activity Report",
+];
+
+const crmFeatures = [
+  {
+    icon: Flame,
+    title: "Automatic Lead Scoring",
+    description: "Every lead is scored and prioritized automatically — hot, warm, or cold — the moment it arrives, so reps always know who to call first.",
+  },
+  {
+    icon: Lock,
+    title: "Team-Tiered Access Control",
+    description: "A sales rep sees only their own team's pipeline and leads. Managers and admins see everything — configured per role, no manual gatekeeping.",
+  },
+  {
+    icon: Plug,
+    title: "Multi-Channel Lead Capture",
+    description: "Leads flow in automatically from Property Finder, Bayut, Calendly, Meta (Facebook/Instagram) lead ads, Google Sheets/Forms, and bulk CSV import — not just manual entry.",
+  },
+];
 
 const platformCapabilities = [
   { icon: Layers, title: "Multi-Company & Branch", description: "Manage multiple legal entities and branches with consolidated reporting" },
@@ -43,6 +72,50 @@ export default function FeaturesPage() {
       />
 
       <ModulesOverview />
+
+      {/* CRM deep dive */}
+      <section id="crm" className="py-20 scroll-mt-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+              CRM, Built for How Sales Teams <span className="text-gradient">Actually Work</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Beyond lead management and pipeline tracking, Vrodux CRM automatically scores and routes leads,
+              keeps visibility scoped to the right team, and pulls leads in from the channels you already use.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-5xl mx-auto">
+            {crmFeatures.map((f) => (
+              <div key={f.title} className="p-5 rounded-2xl border bg-card hover:shadow-sm transition-shadow">
+                <div className="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center mb-3">
+                  <f.icon className="w-5 h-5 text-brand-500" />
+                </div>
+                <h3 className="font-semibold mb-1.5">{f.title}</h3>
+                <p className="text-sm text-muted-foreground">{f.description}</p>
+              </div>
+            ))}
+
+            <div className="p-5 rounded-2xl border bg-card hover:shadow-sm transition-shadow sm:col-span-2">
+              <div className="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center mb-3">
+                <BarChart3 className="w-5 h-5 text-brand-500" />
+              </div>
+              <h3 className="font-semibold mb-1.5">8-Report Analytics Suite</h3>
+              <p className="text-sm text-muted-foreground mb-4">
+                Built-in reporting that answers exactly what a sales manager asks day to day.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {crmReports.map((r) => (
+                  <span key={r} className="text-xs px-2.5 py-1 rounded-full bg-muted text-foreground/80">
+                    {r}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* AI Chat */}
       <div id="ai-chat">
