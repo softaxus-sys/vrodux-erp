@@ -12,27 +12,34 @@ import {
   LayoutDashboard, DollarSign, Users, Package, ShoppingCart,
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
-  CreditCard, ShieldCheck, ArrowRight, Rocket
+  CreditCard, ShieldCheck, ArrowRight, Rocket, ListChecks, Stamp,
 } from "lucide-react";
+import { totalModuleCount } from "@/lib/modules-data";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
 
 const coreModules = [
-  { name: "Finance & Accounting", href: "/features#finance", icon: DollarSign, desc: "GL, AP, AR, Bank Reconciliation" },
-  { name: "HR & Payroll", href: "/features#hr", icon: Users, desc: "Employee, Payroll, Leave, Attendance" },
-  { name: "Inventory & Procurement", href: "/features#inventory", icon: Package, desc: "Stock, Warehouse, Vendor Mgmt" },
-  { name: "Sales Management", href: "/features#sales", icon: ShoppingCart, desc: "Quotations, Orders, Invoicing" },
-  { name: "CRM", href: "/features#crm", icon: LayoutDashboard, desc: "Leads, Opportunities, Pipeline" },
-  { name: "Point of Sale", href: "/features#pos", icon: CreditCard, desc: "Retail, Barcode, Multi-store" },
-  { name: "Purchase Management", href: "/features#purchase", icon: Truck, desc: "RFQ, Purchase Orders, Evaluation" },
-  { name: "Analytics & BI", href: "/features#analytics", icon: BarChart3, desc: "Dashboards, KPIs, Reports" },
+  { name: "Finance & Accounting", href: "/features/finance", icon: DollarSign, desc: "GL, AP, AR, Bank Reconciliation" },
+  { name: "HR & Payroll", href: "/features/hr", icon: Users, desc: "Employee, Payroll, Leave, Attendance" },
+  { name: "Inventory & Procurement", href: "/features/inventory", icon: Package, desc: "Stock, Warehouse, Vendor Mgmt" },
+  { name: "Sales Management", href: "/features/sales", icon: ShoppingCart, desc: "Quotations, Orders, Invoicing" },
+  { name: "CRM", href: "/features/crm", icon: LayoutDashboard, desc: "Leads, Opportunities, Pipeline" },
+  { name: "Purchase Management", href: "/features/purchase", icon: Truck, desc: "RFQ, Purchase Orders, Evaluation" },
+  { name: "Project Management", href: "/features/project-management", icon: ListChecks, desc: "Tasks, Timelines, Budgets" },
+  { name: "Reports", href: "/features/reports", icon: BarChart3, desc: "Dashboards, KPIs, Reports" },
 ];
 
 const industryModules = [
-  { name: "Restaurant POS", href: "/features#restaurant", icon: UtensilsCrossed, desc: "Tables, KDS, Recipe Mgmt" },
-  { name: "Hospitality", href: "/features#hospitality", icon: Hotel, desc: "Reservations, Room, Guest Svc" },
-  { name: "Real Estate", href: "/features#realestate", icon: HomeIcon, desc: "Properties, Leasing, Contracts" },
-  { name: "Construction", href: "/features#construction", icon: HardHat, desc: "Projects, Resources, Costs" },
+  { name: "Point of Sale", href: "/features/pos", icon: CreditCard, desc: "Retail, Barcode, Multi-store" },
+  { name: "Restaurant POS", href: "/features/restaurant", icon: UtensilsCrossed, desc: "Tables, KDS, Recipe Mgmt" },
+  { name: "Hospitality", href: "/features/hospitality", icon: Hotel, desc: "Reservations, Room, Guest Svc" },
+  { name: "Real Estate", href: "/features/real-estate", icon: HomeIcon, desc: "Properties, Leasing, Contracts" },
+  { name: "Construction", href: "/features/construction", icon: HardHat, desc: "Projects, Resources, Costs" },
+  { name: "Healthcare", href: "/features/healthcare", icon: Stethoscope, desc: "Patient Records, Appointments" },
+  { name: "Education", href: "/features/education", icon: GraduationCap, desc: "Admissions, Fees, Records" },
+  { name: "Insurance", href: "/features/insurance", icon: ShieldCheck, desc: "Policy Admin, Claims Tracking" },
+  { name: "B2B & Professional Services", href: "/features/b2b-services", icon: Building2, desc: "Proposals, Project Billing, CRM" },
+  { name: "Visa Services", href: "/features/visa-services", icon: Stamp, desc: "Case Mgmt, Document Checklists" },
 ];
 
 const industries = [
@@ -126,7 +133,7 @@ function MegaMenu({ type, onClose }: MegaMenuProps) {
           ))}
         </div>
         <div className="mt-4 pt-4 border-t flex items-center justify-between">
-          <p className="text-sm text-muted-foreground">12 fully integrated modules</p>
+          <p className="text-sm text-muted-foreground">{totalModuleCount} fully integrated modules</p>
           <Link href="/features" onClick={onClose} className="text-sm font-medium text-brand-500 hover:underline flex items-center gap-1">
             View all features <ArrowRight className="w-3 h-3" />
           </Link>

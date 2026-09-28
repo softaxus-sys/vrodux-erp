@@ -6,18 +6,18 @@ import { Separator } from "@/components/ui/separator";
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
 
 const products = [
-  { label: "Finance & Accounting", href: "/features#finance" },
-  { label: "HR & Payroll", href: "/features#hr" },
-  { label: "Inventory & Procurement", href: "/features#inventory" },
-  { label: "Sales Management", href: "/features#sales" },
-  { label: "CRM", href: "/features#crm" },
-  { label: "Point of Sale", href: "/features#pos" },
-  { label: "Purchase Management", href: "/features#purchase" },
-  { label: "Analytics & BI", href: "/features#analytics" },
-  { label: "Restaurant POS & KDS", href: "/features#restaurant" },
-  { label: "Hospitality Management", href: "/features#hospitality" },
-  { label: "Real Estate Management", href: "/features#realestate" },
-  { label: "Construction Management", href: "/features#construction" },
+  { label: "Finance & Accounting", href: "/features/finance" },
+  { label: "HR & Payroll", href: "/features/hr" },
+  { label: "Inventory & Procurement", href: "/features/inventory" },
+  { label: "Sales Management", href: "/features/sales" },
+  { label: "CRM", href: "/features/crm" },
+  { label: "Point of Sale", href: "/features/pos" },
+  { label: "Purchase Management", href: "/features/purchase" },
+  { label: "Analytics & BI", href: "/features/reports" },
+  { label: "Restaurant POS & KDS", href: "/features/restaurant" },
+  { label: "Hospitality Management", href: "/features/hospitality" },
+  { label: "Real Estate Management", href: "/features/real-estate" },
+  { label: "Construction Management", href: "/features/construction" },
 ];
 
 const solutions = [
