@@ -1,58 +1,63 @@
 import { Check, Minus } from "lucide-react";
 
-type Row = { feature: string; starter: boolean; professional: boolean; enterprise: boolean };
+type Row = { feature: string; micro: boolean; starter: boolean; professional: boolean; enterprise: boolean };
 type Category = { name: string; rows: Row[] };
 
 const categories: Category[] = [
   {
     name: "Platform",
     rows: [
-      { feature: "Core ERP", starter: true, professional: true, enterprise: true },
-      { feature: "Accounting", starter: true, professional: true, enterprise: true },
-      { feature: "Finance", starter: true, professional: true, enterprise: true },
-      { feature: "HR", starter: true, professional: true, enterprise: true },
-      { feature: "Payroll", starter: true, professional: true, enterprise: true },
-      { feature: "Inventory", starter: true, professional: true, enterprise: true },
-      { feature: "Sales", starter: true, professional: true, enterprise: true },
-      { feature: "Purchasing", starter: true, professional: true, enterprise: true },
-      { feature: "CRM", starter: true, professional: true, enterprise: true },
-      { feature: "POS", starter: false, professional: true, enterprise: true },
-      { feature: "Restaurant / KDS", starter: false, professional: true, enterprise: true },
-      { feature: "Hospitality", starter: false, professional: true, enterprise: true },
-      { feature: "Construction", starter: false, professional: false, enterprise: true },
-      { feature: "Real Estate", starter: false, professional: false, enterprise: true },
+      { feature: "Core ERP", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "Accounting", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "Finance", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "HR", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "Payroll", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "Inventory", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "Sales", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "Purchasing", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "CRM", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "POS", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Restaurant / KDS", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Hospitality", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Construction", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Real Estate", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Healthcare", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Education", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Insurance", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "B2B & Professional Services", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Visa Services", micro: false, starter: false, professional: false, enterprise: true },
     ],
   },
   {
     name: "Business Management",
     rows: [
-      { feature: "Multi-company", starter: false, professional: true, enterprise: true },
-      { feature: "Multi-currency", starter: false, professional: true, enterprise: true },
-      { feature: "Advanced workflows", starter: false, professional: true, enterprise: true },
-      { feature: "Advanced permissions", starter: false, professional: false, enterprise: true },
-      { feature: "Advanced reporting", starter: false, professional: true, enterprise: true },
-      { feature: "Analytics", starter: true, professional: true, enterprise: true },
-      { feature: "BI", starter: false, professional: true, enterprise: true },
+      { feature: "Multi-company", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Multi-currency", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Advanced workflows", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Advanced permissions", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Advanced reporting", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Analytics", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "BI", micro: false, starter: false, professional: true, enterprise: true },
     ],
   },
   {
     name: "Integrations & Technology",
     rows: [
-      { feature: "API", starter: false, professional: true, enterprise: true },
-      { feature: "Custom integrations", starter: false, professional: false, enterprise: true },
-      { feature: "Cloud hosting", starter: true, professional: true, enterprise: true },
-      { feature: "Automatic updates", starter: true, professional: true, enterprise: true },
-      { feature: "On-premise deployment", starter: false, professional: false, enterprise: true },
+      { feature: "API", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Custom integrations", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Cloud hosting", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "Automatic updates", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "On-premise deployment", micro: false, starter: false, professional: false, enterprise: true },
     ],
   },
   {
     name: "Support",
     rows: [
-      { feature: "Standard support", starter: true, professional: false, enterprise: false },
-      { feature: "Priority support", starter: false, professional: true, enterprise: true },
-      { feature: "Dedicated support", starter: false, professional: false, enterprise: true },
-      { feature: "SLA", starter: false, professional: false, enterprise: true },
-      { feature: "Account management", starter: false, professional: false, enterprise: true },
+      { feature: "Standard support", micro: true, starter: true, professional: false, enterprise: false },
+      { feature: "Priority support", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Dedicated support", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "SLA", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Account management", micro: false, starter: false, professional: false, enterprise: true },
     ],
   },
 ];
@@ -119,7 +124,7 @@ export function PricingComparison() {
                       {row.feature}
                     </th>
                     <td className="p-4">
-                      <Cell included={row.starter} />
+                      <Cell included={row.micro} />
                     </td>
                     <td className="p-4">
                       <Cell included={row.starter} />
