@@ -177,7 +177,7 @@ export function HeroSection() {
 
             {/* Trust badges */}
             <motion.div variants={itemVariants} className="mt-8 flex flex-wrap gap-4">
-              {["GDPR Compliant", "ISO 27001", "SOC 2 Type II", "99.9% Uptime SLA"].map((badge) => (
+              {["GDPR Compliant", "ISO 27001", "SOC 2 Type II — In Progress", "99.9% Uptime SLA"].map((badge) => (
                 <div key={badge} className="flex items-center gap-1.5 text-xs text-muted-foreground">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
                   {badge}

@@ -47,7 +47,7 @@ export default function SecurityPage() {
         <div className="container mx-auto px-4 max-w-3xl text-center">
           <h2 className="text-2xl font-semibold mb-4">Security Policies & Certifications</h2>
           <div className="grid sm:grid-cols-3 gap-4">
-            {["GDPR Compliant", "ISO 27001 Aligned", "SOC 2 Type II", "PCI DSS Ready", "HIPAA Capable", "UAE PDPL Compliant"].map((cert) => (
+            {["GDPR Compliant", "ISO 27001 Aligned", "SOC 2 Type II — In Progress", "PCI DSS Ready", "HIPAA Capable", "UAE PDPL Compliant"].map((cert) => (
               <div key={cert} className="p-4 rounded-xl border bg-card text-sm font-medium flex items-center justify-center gap-2">
                 <Shield className="w-4 h-4 text-emerald-500" />
                 {cert}
