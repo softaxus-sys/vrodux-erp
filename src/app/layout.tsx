@@ -92,7 +92,7 @@ export const viewport: Viewport = {
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1326788705988837";
+const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "2956413208034575";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
