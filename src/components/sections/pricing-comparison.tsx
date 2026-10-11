@@ -26,6 +26,9 @@ const categories: Category[] = [
       { feature: "Insurance", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "B2B & Professional Services", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Visa Services", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Manufacturing", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Library", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Import & Export", micro: false, starter: false, professional: false, enterprise: true },
     ],
   },
   {

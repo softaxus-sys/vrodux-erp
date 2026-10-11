@@ -17,6 +17,9 @@ import {
   ShieldCheck,
   Briefcase,
   Stamp,
+  Factory,
+  Library as LibraryIcon,
+  Ship,
   type LucideIcon,
 } from "lucide-react";
 
@@ -561,7 +564,7 @@ export const industryModules: ModuleTile[] = [
   {
     id: "visa-services",
     name: "Visa Services",
-    description: "Case management, document checklists, government submission tracking, and renewals for visa and immigration services.",
+    description: "UAE visa cases, applicants, documents, and tracking.",
     icon: Stamp,
     color: "from-fuchsia-500 to-purple-600",
     bg: "bg-fuchsia-500/10",
@@ -576,6 +579,10 @@ export const industryModules: ModuleTile[] = [
       {
         title: "Applicant Records",
         description: "Including passport and document expiry tracking.",
+      },
+      {
+        title: "Visa Types",
+        description: "Employment, family, and visit visa types — each with its own document checklist.",
       },
       {
         title: "Proactive Renewals",
@@ -597,6 +604,58 @@ export const industryModules: ModuleTile[] = [
         title: "Connected to CRM",
         description: "A lead can convert straight into a visa case.",
       },
+    ],
+  },
+  {
+    id: "manufacturing",
+    name: "Manufacturing",
+    description: "Bills of materials, production orders, and costing.",
+    icon: Factory,
+    color: "from-zinc-500 to-slate-600",
+    bg: "bg-zinc-500/10",
+    features: ["Bills of Materials", "Production Orders", "Costing"],
+    href: "/features/manufacturing",
+    related: ["inventory", "purchase", "finance"],
+    capabilities: [
+      { title: "Bills of Materials" },
+      { title: "Production Orders" },
+      { title: "Costing" },
+    ],
+  },
+  {
+    id: "library",
+    name: "Library",
+    description: "Catalogue, members, lending, and fines across branches.",
+    icon: LibraryIcon,
+    color: "from-sky-500 to-indigo-600",
+    bg: "bg-sky-500/10",
+    features: ["Catalogue", "Members", "Lending", "Fines", "Multi-Branch"],
+    href: "/features/library",
+    related: ["finance"],
+    capabilities: [
+      { title: "Catalogue" },
+      { title: "Members" },
+      { title: "Lending" },
+      { title: "Fines" },
+      { title: "Multi-Branch Support" },
+      { title: "Excel Import" },
+    ],
+  },
+  {
+    id: "import-export",
+    name: "Import & Export",
+    description: "Shipments, trade documents, landed cost, and payments.",
+    icon: Ship,
+    color: "from-blue-500 to-cyan-600",
+    bg: "bg-blue-500/10",
+    features: ["Shipments", "Trade Documents", "Landed Cost", "Payments"],
+    href: "/features/import-export",
+    related: ["inventory", "purchase", "sales", "finance"],
+    capabilities: [
+      { title: "Shipments" },
+      { title: "Trade Documents" },
+      { title: "Landed Cost" },
+      { title: "Payments" },
     ],
   },
 ];

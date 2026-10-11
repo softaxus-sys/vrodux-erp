@@ -7,12 +7,13 @@ import Link from "next/link";
 import {
   ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Home, HardHat,
   Stethoscope, GraduationCap, ShieldCheck, Building2, CheckCircle2, Sparkles, Stamp,
+  Factory, Library, Ship,
 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Industry Solutions — ERP for Every Sector",
   description:
-    "Vrodux ERP delivers tailored solutions for Retail, Restaurants & F&B, Hospitality, Real Estate, Construction, Healthcare, Education, Insurance, B2B Services, and Visa Services.",
+    "Vrodux ERP delivers tailored solutions for Retail, Restaurants & F&B, Hospitality, Real Estate, Construction, Healthcare, Education, Insurance, B2B Services, Visa Services, Manufacturing, Library, and Import & Export.",
 };
 
 const industries = [
@@ -164,6 +165,39 @@ const industries = [
       { value: "3x", label: "Faster case processing" },
     ],
   },
+  {
+    id: "manufacturing",
+    icon: Factory,
+    name: "Manufacturing",
+    status: "live" as const,
+    headline: "Bills of Materials, Production Orders & Costing",
+    description: "Manufacturing runs on the same Inventory your components and finished goods already live in, with Purchase and Finance connected for costing.",
+    color: "from-zinc-500 to-slate-600",
+    bg: "bg-zinc-500/10",
+    modules: ["Bills of Materials", "Production Orders", "Costing", "Inventory", "Purchase & Finance"],
+  },
+  {
+    id: "library",
+    icon: Library,
+    name: "Library",
+    status: "live" as const,
+    headline: "Catalogue, Members, Lending & Fines Across Branches",
+    description: "Run a library's own catalogue, members, lending, and fines across multiple branches — with Excel import to get your existing records in, and Finance connected for billing.",
+    color: "from-sky-500 to-indigo-600",
+    bg: "bg-sky-500/10",
+    modules: ["Catalogue", "Members", "Lending", "Fines", "Multi-Branch"],
+  },
+  {
+    id: "import-export",
+    icon: Ship,
+    name: "Import & Export",
+    status: "live" as const,
+    headline: "Shipments, Trade Documents & Landed Cost",
+    description: "Track shipments and trade documents with landed cost and payments — connected to Inventory, Purchase, Sales, and Finance.",
+    color: "from-blue-500 to-cyan-600",
+    bg: "bg-blue-500/10",
+    modules: ["Shipments", "Trade Documents", "Landed Cost", "Payments"],
+  },
 ];
 
 const statusMeta = {
@@ -258,7 +292,7 @@ export default function IndustriesPage() {
                           </div>
                         </div>
                       </>
-                    ) : (
+                    ) : ind.roadmap ? (
                       <>
                         <div className="flex items-center gap-2 mb-4">
                           <Sparkles className="w-5 h-5 opacity-90" />
@@ -283,6 +317,15 @@ export default function IndustriesPage() {
                               <span key={m} className="text-xs px-2 py-1 bg-white/10 border border-white/20 rounded-full">{m}</span>
                             ))}
                           </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <h3 className="text-lg font-semibold mb-6 opacity-90">What&apos;s Included</h3>
+                        <div className="flex flex-wrap gap-2">
+                          {ind.modules.map((m) => (
+                            <span key={m} className="text-xs px-2 py-1 bg-white/20 rounded-full">{m}</span>
+                          ))}
                         </div>
                       </>
                     )}

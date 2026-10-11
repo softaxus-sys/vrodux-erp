@@ -13,6 +13,7 @@ import {
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
   CreditCard, ShieldCheck, ArrowRight, Rocket, ListChecks, Stamp,
+  Factory, Library, Ship,
 } from "lucide-react";
 import { totalModuleCount } from "@/lib/modules-data";
 
@@ -24,8 +25,8 @@ const coreModules = [
   { name: "Inventory & Procurement", href: "/features/inventory", icon: Package, desc: "Stock, Warehouse, Vendor Mgmt" },
   { name: "Sales Management", href: "/features/sales", icon: ShoppingCart, desc: "Quotations, Orders, Invoicing" },
   { name: "CRM", href: "/features/crm", icon: LayoutDashboard, desc: "Leads, Opportunities, Pipeline" },
-  { name: "Purchase Management", href: "/features/purchase", icon: Truck, desc: "RFQ, Purchase Orders, Evaluation" },
-  { name: "Project Management", href: "/features/project-management", icon: ListChecks, desc: "Tasks, Timelines, Budgets" },
+  { name: "Purchase Management", href: "/features/purchase", icon: Truck, desc: "Vendors, Purchase Orders, AP Bills" },
+  { name: "Project Management", href: "/features/project-management", icon: ListChecks, desc: "Kanban Boards, Sprints, Issues" },
   { name: "Reports", href: "/features/reports", icon: BarChart3, desc: "Dashboards, KPIs, Reports" },
 ];
 
@@ -40,6 +41,9 @@ const industryModules = [
   { name: "Insurance", href: "/features/insurance", icon: ShieldCheck, desc: "Policy Admin, Claims Tracking" },
   { name: "B2B & Professional Services", href: "/features/b2b-services", icon: Building2, desc: "Proposals, Project Billing, CRM" },
   { name: "Visa Services", href: "/features/visa-services", icon: Stamp, desc: "Case Mgmt, Document Checklists" },
+  { name: "Manufacturing", href: "/features/manufacturing", icon: Factory, desc: "BOM, Production Orders, Costing" },
+  { name: "Library", href: "/features/library", icon: Library, desc: "Catalogue, Members, Lending" },
+  { name: "Import & Export", href: "/features/import-export", icon: Ship, desc: "Shipments, Trade Docs, Landed Cost" },
 ];
 
 const industries = [
@@ -52,6 +56,10 @@ const industries = [
   { name: "Education", href: "/industries#education", icon: GraduationCap },
   { name: "Insurance", href: "/industries#insurance", icon: ShieldCheck },
   { name: "B2B & Professional Services", href: "/industries#b2bservices", icon: Building2 },
+  { name: "Visa Services", href: "/industries#visa-services", icon: Stamp },
+  { name: "Manufacturing", href: "/industries#manufacturing", icon: Factory },
+  { name: "Library", href: "/industries#library", icon: Library },
+  { name: "Import & Export", href: "/industries#import-export", icon: Ship },
 ];
 
 const navLinks = [
