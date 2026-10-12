@@ -26,6 +26,10 @@ export const pricingFaqs = [
     a: "No. Every module is included on every plan.",
   },
   {
+    q: "Is the AI assistant included, and what does it cost?",
+    a: "The AI assistant is included on every plan. It is pay-as-you-go and bring-your-own (BYO): you connect your own AI provider key and pay only for what you use, directly to that provider, so there is no AI fee in your Vrodux subscription.",
+  },
+  {
     q: "Can Vrodux support multiple companies?",
     a: "Yes. Professional supports up to 3 companies, while Enterprise supports unlimited companies.",
   },

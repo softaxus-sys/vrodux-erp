@@ -21,6 +21,13 @@ const categories: Category[] = [
         professional: true,
         enterprise: true,
       },
+      {
+        feature: "AI assistant (pay-as-you-go, bring your own key)",
+        micro: true,
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
       { feature: "Users", micro: "3", starter: "10", professional: "50", enterprise: "Unlimited" },
     ],
   },

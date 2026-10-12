@@ -31,6 +31,7 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Up to 3 users",
       "Every module included",
+      "AI assistant included – pay-as-you-go, bring your own key",
       "Cloud hosting & automatic updates",
       "Standard support",
     ],
@@ -47,6 +48,7 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Up to 10 users",
       "Every module included",
+      "AI assistant included – pay-as-you-go, bring your own key",
       "Cloud hosting & automatic updates",
       "Standard support",
     ],
@@ -63,6 +65,7 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Up to 50 users",
       "Every module included",
+      "AI assistant included – pay-as-you-go, bring your own key",
       "Cloud hosting & automatic updates",
       "Priority support", // OWNER DECISION
       "Multi-company — up to 3 companies", // OWNER DECISION
