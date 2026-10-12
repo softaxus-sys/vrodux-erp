@@ -1,11 +1,13 @@
+import { TRIAL_DAYS } from "@/lib/trial";
+
 export const pricingFaqs = [
   {
     q: "Is there a free trial?",
-    a: "Yes. Vrodux offers a 30-day free trial.",
+    a: `Yes. Vrodux offers a ${TRIAL_DAYS}-day free trial.`,
   },
   {
     q: "Do I need a credit card to start?",
-    a: "No. Users can start the 30-day trial without entering a credit card.",
+    a: `No. Users can start the ${TRIAL_DAYS}-day trial without entering a credit card.`,
   },
   {
     q: "Can I change plans later?",
@@ -13,7 +15,7 @@ export const pricingFaqs = [
   },
   {
     q: "What's the difference between \"Start Free Trial\" and \"Buy Now\"?",
-    a: "Start Free Trial gives you 30 days of full access with no card required and no commitment. Buy Now skips the trial and activates your subscription immediately, billed right away on the plan and cycle you selected.",
+    a: `Start Free Trial gives you ${TRIAL_DAYS} days of full access with no card required and no commitment. Buy Now skips the trial and activates your subscription immediately, billed right away on the plan and cycle you selected.`,
   },
   {
     q: "Is there a per-user fee?",

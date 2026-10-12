@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/lib/utils";
+import { TRIAL_DAYS } from "@/lib/trial";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
 
 const points = [
-  "30-day free trial",
+  `${TRIAL_DAYS}-day free trial`,
   "No credit card required",
   "Full access to the selected plan",
   "Cancel anytime",
@@ -28,7 +29,7 @@ export function PricingTrialBanner() {
           <div>
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-500 mb-2">
               <Sparkles className="w-3.5 h-3.5" />
-              Try Vrodux Free for 30 Days
+              Try Vrodux Free for {TRIAL_DAYS} Days
             </div>
             <p className="text-muted-foreground max-w-xl">
               Explore the complete Vrodux ERP platform with no upfront commitment.

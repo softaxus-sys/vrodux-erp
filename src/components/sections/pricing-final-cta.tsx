@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { trackEvent } from "@/lib/utils";
+import { TRIAL_DAYS } from "@/lib/trial";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
 
@@ -28,7 +29,7 @@ export function PricingFinalCta() {
           </h2>
 
           <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10">
-            Start your 30-day free trial and see how Vrodux can bring your business operations together.
+            Start your {TRIAL_DAYS}-day free trial and see how Vrodux can bring your business operations together.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">

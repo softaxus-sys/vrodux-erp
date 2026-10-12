@@ -1,3 +1,4 @@
+import { TRIAL_DAYS } from "@/lib/trial";
 import { Layers, Wallet, TrendingUp, Sparkles } from "lucide-react";
 
 const values = [
@@ -24,7 +25,7 @@ const values = [
   },
   {
     icon: Sparkles,
-    title: "30-Day Free Trial",
+    title: `${TRIAL_DAYS}-Day Free Trial`,
     description: "Explore Vrodux before committing.",
     color: "text-purple-500",
     bg: "bg-purple-500/10",

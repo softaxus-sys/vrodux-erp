@@ -1,4 +1,5 @@
 import { Building2, Feather, LucideIcon, Rocket, Zap } from "lucide-react";
+import { TRIAL_DAYS } from "@/lib/trial";
 
 export type Billing = "monthly" | "annual";
 
@@ -42,7 +43,7 @@ export const pricingTiers: PricingTier[] = [
       "Standard support",
       "Cloud hosting",
       "Automatic updates",
-      "30-day free trial",
+      `${TRIAL_DAYS}-day free trial`,
     ],
   },
   {
@@ -68,7 +69,7 @@ export const pricingTiers: PricingTier[] = [
       "Standard support",
       "Cloud hosting",
       "Automatic updates",
-      "30-day free trial",
+      `${TRIAL_DAYS}-day free trial`,
     ],
   },
   {
@@ -97,7 +98,7 @@ export const pricingTiers: PricingTier[] = [
       "Priority support",
       "Cloud hosting",
       "Automatic updates",
-      "30-day free trial",
+      `${TRIAL_DAYS}-day free trial`,
     ],
   },
   {
