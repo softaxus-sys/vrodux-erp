@@ -26,7 +26,7 @@ const values = [
   {
     icon: Sparkles,
     title: `${TRIAL_DAYS}-Day Free Trial`,
-    description: "Explore Vrodux before committing.",
+    description: "All modules, unlimited users, no credit card.",
     color: "text-purple-500",
     bg: "bg-purple-500/10",
   },

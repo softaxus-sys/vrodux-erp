@@ -1,34 +1,27 @@
 import { Check, Minus } from "lucide-react";
 
-type Row = { feature: string; micro: boolean; starter: boolean; professional: boolean; enterprise: boolean };
+type Row = {
+  feature: string;
+  micro: boolean | string;
+  starter: boolean | string;
+  professional: boolean | string;
+  enterprise: boolean | string;
+};
 type Category = { name: string; rows: Row[] };
 
 const categories: Category[] = [
   {
     name: "Platform",
     rows: [
-      { feature: "Core ERP", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "Accounting", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "Finance", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "HR", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "Payroll", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "Inventory", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "Sales", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "Purchasing", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "CRM", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "POS", micro: false, starter: false, professional: true, enterprise: true },
-      { feature: "Restaurant / KDS", micro: false, starter: false, professional: true, enterprise: true },
-      { feature: "Hospitality", micro: false, starter: false, professional: true, enterprise: true },
-      { feature: "Construction", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Real Estate", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Healthcare", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Education", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Insurance", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "B2B & Professional Services", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Visa Services", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Manufacturing", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Library", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Import & Export", micro: false, starter: false, professional: false, enterprise: true },
+      {
+        feature:
+          "All modules (ERP, CRM, Sales, Purchasing, Inventory, Finance, HR, POS, Restaurant, Hospitality, Manufacturing, Library, Import & Export and every industry pack)",
+        micro: true,
+        starter: true,
+        professional: true,
+        enterprise: true,
+      },
+      { feature: "Users", micro: "3", starter: "10", professional: "50", enterprise: "Unlimited" },
     ],
   },
   {
@@ -65,7 +58,10 @@ const categories: Category[] = [
   },
 ];
 
-function Cell({ included }: { included: boolean }) {
+function Cell({ included }: { included: boolean | string }) {
+  if (typeof included === "string") {
+    return <span className="font-medium">{included}</span>;
+  }
   return included ? (
     <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500/10 mx-auto">
       <Check className="w-3.5 h-3.5 text-emerald-500" aria-hidden="true" />
@@ -85,7 +81,7 @@ export function PricingComparison() {
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-semibold text-center mb-3">Compare Plans</h2>
         <p className="text-muted-foreground text-center max-w-xl mx-auto mb-10">
-          Every plan is built on the same complete ERP platform — higher tiers unlock more depth, scale and support.
+          Every plan includes every module. You choose a plan by the size of your team.
         </p>
 
         <div className="max-w-6xl mx-auto rounded-2xl border overflow-x-auto">
@@ -126,16 +122,16 @@ export function PricingComparison() {
                     <th scope="row" className="text-left p-4 font-normal">
                       {row.feature}
                     </th>
-                    <td className="p-4">
+                    <td className="p-4 text-center">
                       <Cell included={row.micro} />
                     </td>
-                    <td className="p-4">
+                    <td className="p-4 text-center">
                       <Cell included={row.starter} />
                     </td>
-                    <td className="p-4">
+                    <td className="p-4 text-center">
                       <Cell included={row.professional} />
                     </td>
-                    <td className="p-4">
+                    <td className="p-4 text-center">
                       <Cell included={row.enterprise} />
                     </td>
                   </tr>

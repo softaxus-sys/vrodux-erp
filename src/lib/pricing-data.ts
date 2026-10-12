@@ -1,5 +1,4 @@
 import { Building2, Feather, LucideIcon, Rocket, Zap } from "lucide-react";
-import { TRIAL_DAYS } from "@/lib/trial";
 
 export type Billing = "monthly" | "annual";
 
@@ -27,23 +26,13 @@ export const pricingTiers: PricingTier[] = [
     monthly: 159,
     annual: 129,
     users: "Up to 3 users",
-    description: "For very small teams who want the complete ERP without paying for seats they don't need.",
+    description: "For very small teams of up to 3 people who want the complete ERP without paying for seats they don't need.",
     highlighted: false,
     features: [
-      "Core ERP",
-      "Accounting",
-      "Finance",
-      "HR & Payroll",
-      "Inventory",
-      "Sales",
-      "Purchasing",
-      "Basic CRM",
-      "Basic reporting",
-      "Basic analytics",
+      "Up to 3 users",
+      "Every module included",
+      "Cloud hosting & automatic updates",
       "Standard support",
-      "Cloud hosting",
-      "Automatic updates",
-      `${TRIAL_DAYS}-day free trial`,
     ],
   },
   {
@@ -56,20 +45,10 @@ export const pricingTiers: PricingTier[] = [
     description: "For startups and small businesses ready to run their core operations in one place.",
     highlighted: false,
     features: [
-      "Core ERP",
-      "Accounting",
-      "Finance",
-      "HR & Payroll",
-      "Inventory",
-      "Sales",
-      "Purchasing",
-      "Basic CRM",
-      "Basic reporting",
-      "Basic analytics",
+      "Up to 10 users",
+      "Every module included",
+      "Cloud hosting & automatic updates",
       "Standard support",
-      "Cloud hosting",
-      "Automatic updates",
-      `${TRIAL_DAYS}-day free trial`,
     ],
   },
   {
@@ -82,23 +61,16 @@ export const pricingTiers: PricingTier[] = [
     description: "Everything growing businesses need to manage operations, customers, sales and financials in one platform.",
     highlighted: true,
     features: [
-      "Everything in Starter",
-      "Advanced CRM",
-      "Advanced sales management",
-      "POS",
-      "Restaurant POS / KDS",
-      "Hospitality management",
-      "Advanced inventory",
-      "Multi-company — up to 3 companies",
-      "Multi-currency",
-      "Advanced analytics & BI",
-      "API access",
-      "Custom workflows",
-      "Advanced reporting",
-      "Priority support",
-      "Cloud hosting",
-      "Automatic updates",
-      `${TRIAL_DAYS}-day free trial`,
+      "Up to 50 users",
+      "Every module included",
+      "Cloud hosting & automatic updates",
+      "Priority support", // OWNER DECISION
+      "Multi-company — up to 3 companies", // OWNER DECISION
+      "Multi-currency", // OWNER DECISION
+      "Advanced analytics & BI", // OWNER DECISION
+      "API access", // OWNER DECISION
+      "Custom workflows", // OWNER DECISION
+      "Advanced reporting", // OWNER DECISION (not on the owner's list; kept as-is)
     ],
   },
   {

@@ -29,7 +29,7 @@ export function PricingFinalCta() {
           </h2>
 
           <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10">
-            Start your {TRIAL_DAYS}-day free trial and see how Vrodux can bring your business operations together.
+            Choose the plan that fits your team and bring your business operations together. Every module is included.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
@@ -39,12 +39,10 @@ export function PricingFinalCta() {
               asChild
             >
               <a
-                href={`${APP_URL}/trial?intent=trial&utm_source=pricing_final_cta`}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => trackEvent("start_free_trial_click", { location: "final_cta" })}
+                href="#plans"
+                onClick={() => trackEvent("buy_now_click", { location: "final_cta" })}
               >
-                Start Free Trial
+                Buy Now
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -61,7 +59,15 @@ export function PricingFinalCta() {
             </Button>
           </div>
 
-          <p className="text-sm text-white/70">No credit card required.</p>
+          <a
+            href={`${APP_URL}/trial?intent=trial&utm_source=pricing_final_cta`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent("start_free_trial_click", { location: "final_cta" })}
+            className="text-sm text-white/70 hover:text-white hover:underline"
+          >
+            or start a {TRIAL_DAYS}-day free trial – no credit card
+          </a>
         </motion.div>
       </div>
     </section>

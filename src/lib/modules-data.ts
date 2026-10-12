@@ -313,7 +313,7 @@ export const coreModules: ModuleTile[] = [
       },
       {
         title: "Plan- & Role-Scoped Visibility",
-        description: "What appears depends on the tenant's plan (a report only shows if that module is included) and the user's own role/team permissions — e.g. a team lead sees their team's figures, not the whole company's.",
+        description: "What appears depends on the tenant's plan (a report only shows if that module is enabled in the workspace) and the user's own role/team permissions — e.g. a team lead sees their team's figures, not the whole company's.",
       },
       {
         title: "CRM's 8-Report Suite",

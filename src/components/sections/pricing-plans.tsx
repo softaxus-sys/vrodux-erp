@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, ArrowRight, Zap } from "lucide-react";
+import { TRIAL_DAYS } from "@/lib/trial";
 import { cn, trackEvent } from "@/lib/utils";
 import { type Billing, pricingTiers as tiers, savingsPercent } from "@/lib/pricing-data";
 
@@ -124,7 +125,7 @@ export function PricingPlans() {
                   </p>
                 )}
 
-                <p className="text-sm font-medium text-foreground/80 mb-1">{tier.users}</p>
+                {isEnterprise && <p className="text-sm font-medium text-foreground/80 mb-1">{tier.users}</p>}
                 <p className="text-sm text-muted-foreground mb-6">{tier.description}</p>
 
                 <ul className="flex-1 space-y-2 mb-6">
@@ -150,30 +151,27 @@ export function PricingPlans() {
                   <>
                     <Button
                       asChild
-                      variant={tier.highlighted ? "default" : "outline"}
-                      className={cn("w-full", tier.highlighted && "bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-sm")}
+                      className="w-full bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-sm"
                     >
                       <a
-                        href={trialHref}
+                        href={buyHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() => trackEvent("start_free_trial_click", { location: "plan_card", plan: tier.id, billing })}
+                        onClick={() => trackEvent("buy_now_click", { location: "plan_card", plan: tier.id, billing })}
                       >
-                        Start Free Trial
+                        Buy Now
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </Button>
 
-                    <p className="text-xs text-center text-muted-foreground mt-2">No credit card required</p>
-
                     <a
-                      href={buyHref}
+                      href={trialHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={() => trackEvent("buy_now_click", { location: "plan_card", plan: tier.id, billing })}
-                      className="block text-center text-xs font-medium text-brand-500 hover:underline mt-3"
+                      onClick={() => trackEvent("start_free_trial_click", { location: "plan_card", plan: tier.id, billing })}
+                      className="block text-center text-xs text-muted-foreground hover:text-foreground hover:underline mt-3"
                     >
-                      Already decided? Buy Now →
+                      or start a {TRIAL_DAYS}-day free trial – no credit card
                     </a>
                   </>
                 )}

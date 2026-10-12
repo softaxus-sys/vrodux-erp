@@ -26,7 +26,7 @@ const faqCategories = [
   {
     category: "Pricing & Plans",
     faqs: [
-      { q: "What are the pricing tiers?", a: "Vrodux ERP offers three tiers: Starter ($299/month), Professional ($799/month), and Enterprise (custom pricing). All plans include access to core modules with higher tiers adding more advanced modules and features." },
+      { q: "What are the pricing tiers?", a: "Vrodux ERP offers three tiers: Starter ($299/month), Professional ($799/month), and Enterprise (custom pricing). Every plan includes every module; the tiers differ by the number of users they cover." },
       { q: "Is there a free trial?", a: "We offer a personalized demo session rather than a generic free trial. This gives you a hands-on experience with your specific business scenarios configured in Vrodux ERP." },
       { q: "Are there any hidden fees?", a: "No hidden fees. Our pricing is transparent and all-inclusive. You pay for your plan and get access to all included modules. On-premise deployment has separate one-time licensing costs." },
       { q: "Can I change plans?", a: "Yes. You can upgrade or downgrade your plan at any time. Upgrades take effect immediately; downgrades apply at the next billing cycle." },

@@ -15,7 +15,7 @@ import { TRIAL_DAYS } from "@/lib/trial";
 export const metadata: Metadata = {
   title: "Vrodux ERP Pricing | Simple, Transparent ERP Pricing",
   description:
-    `Explore Vrodux ERP pricing with simple plans for growing businesses. Start your complete ERP with a ${TRIAL_DAYS}-day free trial and no credit card required.`,
+    `Explore Vrodux ERP pricing with simple plans for growing businesses. Every plan includes every module, priced by team size. Buy now, or try free for ${TRIAL_DAYS} days with no credit card.`,
   alternates: { canonical: "https://vrodux.com/pricing" },
 };
 
@@ -42,7 +42,7 @@ export default function PricingPage() {
         badge="Complete ERP. One Price."
         title="Simple, Transparent "
         highlightedWord="ERP Pricing"
-        description={`Everything your business needs to manage finance, people, customers and operations — in one complete ERP platform. No per-module fees. No complicated licensing. Choose the plan that fits your business and start with a ${TRIAL_DAYS}-day free trial.`}
+        description={`Everything your business needs to manage finance, people, customers and operations — in one complete ERP platform. No per-module fees. No complicated licensing. Every plan includes every module. You choose a plan by the size of your team.`}
       >
         <PricingHeroCtas />
       </PageHero>

@@ -1215,7 +1215,7 @@ A set of security controls apply across the workspace:
 
 ## Billing & your plan
 
-Plans differ by how many users they include and which modules come with them. Before committing to a paid plan, your trial period is shown as a countdown, so you always know how much time is left. Changing your plan, viewing past invoices, and updating your payment method are all handled yourself, right from this section — no need to contact anyone.
+Every plan includes every module; plans differ only by how many users they include. Before committing to a paid plan, your trial period is shown as a countdown, so you always know how much time is left. Changing your plan, viewing past invoices, and updating your payment method are all handled yourself, right from this section — no need to contact anyone.
 
 ## Where to go deeper
 
