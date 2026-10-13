@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { blogCovers } from "@/lib/blog-covers";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
@@ -287,6 +289,19 @@ export default async function BlogPostPage({ params }: Props) {
             </span>
           </div>
         </div>
+
+        {blogCovers[slug] && (
+          <div className="relative aspect-video rounded-2xl overflow-hidden mb-8 shadow-premium">
+            <Image
+              src={blogCovers[slug].src}
+              alt={blogCovers[slug].alt}
+              fill
+              priority
+              sizes="(min-width: 768px) 768px, 100vw"
+              className="object-cover"
+            />
+          </div>
+        )}
 
         <div className="prose prose-gray dark:prose-invert max-w-none">
           {post.content.split("\n").map((line, i) => {

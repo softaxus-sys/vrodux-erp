@@ -4,6 +4,7 @@ import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Code2, Target, Eye, ShieldCheck, Compass, HeartHandshake } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -37,6 +38,21 @@ export default function AboutPage() {
         highlightedWord="for the Modern World"
         description="We're Softaxis Technologies LLC — a Dubai-registered software engineering firm founded in 2019, delivering high-quality digital products for clients across the globe."
       />
+
+      <section className="pb-12">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-premium">
+            <Image
+              src="/images/pages/about-team.jpg"
+              alt="The Softaxis team collaborating around a table in a bright Dubai office"
+              fill
+              priority
+              sizes="(min-width: 1024px) 1024px, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Stats */}
       <section className="py-16 bg-muted/20 border-y">

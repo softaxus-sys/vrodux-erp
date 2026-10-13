@@ -4,6 +4,7 @@ import { FinalCTA } from "@/components/sections/final-cta";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Home, HardHat,
   Stethoscope, GraduationCap, ShieldCheck, Building2, CheckCircle2, Sparkles, Stamp,
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 const industries = [
   {
     id: "retail",
+    image: { src: "/images/industries/retail.jpg", alt: "Retail checkout counter running Vrodux POS with a barcode scanner" },
     icon: ShoppingBag,
     name: "Retail",
     status: "live" as const,
@@ -35,6 +37,7 @@ const industries = [
   },
   {
     id: "restaurants",
+    image: { src: "/images/industries/restaurant.jpg", alt: "Chefs plating dishes in a busy kitchen with a Vrodux restaurant POS and kitchen display" },
     icon: UtensilsCrossed,
     name: "Restaurants & F&B",
     status: "live" as const,
@@ -51,6 +54,7 @@ const industries = [
   },
   {
     id: "hospitality",
+    image: { src: "/images/industries/hospitality.jpg", alt: "Hotel front desk in a marble lobby, a receptionist checking in a guest on a tablet" },
     icon: Hotel,
     name: "Hospitality & Hotels",
     status: "beta" as const,
@@ -67,6 +71,7 @@ const industries = [
   },
   {
     id: "realestate",
+    image: { src: "/images/industries/real-estate.jpg", alt: "Real estate office with a property model and Vrodux real estate management on a tablet" },
     icon: Home,
     name: "Real Estate",
     status: "live" as const,
@@ -83,6 +88,7 @@ const industries = [
   },
   {
     id: "construction",
+    image: { src: "/images/industries/construction.jpg", alt: "Site manager in a hard hat reviewing plans on a tablet at a high-rise construction site in Dubai" },
     icon: HardHat,
     name: "Construction",
     status: "live" as const,
@@ -99,6 +105,7 @@ const industries = [
   },
   {
     id: "healthcare",
+    image: { src: "/images/industries/healthcare.jpg", alt: "Doctor reviewing patient records on a tablet with a patient in a modern clinic" },
     icon: Stethoscope,
     name: "Healthcare",
     status: "early-access" as const,
@@ -111,6 +118,7 @@ const industries = [
   },
   {
     id: "education",
+    image: { src: "/images/industries/education.jpg", alt: "School administrators reviewing student records on a laptop and tablet" },
     icon: GraduationCap,
     name: "Education",
     status: "early-access" as const,
@@ -123,6 +131,7 @@ const industries = [
   },
   {
     id: "insurance",
+    image: { src: "/images/industries/insurance.jpg", alt: "Insurance advisor walking a young couple through policy options on a tablet" },
     icon: ShieldCheck,
     name: "Insurance",
     status: "early-access" as const,
@@ -135,6 +144,7 @@ const industries = [
   },
   {
     id: "b2bservices",
+    image: { src: "/images/industries/b2b-services.jpg", alt: "Consultants presenting a project plan on a wall screen to a client" },
     icon: Building2,
     name: "B2B & Professional Services",
     status: "live" as const,
@@ -151,6 +161,7 @@ const industries = [
   },
   {
     id: "visa-services",
+    image: { src: "/images/industries/visa-services.jpg", alt: "Officer helping a customer with visa documents at a services counter" },
     icon: Stamp,
     name: "Visa Services",
     status: "live" as const,
@@ -167,6 +178,7 @@ const industries = [
   },
   {
     id: "manufacturing",
+    image: { src: "/images/industries/manufacturing.jpg", alt: "Production supervisor checking a tablet on a modern factory floor" },
     icon: Factory,
     name: "Manufacturing",
     status: "live" as const,
@@ -178,6 +190,7 @@ const industries = [
   },
   {
     id: "library",
+    image: { src: "/images/industries/library.jpg", alt: "Librarian scanning a book at the circulation desk of a modern library" },
     icon: Library,
     name: "Library",
     status: "live" as const,
@@ -189,6 +202,7 @@ const industries = [
   },
   {
     id: "import-export",
+    image: { src: "/images/industries/import-export.jpg", alt: "Logistics coordinator at a port office overlooking container cranes" },
     icon: Ship,
     name: "Import & Export",
     status: "live" as const,
@@ -272,7 +286,19 @@ export default function IndustriesPage() {
 
                 {/* Stats / roadmap card */}
                 <div className={i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${ind.color} text-white`}>
+                  <div className="rounded-2xl overflow-hidden shadow-premium">
+                  {ind.image && (
+                    <div className="relative aspect-[5/4]">
+                      <Image
+                        src={ind.image.src}
+                        alt={ind.image.alt}
+                        fill
+                        sizes="(min-width: 1024px) 560px, 100vw"
+                        className="object-cover object-top"
+                      />
+                    </div>
+                  )}
+                  <div className={`p-8 bg-gradient-to-br ${ind.color} text-white`}>
                     {ind.stats ? (
                       <>
                         <h3 className="text-lg font-semibold mb-6 opacity-90">What Our {ind.name} Clients Achieve</h3>
@@ -329,6 +355,7 @@ export default function IndustriesPage() {
                         </div>
                       </>
                     )}
+                  </div>
                   </div>
                 </div>
               </div>

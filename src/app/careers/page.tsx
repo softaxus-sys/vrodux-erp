@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Button } from "@/components/ui/button";
@@ -42,6 +43,21 @@ export default function CareersPage() {
         highlightedWord="Enterprise ERP"
         description="Join 50+ talented people at SoftAxis Technologies working on Vrodux ERP. We're growing fast and looking for exceptional people to grow with us."
       />
+
+      <section className="pb-12">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden shadow-premium">
+            <Image
+              src="/images/pages/careers-culture.jpg"
+              alt="Colleagues brainstorming together in a relaxed office lounge"
+              fill
+              priority
+              sizes="(min-width: 1024px) 1024px, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Why join us */}
       <section className="py-16 bg-muted/20">

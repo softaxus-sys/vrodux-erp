@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Home, HardHat, Stethoscope, GraduationCap, ShieldCheck, Building2, Stamp, Factory, Library, Ship } from "lucide-react";
 
@@ -21,6 +22,27 @@ const industries = [
   { name: "Import & Export", icon: Ship, href: "/industries#import-export", color: "from-blue-500 to-cyan-600" },
 ];
 
+const featured = [
+  {
+    name: "Retail",
+    href: "/industries#retail",
+    src: "/images/industries/retail.jpg",
+    alt: "Retail checkout counter running Vrodux POS",
+  },
+  {
+    name: "Restaurants",
+    href: "/industries#restaurants",
+    src: "/images/industries/restaurant.jpg",
+    alt: "Restaurant kitchen using Vrodux POS and kitchen display",
+  },
+  {
+    name: "Real Estate",
+    href: "/industries#realestate",
+    src: "/images/industries/real-estate.jpg",
+    alt: "Real estate office managing properties with Vrodux",
+  },
+];
+
 export function IndustriesPreview() {
   return (
     <section className="section-padding">
@@ -38,6 +60,30 @@ export function IndustriesPreview() {
             not just generic features with an industry label.
           </p>
         </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-8">
+          {featured.map((f) => (
+            <Link
+              key={f.name}
+              href={f.href}
+              className="group relative block aspect-square rounded-2xl overflow-hidden border shadow-sm hover:shadow-glow-sm transition-shadow"
+            >
+              <Image
+                src={f.src}
+                alt={f.alt}
+                fill
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 pt-16">
+                <span className="text-white font-semibold flex items-center gap-1.5">
+                  {f.name}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </Link>
+          ))}
+        </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
           {industries.map((ind, i) => (

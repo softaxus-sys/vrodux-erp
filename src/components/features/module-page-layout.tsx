@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CheckCircle2, Sparkles, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -14,6 +15,15 @@ function badgeFor(mod: ModuleTile): string {
   return isCoreModule(mod.id) ? "Core Module" : "Industry Module";
 }
 
+const moduleImages: Record<string, { src: string; alt: string }> = {
+  pos: { src: "/images/industries/retail.jpg", alt: "Retail checkout counter running Vrodux POS with a barcode scanner" },
+  restaurant: { src: "/images/industries/restaurant.jpg", alt: "Chefs plating dishes with a Vrodux restaurant POS and kitchen display" },
+  "real-estate": { src: "/images/industries/real-estate.jpg", alt: "Real estate office with a property model and Vrodux on a tablet" },
+  finance: { src: "/images/industries/finance.jpg", alt: "Executive desk with Vrodux finance and accounting on a tablet" },
+  hr: { src: "/images/industries/hr.jpg", alt: "Team working in a modern office with Vrodux HR and payroll on screen" },
+  crm: { src: "/images/industries/crm.jpg", alt: "Sales team meeting with Vrodux CRM and leads on screen" },
+};
+
 export function ModulePageLayout({ module: mod }: { module: ModuleTile }) {
   const related = mod.related
     .map((slug) => getModuleBySlug(slug))
@@ -24,6 +34,23 @@ export function ModulePageLayout({ module: mod }: { module: ModuleTile }) {
   return (
     <>
       <PageHero badge={badgeFor(mod)} title={mod.name} description={mod.description} />
+
+      {moduleImages[mod.id] && (
+        <section className="pt-4">
+          <div className="container mx-auto px-4 max-w-2xl">
+            <div className="relative aspect-square rounded-2xl overflow-hidden border shadow-premium">
+              <Image
+                src={moduleImages[mod.id].src}
+                alt={moduleImages[mod.id].alt}
+                fill
+                sizes="(min-width: 672px) 672px, 100vw"
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">

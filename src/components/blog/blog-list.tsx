@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { blogCovers } from "@/lib/blog-covers";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -145,8 +147,16 @@ export function BlogList() {
         {featured && (
           <Link href={`/blog/${featured.slug}`} className="group block mb-10">
             <div className="grid md:grid-cols-2 gap-8 p-8 rounded-2xl border bg-card hover:shadow-md transition-shadow">
-              <div className="h-56 rounded-xl bg-gradient-to-br from-brand-500/20 to-brand-600/30 flex items-center justify-center">
-                <span className="text-6xl">📖</span>
+              <div className="relative h-56 rounded-xl overflow-hidden bg-gradient-to-br from-brand-500/20 to-brand-600/30">
+                {blogCovers[featured.slug] && (
+                  <Image
+                    src={blogCovers[featured.slug].src}
+                    alt={blogCovers[featured.slug].alt}
+                    fill
+                    sizes="(min-width: 768px) 560px, 100vw"
+                    className="object-cover"
+                  />
+                )}
               </div>
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-2 mb-3">
@@ -172,8 +182,18 @@ export function BlogList() {
             {rest.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                 <article className="h-full flex flex-col p-6 rounded-2xl border bg-card hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                  <div className="h-36 rounded-xl bg-gradient-to-br from-muted to-muted/50 mb-4 flex items-center justify-center text-3xl">
-                    {categoryEmoji(post.category)}
+                  <div className="relative h-40 rounded-xl overflow-hidden bg-gradient-to-br from-muted to-muted/50 mb-4 flex items-center justify-center text-3xl">
+                    {blogCovers[post.slug] ? (
+                      <Image
+                        src={blogCovers[post.slug].src}
+                        alt={blogCovers[post.slug].alt}
+                        fill
+                        sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                    ) : (
+                      categoryEmoji(post.category)
+                    )}
                   </div>
                   <Badge variant="outline" className="w-fit mb-3 text-xs">{post.category}</Badge>
                   <h3 className="font-semibold mb-2 group-hover:text-brand-500 transition-colors leading-snug">
