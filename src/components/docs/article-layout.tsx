@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { MarkdownLite } from "@/components/docs/markdown-lite";
 import { WatchDemo } from "@/components/demos/watch-demo";
 import { demoSlugForDocsCategory } from "@/lib/demos";
+import { getDocsShots } from "@/lib/docs-screenshots";
 import type { DocsArticle, DocsCategory } from "@/components/docs/docs-data";
 
 interface ArticleLayoutProps {
@@ -14,6 +15,8 @@ interface ArticleLayoutProps {
 }
 
 export async function ArticleLayout({ article, category, nextArticle }: ArticleLayoutProps) {
+  const articlePath = `/docs/${category.slug}/${article.slug}`;
+  const shots = await getDocsShots(articlePath);
   const demoSlug = demoSlugForDocsCategory(category.slug);
 
   return (
@@ -48,7 +51,7 @@ export async function ArticleLayout({ article, category, nextArticle }: ArticleL
       )}
 
       <div className="max-w-none">
-        <MarkdownLite content={article.body} />
+        <MarkdownLite content={article.body} shots={shots} articlePath={articlePath} />
       </div>
 
       {nextArticle && (

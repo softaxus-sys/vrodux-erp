@@ -1,6 +1,8 @@
 import { Fragment, type ReactNode } from "react";
 import Link from "next/link";
 import { ScreenshotPlaceholder } from "@/components/docs/screenshot-placeholder";
+import { ScreenshotFigure } from "@/components/docs/screenshot-figure";
+import type { DocsShot } from "@/lib/docs-screenshots";
 
 const SCREENSHOT_PATTERN = /^\[screenshot(?::\s*(.*))?\]$/i;
 const INLINE_LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/g;
@@ -41,7 +43,17 @@ function renderInline(text: string): ReactNode {
  * a line of exactly `[screenshot: label]` renders the screenshot placeholder,
  * and `[label](href)` inline in a paragraph or list item renders a link.
  */
-export function MarkdownLite({ content }: { content: string }) {
+export function MarkdownLite({
+  content,
+  shots,
+  articlePath,
+}: {
+  content: string;
+  /** Real screenshots keyed by 1-based placeholder index; missing = keep placeholder. */
+  shots?: Map<number, DocsShot>;
+  articlePath?: string;
+}) {
+  let shotIndex = 0;
   const lines = content.trim().split("\n");
   const blocks: React.ReactNode[] = [];
   let listBuffer: { type: "ul" | "ol"; items: string[] } | null = null;
@@ -71,7 +83,18 @@ export function MarkdownLite({ content }: { content: string }) {
     const screenshotMatch = line.match(SCREENSHOT_PATTERN);
     if (screenshotMatch) {
       flushList(`${key}-list`);
-      blocks.push(<ScreenshotPlaceholder key={key} label={screenshotMatch[1]} />);
+      const label = screenshotMatch[1];
+      const shot = shots?.get(++shotIndex);
+      if (shot) {
+        if (shot.caption && label && shot.caption.trim().toLowerCase() !== label.trim().toLowerCase()) {
+          console.warn(
+            `[docs-screenshots] caption mismatch at ${articlePath} #${shotIndex}: page "${label}" vs manifest "${shot.caption}"`,
+          );
+        }
+        blocks.push(<ScreenshotFigure key={key} shot={shot} label={label} />);
+      } else {
+        blocks.push(<ScreenshotPlaceholder key={key} label={label} />);
+      }
       return;
     }
 
