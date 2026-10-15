@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/security`, priority: 0.6, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/privacy`, priority: 0.5, changeFrequency: "yearly" as const },
     { url: `${baseUrl}/terms`, priority: 0.5, changeFrequency: "yearly" as const },
+    { url: `${baseUrl}/demos`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/docs`, priority: 0.8, changeFrequency: "weekly" as const },
   ];
 

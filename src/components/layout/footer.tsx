@@ -40,6 +40,7 @@ const solutions = [
 ];
 
 const resources = [
+  { label: "Demos", href: "/demos" },
   { label: "Blog", href: "/blog" },
   { label: "Docs", href: "/docs" },
   { label: "FAQ", href: "/faq" },

@@ -68,6 +68,7 @@ const navLinks = [
   { label: "Industries", href: "/industries", hasMega: "industries" as const },
   { label: "AI Workforce", href: "/ai-workforce" },
   { label: "Pricing", href: "/pricing" },
+  { label: "Demos", href: "/demos" },
   { label: "Blog", href: "/blog" },
   { label: "Docs", href: "/docs" },
   { label: "About", href: "/about" },

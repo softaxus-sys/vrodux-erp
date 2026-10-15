@@ -3,6 +3,8 @@ import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MarkdownLite } from "@/components/docs/markdown-lite";
+import { WatchDemo } from "@/components/demos/watch-demo";
+import { demoSlugForDocsCategory } from "@/lib/demos";
 import type { DocsArticle, DocsCategory } from "@/components/docs/docs-data";
 
 interface ArticleLayoutProps {
@@ -11,7 +13,9 @@ interface ArticleLayoutProps {
   nextArticle?: DocsArticle;
 }
 
-export function ArticleLayout({ article, category, nextArticle }: ArticleLayoutProps) {
+export async function ArticleLayout({ article, category, nextArticle }: ArticleLayoutProps) {
+  const demoSlug = demoSlugForDocsCategory(category.slug);
+
   return (
     <div className="max-w-3xl">
       <Button variant="ghost" size="sm" asChild className="-ml-2 mb-6">
@@ -36,6 +40,12 @@ export function ArticleLayout({ article, category, nextArticle }: ArticleLayoutP
           {article.readTime} min read
         </span>
       </div>
+
+      {demoSlug && (
+        <div className="mb-8 -mx-4">
+          <WatchDemo slug={demoSlug} />
+        </div>
+      )}
 
       <div className="max-w-none">
         <MarkdownLite content={article.body} />

@@ -3,6 +3,8 @@ import Image from "next/image";
 import { CheckCircle2, Sparkles, ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
+import { DemoCta } from "@/components/demos/demo-cta";
+import { WatchDemo } from "@/components/demos/watch-demo";
 import { coreModules, getModuleBySlug, type ModuleTile } from "@/lib/modules-data";
 
 function isCoreModule(id: string): boolean {
@@ -24,7 +26,7 @@ const moduleImages: Record<string, { src: string; alt: string }> = {
   crm: { src: "/images/industries/crm.jpg", alt: "Sales team meeting with Vrodux CRM and leads on screen" },
 };
 
-export function ModulePageLayout({ module: mod }: { module: ModuleTile }) {
+export async function ModulePageLayout({ module: mod }: { module: ModuleTile }) {
   const related = mod.related
     .map((slug) => getModuleBySlug(slug))
     .filter((m): m is ModuleTile => Boolean(m));
@@ -33,7 +35,9 @@ export function ModulePageLayout({ module: mod }: { module: ModuleTile }) {
 
   return (
     <>
-      <PageHero badge={badgeFor(mod)} title={mod.name} description={mod.description} />
+      <PageHero badge={badgeFor(mod)} title={mod.name} description={mod.description}>
+        <DemoCta slug={mod.id} />
+      </PageHero>
 
       {moduleImages[mod.id] && (
         <section className="pt-4">
@@ -51,6 +55,8 @@ export function ModulePageLayout({ module: mod }: { module: ModuleTile }) {
           </div>
         </section>
       )}
+
+      <WatchDemo slug={mod.id} className="pt-12" />
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">

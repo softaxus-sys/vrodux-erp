@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WatchDemo } from "@/components/demos/watch-demo";
+import { demoSlugForDocsCategory } from "@/lib/demos";
 import { ArticleCard } from "@/components/docs/article-card";
 import { docsCategories, getArticlesByCategory, getCategory } from "@/components/docs/docs-data";
 
@@ -50,6 +52,12 @@ export default async function DocsCategoryPage({ params }: Props) {
           <p className="text-muted-foreground max-w-2xl">{category.description}</p>
         </div>
       </div>
+
+      {demoSlugForDocsCategory(category.slug) && (
+        <div className="mb-10 -mx-4">
+          <WatchDemo slug={demoSlugForDocsCategory(category.slug)!} />
+        </div>
+      )}
 
       {articles.length > 0 ? (
         <div className="grid sm:grid-cols-2 gap-6">

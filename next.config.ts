@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https:",
+              "media-src 'self' https://sin1.contabostorage.com",
               "connect-src 'self' https://www.google-analytics.com https://api.resend.com https://calendly.com https://challenges.cloudflare.com https://www.facebook.com",
               "frame-src https://calendly.com https://challenges.cloudflare.com",
             ].join("; "),
