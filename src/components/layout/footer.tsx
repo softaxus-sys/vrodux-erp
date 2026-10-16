@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, MapPin, MessageCircle, Linkedin, Twitter, Youtube, Facebook, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Youtube, Facebook, ExternalLink } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
@@ -51,14 +51,23 @@ const resources = [
   { label: "Security & Compliance", href: "/security" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
+  { label: "Delete Account", href: "/delete-account" },
   { label: "Contact", href: "/contact" },
 ];
 
+/** X (formerly Twitter) logo; lucide has no brand mark for it. */
+function XLogo({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
 const social = [
-  { icon: Linkedin, href: "https://linkedin.com/company/vrodux", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/vroduxerp", label: "Twitter" },
-  { icon: Youtube, href: "https://youtube.com/@vroduxerp", label: "YouTube" },
-  { icon: Facebook, href: "https://facebook.com/vroduxerp", label: "Facebook" },
+  { icon: XLogo, href: "https://x.com/AxusSoft", label: "X" },
+  { icon: Youtube, href: "https://www.youtube.com/channel/UCLjmPTXsvhowyfAMKSmTSCQ", label: "YouTube" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61593996783081", label: "Facebook" },
 ];
 
 export function Footer() {
@@ -206,6 +215,7 @@ export function Footer() {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
             <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+            <Link href="/delete-account" className="hover:text-foreground transition-colors">Delete Account</Link>
             <Link href="/security" className="hover:text-foreground transition-colors">Security</Link>
             <Link href="/sitemap.xml" className="hover:text-foreground transition-colors">Sitemap</Link>
           </div>

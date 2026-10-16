@@ -81,8 +81,9 @@ export function generateJsonLd(type: "organization" | "product" | "faq", data?: 
         availableLanguage: ["English", "Arabic"],
       },
       sameAs: [
-        "https://linkedin.com/company/vrodux",
-        "https://twitter.com/vroduxerp",
+        "https://x.com/AxusSoft",
+        "https://www.facebook.com/profile.php?id=61593996783081",
+        "https://www.youtube.com/channel/UCLjmPTXsvhowyfAMKSmTSCQ",
       ],
     };
   }
