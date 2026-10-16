@@ -14,6 +14,7 @@ import { PricingPreview } from "@/components/sections/pricing-preview";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { generateJsonLd } from "@/lib/seo";
+import { getHomeShots } from "@/lib/home-shots";
 import Script from "next/script";
 
 export const metadata: Metadata = {
@@ -23,8 +24,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://vrodux.com" },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
   const jsonLd = generateJsonLd("organization");
+  const shots = await getHomeShots();
 
   return (
     <>
@@ -33,11 +35,11 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <HeroSection />
+      <HeroSection dashboardShot={shots.hero} />
       <ClientsSection />
       <StatsSection />
       <ModulesOverview />
-      <ProductShowcase />
+      <ProductShowcase shots={shots} />
       <HowItWorks />
       <IndustriesPreview />
       <WhyVrodux />

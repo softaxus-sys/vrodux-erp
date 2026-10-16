@@ -162,6 +162,23 @@
 }
 
 /* Marquee */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Scrolls until hovered or keyboard-focused inside, then holds position. */
+.marquee-track {
+  animation: marquee-scroll 50s linear infinite;
+}
+.marquee-container:hover .marquee-track,
+.marquee-container:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
 .marquee-container {
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);

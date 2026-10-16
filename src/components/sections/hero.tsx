@@ -2,13 +2,14 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Play, CheckCircle2, Bell, Settings } from "lucide-react";
 import { totalModuleCount } from "@/lib/modules-data";
+import { ThemedShotImage } from "@/components/sections/themed-shot";
+import type { ThemedShot } from "@/lib/home-shots";
 
-function DashboardMockup() {
+function DashboardMockup({ shot }: { shot?: ThemedShot }) {
   return (
     <div className="relative w-full max-w-2xl mx-auto">
       {/* Glow effects */}
@@ -37,24 +38,13 @@ function DashboardMockup() {
         </div>
 
         {/* Live product screenshot */}
-        <div className="relative aspect-[1910/913]">
-          <Image
-            src="/Verdux-erp-app-ss/dashboard-light.png"
-            alt="Vrodux ERP dashboard showing revenue, invoices, orders and customer KPIs"
-            fill
-            sizes="(min-width: 1024px) 640px, 100vw"
-            className="object-cover object-top dark:hidden"
-            priority
-          />
-          <Image
-            src="/Verdux-erp-app-ss/dashboardDark.png"
-            alt="Vrodux ERP dashboard showing revenue, invoices, orders and customer KPIs"
-            fill
-            sizes="(min-width: 1024px) 640px, 100vw"
-            className="hidden object-cover object-top dark:block"
-            priority
-          />
-        </div>
+        <ThemedShotImage
+          shot={shot}
+          alt="Vrodux ERP dashboard showing revenue, invoices, orders and customer KPIs"
+          sizes="(min-width: 1024px) 640px, 100vw"
+          priority
+          zoomable
+        />
       </div>
 
       {/* Floating notification card */}
@@ -101,7 +91,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export function HeroSection() {
+export function HeroSection({ dashboardShot }: { dashboardShot?: ThemedShot }) {
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
       {/* Background */}
@@ -193,7 +183,7 @@ export function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           >
-            <DashboardMockup />
+            <DashboardMockup shot={dashboardShot} />
           </motion.div>
         </div>
       </div>

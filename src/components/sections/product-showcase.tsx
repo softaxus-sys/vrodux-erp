@@ -1,87 +1,81 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Sparkles, DollarSign, Users, Zap, BarChart3, CreditCard, UtensilsCrossed, KeyRound } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ThemedShotImage } from "@/components/sections/themed-shot";
+import type { HomeShots, HomeSlot } from "@/lib/home-shots";
 
-const tabs = [
+const tabs: {
+  id: HomeSlot;
+  label: string;
+  icon: typeof DollarSign;
+  description: string;
+}[] = [
   {
     id: "finance",
     label: "Finance & Accounting",
     icon: DollarSign,
     description: "Track revenue, expenses, ledgers and bank reconciliation in real time, with a complete financial picture at a glance.",
-    light: "/Verdux-erp-app-ss/finance-module-light.png",
-    dark: "/Verdux-erp-app-ss/finance-module-dark.png",
   },
   {
     id: "hr",
     label: "HR & Payroll",
     icon: Users,
     description: "Manage employees, payroll runs, leave and attendance from a single, streamlined workspace.",
-    light: "/Verdux-erp-app-ss/hr-and-payrole-light.png",
-    dark: "/Verdux-erp-app-ss/hr-and-payrole-dark.png",
   },
   {
     id: "crm",
     label: "CRM & Sales",
     icon: Zap,
     description: "Track leads, opportunities and customer communication through a clear, actionable pipeline view.",
-    light: "/Verdux-erp-app-ss/crm-light.png",
-    dark: "/Verdux-erp-app-ss/crm-dark.png",
   },
   {
     id: "reports",
     label: "Reports & Analytics",
     icon: BarChart3,
     description: "Module-wise reports and dashboards give every team the numbers they need, the moment they need them.",
-    light: "/Verdux-erp-app-ss/module-wise-reports-light.png",
-    dark: "/Verdux-erp-app-ss/module-wise-reports-dark.png",
   },
   {
     id: "retail",
     label: "Retail POS",
     icon: CreditCard,
     description: "A fast, reliable point-of-sale built for high-volume retail, with barcode scanning and multi-store sync.",
-    light: "/Verdux-erp-app-ss/retail-system-rubust.png",
   },
   {
     id: "restaurant",
     label: "Restaurant POS & KDS",
     icon: UtensilsCrossed,
     description: "From table orders to the kitchen display, run your restaurant floor and kitchen in perfect sync.",
-    light: "/Verdux-erp-app-ss/resturant-point-of-sale.png",
   },
   {
     id: "login",
     label: "Secure Login",
     icon: KeyRound,
     description: "A clean, secure sign-in experience that adapts to your brand and your team's preferred theme.",
-    light: "/Verdux-erp-app-ss/login-light.png",
-    dark: "/Verdux-erp-app-ss/login-dark.png",
   },
 ];
 
-const moreScreens = [
-  { src: "/Verdux-erp-app-ss/hr-add-employe.png", label: "Add Employee" },
-  { src: "/Verdux-erp-app-ss/hr-attendance.png", label: "Attendance Tracking" },
-  { src: "/Verdux-erp-app-ss/industory-wise-modules.png", label: "Industry-Specific Modules" },
-  { src: "/Verdux-erp-app-ss/kds.png", label: "Kitchen Display System" },
-  { src: "/Verdux-erp-app-ss/recipe.png", label: "Recipe & Food Costing" },
-  { src: "/Verdux-erp-app-ss/ingreadents.png", label: "Ingredient Management" },
-  { src: "/Verdux-erp-app-ss/master-data.png", label: "Master Data" },
-  { src: "/Verdux-erp-app-ss/general-setting.png", label: "General Settings" },
-  { src: "/Verdux-erp-app-ss/region-wise-payment-methods.png", label: "Regional Payment Methods" },
-  { src: "/Verdux-erp-app-ss/vocuhers-and-coupens.png", label: "Vouchers & Coupons" },
-  { src: "/Verdux-erp-app-ss/user-managments.png", label: "User Management" },
-  { src: "/Verdux-erp-app-ss/roles-and-permissions.png", label: "Roles & Permissions" },
-  { src: "/Verdux-erp-app-ss/branch-managment.png", label: "Branch Management" },
-  { src: "/Verdux-erp-app-ss/integrations-comming-soon.png", label: "Integrations (Coming Soon)" },
-  { src: "/Verdux-erp-app-ss/complete-audit-logs.png", label: "Complete Audit Logs" },
+const moreScreens: { slot: HomeSlot; label: string }[] = [
+  { slot: "add-employee", label: "Add Employee" },
+  { slot: "attendance", label: "Attendance Tracking" },
+  { slot: "industry-modules", label: "Industry-Specific Modules" },
+  { slot: "kitchen", label: "Kitchen Display System" },
+  { slot: "recipe", label: "Recipe & Food Costing" },
+  { slot: "ingredients", label: "Ingredient Management" },
+  { slot: "master-data", label: "Master Data" },
+  { slot: "general-settings", label: "General Settings" },
+  { slot: "payment-methods", label: "Regional Payment Methods" },
+  { slot: "vouchers", label: "Vouchers & Coupons" },
+  { slot: "user-management", label: "User Management" },
+  { slot: "roles-permissions", label: "Roles & Permissions" },
+  { slot: "branches", label: "Branch Management" },
+  { slot: "integrations", label: "Integrations" },
+  { slot: "audit-logs", label: "Complete Audit Logs" },
 ];
 
-export function ProductShowcase() {
+export function ProductShowcase({ shots = {} }: { shots?: HomeShots }) {
   const [active, setActive] = useState(0);
   const tab = tabs[active];
 
@@ -137,45 +131,22 @@ export function ProductShowcase() {
               <div className="ml-3 text-xs text-muted-foreground">erp.vrodux.com / {tab.id}</div>
             </div>
 
-            <div className="relative aspect-[1910/913]">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={tab.id}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="absolute inset-0"
-                >
-                  {tab.dark ? (
-                    <>
-                      <Image
-                        src={tab.light}
-                        alt={`Vrodux ERP — ${tab.label}`}
-                        fill
-                        sizes="(min-width: 1024px) 1024px, 100vw"
-                        className="object-cover object-top dark:hidden"
-                      />
-                      <Image
-                        src={tab.dark}
-                        alt={`Vrodux ERP — ${tab.label}`}
-                        fill
-                        sizes="(min-width: 1024px) 1024px, 100vw"
-                        className="hidden object-cover object-top dark:block"
-                      />
-                    </>
-                  ) : (
-                    <Image
-                      src={tab.light}
-                      alt={`Vrodux ERP — ${tab.label}`}
-                      fill
-                      sizes="(min-width: 1024px) 1024px, 100vw"
-                      className="object-cover object-top"
-                    />
-                  )}
-                </motion.div>
-              </AnimatePresence>
-            </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={tab.id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ThemedShotImage
+                  shot={shots[tab.id]}
+                  alt={`Vrodux ERP — ${tab.label}`}
+                  sizes="(min-width: 1024px) 1024px, 100vw"
+                  zoomable
+                />
+              </motion.div>
+            </AnimatePresence>
           </div>
 
           <motion.p
@@ -195,29 +166,23 @@ export function ProductShowcase() {
             Explore more of the platform
           </p>
           <div className="marquee-container overflow-hidden">
-            <motion.div
-              className="flex gap-5 w-max"
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-            >
+            <div className="marquee-track flex gap-5 w-max">
               {[...moreScreens, ...moreScreens].map((s, i) => (
                 <div
                   key={`${s.label}-${i}`}
                   className="flex-shrink-0 w-72 rounded-xl border bg-card overflow-hidden hover:shadow-glow-sm transition-shadow"
                 >
-                  <div className="relative aspect-[1910/913]">
-                    <Image
-                      src={s.src}
-                      alt={`Vrodux ERP — ${s.label}`}
-                      fill
-                      sizes="288px"
-                      className="object-cover object-top"
-                    />
-                  </div>
+                  <ThemedShotImage
+                    shot={shots[s.slot]}
+                    alt={`Vrodux ERP — ${s.label}`}
+                    sizes="288px"
+                    uniform="4 / 3"
+                    zoomable
+                  />
                   <div className="px-4 py-3 text-sm font-medium">{s.label}</div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

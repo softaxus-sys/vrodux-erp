@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "**.unsplash.com" },
       { protocol: "https", hostname: "**.cloudinary.com" },
       { protocol: "https", hostname: "avatars.githubusercontent.com" },
+      { protocol: "https", hostname: "sin1.contabostorage.com" },
     ],
     formats: ["image/avif", "image/webp"],
   },
