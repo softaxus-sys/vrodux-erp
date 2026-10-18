@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
+import { IndustryDemoButton } from "@/components/demos/industry-demo-button";
+import { getDemoCatalog } from "@/lib/demos";
 import {
   ArrowRight, ShoppingBag, UtensilsCrossed, Hotel, Home, HardHat,
   Stethoscope, GraduationCap, ShieldCheck, Building2, CheckCircle2, Sparkles, Stamp,
@@ -220,7 +222,22 @@ const statusMeta = {
   "early-access": { label: "Early Access", variant: "warning" as const },
 };
 
-export default function IndustriesPage() {
+/** Industry id -> demo video slug. Industries without a video get only the Book a Demo button. */
+const DEMO_SLUG: Record<string, string> = {
+  retail: "pos",
+  restaurants: "restaurant",
+  realestate: "real-estate",
+  construction: "construction",
+  healthcare: "healthcare",
+  education: "education",
+  "visa-services": "visa-services",
+  manufacturing: "manufacturing",
+  library: "library",
+  "import-export": "import-export",
+};
+
+export default async function IndustriesPage() {
+  const { videos } = await getDemoCatalog();
   return (
     <>
       <PageHero
@@ -249,7 +266,9 @@ export default function IndustriesPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="space-y-24">
-            {industries.map((ind, i) => (
+            {industries.map((ind, i) => {
+              const demo = videos.find((v) => v.slug === DEMO_SLUG[ind.id]);
+              return (
               <div
                 key={ind.id}
                 id={ind.id}
@@ -276,12 +295,15 @@ export default function IndustriesPage() {
                     ))}
                   </div>
 
-                  <Button asChild>
-                    <Link href="/book-demo">
-                      See Demo for {ind.name}
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </Button>
+                  <div className="flex flex-wrap gap-3">
+                    {demo && <IndustryDemoButton video={demo} label={`See Demo for ${ind.name}`} />}
+                    <Button asChild variant={demo ? "outline" : "default"}>
+                      <Link href="/book-demo">
+                        Book a Demo
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
+                  </div>
                 </div>
 
                 {/* Stats / roadmap card */}
@@ -359,7 +381,8 @@ export default function IndustriesPage() {
                   </div>
                 </div>
               </div>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>
