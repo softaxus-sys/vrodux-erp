@@ -218,6 +218,18 @@ export function Footer() {
             <Link href="/delete-account" className="hover:text-foreground transition-colors">Delete Account</Link>
             <Link href="/security" className="hover:text-foreground transition-colors">Security</Link>
             <Link href="/sitemap.xml" className="hover:text-foreground transition-colors">Sitemap</Link>
+            <a href="https://www.codehype.ai/product/vrodux-erp?utm_source=codehype_badge" target="_blank" rel="noopener noreferrer">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://www.codehype.ai/badges/vrodux-erp.svg?variant=find-us&v=20"
+                alt="Featured on CodeHype"
+                width={100}
+                height={36}
+                loading="lazy"
+                decoding="async"
+                className="h-auto w-full max-w-[100px] border-0"
+              />
+            </a>
           </div>
         </div>
       </div>
