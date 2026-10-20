@@ -8,8 +8,8 @@ const steps = [
     step: "01",
     icon: ClipboardList,
     title: "Discovery & Planning",
-    description: "Our consultants analyze your business processes, map requirements, and design a tailored ERP implementation roadmap.",
-    duration: "Week 1-2",
+    description: "We learn how your business runs and agree what to set up and which data to bring across.",
+    duration: "Day 1",
     color: "text-brand-500",
     bg: "bg-brand-500/10",
     border: "border-brand-500/30",
@@ -18,8 +18,8 @@ const steps = [
     step: "02",
     icon: Settings,
     title: "Configuration & Setup",
-    description: "We configure Vrodux ERP to your exact specifications — chart of accounts, workflows, approvals, and user roles.",
-    duration: "Week 3-5",
+    description: "Vrodux is cloud-based, so your workspace is ready instantly. We set up your chart of accounts, workflows, approvals, and user roles.",
+    duration: "Day 1",
     color: "text-purple-500",
     bg: "bg-purple-500/10",
     border: "border-purple-500/30",
@@ -27,9 +27,9 @@ const steps = [
   {
     step: "03",
     icon: BookOpen,
-    title: "Data Migration & Training",
-    description: "Historical data is carefully migrated and validated. Your team receives comprehensive role-based training.",
-    duration: "Week 6-8",
+    title: "Data Import & Training",
+    description: "Export your data from your current system and import it into Vrodux, then validate it. Your team gets role-based training.",
+    duration: "1-2 Days",
     color: "text-cyan-500",
     bg: "bg-cyan-500/10",
     border: "border-cyan-500/30",
@@ -38,8 +38,8 @@ const steps = [
     step: "04",
     icon: Rocket,
     title: "Go Live",
-    description: "Your system goes live with our team fully available. We monitor performance and resolve any issues immediately.",
-    duration: "Week 9",
+    description: "You are ready to work. Our team stays available and resolves any issues immediately. On-premises installs take a few days because of installation and training.",
+    duration: "Within Days",
     color: "text-emerald-500",
     bg: "bg-emerald-500/10",
     border: "border-emerald-500/30",
@@ -67,11 +67,10 @@ export function ImplementationProcess() {
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
             From Contract to{" "}
-            <span className="text-gradient">Go-Live in Weeks</span>
+            <span className="text-gradient">Go-Live in Days</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            Our proven 5-step implementation methodology ensures a smooth, risk-free ERP deployment
-            with minimal disruption to your business.
+            Vrodux is cloud-based and works instantly. The only time involved is importing your data and adjusting settings, so you can be live within days with minimal disruption.
           </p>
         </motion.div>
 

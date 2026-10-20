@@ -14,21 +14,21 @@ export const metadata: Metadata = {
 const packages = [
   {
     name: "Express",
-    duration: "3-4 Weeks",
+    duration: "Same Day – 2 Days",
     description: "For small businesses with standard requirements",
     includes: ["Core module setup", "Basic data migration", "User training (online)", "Go-live support (1 week)"],
     price: "Starting from $2,999",
   },
   {
     name: "Professional",
-    duration: "6-8 Weeks",
+    duration: "2-4 Days",
     description: "For growing businesses with moderate customization",
     includes: ["Full module configuration", "Data migration & validation", "Custom workflows", "On-site training", "Go-live support (2 weeks)", "Post-launch optimization"],
     price: "Starting from $7,999",
   },
   {
     name: "Enterprise",
-    duration: "3-6 Months",
+    duration: "Under 1 Week",
     description: "For large enterprises with complex requirements",
     includes: ["Full platform customization", "Complex data migration", "Custom integrations", "Multi-site rollout", "Change management support", "Dedicated project manager", "6-month post-launch support"],
     price: "Custom quote",
@@ -41,7 +41,7 @@ export default function ImplementationPage() {
       <PageHero
         badge="Implementation Services"
         title="From Contract to "
-        highlightedWord="Live in Weeks"
+        highlightedWord="Live in Days"
         description="Our certified ERP consultants deliver smooth, risk-free Vrodux ERP implementations with our proven 5-phase methodology — on time and on budget."
       />
 
@@ -50,7 +50,7 @@ export default function ImplementationPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
             {[
               { icon: Award, value: "200+", label: "Implementations Delivered" },
-              { icon: Clock, value: "6 Weeks", label: "Average Time-to-Go-Live" },
+              { icon: Clock, value: "Days", label: "Average Time-to-Go-Live" },
               { icon: CheckCircle2, value: "98%", label: "On-Time Delivery Rate" },
               { icon: Users, value: "100%", label: "Client Satisfaction" },
             ].map((stat) => (

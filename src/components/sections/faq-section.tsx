@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 const faqs = [
   {
     q: "How long does ERP implementation take?",
-    a: "Typical implementation takes 6-12 weeks depending on your business complexity, number of modules, and data migration requirements. We've successfully gone live in as few as 3 weeks for smaller businesses.",
+    a: "Vrodux ERP is cloud-based, so your workspace works instantly. The only time involved is exporting your data from your current system, importing it, and adjusting settings, which is usually a day or two for most businesses, such as real estate, POS and restaurants. On-premises deployments take a few days because of installation and training.",
   },
   {
     q: "Can Vrodux ERP be deployed on-premise?",

@@ -35,10 +35,10 @@ const faqCategories = [
   {
     category: "Implementation",
     faqs: [
-      { q: "How long does implementation take?", a: "Typical implementation takes 6-12 weeks depending on business complexity, number of modules, and data migration requirements. Smaller businesses can go live in as few as 3 weeks." },
+      { q: "How long does implementation take?", a: "Vrodux ERP is cloud-based, so your workspace works instantly. The only time involved is exporting your data from your current system, importing it, and adjusting settings, which is usually a day or two for most businesses, such as real estate, POS and restaurants. On-premises deployments take a few days because of installation and training." },
       { q: "Do you migrate data from our existing system?", a: "Yes. Our implementation team handles data migration from any source — Excel, QuickBooks, Tally, SAP, Odoo, or other ERP systems. We provide data validation and reconciliation." },
       { q: "Do you provide training?", a: "Yes. Comprehensive role-based training is included in all implementations. We offer online and on-site training sessions, training videos, and documentation." },
-      { q: "What is your implementation methodology?", a: "We follow a 5-phase methodology: Discovery & Planning, Configuration & Setup, Data Migration & Training, Go-Live, and Post-Launch Support. Each phase has clear milestones and deliverables." },
+      { q: "What is your implementation methodology?", a: "We follow a 5-phase methodology: Discovery & Planning, Configuration & Setup, Data Import & Training, Go-Live, and Post-Launch Support. Each phase has clear milestones and deliverables." },
     ],
   },
   {
