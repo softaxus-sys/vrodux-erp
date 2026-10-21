@@ -195,3 +195,40 @@
   pointer-events: none;
   z-index: 0;
 }
+
+/* Gentle entrance and flow animations for module / industry pages. Everything is visible
+   after at most ~1.5s on load, never hidden until scrolled to. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise {
+  animation: rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--d, 0) * 80ms);
+}
+@keyframes flow-glow {
+  0%, 18% { transform: scale(1.12); box-shadow: 0 0 0 6px hsl(var(--primary) / 0.25); }
+  30%, 100% { transform: scale(1); box-shadow: 0 0 0 0 hsl(var(--primary) / 0); }
+}
+.flow-node { animation: flow-glow var(--flow-total, 8s) ease-in-out infinite; animation-delay: calc(var(--i, 0) * var(--flow-step, 1.4s)); }
+@keyframes flow-dash {
+  to { background-position: 24px 0; }
+}
+.flow-line {
+  background-image: linear-gradient(90deg, hsl(var(--primary)) 50%, transparent 50%);
+  background-size: 12px 2px;
+  background-repeat: repeat-x;
+  animation: flow-dash 1.2s linear infinite;
+}
+@keyframes flow-dash-y {
+  to { background-position: 0 24px; }
+}
+.flow-line-y {
+  background-image: linear-gradient(180deg, hsl(var(--primary)) 50%, transparent 50%);
+  background-size: 2px 12px;
+  background-repeat: repeat-y;
+  animation: flow-dash-y 1.2s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise, .flow-node, .flow-line, .flow-line-y { animation: none; }
+}

@@ -151,6 +151,10 @@ const DOCS_CATEGORY_TO_DEMO: Record<string, string> = {
   inventory: "inventory",
   "real-estate": "real-estate",
   "visa-services": "visa-services",
+  restaurant: "restaurant",
+  manufacturing: "manufacturing",
+  library: "library",
+  "import-export": "import-export",
 };
 
 export function demoSlugForDocsCategory(categorySlug: string): string | undefined {

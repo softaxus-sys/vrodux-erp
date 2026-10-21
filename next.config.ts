@@ -13,6 +13,24 @@ const nextConfig: NextConfig = {
     ],
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    // Old docs addresses that were linked before the guides existed.
+    return [
+      { source: "/docs/crm/connecting-lead-sources", destination: "/docs/crm/capture-and-import-leads", permanent: true },
+      { source: "/docs/crm/lead-scoring", destination: "/docs/crm/lead-scoring-hot-warm-cold", permanent: true },
+      { source: "/docs/finance/recurring-invoices", destination: "/docs/finance/tax-invoices-and-recurring-invoices", permanent: true },
+      { source: "/docs/finance/vat-tax-reporting", destination: "/docs/finance/prepare-a-uae-vat-return", permanent: true },
+      { source: "/docs/hr/payroll-workflow", destination: "/docs/hr/run-payroll-with-finance-approval", permanent: true },
+      { source: "/docs/hr/performance-reviews", destination: "/docs/hr/recruitment-and-performance", permanent: true },
+      { source: "/docs/hr/recruitment", destination: "/docs/hr/recruitment-and-performance", permanent: true },
+      { source: "/docs/project-management/managing-membership", destination: "/docs/project-management/projects-teams-and-access", permanent: true },
+      { source: "/docs/real-estate/reminder-settings", destination: "/docs/real-estate/rent-reminders-and-vacancy-alerts", permanent: true },
+      { source: "/docs/settings/roles-permissions-matrix", destination: "/docs/start-here/users-roles-teams-permissions", permanent: true },
+      { source: "/docs/visa-services/government-channels", destination: "/docs/visa-services/visa-types-renewals-and-billing", permanent: true },
+      { source: "/docs/visa-services/visa-types", destination: "/docs/visa-services/visa-types-renewals-and-billing", permanent: true },
+    ];
+  },
+
   async headers() {
     return [
       {

@@ -8,25 +8,25 @@ import { SectionHeading, pill, WRAP } from "@/components/home/ui";
 import { cn } from "@/lib/utils";
 
 const industries = [
-  { name: "Retail", icon: ShoppingBag, href: "/industries#retail" },
-  { name: "Restaurants", icon: UtensilsCrossed, href: "/industries#restaurants" },
-  { name: "Hospitality", icon: Hotel, href: "/industries#hospitality" },
-  { name: "Real Estate", icon: Home, href: "/industries#realestate" },
-  { name: "Construction", icon: HardHat, href: "/industries#construction" },
-  { name: "Healthcare", icon: Stethoscope, href: "/industries#healthcare" },
-  { name: "Education", icon: GraduationCap, href: "/industries#education" },
-  { name: "Insurance", icon: ShieldCheck, href: "/industries#insurance" },
-  { name: "B2B Services", icon: Building2, href: "/industries#b2bservices" },
-  { name: "Visa Services", icon: Stamp, href: "/industries#visa-services" },
-  { name: "Manufacturing", icon: Factory, href: "/industries#manufacturing" },
-  { name: "Library", icon: Library, href: "/industries#library" },
-  { name: "Import & Export", icon: Ship, href: "/industries#import-export" },
+  { name: "Retail", icon: ShoppingBag, href: "/industries/retail" },
+  { name: "Restaurants", icon: UtensilsCrossed, href: "/industries/restaurants" },
+  { name: "Hospitality", icon: Hotel, href: "/industries/hospitality" },
+  { name: "Real Estate", icon: Home, href: "/industries/real-estate" },
+  { name: "Construction", icon: HardHat, href: "/industries/construction" },
+  { name: "Healthcare", icon: Stethoscope, href: "/industries/healthcare" },
+  { name: "Education", icon: GraduationCap, href: "/industries/education" },
+  { name: "Insurance", icon: ShieldCheck, href: "/industries/insurance" },
+  { name: "B2B Services", icon: Building2, href: "/industries/b2b-services" },
+  { name: "Visa Services", icon: Stamp, href: "/industries/visa-services" },
+  { name: "Manufacturing", icon: Factory, href: "/industries/manufacturing" },
+  { name: "Library", icon: Library, href: "/industries/library" },
+  { name: "Import & Export", icon: Ship, href: "/industries/import-export" },
 ];
 
 const featured = [
-  { name: "Retail", text: "POS, stock and loyalty across every store.", href: "/industries#retail", src: "/images/industries/retail.jpg", alt: "Retail checkout counter running Vrodux POS" },
-  { name: "Restaurants", text: "Tables, kitchen display and recipe costing.", href: "/industries#restaurants", src: "/images/industries/restaurant.jpg", alt: "Restaurant kitchen using Vrodux POS and kitchen display" },
-  { name: "Real Estate", text: "Listings, leads, contracts and collections.", href: "/industries#realestate", src: "/images/industries/real-estate.jpg", alt: "Real estate office managing properties with Vrodux" },
+  { name: "Retail", text: "POS, stock and loyalty across every store.", href: "/industries/retail", src: "/images/industries/retail.jpg", alt: "Retail checkout counter running Vrodux POS" },
+  { name: "Restaurants", text: "Tables, kitchen display and recipe costing.", href: "/industries/restaurants", src: "/images/industries/restaurant.jpg", alt: "Restaurant kitchen using Vrodux POS and kitchen display" },
+  { name: "Real Estate", text: "Listings, leads, contracts and collections.", href: "/industries/real-estate", src: "/images/industries/real-estate.jpg", alt: "Real estate office managing properties with Vrodux" },
 ];
 
 export function HomeIndustries() {

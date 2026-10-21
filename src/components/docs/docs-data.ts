@@ -16,8 +16,15 @@ import {
   Sparkles,
   Smartphone,
   Settings,
+  UtensilsCrossed,
+  Hotel,
+  Factory,
+  Library,
+  Ship,
+  Search,
   type LucideIcon,
 } from "lucide-react";
+import { guideArticles, guideCategories } from "@/components/docs/docs-guides.generated";
 
 /**
  * Docs content. Most categories/articles are real content — remaining gaps
@@ -45,7 +52,7 @@ export interface DocsArticle {
   body: string;
 }
 
-export const docsCategories: DocsCategory[] = [
+const baseCategories: DocsCategory[] = [
   {
     slug: "start-here",
     name: "Start Here",
@@ -150,7 +157,7 @@ export const docsCategories: DocsCategory[] = [
   },
 ];
 
-export const docsArticles: DocsArticle[] = [
+const baseArticles: DocsArticle[] = [
   {
     slug: "what-is-vroduxerp",
     categorySlug: "start-here",
@@ -496,8 +503,8 @@ CRM includes a reporting section built for exactly the questions a sales manager
 
 ## Where to go deeper
 
-- [Connecting your lead sources →](/docs/crm/connecting-lead-sources) — wiring up website forms, ad platforms, and scheduling tools
-- [How lead scoring works →](/docs/crm/lead-scoring) — a closer look at what feeds the hot/warm/cold score
+- [Connecting your lead sources →](/docs/crm/capture-and-import-leads) — wiring up website forms, ad platforms, and scheduling tools
+- [How lead scoring works →](/docs/crm/lead-scoring-hot-warm-cold) — a closer look at what feeds the hot/warm/cold score
 - [The full reporting suite →](/docs/reports) — every report available across VroduxERP, not just CRM
     `,
   },
@@ -555,9 +562,8 @@ Once an employee has their own login, they get access to a self-service portal. 
 
 ## Where to go deeper
 
-- [Performance reviews →](/docs/hr/performance-reviews) — a closer look at how reviews work
-- [Recruitment →](/docs/hr/recruitment) — hiring and candidate tracking
-- [The payroll workflow in depth →](/docs/hr/payroll-workflow) — a step-by-step look at preparing and approving a payroll run
+- [Recruitment & performance reviews →](/docs/hr/recruitment-and-performance) — job postings, the careers page and reviews
+- [The payroll workflow in depth →](/docs/hr/run-payroll-with-finance-approval) — a step-by-step look at preparing and approving a payroll run
     `,
   },
   {
@@ -618,9 +624,9 @@ Not every transaction has to be in your workspace's default operating currency. 
 
 ## Where to go deeper
 
-- [VAT & tax reporting →](/docs/finance/vat-tax-reporting) — a closer look at tax reporting
+- [VAT & tax reporting →](/docs/finance/prepare-a-uae-vat-return) — a closer look at tax reporting
 - [The Purchase module →](/docs/purchase) — where vendor purchase orders originate before they become bills
-- [Recurring invoices in depth →](/docs/finance/recurring-invoices) — setting up a recurring billing schedule
+- [Recurring invoices in depth →](/docs/finance/tax-invoices-and-recurring-invoices) — setting up a recurring billing schedule
     `,
   },
   {
@@ -854,7 +860,7 @@ A project has its own membership list, separate from broader role permissions. P
 
 ## Where to go deeper
 
-- [Managing project membership →](/docs/project-management/managing-membership) — adding and removing people from a project, and changing their role
+- [Managing project membership →](/docs/project-management/projects-teams-and-access) — adding and removing people from a project, and changing their role
     `,
   },
   {
@@ -898,8 +904,8 @@ A case doesn't have to sit on its own. It can be linked to an existing CRM accou
 
 ## Where to go deeper
 
-- [The visa types catalogue →](/docs/visa-services/visa-types) — standard fees and expected processing times per visa type
-- [Government channel connections →](/docs/visa-services/government-channels) — how cases connect to government submission channels
+- [The visa types catalogue →](/docs/visa-services/visa-types-renewals-and-billing) — standard fees and expected processing times per visa type
+- [Government channel connections →](/docs/visa-services/visa-types-renewals-and-billing) — how cases connect to government submission channels
     `,
   },
   {
@@ -945,7 +951,7 @@ Each rent installment is tracked individually — as pending, partially paid, pa
 
 ## Where to go deeper
 
-- [Configuring reminders →](/docs/real-estate/reminder-settings) — setting the reminder schedule and who receives them
+- [Configuring reminders →](/docs/real-estate/rent-reminders-and-vacancy-alerts) — setting the reminder schedule and who receives them
     `,
   },
   {
@@ -1167,7 +1173,6 @@ The AI Assistant is available on mobile too, from the same floating button as on
 
 ## Where to go deeper
 
-- [Downloading the app →](/docs/mobile-app/download) — a direct link to the app once it's available for download
     `,
   },
   {
@@ -1219,10 +1224,26 @@ Every plan includes every module; plans differ only by how many users they inclu
 
 ## Where to go deeper
 
-- [The roles & permissions matrix in depth →](/docs/settings/roles-permissions-matrix) — a full walkthrough of what each role can do, module by module
+- [The roles & permissions matrix in depth →](/docs/start-here/users-roles-teams-permissions) — a full walkthrough of what each role can do, module by module
     `,
   },
 ];
+
+const GUIDE_ICONS: Record<string, LucideIcon> = { UtensilsCrossed, Hotel, Factory, Library, Ship, Search };
+
+const guideCategoriesResolved: DocsCategory[] = guideCategories.map((c) => ({
+  slug: c.slug,
+  name: c.name,
+  description: c.description,
+  icon: GUIDE_ICONS[c.icon] ?? Blocks,
+}));
+
+/** New categories slot in after Real Estate, before the lighter industry packs. */
+export const docsCategories: DocsCategory[] = baseCategories.flatMap((c) =>
+  c.slug === "real-estate" ? [c, ...guideCategoriesResolved] : [c]
+);
+
+export const docsArticles: DocsArticle[] = [...baseArticles, ...guideArticles];
 
 export function getCategory(slug: string): DocsCategory | undefined {
   return docsCategories.find((c) => c.slug === slug);

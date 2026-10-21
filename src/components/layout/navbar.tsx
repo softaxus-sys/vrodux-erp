@@ -13,7 +13,7 @@ import {
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
   CreditCard, ShieldCheck, ArrowRight, Rocket, ListChecks, Stamp,
-  Factory, Library, Ship,
+  Factory, Library, Ship, Search, Plane,
 } from "lucide-react";
 import { totalModuleCount } from "@/lib/modules-data";
 
@@ -28,12 +28,14 @@ const coreModules = [
   { name: "Purchase Management", href: "/features/purchase", icon: Truck, desc: "Vendors, Purchase Orders, AP Bills" },
   { name: "Project Management", href: "/features/project-management", icon: ListChecks, desc: "Kanban Boards, Sprints, Issues" },
   { name: "Reports", href: "/features/reports", icon: BarChart3, desc: "Dashboards, KPIs, Reports" },
+  { name: "Lead Generation", href: "/features/lead-generation", icon: Search, desc: "Find businesses, cold-email outreach" },
 ];
 
 const industryModules = [
   { name: "Point of Sale", href: "/features/pos", icon: CreditCard, desc: "Retail, Barcode, Multi-store" },
   { name: "Restaurant POS", href: "/features/restaurant", icon: UtensilsCrossed, desc: "Tables, KDS, Recipe Mgmt" },
   { name: "Hospitality", href: "/features/hospitality", icon: Hotel, desc: "Reservations, Room, Guest Svc" },
+  { name: "Tourism", href: "/features/tourism", icon: Plane, desc: "Tour packages, Departures, Bookings" },
   { name: "Real Estate", href: "/features/real-estate", icon: HomeIcon, desc: "Properties, Leasing, Contracts" },
   { name: "Construction", href: "/features/construction", icon: HardHat, desc: "Projects, Resources, Costs" },
   { name: "Healthcare", href: "/features/healthcare", icon: Stethoscope, desc: "Patient Records, Appointments" },
@@ -47,19 +49,19 @@ const industryModules = [
 ];
 
 const industries = [
-  { name: "Retail", href: "/industries#retail", icon: ShoppingBag },
-  { name: "Restaurants & F&B", href: "/industries#restaurants", icon: UtensilsCrossed },
-  { name: "Hospitality & Hotels", href: "/industries#hospitality", icon: Hotel },
-  { name: "Real Estate", href: "/industries#realestate", icon: HomeIcon },
-  { name: "Construction", href: "/industries#construction", icon: HardHat },
-  { name: "Healthcare", href: "/industries#healthcare", icon: Stethoscope },
-  { name: "Education", href: "/industries#education", icon: GraduationCap },
-  { name: "Insurance", href: "/industries#insurance", icon: ShieldCheck },
-  { name: "B2B & Professional Services", href: "/industries#b2bservices", icon: Building2 },
-  { name: "Visa Services", href: "/industries#visa-services", icon: Stamp },
-  { name: "Manufacturing", href: "/industries#manufacturing", icon: Factory },
-  { name: "Library", href: "/industries#library", icon: Library },
-  { name: "Import & Export", href: "/industries#import-export", icon: Ship },
+  { name: "Retail", href: "/industries/retail", icon: ShoppingBag },
+  { name: "Restaurants & F&B", href: "/industries/restaurants", icon: UtensilsCrossed },
+  { name: "Hospitality & Hotels", href: "/industries/hospitality", icon: Hotel },
+  { name: "Real Estate", href: "/industries/real-estate", icon: HomeIcon },
+  { name: "Construction", href: "/industries/construction", icon: HardHat },
+  { name: "Healthcare", href: "/industries/healthcare", icon: Stethoscope },
+  { name: "Education", href: "/industries/education", icon: GraduationCap },
+  { name: "Insurance", href: "/industries/insurance", icon: ShieldCheck },
+  { name: "B2B & Professional Services", href: "/industries/b2b-services", icon: Building2 },
+  { name: "Visa Services", href: "/industries/visa-services", icon: Stamp },
+  { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },
+  { name: "Library", href: "/industries/library", icon: Library },
+  { name: "Import & Export", href: "/industries/import-export", icon: Ship },
 ];
 
 const navLinks = [

@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { industries } from "@/lib/industries-data";
 import { docsArticles, docsCategories } from "@/components/docs/docs-data";
 import { allModules } from "@/lib/modules-data";
 
@@ -35,6 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
+  const industryPages = industries.map((i) => ({
+    url: `${baseUrl}${i.href}`,
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+
   const docsCategoryPages = docsCategories.map((category) => ({
     url: `${baseUrl}/docs/${category.slug}`,
     priority: 0.7,
@@ -47,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  return [...staticPages, ...featureModulePages, ...docsCategoryPages, ...docsArticlePages].map((page) => ({
+  return [...staticPages, ...featureModulePages, ...industryPages, ...docsCategoryPages, ...docsArticlePages].map((page) => ({
     url: page.url,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,

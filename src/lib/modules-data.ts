@@ -20,6 +20,8 @@ import {
   Factory,
   Library as LibraryIcon,
   Ship,
+  Plane,
+  Search,
   type LucideIcon,
 } from "lucide-react";
 
@@ -657,6 +659,28 @@ export const industryModules: ModuleTile[] = [
       { title: "Landed Cost" },
       { title: "Payments" },
     ],
+  },
+  {
+    id: "tourism",
+    name: "Tourism",
+    description: "Tour packages, departures with seats, bookings, instalments and traveller payments for travel agencies and tour operators.",
+    icon: Plane,
+    color: "from-sky-500 to-blue-600",
+    bg: "bg-sky-500/10",
+    features: ["Tour Packages", "Departures & Seats", "Bookings", "Instalments & Payments"],
+    href: "/features/tourism",
+    related: ["hospitality", "crm", "finance"],
+  },
+  {
+    id: "lead-generation",
+    name: "Lead Generation",
+    description: "Find businesses, reveal their contacts with credits, and email them from your own mailbox, with a reply inbox.",
+    icon: Search,
+    color: "from-emerald-500 to-teal-600",
+    bg: "bg-emerald-500/10",
+    features: ["Business Search", "Credit-Based Reveal", "Cold-Email Campaigns", "Reply Inbox"],
+    href: "/features/lead-generation",
+    related: ["crm", "sales", "reports"],
   },
 ];
 

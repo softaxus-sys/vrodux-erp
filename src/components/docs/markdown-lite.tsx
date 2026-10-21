@@ -7,8 +7,24 @@ import type { DocsShot } from "@/lib/docs-screenshots";
 const SCREENSHOT_PATTERN = /^\[screenshot(?::\s*(.*))?\]$/i;
 const INLINE_LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/g;
 
-/** Renders `[label](href)` spans inline within a line of plain text. */
+/** Renders `**bold**` and `[label](href)` spans inline within a line of plain text. */
 function renderInline(text: string): ReactNode {
+  const segments = text.split(/(\*\*[^*]+\*\*)/g);
+  if (segments.length > 1) {
+    return segments.map((seg, i) =>
+      seg.startsWith("**") && seg.endsWith("**") ? (
+        <strong key={i} className="font-semibold text-foreground">
+          {seg.slice(2, -2)}
+        </strong>
+      ) : (
+        <Fragment key={i}>{renderLinks(seg)}</Fragment>
+      )
+    );
+  }
+  return renderLinks(text);
+}
+
+function renderLinks(text: string): ReactNode {
   const parts: ReactNode[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
