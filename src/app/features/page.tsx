@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/shared/page-hero";
-import { ModulesOverview } from "@/components/sections/modules-overview";
+import { HomeModules } from "@/components/home/modules";
 import { totalModuleCount } from "@/lib/modules-data";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -71,7 +71,7 @@ export default function FeaturesPage() {
         description="Vrodux ERP brings Finance, HR, Inventory, Sales, CRM, Project Management, POS, Restaurant, Hospitality, Real Estate, Construction, Healthcare, Education, and more together in a single, unified platform."
       />
 
-      <ModulesOverview />
+      <HomeModules />
 
       {/* CRM deep dive */}
       <section id="crm" className="py-20 scroll-mt-24">

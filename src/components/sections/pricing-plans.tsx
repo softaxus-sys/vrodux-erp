@@ -72,8 +72,7 @@ export function PricingPlans() {
               <motion.div
                 key={tier.id}
                 initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className={cn(
                   "relative flex flex-col rounded-2xl border p-7 transition-all duration-300 bg-card",
@@ -151,7 +150,7 @@ export function PricingPlans() {
                   <>
                     <Button
                       asChild
-                      className="w-full bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-sm"
+                      className="w-full"
                     >
                       <a
                         href={buyHref}

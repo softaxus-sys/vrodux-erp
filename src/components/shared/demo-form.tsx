@@ -225,7 +225,7 @@ export function DemoForm() {
                   onExpire={() => setCaptchaToken("")}
                 />
 
-                <Button type="submit" size="lg" loading={isSubmitting} className="w-full bg-gradient-to-r from-brand-600 to-brand-500">
+                <Button type="submit" size="lg" loading={isSubmitting} className="w-full">
                   <Calendar className="mr-2 w-4 h-4" />
                   Book My Demo
                 </Button>

@@ -127,7 +127,7 @@ const THINK_TIME = 1500;
 const READ_TIME = 1000;
 const LOOP_PAUSE = 3400;
 
-export function AiChatSection() {
+export function AiChatSection({ plain = true }: { plain?: boolean } = {}) {
   const [count, setCount] = useState(0);
   const [typed, setTyped] = useState("");
   const [inView, setInView] = useState(false);
@@ -223,12 +223,24 @@ export function AiChatSection() {
   };
 
   return (
-    <section ref={sectionRef} className="section-padding relative overflow-hidden">
+    <section ref={sectionRef} className={plain ? "relative overflow-hidden py-16 md:py-24" : "section-padding relative overflow-hidden"}>
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-900/5 via-transparent to-brand-500/5 pointer-events-none" />
+      {!plain && <div className="absolute inset-0 bg-gradient-to-br from-brand-900/5 via-transparent to-brand-500/5 pointer-events-none" />}
 
-      <div className="container mx-auto px-4">
+      <div className={plain ? "mx-auto max-w-[1400px] px-9 sm:px-[68px] lg:px-[88px]" : "container mx-auto px-4"}>
         {/* Header */}
+        {plain ? (
+          <div className="mb-14 grid gap-6 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-16">
+            <div>
+              <span className="inline-block border-b-[3px] border-brand-500 pb-1 text-sm font-semibold">AI-powered chat</span>
+              <h2 className="mt-5 text-4xl font-medium leading-[1.08] tracking-[-0.03em] sm:text-5xl">Ask Vrodux anything</h2>
+            </div>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              One chat, a whole AI workforce. Ask in plain language and the right agent (Sales, Finance, Inventory or
+              HR) answers from your live ERP data and gets the work done.
+            </p>
+          </div>
+        ) : (
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-500 text-sm font-medium mb-5">
             <Sparkles className="w-3.5 h-3.5" />
@@ -242,10 +254,11 @@ export function AiChatSection() {
             Inventory or HR — answers from your live ERP data and gets the work done.
           </p>
         </div>
+        )}
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className={`grid lg:grid-cols-2 gap-12 items-center ${plain ? "" : "max-w-6xl mx-auto"}`}>
           {/* Chat Mockup */}
-          <div className="relative order-2 lg:order-1">
+          <div className="relative order-2 lg:order-1 min-w-0">
             <div className="rounded-2xl border bg-card shadow-premium overflow-hidden">
               {/* Chat header */}
               <div className="flex items-center gap-3 px-5 py-4 border-b bg-muted/30">
@@ -265,7 +278,7 @@ export function AiChatSection() {
                 </div>
 
                 {/* Agent roster — the active agent lights up */}
-                <div className="flex items-center -space-x-1.5 flex-shrink-0">
+                <div className="hidden sm:flex items-center -space-x-1.5 flex-shrink-0">
                   {agentOrder.map((id) => {
                     const agent = agents[id];
                     const isActive = id === activeAgent;
@@ -421,7 +434,6 @@ export function AiChatSection() {
             </div>
 
             {/* Decorative glow */}
-            <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-brand-500/10 rounded-full blur-3xl pointer-events-none" />
           </div>
 
           {/* Right content */}
@@ -458,7 +470,7 @@ export function AiChatSection() {
             <div className="flex flex-col sm:flex-row gap-3">
               <Button
                 asChild
-                className="bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-700 hover:to-brand-600 shadow-glow-sm"
+                className=""
               >
                 <Link href="/book-demo" className="flex items-center gap-2">
                   See it Live <ArrowRight className="w-4 h-4" />

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
-const clients = [
+export const clients = [
   {
     name: "Leading Properties",
     domain: "leadingproperties.ae",

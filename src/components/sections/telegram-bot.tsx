@@ -264,7 +264,6 @@ export function TelegramBotSection() {
                 <span className="text-xs font-medium">No app to install</span>
               </div>
 
-              <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[#229ED9]/15 rounded-full blur-3xl pointer-events-none" />
             </div>
           </div>
 

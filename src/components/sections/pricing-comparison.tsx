@@ -91,7 +91,7 @@ export function PricingComparison() {
           Every plan includes every module. You choose a plan by the size of your team.
         </p>
 
-        <div className="max-w-6xl mx-auto rounded-2xl border overflow-x-auto">
+        <div className="relative max-w-6xl mx-auto rounded-2xl border overflow-x-auto">
           <table className="w-full text-sm min-w-[760px]">
             <caption className="sr-only">Feature comparison between Micro, Starter, Professional and Enterprise plans</caption>
             <thead>

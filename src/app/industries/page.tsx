@@ -276,8 +276,8 @@ export default async function IndustriesPage() {
               >
                 {/* Content */}
                 <div className={i % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${ind.color} flex items-center justify-center mb-4`}>
-                    <ind.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-full bg-[#B5D6FF] dark:bg-[#17379B] flex items-center justify-center mb-4">
+                    <ind.icon className="w-6 h-6 text-brand-700 dark:text-brand-300" strokeWidth={1.75} />
                   </div>
                   <div className="flex items-center gap-2 mb-3">
                     <Badge variant="outline">{ind.name}</Badge>
@@ -320,7 +320,7 @@ export default async function IndustriesPage() {
                       />
                     </div>
                   )}
-                  <div className={`p-8 bg-gradient-to-br ${ind.color} text-white`}>
+                  <div className="p-8 bg-brand-700 text-white">
                     {ind.stats ? (
                       <>
                         <h3 className="text-lg font-semibold mb-6 opacity-90">What Our {ind.name} Clients Achieve</h3>

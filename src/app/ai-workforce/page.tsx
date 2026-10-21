@@ -132,7 +132,7 @@ export default function AiWorkforcePage() {
             {agents.map((agent) => (
               <div key={agent.name} className="p-6 rounded-2xl border bg-card hover:shadow-glow-sm transition-all duration-300 hover:-translate-y-1">
                 <div className={`w-11 h-11 rounded-xl ${agent.bg} flex items-center justify-center mb-4`}>
-                  <div className={`w-5 h-5 bg-gradient-to-br ${agent.color} rounded-md flex items-center justify-center`}>
+                  <div className={`w-5 h-5 bg-brand-600 rounded-md flex items-center justify-center`}>
                     <agent.icon className="w-3 h-3 text-white" />
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function AiWorkforcePage() {
                 <ul className="space-y-1.5">
                   {agent.tasks.map((task) => (
                     <li key={task} className="flex items-start gap-1.5 text-sm text-muted-foreground">
-                      <div className={`w-1 h-1 mt-2 rounded-full bg-gradient-to-r ${agent.color} flex-shrink-0`} />
+                      <div className={`w-1 h-1 mt-2 rounded-full bg-brand-500 flex-shrink-0`} />
                       {task}
                     </li>
                   ))}

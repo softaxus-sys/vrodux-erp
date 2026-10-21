@@ -1,74 +1,53 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageSquare } from "lucide-react";
-import { trackEvent } from "@/lib/utils";
+import { GRID_STYLE, PANEL, pill } from "@/components/home/ui";
+import { cn, trackEvent } from "@/lib/utils";
 import { TRIAL_DAYS } from "@/lib/trial";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
 
 export function PricingFinalCta() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-600 via-brand-500 to-indigo-600" />
-      <div className="absolute inset-0 bg-mesh-pattern opacity-30" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-black/10 rounded-full blur-3xl" />
-
-      <div className="relative container mx-auto px-4 text-center text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Ready to Run Your Business in One Place?
+    <section className="px-3 pb-3 pt-6 sm:px-5 lg:px-6">
+      <div className={PANEL}>
+        <div className="absolute inset-0" style={GRID_STYLE} aria-hidden />
+        <div className="relative mx-auto max-w-3xl px-6 py-20 text-center sm:px-12 md:py-28">
+          <h2 className="text-4xl font-medium leading-[1.06] tracking-[-0.035em] sm:text-6xl">
+            Ready to run your business in one place?
           </h2>
-
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
             Choose the plan that fits your team and bring your business operations together. Every module is included.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Button
-              size="xl"
-              className="bg-white text-brand-600 hover:bg-white/90 shadow-premium font-semibold group"
-              asChild
+          <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+            <a
+              href="#plans"
+              onClick={() => trackEvent("buy_now_click", { location: "final_cta" })}
+              className={cn(pill.base, pill.light, "group")}
             >
-              <a
-                href="#plans"
-                onClick={() => trackEvent("buy_now_click", { location: "final_cta" })}
-              >
-                Buy Now
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-            <Button
-              size="xl"
-              variant="outline"
-              className="bg-transparent border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
-              asChild
+              Buy Now
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
+            <Link
+              href="/contact"
+              onClick={() => trackEvent("talk_to_sales_click", { location: "final_cta" })}
+              className={cn(pill.base, pill.outlineLight)}
             >
-              <Link href="/contact" onClick={() => trackEvent("talk_to_sales_click", { location: "final_cta" })}>
-                <MessageSquare className="mr-2 w-5 h-5" />
-                Talk to Sales
-              </Link>
-            </Button>
+              <MessageSquare className="h-4 w-4" />
+              Talk to Sales
+            </Link>
           </div>
-
           <a
             href={`${APP_URL}/trial?intent=trial&utm_source=pricing_final_cta`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("start_free_trial_click", { location: "final_cta" })}
-            className="text-sm text-white/70 hover:text-white hover:underline"
+            className="mt-6 inline-block text-sm text-white/70 hover:text-white hover:underline"
           >
             or start a {TRIAL_DAYS}-day free trial – no credit card
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

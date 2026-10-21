@@ -140,13 +140,12 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "mesh-pattern":
-          "radial-gradient(at 40% 20%, hsla(212,86%,60%,0.15) 0, transparent 50%), radial-gradient(at 80% 0%, hsla(213,87%,58%,0.1) 0, transparent 50%), radial-gradient(at 0% 50%, hsla(226,85%,16%,0.06) 0, transparent 50%)",
+        "mesh-pattern": "linear-gradient(transparent, transparent)",
       },
       boxShadow: {
-        glow: "0 0 60px -15px hsl(212 86% 60% / 0.5)",
-        "glow-sm": "0 0 30px -10px hsl(212 86% 60% / 0.3)",
-        premium: "0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.05)",
+        glow: "0 10px 30px -14px rgba(0, 0, 0, 0.3)",
+        "glow-sm": "0 6px 20px -12px rgba(0, 0, 0, 0.25)",
+        premium: "0 24px 48px -24px rgba(0, 0, 0, 0.3)",
       },
     },
   },

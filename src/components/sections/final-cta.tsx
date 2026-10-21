@@ -1,71 +1,60 @@
-"use client";
-
-import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MessageSquare } from "lucide-react";
+import { GRID_STYLE, PANEL, pill } from "@/components/home/ui";
+import { GridCells } from "@/components/home/panel-art";
+import { cn } from "@/lib/utils";
 
+/** Closing call to action shared by the home page and inner pages. */
 export function FinalCTA() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-600 via-brand-500 to-indigo-600" />
-      <div className="absolute inset-0 bg-mesh-pattern opacity-30" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-black/10 rounded-full blur-3xl" />
-
-      <div className="relative container mx-auto px-4 text-center text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            Limited Onboarding Slots Available
-          </div>
-
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Start Your ERP Journey{" "}
-            <span className="block opacity-90">Today</span>
-          </h2>
-
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-10">
-            Join 500+ businesses that have transformed their operations with Vrodux ERP.
-            Get a personalized demo tailored to your industry and specific needs.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-            <Button
-              size="xl"
-              className="bg-white text-brand-600 hover:bg-white/90 shadow-premium font-semibold group"
-              asChild
-            >
-              <Link href="/book-demo">
-                <Calendar className="mr-2 w-5 h-5" />
-                Schedule Demo
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+    <section className="px-3 pb-3 pt-6 sm:px-5 lg:px-6">
+      <div className={PANEL}>
+        <div className="absolute inset-0" style={GRID_STYLE} aria-hidden />
+        <GridCells
+          cells={[
+            { right: 0, top: 0, color: "yellow", opacity: 0.95 },
+            { right: 3, top: 1, color: "violet", opacity: 0.85 },
+          ]}
+        />
+        <div className="relative grid lg:grid-cols-[1.1fr_1fr]">
+          <div className="px-6 py-16 sm:px-12 lg:px-16 lg:py-24">
+            <h2 className="text-4xl font-medium leading-[1.06] tracking-[-0.035em] sm:text-5xl lg:text-6xl">
+              Start your ERP journey today
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+              Join 500+ businesses running on Vrodux ERP. Get a personalised demo built around your industry and your
+              processes.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Link href="/book-demo" className={cn(pill.base, pill.light, "group")}>
+                <Calendar className="h-4 w-4" />
+                Schedule demo
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
-            </Button>
-            <Button
-              size="xl"
-              variant="outline"
-              className="bg-transparent border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
-              asChild
-            >
-              <Link href="/contact">
-                <MessageSquare className="mr-2 w-5 h-5" />
-                Talk to an Expert
+              <Link href="/contact" className={cn(pill.base, pill.outlineLight)}>
+                <MessageSquare className="h-4 w-4" />
+                Talk to an expert
               </Link>
-            </Button>
+            </div>
+            <ul className="mt-9 flex flex-wrap gap-x-7 gap-y-2 text-sm text-white/85">
+              <li>No credit card required</li>
+              <li>Free implementation consultation</li>
+              <li>30-day money-back guarantee</li>
+            </ul>
           </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/70">
-            <span>✓ No credit card required</span>
-            <span>✓ Free implementation consultation</span>
-            <span>✓ 30-day money-back guarantee</span>
+          <div className="p-3 pt-0 lg:p-4">
+            <div className="relative min-h-[260px] overflow-hidden rounded-[1.5rem] sm:rounded-[2rem] lg:h-full lg:min-h-[420px]">
+              <Image
+                src="/images/pages/about-team.jpg"
+                alt="A team collaborating around a table in a bright office"
+                fill
+                sizes="(min-width: 1024px) 560px, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
-import { ImplementationProcess } from "@/components/sections/implementation-process";
+import { HomeGoLive } from "@/components/home/golive-pricing";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Clock, Users, Award } from "lucide-react";
 
@@ -64,7 +64,7 @@ export default function ImplementationPage() {
         </div>
       </section>
 
-      <ImplementationProcess />
+      <HomeGoLive />
 
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4">

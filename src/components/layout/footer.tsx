@@ -72,7 +72,7 @@ const social = [
 
 export function Footer() {
   return (
-    <footer className="bg-muted/30 border-t">
+    <footer className="border-t bg-white dark:bg-card/40">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand column */}
@@ -122,7 +122,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="w-8 h-8 rounded-lg bg-muted hover:bg-brand-500/10 hover:text-brand-500 flex items-center justify-center transition-colors"
+                  className="w-9 h-9 rounded-full bg-muted hover:bg-brand-500/10 hover:text-brand-500 flex items-center justify-center transition-colors"
                 >
                   <s.icon className="w-4 h-4" />
                 </a>
@@ -176,7 +176,7 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Get Started</h3>
             <div className="space-y-3">
-              <div className="p-4 rounded-xl border bg-gradient-to-br from-brand-500/5 to-brand-600/10">
+              <div className="p-4 rounded-xl border bg-[#B5D6FF] dark:bg-[#17379B]">
                 <p className="text-sm font-medium mb-1">Start Free Consultation</p>
                 <p className="text-xs text-muted-foreground mb-3">Get a personalized ERP roadmap for your business</p>
                 <Link

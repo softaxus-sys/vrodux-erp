@@ -15,8 +15,7 @@ export function PricingFaq() {
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-semibold mb-4">
@@ -29,8 +28,7 @@ export function PricingFaq() {
 
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
             <Accordion
@@ -52,8 +50,7 @@ export function PricingFaq() {
 
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
             className="mt-10 text-center"
           >
             <p className="text-muted-foreground mb-4">Still have questions?</p>

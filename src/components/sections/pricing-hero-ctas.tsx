@@ -12,7 +12,7 @@ export function PricingHeroCtas() {
   return (
     <div className="flex flex-col items-center gap-3">
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
-        <Button size="lg" className="bg-gradient-to-r from-brand-600 to-brand-500 shadow-glow-sm" asChild>
+        <Button size="lg" className="" asChild>
           <a href="#plans" onClick={() => trackEvent("buy_now_click", { location: "hero" })}>
             Buy Now
             <ArrowRight className="w-4 h-4 ml-2" />

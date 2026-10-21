@@ -147,7 +147,7 @@ export function BlogList() {
         {featured && (
           <Link href={`/blog/${featured.slug}`} className="group block mb-10">
             <div className="grid md:grid-cols-2 gap-8 p-8 rounded-2xl border bg-card hover:shadow-md transition-shadow">
-              <div className="relative h-56 rounded-xl overflow-hidden bg-gradient-to-br from-brand-500/20 to-brand-600/30">
+              <div className="relative h-56 rounded-xl overflow-hidden bg-[#B5D6FF] dark:bg-[#17379B]">
                 {blogCovers[featured.slug] && (
                   <Image
                     src={blogCovers[featured.slug].src}
@@ -182,7 +182,7 @@ export function BlogList() {
             {rest.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
                 <article className="h-full flex flex-col p-6 rounded-2xl border bg-card hover:shadow-md transition-all duration-300 hover:-translate-y-1">
-                  <div className="relative h-40 rounded-xl overflow-hidden bg-gradient-to-br from-muted to-muted/50 mb-4 flex items-center justify-center text-3xl">
+                  <div className="relative h-40 rounded-xl overflow-hidden bg-muted mb-4 flex items-center justify-center text-3xl">
                     {blogCovers[post.slug] ? (
                       <Image
                         src={blogCovers[post.slug].src}

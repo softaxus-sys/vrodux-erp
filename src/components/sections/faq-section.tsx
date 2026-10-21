@@ -6,7 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const faqs = [
+export const faqs = [
   {
     q: "How long does ERP implementation take?",
     a: "Vrodux ERP is cloud-based, so your workspace works instantly. The only time involved is exporting your data from your current system, importing it, and adjusting settings, which is usually a day or two for most businesses, such as real estate, POS and restaurants. On-premises deployments take a few days because of installation and training.",

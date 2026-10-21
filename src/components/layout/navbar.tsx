@@ -270,7 +270,7 @@ export function Navbar() {
               Launch Vrodux ERP
             </a>
           </Button>
-          <Button size="sm" asChild className="bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-700 hover:to-brand-600 shadow-glow-sm">
+          <Button size="sm" asChild className="">
             <Link href="/book-demo">Book Demo</Link>
           </Button>
         </div>

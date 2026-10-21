@@ -122,12 +122,10 @@ export async function ModulePageLayout({ module: mod }: { module: ModuleTile }) 
                 <Link
                   key={r.id}
                   href={r.href}
-                  className="group block p-5 rounded-2xl border bg-card hover:shadow-glow-sm hover:-translate-y-1 transition-all duration-300"
+                  className="group block p-5 rounded-2xl border bg-card hover:border-brand-500/40 transition-colors"
                 >
-                  <div className={`w-10 h-10 rounded-xl ${r.bg} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
-                    <div className={`w-5 h-5 bg-gradient-to-br ${r.color} rounded-md flex items-center justify-center`}>
-                      <r.icon className="w-3 h-3 text-white" />
-                    </div>
+                  <div className="w-10 h-10 rounded-full bg-[#B5D6FF] dark:bg-[#17379B] flex items-center justify-center mb-3">
+                    <r.icon className="w-5 h-5 text-brand-700 dark:text-brand-300" strokeWidth={1.75} />
                   </div>
                   <h3 className="font-semibold mb-1.5">{r.name}</h3>
                   <p className="text-sm text-muted-foreground line-clamp-2 mb-3">{r.description}</p>
