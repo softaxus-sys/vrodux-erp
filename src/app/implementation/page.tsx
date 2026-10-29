@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2, Clock, Users, Award } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Implementation Services — Vrodux ERP",
-  description: "Professional ERP implementation services by SoftAxis Technologies. Get your Vrodux ERP up and running quickly with our proven methodology.",
+  description: "Free ERP implementation, customization and data migration by SoftAxis Technologies. Get your Vrodux ERP up and running quickly with our proven methodology.",
 };
 
 const packages = [
@@ -17,21 +17,18 @@ const packages = [
     duration: "Same Day – 2 Days",
     description: "For small businesses with standard requirements",
     includes: ["Core module setup", "Basic data migration", "User training (online)", "Go-live support (1 week)"],
-    price: "Starting from $2,999",
   },
   {
     name: "Professional",
     duration: "2-4 Days",
     description: "For growing businesses with moderate customization",
     includes: ["Full module configuration", "Data migration & validation", "Custom workflows", "On-site training", "Go-live support (2 weeks)", "Post-launch optimization"],
-    price: "Starting from $7,999",
   },
   {
     name: "Enterprise",
     duration: "Under 1 Week",
     description: "For large enterprises with complex requirements",
     includes: ["Full platform customization", "Complex data migration", "Custom integrations", "Multi-site rollout", "Change management support", "Dedicated project manager", "6-month post-launch support"],
-    price: "Custom quote",
   },
 ];
 
@@ -71,6 +68,9 @@ export default function ImplementationPage() {
           <h2 className="text-3xl font-semibold text-center mb-10">
             Implementation <span className="text-gradient">Packages</span>
           </h2>
+          <p className="text-center text-muted-foreground max-w-2xl mx-auto -mt-6 mb-10">
+            Free implementation, free customization and free data migration — at no extra cost.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {packages.map((pkg, i) => (
               <div key={pkg.name} className={`p-7 rounded-2xl border bg-card flex flex-col ${i === 1 ? "border-brand-500 shadow-glow-sm" : ""}`}>
@@ -87,10 +87,10 @@ export default function ImplementationPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="text-lg font-semibold mb-3">{pkg.price}</div>
+                <div className="text-lg font-semibold mb-3">Free</div>
                 <Button asChild variant={i === 1 ? "default" : "outline"}>
                   <Link href="/contact?subject=Implementation+Services">
-                    Get a Quote <ArrowRight className="ml-2 w-4 h-4" />
+                    Talk to Us <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
               </div>
