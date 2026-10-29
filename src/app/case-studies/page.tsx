@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
+import { ClientsSection } from "@/components/sections/clients";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -76,6 +77,38 @@ const caseStudies = [
     quote: "Now we know the exact cost and margin of every project in real-time. No more surprises at project close.",
     quotePerson: "Mohammed Al Farsi, CEO",
   },
+  {
+    company: "Metro Pharma Distribution",
+    industry: "Pharma Distribution",
+    country: "",
+    logo: "MP",
+    color: "bg-orange-500",
+    challenge: "Stockouts and overstocking across multiple warehouses with no real-time view of inventory.",
+    solution: "Inventory Management + Procurement workflows with automatic reorder points across 8 warehouses.",
+    results: [
+      { metric: "8", label: "Warehouses with live stock" },
+      { metric: "Real-time", label: "Stock visibility" },
+      { metric: "Automatic", label: "Reorder points" },
+    ],
+    quote: "Inventory management and procurement workflows have been game-changing. Real-time stock visibility across 8 warehouses and automatic reorder points saved us from stockouts and overstocking.",
+    quotePerson: "Sarah Johnson, Head of Finance",
+  },
+  {
+    company: "TechVision Technologies",
+    industry: "Technology",
+    country: "UAE",
+    logo: "TV",
+    color: "bg-cyan-500",
+    challenge: "A complex payroll structure that took a week to process, with UAE labor law, gratuity and leave to manage.",
+    solution: "HR & Payroll module covering UAE labor law compliance, gratuity calculations and leave management.",
+    results: [
+      { metric: "Week → hours", label: "Payroll processing time" },
+      { metric: "UAE", label: "Labor law compliance" },
+      { metric: "Automated", label: "Gratuity & leave" },
+    ],
+    quote: "The HR and payroll module handles our complex payroll structure perfectly — including UAE labor law compliance, gratuity calculations, and leave management. Payroll that used to take a week now takes hours.",
+    quotePerson: "Fatima Hassan, HR Manager",
+  },
 ];
 
 export default function CaseStudiesPage() {
@@ -103,7 +136,7 @@ export default function CaseStudiesPage() {
                     </div>
                     <div>
                       <div className="font-semibold">{study.company}</div>
-                      <div className="text-sm text-muted-foreground">{study.industry} · {study.country}</div>
+                      <div className="text-sm text-muted-foreground">{study.industry}{study.country && ` · ${study.country}`}</div>
                     </div>
                   </div>
 
@@ -149,6 +182,8 @@ export default function CaseStudiesPage() {
           </div>
         </div>
       </section>
+
+      <ClientsSection />
 
       <FinalCTA />
     </>
