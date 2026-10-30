@@ -24,10 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!category) return { title: "Category Not Found" };
   return pageMeta({
     title: `${category.name} — Docs`,
-    description: fitDescription([
-      category.description,
-      `Browse step-by-step guides and how-to articles for ${category.name} in the Vrodux ERP knowledge base.`,
-    ]),
+    description: fitDescription([category.description]),
     path: `/docs/${category.slug}`,
   });
 }

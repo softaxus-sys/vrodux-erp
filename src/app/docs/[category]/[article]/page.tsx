@@ -27,14 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category: categorySlug, article: articleSlug } = await params;
   const article = getArticle(categorySlug, articleSlug);
   if (!article) return { title: "Article Not Found", robots: { index: false, follow: false } };
-  const category = getCategory(article.categorySlug);
   return pageMeta({
     title: DOC_TITLE_OVERRIDES[`${article.categorySlug}/${article.slug}`] ?? article.title,
-    description: fitDescription([
-      article.summary,
-      `Step-by-step guide from the Vrodux ERP ${category?.name ?? ""} documentation.`,
-      "Learn how it works and how to set it up in your workspace.",
-    ]),
+    // The article summary is already a specific, human-written description; no filler is added to reach a length.
+    description: fitDescription([article.summary]),
     path: `/docs/${article.categorySlug}/${article.slug}`,
     type: "article",
   });

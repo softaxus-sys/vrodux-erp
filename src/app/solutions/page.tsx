@@ -30,7 +30,7 @@ const deploymentOptions = [
       "Access from any device",
     ],
     cta: "Start with SaaS",
-    href: "/book-demo?type=saas",
+    href: "/book-demo",
     color: "border-brand-500 bg-brand-500/5",
   },
   {
@@ -47,7 +47,7 @@ const deploymentOptions = [
       "Custom server configuration",
     ],
     cta: "Request On-Premise Quote",
-    href: "/contact?subject=On-Premise+Deployment",
+    href: "/contact",
     color: "border-muted",
   },
 ];

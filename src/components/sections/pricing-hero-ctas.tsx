@@ -20,7 +20,7 @@ export function PricingHeroCtas() {
         </Button>
         <Button size="lg" variant="outline" asChild>
           <Link
-            href="/contact?subject=Sales"
+            href="/contact"
             onClick={() => trackEvent("talk_to_sales_click", { location: "hero" })}
           >
             <MessageSquare className="w-4 h-4 mr-2" />

@@ -92,7 +92,7 @@ export default function PartnersPage() {
                 </div>
 
                 <Button asChild>
-                  <Link href="/contact?subject=Partner+Program+Inquiry">
+                  <Link href="/contact">
                     Apply Now <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>
@@ -111,7 +111,7 @@ export default function PartnersPage() {
             a partner portal, and a dedicated partner success manager.
           </p>
           <Button size="lg" asChild>
-            <Link href="/contact?subject=Partner+Program+Inquiry">
+            <Link href="/contact">
               Apply for Partnership
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>

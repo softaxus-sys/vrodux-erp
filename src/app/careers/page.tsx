@@ -96,7 +96,7 @@ export default function CareersPage() {
                 <div className="flex items-center gap-3 flex-shrink-0">
                   <Badge variant="outline">{job.level}</Badge>
                   <Button size="sm" asChild>
-                    <Link href={`/contact?subject=Job+Application+${encodeURIComponent(job.title)}`}>
+                    <Link href="/contact">
                       Apply Now <ArrowRight className="ml-1 w-3 h-3" />
                     </Link>
                   </Button>
@@ -109,7 +109,7 @@ export default function CareersPage() {
             <h3 className="font-semibold mb-2">Don't see your role?</h3>
             <p className="text-muted-foreground text-sm mb-4">We're always looking for exceptional talent. Send us your CV.</p>
             <Button variant="outline" asChild>
-              <Link href="/contact?subject=Open+Application">Send Open Application</Link>
+              <Link href="/contact">Send Open Application</Link>
             </Button>
           </div>
         </div>

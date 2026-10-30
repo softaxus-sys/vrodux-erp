@@ -63,7 +63,7 @@ export function PricingServices() {
         <div className="text-center">
           <Button variant="outline" size="lg" asChild>
             <Link
-              href="/contact?subject=Implementation+Services"
+              href="/contact"
               onClick={() => trackEvent("talk_to_sales_click", { location: "services" })}
             >
               Talk to Sales

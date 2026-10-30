@@ -94,7 +94,7 @@ export default function ImplementationPage() {
                 </ul>
                 <div className="text-lg font-semibold mb-3">Free</div>
                 <Button asChild variant={i === 1 ? "default" : "outline"}>
-                  <Link href="/contact?subject=Implementation+Services">
+                  <Link href="/contact">
                     Talk to Us <ArrowRight className="ml-2 w-4 h-4" />
                   </Link>
                 </Button>

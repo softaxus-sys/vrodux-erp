@@ -139,7 +139,7 @@ export function PricingPlans() {
                 {isEnterprise ? (
                   <Button asChild variant="outline" className="w-full">
                     <Link
-                      href="/contact?plan=enterprise"
+                      href="/contact"
                       onClick={() => trackEvent("talk_to_sales_click", { location: "plan_card", plan: tier.id })}
                     >
                       Talk to Sales
