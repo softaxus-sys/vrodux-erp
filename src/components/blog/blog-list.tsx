@@ -23,6 +23,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "next-gen-erp-guide",
+    title: "Next-Gen ERP: What It Means for Modern Businesses",
+    excerpt: "What a next-gen ERP really is: cloud-first, modular and connected. How it differs from traditional ERP, what to look for and how to roll it out.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-10-30",
+    featured: false,
+    tags: ["Next-Gen ERP", "Cloud ERP", "Digital Transformation"],
+  },
+  {
     slug: "erp-implementation-guide-2025",
     title: "The Complete ERP Implementation Guide for 2025",
     excerpt: "Everything you need to know about planning and executing a successful ERP implementation — from vendor selection to go-live.",

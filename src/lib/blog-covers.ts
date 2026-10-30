@@ -1,4 +1,5 @@
 export const blogCovers: Record<string, { src: string; alt: string }> = {
+  "next-gen-erp-guide": { src: "/images/blog/next-gen-erp-guide.jpg", alt: "Illustration of connected ERP modules: finance, CRM, HR, inventory, POS and reports" },
   "erp-implementation-guide-2025": { src: "/images/blog/erp-implementation-guide-2025.jpg", alt: "A project team planning an ERP rollout with sticky notes and a wall screen" },
   "restaurant-pos-kds-integration": { src: "/images/blog/restaurant-pos-kds-integration.jpg", alt: "Chefs plating dishes beneath a kitchen display screen" },
   "vat-compliance-uae-erp": { src: "/images/blog/vat-compliance-uae-erp.jpg", alt: "Finance manager reviewing reports at a desk with a Dubai skyline behind" },
