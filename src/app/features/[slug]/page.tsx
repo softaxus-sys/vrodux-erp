@@ -10,7 +10,8 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return allModules.map((m) => ({ slug: m.id }));
+  // "crm" has its own route (app/features/crm); skipping it here avoids a prerender collision.
+  return allModules.filter((m) => m.id !== "crm").map((m) => ({ slug: m.id }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
