@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/demos/json-ld";
 import { ArticleLayout } from "@/components/docs/article-layout";
 import {
   docsArticles,
@@ -7,6 +8,12 @@ import {
   getCategory,
   getNextArticle,
 } from "@/components/docs/docs-data";
+import { SITE, breadcrumbLd, fitDescription, pageMeta } from "@/lib/seo";
+
+/** Titles that are still over 60 characters once the brand suffix is dropped. */
+const DOC_TITLE_OVERRIDES: Record<string, string> = {
+  "settings/two-factor-authentication-and-security-settings": "Turn on two-factor authentication and set security rules",
+};
 
 type Props = {
   params: Promise<{ category: string; article: string }>;
@@ -19,11 +26,18 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category: categorySlug, article: articleSlug } = await params;
   const article = getArticle(categorySlug, articleSlug);
-  if (!article) return { title: "Article Not Found" };
-  return {
-    title: article.title,
-    description: article.summary,
-  };
+  if (!article) return { title: "Article Not Found", robots: { index: false, follow: false } };
+  const category = getCategory(article.categorySlug);
+  return pageMeta({
+    title: DOC_TITLE_OVERRIDES[`${article.categorySlug}/${article.slug}`] ?? article.title,
+    description: fitDescription([
+      article.summary,
+      `Step-by-step guide from the Vrodux ERP ${category?.name ?? ""} documentation.`,
+      "Learn how it works and how to set it up in your workspace.",
+    ]),
+    path: `/docs/${article.categorySlug}/${article.slug}`,
+    type: "article",
+  });
 }
 
 export default async function DocsArticlePage({ params }: Props) {
@@ -35,6 +49,33 @@ export default async function DocsArticlePage({ params }: Props) {
   if (!category) notFound();
 
   const nextArticle = getNextArticle(article);
+  const url = `${SITE}/docs/${article.categorySlug}/${article.slug}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "TechArticle",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        headline: article.title,
+        description: article.summary,
+        articleSection: category.name,
+        inLanguage: "en",
+        publisher: { "@type": "Organization", name: "SoftAxis Technologies LLC", logo: { "@type": "ImageObject", url: `${SITE}/images/vrodux_logo.png` } },
+      },
+      breadcrumbLd([
+        { name: "Home", path: "/" },
+        { name: "Docs", path: "/docs" },
+        { name: category.name, path: `/docs/${category.slug}` },
+        { name: article.title, path: `/docs/${article.categorySlug}/${article.slug}` },
+      ]),
+    ],
+  };
 
-  return <ArticleLayout article={article} category={category} nextArticle={nextArticle} />;
+  return (
+    <>
+      <JsonLd data={jsonLd} />
+      <ArticleLayout article={article} category={category} nextArticle={nextArticle} />
+    </>
+  );
 }

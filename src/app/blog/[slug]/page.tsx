@@ -1,4 +1,7 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/demos/json-ld";
+import { SITE, breadcrumbLd, fitDescription, pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { blogCovers } from "@/lib/blog-covers";
@@ -232,31 +235,67 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+/** Shorter <title> text for posts whose headline is too long for search results; the on-page H1 is unchanged. */
+const SEO_TITLES: Record<string, string> = {
+  "restaurant-pos-kds-integration": "How Restaurant POS + KDS Integration Reduces Kitchen Errors",
+  "construction-erp-cost-tracking": "Why Construction Companies Lose Money Without Cost Tracking",
+  "hotel-pms-erp-integration": "Why Standalone Hotel PMS Systems Are Failing Hoteliers",
+};
+
+export function generateStaticParams() {
+  return Object.keys(posts).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = posts[slug];
-  if (!post) return { title: "Post Not Found" };
-  return {
-    title: post.title,
-    description: post.excerpt,
-  };
+  if (!post) return { title: "Post Not Found", robots: { index: false, follow: false } };
+  const cover = blogCovers[slug];
+  return pageMeta({
+    title: SEO_TITLES[slug] ?? post.title,
+    description: fitDescription([post.excerpt, "Read the full guide on the Vrodux ERP blog."]),
+    path: `/blog/${slug}`,
+    type: "article",
+    publishedTime: post.publishedAt,
+    image: cover ? { url: `${SITE}${cover.src}`, alt: cover.alt } : undefined,
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = posts[slug] || {
-    title: "Blog Post",
-    excerpt: "",
-    category: "General",
-    author: "Vrodux Team",
-    readTime: 5,
-    publishedAt: "2025-01-01",
-    tags: [],
-    content: "This article is coming soon. Check back later for more content.",
+  const post = posts[slug];
+  // Unknown slugs must return a real 404 rather than a "coming soon" page with a 200 status.
+  if (!post) notFound();
+  const cover = blogCovers[slug];
+  const url = `${SITE}/blog/${slug}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `${url}#article`,
+        mainEntityOfPage: url,
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        articleSection: post.category,
+        keywords: post.tags.join(", "),
+        author: { "@type": "Person", name: post.author },
+        publisher: { "@type": "Organization", name: "SoftAxis Technologies LLC", logo: { "@type": "ImageObject", url: `${SITE}/images/vrodux_logo.png` } },
+        ...(cover ? { image: `${SITE}${cover.src}` } : {}),
+      },
+      breadcrumbLd([
+        { name: "Home", path: "/" },
+        { name: "Blog", path: "/blog" },
+        { name: post.title, path: `/blog/${slug}` },
+      ]),
+    ],
   };
 
   return (
     <div className="pt-20 pb-16">
+      <JsonLd data={jsonLd} />
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="mb-8">
           <Button variant="ghost" size="sm" asChild className="-ml-2 mb-6">

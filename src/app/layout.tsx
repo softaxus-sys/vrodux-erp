@@ -46,7 +46,6 @@ export const metadata: Metadata = {
   creator: "SoftAxis Technologies LLC",
   publisher: "SoftAxis Technologies LLC",
   metadataBase: new URL("https://vrodux.com"),
-  alternates: { canonical: "https://vrodux.com" },
   openGraph: {
     type: "website",
     locale: "en_US",

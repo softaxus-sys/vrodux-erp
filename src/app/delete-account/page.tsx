@@ -1,16 +1,17 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 
 const EMAIL = "vrodux@softaxis.ae";
 
-export const metadata: Metadata = {
-  title: { absolute: "Delete your Vrodux ERP account | Vrodux" },
+export const metadata: Metadata = pageMeta({
+  title: "Delete your Vrodux ERP account | Vrodux",
   description:
     "How to request deletion of your Vrodux ERP account, or of your company's whole workspace and its data, and what we delete and keep.",
-  alternates: { canonical: "https://vrodux.com/delete-account" },
-  robots: { index: true, follow: true },
-};
+  path: "/delete-account", brand: false,
+});
 
 const mail = (
   <a href={`mailto:${EMAIL}`} className="text-brand-500 hover:underline">
@@ -21,6 +22,7 @@ const mail = (
 export default function DeleteAccountPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Delete your Vrodux ERP account" description={metadata.description as string} path="/delete-account" crumbs={[{ name: "Delete Account", path: "/delete-account" }]} />
       <PageHero
         badge="Account & Data"
         title="Delete your Vrodux ERP "

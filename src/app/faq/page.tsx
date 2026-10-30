@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -8,11 +9,12 @@ import { Badge } from "@/components/ui/badge";
 import Script from "next/script";
 import { totalModuleCount } from "@/lib/modules-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "FAQ — Frequently Asked Questions about Vrodux ERP",
   description:
-    "Find answers to common questions about Vrodux ERP features, pricing, implementation, support, and deployment options.",
-};
+    "Find answers to common questions about Vrodux ERP features, pricing, implementation, support, security and deployment options, from free trial to go-live.",
+  path: "/faq", brand: false,
+});
 
 const faqCategories = [
   {

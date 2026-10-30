@@ -1,14 +1,17 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import Link from "next/link";
 import { ArrowRight, Rocket } from "lucide-react";
 import { CategoryCard } from "@/components/docs/category-card";
 import { docsCategories, getArticlesByCategory } from "@/components/docs/docs-data";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Docs & Knowledge Base",
   description:
-    "Browse the Vrodux ERP knowledge base — onboarding guides and how-to articles organized by category.",
-};
+    "Browse the Vrodux ERP knowledge base: onboarding guides and step-by-step how-to articles for every module, organized by category.",
+  path: "/docs",
+});
 
 const START_HERE_SLUG = "start-here";
 
@@ -17,6 +20,7 @@ export default function DocsHubPage() {
 
   return (
     <div>
+      <PageJsonLd type="CollectionPage" name="Vrodux ERP Docs & Knowledge Base" description={metadata.description as string} path="/docs" crumbs={[{ name: "Docs", path: "/docs" }]} />
       <div className="mb-10">
         <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3">
           Docs &amp; Knowledge Base

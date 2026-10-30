@@ -155,7 +155,7 @@ export const moduleVisuals: Record<string, ModuleVisual> = {
   pos: {
     tone: 4,
     docsCategory: "pos",
-    seoTitle: "Retail POS Software — Barcode, Credit Accounts & Offline Mode",
+    seoTitle: "Retail POS Software — Barcode, Credit & Offline Mode",
     seoDescription:
       "A retail point of sale with barcode scanning, shifts and Z-reports, controlled refunds, customer credit accounts, a live dashboard and offline mode that syncs at day end.",
     flowTitle: "A day at the till",
@@ -288,7 +288,7 @@ export const moduleVisuals: Record<string, ModuleVisual> = {
   library: {
     tone: 5,
     docsCategory: "library",
-    seoTitle: "Library Management Software — Circulation, Fines & Member Portal",
+    seoTitle: "Library Management Software — Circulation & Fines",
     seoDescription:
       "Catalogue, barcode circulation, reservations, branch transfers, automatic fines, email reminders and a member portal for school, university and community libraries.",
     flowTitle: "How a book moves through the library",
@@ -404,7 +404,7 @@ export const moduleVisuals: Record<string, ModuleVisual> = {
   "b2b-services": {
     tone: 3,
     docsCategory: "industry-packs",
-    seoTitle: "Professional Services Software — Proposals, Contracts & Tickets",
+    seoTitle: "Professional Services Software — Contracts & Tickets",
     seoDescription: "Proposals, contracts and support tickets with a summary overview. A lightweight B2B services module inside Vrodux ERP.",
     flowTitle: "Client engagement",
     flow: [

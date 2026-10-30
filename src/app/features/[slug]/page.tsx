@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ModulePageLayout } from "@/components/features/module-page-layout";
 import { allModules, getModuleBySlug } from "@/lib/modules-data";
 import { moduleVisuals } from "@/lib/module-visuals";
+import { SITE, fitDescription, pageMeta } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -18,14 +19,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!mod) return { title: "Module Not Found" };
   const v = moduleVisuals[mod.id];
   const title = v?.seoTitle ?? `${mod.name} — Vrodux ERP Features`;
-  const description = v?.seoDescription ?? mod.description;
-  const url = `https://vrodux.com${mod.href}`;
-  return {
-    title: { absolute: `${title} | Vrodux ERP` },
+  const description = fitDescription([v?.seoDescription, mod.description, "Part of the Vrodux ERP platform."]);
+  return pageMeta({
+    title,
     description,
-    alternates: { canonical: url },
-    openGraph: { title: `${title} | Vrodux ERP`, description, url, type: "website", siteName: "Vrodux ERP" },
-  };
+    path: mod.href,
+    image: v?.photo ? { url: `${SITE}${v.photo.src}`, alt: v.photo.alt } : undefined,
+  });
 }
 
 export default async function ModuleFeaturePage({ params }: Props) {

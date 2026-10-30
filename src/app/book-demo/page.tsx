@@ -1,17 +1,21 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { DemoForm } from "@/components/shared/demo-form";
 import { PageHero } from "@/components/shared/page-hero";
 import { Clock, Video, Users, Star } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Book a Demo — See Vrodux ERP in Action",
   description:
     "Schedule a personalized 30-minute demo of Vrodux ERP. See how our platform can transform your specific business operations.",
-};
+  path: "/book-demo",
+});
 
 export default function BookDemoPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Book a Vrodux ERP Demo" description={metadata.description as string} path="/book-demo" crumbs={[{ name: "Book a Demo", path: "/book-demo" }]} />
       <PageHero
         badge="30-Minute Demo"
         title="See Vrodux ERP "

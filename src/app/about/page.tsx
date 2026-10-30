@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
@@ -7,11 +9,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Code2, Target, Eye, ShieldCheck, Compass, HeartHandshake } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About Us — Softaxis Technologies LLC",
   description:
-    "Learn about Softaxis Technologies LLC, the Dubai-based software engineering company behind Vrodux ERP. Founded in 2019, DET-licensed, and trusted by clients across Canada, the UAE, and the GCC.",
-};
+    "Learn about Softaxis Technologies LLC, the Dubai-based software company behind Vrodux ERP. Founded in 2019, DET-licensed and trusted across the UAE and GCC.",
+  path: "/about",
+});
 
 const values = [
   { icon: Code2, title: "Code Quality First", description: "We write maintainable, well-tested code with documentation that your future team can confidently extend." },
@@ -32,6 +35,7 @@ const milestones = [
 export default function AboutPage() {
   return (
     <>
+      <PageJsonLd type="AboutPage" name="About Softaxis Technologies" description={metadata.description as string} path="/about" crumbs={[{ name: "About", path: "/about" }]} />
       <PageHero
         badge="About Softaxis Technologies"
         title="Engineering Built "

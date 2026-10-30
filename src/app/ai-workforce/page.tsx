@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { TelegramBotSection } from "@/components/sections/telegram-bot";
@@ -6,11 +8,12 @@ import { VoiceAgentSection } from "@/components/sections/voice-agent";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { CheckCircle2, DollarSign, Users, ShoppingCart, Package, Layers, BarChart3, ShieldCheck, Bot } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Vrodux AI Workforce — AI Agents Built Into Your ERP",
   description:
-    "Meet the Vrodux AI Workforce: AI agents for Finance, HR, Sales, Inventory, and Operations that work inside your ERP — reconciling accounts, following up on invoices, flagging reorders, and answering questions in plain language.",
-};
+    "Meet the Vrodux AI Workforce: AI agents for Finance, HR, Sales, Inventory and Operations that work inside your ERP and answer questions in plain language.",
+  path: "/ai-workforce", brand: false,
+});
 
 const agents = [
   {
@@ -108,6 +111,7 @@ const guardrails = [
 export default function AiWorkforcePage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Vrodux AI Workforce" description={metadata.description as string} path="/ai-workforce" crumbs={[{ name: "AI Workforce", path: "/ai-workforce" }]} />
       <PageHero
         badge="Vrodux AI Workforce"
         title="Meet Your New "

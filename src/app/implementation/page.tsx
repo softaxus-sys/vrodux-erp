@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -6,10 +8,12 @@ import { HomeGoLive } from "@/components/home/golive-pricing";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Clock, Users, Award } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Implementation Services — Vrodux ERP",
-  description: "Free ERP implementation, customization and data migration by SoftAxis Technologies. Get your Vrodux ERP up and running quickly with our proven methodology.",
-};
+export const metadata: Metadata = pageMeta({
+  title: "Implementation Services",
+  description:
+    "Free ERP implementation, customization and data migration by SoftAxis Technologies. Get your Vrodux ERP up and running quickly with our proven methodology.",
+  path: "/implementation",
+});
 
 const packages = [
   {
@@ -35,6 +39,7 @@ const packages = [
 export default function ImplementationPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Vrodux ERP Implementation Services" description={metadata.description as string} path="/implementation" crumbs={[{ name: "Implementation", path: "/implementation" }]} />
       <PageHero
         badge="Implementation Services"
         title="From Contract to "

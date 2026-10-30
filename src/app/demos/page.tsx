@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { Button } from "@/components/ui/button";
@@ -6,12 +7,12 @@ import { DemoCard } from "@/components/demos/demo-card";
 import { JsonLd } from "@/components/demos/json-ld";
 import { getDemoCatalog, groupByCategory, videoObjectJsonLd } from "@/lib/demos";
 
-export const metadata: Metadata = {
-  title: "Product Demos — Vrodux ERP",
+export const metadata: Metadata = pageMeta({
+  title: "Product Demo Videos for Every Module",
   description:
-    "Watch short Vrodux ERP demo videos: CRM, sales, POS, finance, HR, inventory, manufacturing and industry modules.",
-  alternates: { canonical: "https://vrodux.com/demos" },
-};
+    "Watch short Vrodux ERP demo videos: CRM, sales, POS, finance, HR, inventory, manufacturing and industry modules. See each workflow in action.",
+  path: "/demos",
+});
 
 export default async function DemosPage() {
   const { videos, updated } = await getDemoCatalog();
@@ -21,7 +22,7 @@ export default async function DemosPage() {
     <>
       <PageHero
         badge="Product demos"
-        title="See Vrodux ERP in action"
+        title="Vrodux ERP product demo videos"
         description="Short walkthroughs of every module, from first sign-in to day-to-day workflows."
       />
 

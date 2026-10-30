@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import Link from "next/link";
 import Image from "next/image";
 import { PageHero } from "@/components/shared/page-hero";
@@ -7,10 +9,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, MapPin, Clock, Briefcase } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Careers — Join the Vrodux Team",
-  description: "Join SoftAxis Technologies and help build the future of enterprise ERP. Open positions in engineering, sales, customer success, and more.",
-};
+  description:
+    "Join SoftAxis Technologies and help build the future of enterprise ERP. Open positions in engineering, sales, customer success, and more.",
+  path: "/careers",
+});
 
 const openings = [
   { title: "Senior Full-Stack Engineer", department: "Engineering", location: "Dubai, UAE", type: "Full-time", level: "Senior" },
@@ -37,6 +41,7 @@ const perks = [
 export default function CareersPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Careers at Vrodux" description={metadata.description as string} path="/careers" crumbs={[{ name: "Careers", path: "/careers" }]} />
       <PageHero
         badge="Join Our Team"
         title="Build the Future of "

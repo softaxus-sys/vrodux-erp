@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
 import { HomeModules } from "@/components/home/modules";
 import { totalModuleCount } from "@/lib/modules-data";
@@ -7,10 +9,12 @@ import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet, Flame, Lock, Plug } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Features — Complete ERP Platform",
-  description: `Explore all ${totalModuleCount} Vrodux ERP modules including Finance, HR, Inventory, CRM, Project Management, POS, Restaurant, Hospitality, Real Estate, Construction, Healthcare, Education, and more.`,
-};
+  description:
+    `Explore all ${totalModuleCount} Vrodux ERP modules: Finance, HR, Inventory, CRM, POS, Restaurant, Hospitality, Real Estate, Construction, Healthcare, Education and more.`,
+  path: "/features",
+});
 
 const crmReports = [
   "Sales Pipeline",
@@ -64,6 +68,7 @@ const workspaceAdmin = [
 export default function FeaturesPage() {
   return (
     <>
+      <PageJsonLd type="CollectionPage" name="Vrodux ERP Features" description={metadata.description as string} path="/features" crumbs={[{ name: "Features", path: "/features" }]} />
       <PageHero
         badge={`${totalModuleCount} Powerful Modules`}
         title="Everything Your Business Needs, "

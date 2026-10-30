@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -6,11 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, CheckCircle2, Cloud, Server, Globe, Shield, Zap, BarChart3 } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Solutions — ERP Deployment & Business Solutions",
   description:
     "Vrodux ERP solutions for SaaS, On-Premise, multi-company, multi-currency, and global businesses. Discover the right deployment model for your needs.",
-};
+  path: "/solutions",
+});
 
 const deploymentOptions = [
   {
@@ -79,6 +82,7 @@ const capabilities = [
 export default function SolutionsPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Vrodux ERP Solutions" description={metadata.description as string} path="/solutions" crumbs={[{ name: "Solutions", path: "/solutions" }]} />
       <PageHero
         badge="ERP Solutions"
         title="The Right ERP Solution "

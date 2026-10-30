@@ -1,12 +1,16 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Shield, Lock, Eye, Server, RefreshCw, Award, Fingerprint, MonitorSmartphone, UserCog } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Security & Compliance — Vrodux ERP",
-  description: "Learn about Vrodux ERP's enterprise-grade security, compliance certifications, and data protection practices.",
-};
+export const metadata: Metadata = pageMeta({
+  title: "Security & Compliance",
+  description:
+    "Learn about Vrodux ERP's enterprise-grade security: encryption, access control, audit logs, backups and data protection practices for your business data.",
+  path: "/security",
+});
 
 const securityFeatures = [
   { icon: Lock, title: "Data Encryption", description: "All data encrypted at rest (AES-256) and in transit (TLS 1.3). Keys managed with industry-standard HSMs.", color: "text-blue-500", bg: "bg-blue-500/10" },
@@ -29,6 +33,7 @@ const accessControlFeatures = [
 export default function SecurityPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Vrodux ERP Security" description={metadata.description as string} path="/security" crumbs={[{ name: "Security", path: "/security" }]} />
       <PageHero
         badge="Security First"
         title="Enterprise-Grade "

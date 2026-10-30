@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Button } from "@/components/ui/button";
@@ -10,11 +12,12 @@ import { IndustryDemoButton } from "@/components/demos/industry-demo-button";
 import { getDemoCatalog } from "@/lib/demos";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Industry Solutions — ERP for Every Sector",
   description:
-    "Vrodux ERP delivers tailored solutions for Retail, Restaurants & F&B, Hospitality, Real Estate, Construction, Healthcare, Education, Insurance, B2B Services, Visa Services, Manufacturing, Library, and Import & Export.",
-};
+    "Vrodux ERP delivers tailored solutions for retail, restaurants, hospitality, real estate, construction, healthcare, education, manufacturing and more.",
+  path: "/industries",
+});
 
 /** Industry id -> demo video slug. Industries without a video get only the Book a Demo button. */
 const DEMO_SLUG: Record<string, string> = {
@@ -34,6 +37,7 @@ export default async function IndustriesPage() {
   const { videos } = await getDemoCatalog();
   return (
     <>
+      <PageJsonLd type="CollectionPage" name="Vrodux ERP Industry Solutions" description={metadata.description as string} path="/industries" crumbs={[{ name: "Industries", path: "/industries" }]} />
       <PageHero
         badge="Industry Solutions"
         title="ERP Built for "

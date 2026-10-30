@@ -1,19 +1,23 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { ContactForm } from "@/components/shared/contact-form";
 import { PageHero } from "@/components/shared/page-hero";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Contact Us — Vrodux ERP",
+export const metadata: Metadata = pageMeta({
+  title: "Contact Vrodux ERP Sales & Support",
   description:
-    "Get in touch with the Vrodux ERP team. We're here to help with demos, pricing, support, and partnership inquiries.",
-};
+    "Get in touch with the Vrodux ERP team for demos, pricing, implementation help, support and partnership enquiries. Tell us about your business.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
     <>
+      <PageJsonLd type="ContactPage" name="Contact Vrodux ERP" description={metadata.description as string} path="/contact" crumbs={[{ name: "Contact", path: "/contact" }]} />
       <PageHero
         badge="Get in Touch"
         title="We'd Love to "

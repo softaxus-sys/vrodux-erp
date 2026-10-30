@@ -19,7 +19,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Vrodux ERP — Enterprise Business Management Platform",
   description:
-    "The complete enterprise ERP platform for modern businesses. Finance, HR, Inventory, Sales, CRM, POS, Hospitality, Real Estate and more — all in one platform by SoftAxis Technologies.",
+    "The complete enterprise ERP platform for modern businesses. Finance, HR, Inventory, Sales, CRM, POS, Hospitality, Real Estate and more in one platform.",
   alternates: { canonical: "https://vrodux.com" },
 };
 

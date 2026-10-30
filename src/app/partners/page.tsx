@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -6,10 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Handshake, DollarSign, BookOpen, Award, Users, Globe } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Partners & Resellers — Vrodux ERP Partner Program",
-  description: "Join the Vrodux ERP partner ecosystem. Become a reseller, implementation partner, or technology partner and grow your business.",
-};
+  description:
+    "Join the Vrodux ERP partner ecosystem. Become a reseller, implementation partner, or technology partner and grow your business.",
+  path: "/partners", brand: false,
+});
 
 const partnerTiers = [
   {
@@ -44,6 +48,7 @@ const partnerTiers = [
 export default function PartnersPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Vrodux ERP Partner Program" description={metadata.description as string} path="/partners" crumbs={[{ name: "Partners", path: "/partners" }]} />
       <PageHero
         badge="Partner Program"
         title="Grow Together with "

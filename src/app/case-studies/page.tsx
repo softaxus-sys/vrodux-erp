@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { ClientsSection } from "@/components/sections/clients";
@@ -7,10 +9,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, TrendingUp } from "lucide-react";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Customer Success Stories — Vrodux ERP Case Studies",
-  description: "Real-world results from businesses that transformed their operations with Vrodux ERP. Read case studies from retail, restaurant, hospitality, construction, and more.",
-};
+  description:
+    "Real results from businesses running on Vrodux ERP. Read case studies from retail, restaurants, hospitality, construction and more.",
+  path: "/case-studies", brand: false,
+});
 
 const caseStudies = [
   {
@@ -114,6 +118,7 @@ const caseStudies = [
 export default function CaseStudiesPage() {
   return (
     <>
+      <PageJsonLd type="CollectionPage" name="Vrodux ERP Case Studies" description={metadata.description as string} path="/case-studies" crumbs={[{ name: "Case Studies", path: "/case-studies" }]} />
       <PageHero
         badge="Success Stories"
         title="Real Results from "

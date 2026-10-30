@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Script from "next/script";
 import { PageHero } from "@/components/shared/page-hero";
 import { PricingTrialBanner } from "@/components/sections/pricing-trial-banner";
@@ -12,12 +13,12 @@ import { PricingFinalCta } from "@/components/sections/pricing-final-cta";
 import { PricingHeroCtas } from "@/components/sections/pricing-hero-ctas";
 import { TRIAL_DAYS } from "@/lib/trial";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Vrodux ERP Pricing | Simple, Transparent ERP Pricing",
   description:
-    `Explore Vrodux ERP pricing with simple plans for growing businesses. Every plan includes every module, priced by team size. Buy now, or try free for ${TRIAL_DAYS} days with no credit card.`,
-  alternates: { canonical: "https://vrodux.com/pricing" },
-};
+    `Explore Vrodux ERP pricing: simple plans with every module included, priced by team size. Buy now or try free for ${TRIAL_DAYS} days with no credit card.`,
+  path: "/pricing", brand: false,
+});
 
 export default function PricingPage() {
   const jsonLd = {

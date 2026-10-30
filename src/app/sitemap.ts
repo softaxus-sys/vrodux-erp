@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { industries } from "@/lib/industries-data";
 import { docsArticles, docsCategories } from "@/components/docs/docs-data";
 import { allModules } from "@/lib/modules-data";
+import { blogCovers } from "@/lib/blog-covers";
 
 const baseUrl = "https://vrodux.com";
 
@@ -54,7 +55,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  return [...staticPages, ...featureModulePages, ...industryPages, ...docsCategoryPages, ...docsArticlePages].map((page) => ({
+  const blogPostPages = Object.keys(blogCovers).map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+
+  return [...staticPages, ...featureModulePages, ...industryPages, ...blogPostPages, ...docsCategoryPages, ...docsArticlePages].map((page) => ({
     url: page.url,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,

@@ -1,14 +1,19 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy — Vrodux ERP",
-  description: "Learn how SoftAxis Technologies LLC collects, uses, and protects your personal data.",
-};
+export const metadata: Metadata = pageMeta({
+  title: "Privacy Policy",
+  description:
+    "Learn how SoftAxis Technologies LLC collects, uses and protects your personal data when you use Vrodux ERP, and how you can exercise your data rights.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Privacy Policy" description={metadata.description as string} path="/privacy" crumbs={[{ name: "Privacy Policy", path: "/privacy" }]} />
       <PageHero
         badge="Last Updated: January 2025"
         title="Privacy "

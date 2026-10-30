@@ -1,14 +1,19 @@
 import { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
+import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
 
-export const metadata: Metadata = {
-  title: "Terms of Service — Vrodux ERP",
-  description: "Terms and conditions governing the use of Vrodux ERP software and services by SoftAxis Technologies LLC.",
-};
+export const metadata: Metadata = pageMeta({
+  title: "Terms of Service",
+  description:
+    "Terms and conditions governing the use of Vrodux ERP software and services provided by SoftAxis Technologies LLC, including subscriptions and data ownership.",
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (
     <>
+      <PageJsonLd type="WebPage" name="Terms of Service" description={metadata.description as string} path="/terms" crumbs={[{ name: "Terms of Service", path: "/terms" }]} />
       <PageHero
         badge="Last Updated: January 2025"
         title="Terms of "
