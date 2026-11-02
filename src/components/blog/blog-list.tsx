@@ -23,6 +23,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "what-is-an-erp-system",
+    title: "What Is an ERP System? A Practical Guide",
+    excerpt: "What is an ERP system? Learn the core modules, the benefits, how to choose the right ERP and how to implement it, with practical tips for UAE businesses.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-02",
+    featured: false,
+    tags: ["ERP System", "What Is ERP", "ERP Selection"],
+  },
+  {
     slug: "erp-systems-uae-evolution",
     title: "The Evolution of ERP Systems in the UAE Tech Ecosystem",
     excerpt: "How ERP systems in the UAE evolved from on-premise platforms to cloud and AI, what drove adoption, and what to look for when choosing one today.",
