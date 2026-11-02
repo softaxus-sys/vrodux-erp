@@ -23,6 +23,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "erp-systems-uae-evolution",
+    title: "The Evolution of ERP Systems in the UAE Tech Ecosystem",
+    excerpt: "How ERP systems in the UAE evolved from on-premise platforms to cloud and AI, what drove adoption, and what to look for when choosing one today.",
+    category: "UAE Market",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-02",
+    featured: false,
+    tags: ["ERP UAE", "UAE Business", "Digital Transformation"],
+  },
+  {
     slug: "next-gen-erp-guide",
     title: "Next-Gen ERP: What It Means for Modern Businesses",
     excerpt: "What a next-gen ERP really is: cloud-first, modular and connected. How it differs from traditional ERP, what to look for and how to roll it out.",

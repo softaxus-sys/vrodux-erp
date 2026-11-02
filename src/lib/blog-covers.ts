@@ -1,4 +1,5 @@
 export const blogCovers: Record<string, { src: string; alt: string }> = {
+  "erp-systems-uae-evolution": { src: "/images/blog/erp-systems-uae-evolution.jpg", alt: "Timeline of ERP systems in the UAE: on-premise in the early 2000s, cloud in the mid 2010s, UAE VAT in 2018, AI and mobile today" },
   "next-gen-erp-guide": { src: "/images/blog/next-gen-erp-guide.jpg", alt: "Illustration of connected ERP modules: finance, CRM, HR, inventory, POS and reports" },
   "erp-implementation-guide-2025": { src: "/images/blog/erp-implementation-guide-2025.jpg", alt: "A project team planning an ERP rollout with sticky notes and a wall screen" },
   "restaurant-pos-kds-integration": { src: "/images/blog/restaurant-pos-kds-integration.jpg", alt: "Chefs plating dishes beneath a kitchen display screen" },
