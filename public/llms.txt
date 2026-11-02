@@ -1,0 +1,39 @@
+# Vrodux ERP
+
+> Vrodux ERP is a cloud-based enterprise resource planning platform by SoftAxis Technologies LLC, a Dubai-based software company. It brings finance, HR and payroll, CRM, sales, purchasing, inventory, POS, manufacturing, project management and industry modules together on one login and one ledger. Every module is included on every plan, and it is also available for deployment on your own servers.
+
+Vrodux supports UAE VAT return preparation, UAE WPS salary files, English and Arabic in the main app, and a 14-day free trial with unlimited users and no credit card. Plans differ by the number of users.
+
+## Product
+- [Features](https://vrodux.com/features): all modules
+- [CRM](https://vrodux.com/features/crm): lead capture and import, lead management, sales pipeline and reports
+- [Finance and accounting](https://vrodux.com/features/finance)
+- [HR and payroll](https://vrodux.com/features/hr)
+- [Inventory](https://vrodux.com/features/inventory)
+- [Purchase management](https://vrodux.com/features/purchase)
+- [Point of sale](https://vrodux.com/features/pos)
+- [Restaurant POS and kitchen display](https://vrodux.com/features/restaurant)
+- [AI Workforce](https://vrodux.com/ai-workforce)
+- [Deployment options](https://vrodux.com/solutions)
+- [Pricing](https://vrodux.com/pricing)
+- [Implementation services](https://vrodux.com/implementation)
+
+## Industries
+- [All industries](https://vrodux.com/industries)
+- [Restaurants and cafes](https://vrodux.com/industries/restaurants)
+- [Retail](https://vrodux.com/industries/retail)
+- [Hospitality](https://vrodux.com/industries/hospitality)
+- [Real estate](https://vrodux.com/industries/real-estate)
+- [Construction](https://vrodux.com/industries/construction)
+
+## Learn
+- [Documentation](https://vrodux.com/docs): step-by-step guides for every module
+- [Blog](https://vrodux.com/blog): ERP guides and UAE business articles
+- [FAQ](https://vrodux.com/faq)
+- [Product demo videos](https://vrodux.com/demos)
+
+## Company
+- [About](https://vrodux.com/about)
+- [Contact](https://vrodux.com/contact)
+- [Book a demo](https://vrodux.com/book-demo)
+- [Security](https://vrodux.com/security)

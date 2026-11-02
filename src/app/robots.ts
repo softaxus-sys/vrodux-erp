@@ -6,7 +6,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin/", "/api/", "/_next/"],
+        // /_next/ holds the CSS, JavaScript and optimized images that pages need to render, so it must stay crawlable.
+        disallow: ["/admin/", "/api/"],
       },
     ],
     sitemap: "https://vrodux.com/sitemap.xml",
