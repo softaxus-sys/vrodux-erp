@@ -66,8 +66,22 @@ export function BlogContent({ content }: { content: string }) {
     }
     if (line.startsWith("## ")) nodes.push(<h2 key={i} className="text-2xl font-semibold mt-8 mb-4">{line.slice(3)}</h2>);
     else if (line.startsWith("### ")) nodes.push(<h3 key={i} className="text-xl font-semibold mt-6 mb-3">{line.slice(4)}</h3>);
-    else if (line.startsWith("- ")) nodes.push(<li key={i} className="ml-4 mb-1 text-muted-foreground">{inline(line.slice(2))}</li>);
-    else if (/^\d+\. /.test(line)) nodes.push(<li key={i} className="ml-4 mb-1 text-muted-foreground list-decimal">{inline(line.replace(/^\d+\. /, ""))}</li>);
+    else if (line.startsWith("- ") || /^\d+\. /.test(line)) {
+      // Group consecutive items into one list so each numbered list restarts at 1.
+      const ordered = !line.startsWith("- ");
+      const marker = ordered ? /^\d+\. / : /^- /;
+      const items: string[] = [];
+      while (i < lines.length && marker.test(lines[i])) items.push(lines[i++].replace(marker, ""));
+      i--;
+      const Tag = ordered ? "ol" : "ul";
+      nodes.push(
+        <Tag key={`l${i}`} className={`my-3 space-y-1 pl-6 text-muted-foreground ${ordered ? "list-decimal" : "list-disc"}`}>
+          {items.map((t, ii) => (
+            <li key={ii}>{inline(t)}</li>
+          ))}
+        </Tag>
+      );
+    }
     else if (line.trim() === "") nodes.push(<div key={i} className="h-2" />);
     else nodes.push(<p key={i} className="text-muted-foreground leading-relaxed mb-3">{inline(line)}</p>);
   }
