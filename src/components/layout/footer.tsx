@@ -181,7 +181,7 @@ export function Footer() {
                 <p className="text-xs text-muted-foreground mb-3">Get a personalized ERP roadmap for your business</p>
                 <Link
                   href="/book-demo"
-                  className="text-xs font-medium text-brand-500 hover:underline flex items-center gap-1"
+                  className="text-xs font-medium text-brand-700 hover:underline dark:text-white flex items-center gap-1"
                 >
                   Book Demo →
                 </Link>
@@ -193,7 +193,7 @@ export function Footer() {
                   href={`${APP_URL}/auth/login?utm_source=footer`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-medium text-brand-500 hover:underline flex items-center gap-1"
+                  className="text-xs font-medium text-brand-700 hover:underline dark:text-white flex items-center gap-1"
                 >
                   Login to ERP <ExternalLink className="w-3 h-3" />
                 </a>

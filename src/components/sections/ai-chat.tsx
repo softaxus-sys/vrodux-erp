@@ -477,7 +477,7 @@ export function AiChatSection({ plain = true }: { plain?: boolean } = {}) {
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="/ai-workforce">Learn More</Link>
+                <Link href="/ai-workforce">Learn more about AI Workforce</Link>
               </Button>
             </div>
           </div>

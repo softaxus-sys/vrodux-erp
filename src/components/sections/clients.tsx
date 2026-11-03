@@ -83,6 +83,7 @@ export function ClientsSection() {
                     alt={`${client.name} logo`}
                     width={client.width}
                     height={client.height}
+                    sizes="(min-width: 1024px) 220px, 45vw"
                     className="max-h-16 w-auto max-w-full object-contain"
                   />
                 )}

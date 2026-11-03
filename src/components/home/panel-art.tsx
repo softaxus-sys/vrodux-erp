@@ -36,7 +36,7 @@ export function BrowserFrame({ url, children, className }: { url: string; childr
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff6159]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#28c940]" />
-        <span className="ml-2 truncate text-[11px] text-slate-500">{url}</span>
+        <span className="ml-2 truncate text-[11px] text-slate-600">{url}</span>
       </div>
       {children}
     </div>

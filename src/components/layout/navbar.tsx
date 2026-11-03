@@ -282,7 +282,7 @@ export function Navbar() {
           <ThemeToggle />
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
             <SheetTrigger asChild>
-              <button className="p-2 rounded-lg hover:bg-muted transition-colors">
+              <button aria-label="Open menu" className="p-2 rounded-lg hover:bg-muted transition-colors">
                 <Menu className="h-5 w-5" />
               </button>
             </SheetTrigger>

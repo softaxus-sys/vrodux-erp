@@ -3,12 +3,12 @@ import { cn } from "@/lib/utils";
 
 /** Bold solid card backgrounds: light tints in light mode, saturated deep colours in dark mode, with a matching icon colour. */
 export const TONES = [
-  { card: "bg-[#B5D6FF] dark:bg-[#1D4FD7]", icon: "text-brand-700 dark:text-white" },
-  { card: "bg-[#D5C2FF] dark:bg-[#6A3DDB]", icon: "text-violet-700 dark:text-white" },
-  { card: "bg-[#A8E6C3] dark:bg-[#047857]", icon: "text-emerald-700 dark:text-white" },
-  { card: "bg-[#FFE08A] dark:bg-[#B45309]", icon: "text-amber-700 dark:text-white" },
-  { card: "bg-[#FFC9A3] dark:bg-[#C2410C]", icon: "text-orange-700 dark:text-white" },
-  { card: "bg-[#FFBFD0] dark:bg-[#BE185D]", icon: "text-rose-700 dark:text-white" },
+  { card: "bg-[#B5D6FF] dark:bg-[#1D4FD7]", icon: "text-brand-800 dark:text-white" },
+  { card: "bg-[#D5C2FF] dark:bg-[#6A3DDB]", icon: "text-violet-800 dark:text-white" },
+  { card: "bg-[#A8E6C3] dark:bg-[#047857]", icon: "text-emerald-800 dark:text-white" },
+  { card: "bg-[#FFE08A] dark:bg-[#B45309]", icon: "text-amber-800 dark:text-white" },
+  { card: "bg-[#FFC9A3] dark:bg-[#C2410C]", icon: "text-orange-800 dark:text-white" },
+  { card: "bg-[#FFBFD0] dark:bg-[#BE185D]", icon: "text-rose-800 dark:text-white" },
 ] as const;
 
 export const tone = (i: number) => TONES[i % TONES.length];

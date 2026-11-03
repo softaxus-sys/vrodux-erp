@@ -54,7 +54,7 @@ export function PricingPlans() {
               )}
             >
               Annual
-              <span className="text-[11px] font-semibold text-emerald-500">Save with annual billing</span>
+              <span className="text-[11px] font-semibold text-emerald-700 dark:text-emerald-400">Save with annual billing</span>
             </button>
           </fieldset>
         </div>
@@ -83,7 +83,7 @@ export function PricingPlans() {
               >
                 {tier.highlighted && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <Badge className="bg-brand-500 text-white gap-1 px-4">
+                    <Badge className="bg-brand-600 text-white gap-1 px-4">
                       <Zap className="w-3 h-3" />
                       Most Popular
                     </Badge>
