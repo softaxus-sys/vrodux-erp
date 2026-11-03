@@ -1,4 +1,5 @@
 export const blogCovers: Record<string, { src: string; alt: string }> = {
+  "marketing-overview-guide": { src: "/images/blog/marketing-overview-guide.jpg", alt: "Four steps of a marketing overview: strategy, channels, measurement and optimization" },
   "what-is-an-erp-system": { src: "/images/blog/what-is-an-erp-system.jpg", alt: "Diagram of an ERP system connecting finance, supply chain, HR, CRM, production and projects" },
   "erp-systems-uae-evolution": { src: "/images/blog/erp-systems-uae-evolution.jpg", alt: "Timeline of ERP systems in the UAE: on-premise in the early 2000s, cloud in the mid 2010s, UAE VAT in 2018, AI and mobile today" },
   "next-gen-erp-guide": { src: "/images/blog/next-gen-erp-guide.jpg", alt: "Illustration of connected ERP modules: finance, CRM, HR, inventory, POS and reports" },

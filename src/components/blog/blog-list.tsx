@@ -23,6 +23,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "marketing-overview-guide",
+    title: "Marketing Overview: A Practical Guide for Modern Businesses",
+    excerpt: "A marketing overview aligns strategy, channels, measurement and optimization. Learn how to build one, with a channel matrix, KPI dashboard and a 4 to 6 week plan.",
+    category: "Marketing",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-03",
+    featured: false,
+    tags: ["Marketing Overview", "Marketing Strategy", "Lead Generation"],
+  },
+  {
     slug: "what-is-an-erp-system",
     title: "What Is an ERP System? A Practical Guide",
     excerpt: "What is an ERP system? Learn the core modules, the benefits, how to choose the right ERP and how to implement it, with practical tips for UAE businesses.",
