@@ -1,4 +1,5 @@
 export const blogCovers: Record<string, { src: string; alt: string }> = {
+  "erp-solutions-transform-business": { src: "/images/blog/erp-solutions-transform-business.jpg", alt: "Separate finance, sales, inventory and HR tools merging into one connected ERP platform" },
   "cloud-erp-uae-business-growth": { src: "/images/blog/cloud-erp-uae-business-growth.jpg", alt: "Illustration of cloud ERP for UAE businesses with benefits: lower cost, scalable, real-time and secure" },
   "marketing-overview-guide": { src: "/images/blog/marketing-overview-guide.jpg", alt: "Four steps of a marketing overview: strategy, channels, measurement and optimization" },
   "what-is-an-erp-system": { src: "/images/blog/what-is-an-erp-system.jpg", alt: "Diagram of an ERP system connecting finance, supply chain, HR, CRM, production and projects" },

@@ -23,6 +23,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "erp-solutions-transform-business",
+    title: "How ERP Solutions Transform the Modern Business Landscape",
+    excerpt: "How ERP solutions transform business: break down data silos, automate routine work, gain real-time visibility and scale, plus an 8-step implementation plan.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-03",
+    featured: false,
+    tags: ["ERP Solutions", "Digital Transformation", "ERP Benefits"],
+  },
+  {
     slug: "cloud-erp-uae-business-growth",
     title: "How Cloud-Based ERP Boosts UAE Business Growth",
     excerpt: "Why cloud ERP suits UAE businesses: lower upfront cost, easy scaling, real-time visibility and VAT and WPS support, plus how to migrate from on-premise.",
