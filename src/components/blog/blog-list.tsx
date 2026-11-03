@@ -23,6 +23,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "cloud-erp-uae-business-growth",
+    title: "How Cloud-Based ERP Boosts UAE Business Growth",
+    excerpt: "Why cloud ERP suits UAE businesses: lower upfront cost, easy scaling, real-time visibility and VAT and WPS support, plus how to migrate from on-premise.",
+    category: "UAE Market",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-03",
+    featured: false,
+    tags: ["Cloud ERP", "UAE", "ERP Migration"],
+  },
+  {
     slug: "marketing-overview-guide",
     title: "Marketing Overview: A Practical Guide for Modern Businesses",
     excerpt: "A marketing overview aligns strategy, channels, measurement and optimization. Learn how to build one, with a channel matrix, KPI dashboard and a 4 to 6 week plan.",
