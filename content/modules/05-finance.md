@@ -19,7 +19,7 @@
 **Currency** — your operating currency is set per company; ledger postings convert into it.
 
 **Tax**
-- VAT screens and a **UAE VAT 201 return preparation** workspace: boxes computed from your ledger, validation, reconciliation to the VAT control account, FAF CSV and XML export, workflow draft → approved → ready, and "filed via portal" with your EmaraTax reference.
+- VAT screens and a **UAE VAT 201 return preparation** workspace: boxes computed from your ledger, validation, reconciliation to the VAT control account, FAF CSV and XML export, workflow draft → approved → ready, and "filed via portal" with your EmaraTax reference. Vrodux prepares your VAT return and exports the files; you file on the FTA portal.
 
 **Integration Center / Finance Posting**
 - See how each module reaches the ledger. Seven sources queue documents (POS sales/refunds, restaurant orders/refunds, real-estate rent, library fines, payroll) plus sales returns, wallet top-ups, POS cash in/out and hotel payments.

@@ -29,7 +29,10 @@ Sales teams, agencies, real-estate brokers, service businesses — anyone with i
 - Calls, meetings, emails, notes and tasks; meeting/call time; assign tasks to a teammate (they get a notification).
 
 **Quotations from CRM** (needs the Sales module)
-- Create a quotation for a lead or account from a Sales template, preview the branded document, email it, copy the customer link or download a PDF.
+- Send quotations from a lead or account using your Sales templates: preview the exact branded document, email it, copy the customer link or download a PDF. The customer can accept or decline online, and you are alerted when they answer.
+
+**Tell Meta which leads became customers** (off until you switch it on)
+- When a lead that came from a Meta ad changes stage or its deal is won, Vrodux can tell Meta through its Conversions API for CRM, so Meta can learn which leads were good. Needs a Dataset ID and token from Meta Events Manager. Vrodux sends the signal; no change in ad results is promised.
 
 **Documents** — attach files to leads, opportunities and accounts.
 

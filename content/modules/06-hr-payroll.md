@@ -1,6 +1,6 @@
 # HR, Attendance, Leave & Payroll
 
-**Headline:** Run people operations — from hiring to a bank-ready salary file.
+**Headline:** Run people operations — from hiring to a WPS salary file ready to take to your bank.
 **Tagline:** Employees, attendance with office hours, leave entitlements, payroll with Finance approval, UAE WPS, and employee self-service.
 
 ## Features

@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MarkdownLite } from "@/components/docs/markdown-lite";
 import { WatchDemo } from "@/components/demos/watch-demo";
-import { demoSlugForDocsCategory } from "@/lib/demos";
+import { demoForDocsPage } from "@/lib/demos";
 import { getDocsShots } from "@/lib/docs-screenshots";
 import type { DocsArticle, DocsCategory } from "@/components/docs/docs-data";
 
@@ -17,7 +17,7 @@ interface ArticleLayoutProps {
 export async function ArticleLayout({ article, category, nextArticle }: ArticleLayoutProps) {
   const articlePath = `/docs/${category.slug}/${article.slug}`;
   const shots = await getDocsShots(articlePath);
-  const demoSlug = demoSlugForDocsCategory(category.slug);
+  const demo = demoForDocsPage(category.slug, article.slug);
 
   return (
     <div className="max-w-3xl">
@@ -44,9 +44,9 @@ export async function ArticleLayout({ article, category, nextArticle }: ArticleL
         </span>
       </div>
 
-      {demoSlug && (
+      {demo && (
         <div className="mb-8 -mx-4">
-          <WatchDemo slug={demoSlug} />
+          <WatchDemo slug={demo.slug} startAt={demo.startAt} />
         </div>
       )}
 

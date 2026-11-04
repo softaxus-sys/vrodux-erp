@@ -4,6 +4,12 @@ export interface GuideArticle { slug: string; categorySlug: string; title: strin
 
 export const guideCategories: GuideCategory[] = [
   {
+    "slug": "ecommerce",
+    "name": "E-commerce",
+    "description": "Open an online store on top of Inventory, take orders and payments, and connect Shopify.",
+    "icon": "Store"
+  },
+  {
     "slug": "hospitality",
     "name": "Hospitality",
     "description": "Hotel front desk, rooms and rates, folios and housekeeping, and tour operator bookings.",
@@ -38,6 +44,12 @@ export const guideCategories: GuideCategory[] = [
     "name": "Restaurant",
     "description": "Floors and tables, menu, orders, the kitchen display, bills, delivery and loyalty.",
     "icon": "UtensilsCrossed"
+  },
+  {
+    "slug": "seo",
+    "name": "SEO AI Agent",
+    "description": "Audit your site, approve fixes, compare competitors and plan 30 days of content.",
+    "icon": "TrendingUp"
   }
 ];
 
@@ -45,10 +57,10 @@ export const guideArticles: GuideArticle[] = [
   {
     "slug": "what-the-assistant-can-do",
     "categorySlug": "ai-assistant",
-    "title": "What the AI assistant can do and what it will not",
-    "summary": "The scope of the assistant across modules, how confirmation works, and the limits built in.",
+    "title": "What Vrodux AI can do and what it will not",
+    "summary": "The scope of Vrodux AI across modules, how confirmation works, and the limits built in.",
     "order": 2,
-    "body": "\n## Where it works\n\nChat with the assistant in a **side panel** or on a **full page**. Replies are formatted, with tables and lists.\n\n## Across modules\n\nIn **auto mode** it works across all your modules. Name an agent such as CRM, Finance, HR, Restaurant, Visa or Trade to focus it. It finds the right tools when it needs them, from **more than 250 tools** across the modules, to list, look up, create and change records. Examples: log a bug in a project, raise a purchase requisition, create a quotation, add a shipment cost.\n\n## Every change is confirmed\n\nAnything that **creates or changes** data is held for your confirmation. You see a **field-by-field summary** and choose to confirm or reject.\n\n## Safeguards\n\n- It respects the **signed-in user's permissions** and your enabled modules.\n- There are **no delete tools**.\n- It cannot make a **POS sale, void or refund** from chat.\n- You **bring your own AI provider key**.\n\nAnswers can be wrong, so check the summary before you confirm.\n",
+    "body": "\n## Where it works\n\nChat with Vrodux AI in a **side panel** or on a **full page**. Replies are formatted, with tables and lists. Open it from the **Ask Vrodux** button.\n\n## Across modules\n\nThe picker lists a **specialist for each module you use**: CRM, Sales, Purchase, Finance, HR, Inventory, POS, Restaurant, Hospitality, Real Estate, Library, Lead Generation, SEO, E-commerce, Visa, Trade, Projects, Manufacturing, Construction, Recipe, B2B, Education, Healthcare and Insurance. **Auto mode** picks the right one. It finds the right tools when it needs them, from **more than 300 tools** across 20+ modules, to list, look up, create and change records and to run steps such as approvals and status changes. Examples: log a bug in a project, create a quotation, check a guest in, issue a library book, approve a purchase requisition, change an SEO fix status.\n\n## Every change is confirmed\n\nAnything that **creates or changes** data is held for your confirmation. You see a **field-by-field summary** and choose to confirm or reject.\n\n## Safeguards\n\n- It respects the **signed-in user's permissions** and your enabled modules.\n- There are **no delete tools**.\n- It cannot make, void or refund a **POS sale** from chat.\n- You can connect **your own AI provider key**, or use the shared allowance included with your workspace (a monthly message limit applies).\n- **Voice**: push-to-talk in the chat, with spoken replies where voice is enabled for your workspace.\n\nAnswers can be wrong, so check the summary before you confirm.\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -109,6 +121,66 @@ export const guideArticles: GuideArticle[] = [
     "summary": "Eight built-in reports for pipeline, wins and losses, team performance, lead sources, conversion, velocity, activities and account revenue.",
     "order": 7,
     "body": "\nCRM has eight built-in reports, available from the Reports hub.\n\n## The reports\n\n- **Sales pipeline**\n- **Win/Loss**\n- **Team performance**, grouped by team\n- **Lead source ROI**\n- **Lead conversion**\n- **Sales velocity**\n- **Activities**\n- **Account revenue**\n\n## How to run one\n\n1. Open the Reports hub and choose CRM.\n2. Pick a report.\n3. Filter by date range, owner or stage.\n4. Export the result as CSV or PDF if you need to share it.\n\n## Good to know\n\n- Results respect each person's access tier, so a rep sees only their own numbers.\n- Stage history for reports builds up from the date the feature was deployed, so older closed deals use approximate dates.\n\nSee [Reports hub](/docs/reports/overview) for how the hub works across modules.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "open-your-online-store",
+    "categorySlug": "ecommerce",
+    "title": "How to open your online store",
+    "summary": "One store per workspace, on a web address you choose or your own domain, kept private until you launch.",
+    "order": 2,
+    "body": "\nE-commerce is your own online store, **built on Inventory**. Products, prices and stock come straight from Inventory, so nothing is entered twice.\n\n## Your store address\n\nEach workspace has **one store**. Choose a web address for it, or use **your own domain**, which you set up with DNS.\n\n## Preview before you launch\n\nYour store stays in a **private preview** until you launch it. Use it to check your pages, products and checkout first.\n\n## Languages\n\nThe storefront supports **English and Arabic** (right to left).\n\n## Before you start\n\nPut the products you want to sell in Inventory first. See [Publish products from Inventory](/docs/ecommerce/publish-products-from-inventory).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "settings-payments-and-delivery",
+    "categorySlug": "ecommerce",
+    "title": "How to set up payments and delivery",
+    "summary": "Choose how customers pay, then set delivery zones, rates, a free-delivery threshold and tax.",
+    "order": 3,
+    "body": "\n## Payments\n\nCustomers can pay in three ways:\n\n- **Card**, through your own **Stripe** or **PayPal** account\n- **Cash on delivery**\n- **Bank transfer**\n\n## Delivery\n\n- Create **delivery zones** and a **rate** for each.\n- Set a **free-delivery threshold**.\n- Set **tax**.\n\n## Discount codes\n\nCreate **discount codes** for your customers to use at checkout.\n\n## Totals are worked out by the server\n\nTotals, stock and prices are always worked out by the server, never trusted from the customer's browser.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "design-pages-and-collections",
+    "categorySlug": "ecommerce",
+    "title": "How to design pages and collections",
+    "summary": "Build pages from sections with a live preview, then add menus, collections and discount codes.",
+    "order": 4,
+    "body": "\n## The page builder\n\nPages are built from **sections**: hero, product grid, text, images and call to action. A **live preview** shows the page as you build it.\n\n## Menus and collections\n\n- Add **menus** so customers can find their way around.\n- Group products into **collections**.\n\n## Launch\n\nWhen you are happy with the private preview, launch the store.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "publish-products-from-inventory",
+    "categorySlug": "ecommerce",
+    "title": "How to publish products from Inventory",
+    "summary": "List stock online as drafts or published, in one click, and keep photos with the stock item.",
+    "order": 5,
+    "body": "\n## Online listings\n\nA **listing** is what customers see: name, description, photos, options such as size and colour (up to three), and search details. Each variant is an ordinary Inventory product with its own SKU, barcode, price and stock, so POS, purchasing and reports stay correct.\n\n## List stock in one click\n\n1. Open the stock list, or the **Not yet listed** worklist.\n2. Select the items you want to sell online.\n3. List them as **drafts** or **published**.\n\nPhotos stay with the stock item. See [Online listings and photos](/docs/inventory/online-listings-and-photos) and [Import stock with pictures](/docs/inventory/import-stock-with-pictures).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "connect-shopify",
+    "categorySlug": "ecommerce",
+    "title": "How to connect Shopify",
+    "summary": "Publish products from Inventory to a Shopify store, keep stock in step and bring its orders into Vrodux.",
+    "order": 6,
+    "body": "\n## What the connection does\n\nConnect a Shopify store to:\n\n- **Publish products** from Inventory\n- Keep **stock in step both ways**\n- Bring its **orders** into Vrodux\n\n## Not available yet\n\nWooCommerce is shown as coming soon in the app.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "manage-store-orders",
+    "categorySlug": "ecommerce",
+    "title": "How to manage store orders",
+    "summary": "Stock is reserved when an order is placed. Mark it paid, pack, ship, deliver or refund.",
+    "order": 7,
+    "body": "\n## Stock and orders\n\n**Stock is reserved** when the order is placed and **released** if it is cancelled or never paid.\n\n## Move an order along\n\nMark it **paid**, then **pack**, **ship**, **deliver** or **refund**. Customers are **emailed at each step**.\n\n## Customer accounts\n\nCustomers can check out with or without an account. Those with an account sign in to the store, with password reset by email.\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -353,12 +425,32 @@ export const guideArticles: GuideArticle[] = [
     "placeholder": false
   },
   {
+    "slug": "online-listings-and-photos",
+    "categorySlug": "inventory",
+    "title": "How online listings and photos work",
+    "summary": "A listing is what online customers see. Each variant is an ordinary Inventory product.",
+    "order": 4,
+    "body": "\n## One listing, many variants\n\nA **listing** is what customers see: name, description, photos, options such as **size and colour (up to three)**, and search details. Each **variant is an ordinary Inventory product** with its own SKU, barcode, price and stock, so POS, purchasing and reports stay correct.\n\n## List stock online\n\nFrom the stock list, or from a **Not yet listed** worklist, select items and list them as **drafts** or **published**. Photos stay with the stock item.\n\nSee [Open your online store](/docs/ecommerce/open-your-online-store).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "import-stock-with-pictures",
+    "categorySlug": "inventory",
+    "title": "How to import stock with pictures",
+    "summary": "Upload an Excel or CSV with picture links. Photos are fetched in the background.",
+    "order": 5,
+    "body": "\n## Import\n\nUpload an **Excel or CSV** file with picture links. The photos are **fetched in the background**.\n\n## Safe to run twice\n\nRunning the same file twice **does not duplicate** items.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
     "slug": "find-businesses-and-reveal-contacts",
     "categorySlug": "lead-generation",
     "title": "How to find businesses and reveal contacts",
     "summary": "Search for businesses by category and area, and spend credits only on the contacts you want.",
     "order": 2,
-    "body": "\nLead Generation is live for the **UAE**.\n\n## Find businesses\n\n1. Open Lead Generation and search by **category** and **area**. Results come from real businesses, with website information added.\n2. **Finding is free.**\n\n## Reveal a contact\n\nSpend **credits** to reveal a contact. If the contact turns out to be unusable or bounces, the credit is **refunded**. Credit packs are bought by Stripe or PayPal.\n\n## Manage prospects\n\nYour prospects list can be edited, imported and exported, and you can **push prospects to your CRM**.\n",
+    "body": "\nLead Generation is live for the **UAE**.\n\n## Find businesses\n\n1. Open Lead Generation and search by **category** and **area**. Results come from real businesses, with website information added.\n2. **Finding is free.**\n\n## Reveal a contact\n\nSpend **credits** to reveal a contact. If the contact turns out to be unusable or bounces, the credit is **refunded**. Buy credits in **Settings, Billing, Add-ons and credits**, by card through Stripe or PayPal. The same credits system covers SEO audits, and unused credits can be swapped between add-ons.\n\n## Manage prospects\n\nYour prospects list can be edited, imported and exported, and you can **push prospects to your CRM**.\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -508,7 +600,7 @@ export const guideArticles: GuideArticle[] = [
     "title": "How to use the backlog, sprints and issues",
     "summary": "Capture issues in the backlog, plan sprints, and move issues across the board.",
     "order": 3,
-    "body": "\n## Issues\n\nCreate **issues** in the **backlog**. Use **labels** to categorise them and **comments** to discuss them. Open an issue to see its details in the issue drawer. When you **assign** an issue, the assignee is notified.\n\n## Sprints\n\n**Start** a sprint with the issues you will do, and **complete** it when it ends.\n\n## The board\n\nThe **kanban board** shows issues as cards in **columns**. Drag a card to move it, and manage the columns to match your process.\n\n## AI assistant\n\nThe AI assistant can list and create issues for you, and asks you to confirm before it creates anything. See [AI assistant](/docs/ai-assistant/ask-it-confirm-it).\n",
+    "body": "\n## Issues\n\nCreate **issues** in the **backlog**. Use **labels** to categorise them and **comments** to discuss them. Open an issue to see its details in the issue drawer. When you **assign** an issue, the assignee is notified.\n\n## Sprints\n\n**Start** a sprint with the issues you will do, and **complete** it when it ends.\n\n## The board\n\nThe **kanban board** shows issues as cards in **columns**. Drag a card to move it, and manage the columns to match your process.\n\n## Vrodux AI\n\nVrodux AI can list and create issues for you, and asks you to confirm before it creates anything. See [AI assistant](/docs/ai-assistant/ask-it-confirm-it).\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -518,7 +610,7 @@ export const guideArticles: GuideArticle[] = [
     "title": "How purchase approvals work",
     "summary": "Approve or reject purchase requisitions, and where requisitions come from.",
     "order": 2,
-    "body": "\nPurchase approvals let a manager decide before money is committed.\n\n## Where requisitions come from\n\nRequisitions are raised from **Manufacturing material shortages** and through the **AI assistant**. (The approvals screen in the web app lists and decides them; it does not have a \"new request\" button.)\n\n## Approve or reject\n\n1. Open the approvals list.\n2. Open a requisition and review it.\n3. Choose **Approve**, or **Reject**. Rejecting asks you for a reason.\n\nApprovers are alerted by notification when a requisition needs them.\n\n## Permissions\n\nVendors, orders and approvals each have their own permissions, so approving can be limited to the right people. Reading vendors is also permission-gated.\n",
+    "body": "\nPurchase approvals let a manager decide before money is committed.\n\n## Where requisitions come from\n\nRequisitions are raised from **Manufacturing material shortages** and through **Vrodux AI**. (The approvals screen in the web app lists and decides them; it does not have a \"new request\" button.)\n\n## Approve or reject\n\n1. Open the approvals list.\n2. Open a requisition and review it.\n3. Choose **Approve**, or **Reject**. Rejecting asks you for a reason.\n\nApprovers are alerted by notification when a requisition needs them.\n\n## Permissions\n\nVendors, orders and approvals each have their own permissions, so approving can be limited to the right people. Reading vendors is also permission-gated.\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -663,6 +755,66 @@ export const guideArticles: GuideArticle[] = [
     "placeholder": false
   },
   {
+    "slug": "connect-a-site",
+    "categorySlug": "seo",
+    "title": "How to connect a site",
+    "summary": "Add your website so Vrodux can audit it, and optionally bring in Google Search Console queries.",
+    "order": 2,
+    "body": "\nSEO is **included with every workspace**.\n\n## Add your website\n\nConnect your website so Vrodux can crawl and audit it.\n\n## Google Search Console\n\nOptionally connect **Google Search Console** to bring in the queries your site already gets.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "run-an-audit-and-read-the-health-score",
+    "categorySlug": "seo",
+    "title": "How to run an audit and read the health score",
+    "summary": "Crawl up to 500 pages against more than 30 rules and get a 0 to 100 health score.",
+    "order": 3,
+    "body": "\n## What an audit checks\n\nAn audit crawls **up to 500 pages** and checks **more than 30 rules**: titles, descriptions, headings, canonical tags, structured data, images and alt text, speed, redirects, broken links, duplicates, orphan pages, sitemap and robots.\n\n## The health score\n\nYou get a **0 to 100 health score** and a history of audits. Issues are remembered, so a re-run updates them and closes the ones you fixed.\n\n## Cost\n\nAn audit costs **1 credit per 25 pages crawled**. You see the cost before you run it. See [Credits for SEO](/docs/seo/credits-for-seo).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "review-and-approve-fixes",
+    "categorySlug": "seo",
+    "title": "How to review and approve fixes",
+    "summary": "The agent proposes fixes for new issues. Nothing changes until you approve it.",
+    "order": 4,
+    "body": "\n## Fixes you approve\n\nFor new issues, the agent **proposes fixes**. Review each one. **Nothing changes until you approve it.**\n\n## A limit to know about\n\nOn websites that are **not hosted on Vrodux**, approved fixes are applied by a script in the visitor's browser, which search crawlers and social previews may not see. WordPress articles can be pushed, but existing WordPress pages are not edited at source.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "product-listing-seo",
+    "categorySlug": "seo",
+    "title": "How to improve product listing SEO",
+    "summary": "For stores on Vrodux, edit each listing's title, description and photo alt text and publish the change.",
+    "order": 5,
+    "body": "\n## For stores on Vrodux\n\nReview and edit the **title**, **description** and **photo alt text** of each online listing, then publish the change to your store.\n\nSee [Open your online store](/docs/ecommerce/open-your-online-store).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "competitor-analysis-and-content-plan",
+    "categorySlug": "seo",
+    "title": "How to analyse competitors and plan content",
+    "summary": "Add up to five competitors, see the topics they cover that you do not, and turn the gaps into a 30-day plan.",
+    "order": 6,
+    "body": "\n## Competitor analysis\n\nAdd up to **five competitor websites** and a **search market**. You see topics they cover that you do not and, **where keyword data is available**, search terms they rank for that you do not.\n\n## 30-day content plan\n\nThe gaps become a **calendar of article ideas**. Write a draft with one click into a **review queue**. Publishing to WordPress is a **separate step you choose**.\n\n## Not included\n\nA keyword research tool, rank tracking, backlink analysis and AI-search visibility are not available. A bigger keyword and ranking toolset is planned.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "credits-for-seo",
+    "categorySlug": "seo",
+    "title": "How credits for SEO work",
+    "summary": "An audit costs 1 credit per 25 pages crawled, and every workspace starts with 20 credits.",
+    "order": 7,
+    "body": "\n## Credits\n\n- An audit costs **1 credit per 25 pages crawled**.\n- Every workspace starts with **20 credits**.\n- Competitor analysis costs credits **per website**.\n- You see the cost **before you run anything**.\n\nBuy more in **Settings, Billing, Add-ons and credits**. See [Add-ons and credits](/docs/settings/add-ons-and-credits).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
     "slug": "two-factor-authentication-and-security-settings",
     "categorySlug": "settings",
     "title": "How to turn on two-factor authentication and set security rules",
@@ -688,7 +840,27 @@ export const guideArticles: GuideArticle[] = [
     "title": "Notifications, mobile app and desktop app",
     "summary": "Real-time alerts, installing the web app, the mobile app and the Windows till app.",
     "order": 4,
-    "body": "\n## Notifications\n\nAlerts appear in real time as a **bell** and a toast, with optional sound and desktop notifications. They are **stored**, so you can read them later. They cover things like CRM assignments, leave and payroll approvals, purchase approvals, project assignments, rent and vacancy alerts, trade alerts and quotation responses.\n\n## Web, phone and till\n\n- The **web app** can be **installed to your home screen** and works on phones and tablets.\n- The **mobile app** covers sign-in with two-factor, CRM, HR self-service, approvals and more. See [What's on your phone](/docs/mobile-app/whats-on-your-phone).\n- The **Windows desktop app** is for tills. The installer asks for your server address.\n\n## Languages and currency\n\nThe main app supports **English and Arabic**. Set your company currency once. Exchange rates use a USD base and refresh daily.\n",
+    "body": "\n## Notifications\n\nAn alert appears in the **bell** and as a pop-up the moment something needs you, with a soft sound you can mute and optional desktop notifications. Alerts are **stored**, so you see what you missed while offline.\n\nExamples: a lead, opportunity or account assigned to you; a leave request to approve; a payroll run awaiting Finance approval; a purchase requisition to approve; a project issue assigned to you; a rented property about to fall vacant; trade shipments and payments needing attention; a customer answering a quotation. Team leads are also told when work lands on one of their team members. Only modules your plan and role can open appear.\n\n## Web, phone and till\n\n- The **web app** can be **installed to your home screen** and works on phones and tablets.\n- The **mobile app** covers sign-in with two-factor, CRM, HR, one approvals inbox, Lead Generation, master data, camera barcode scanning, push notifications and Vrodux AI. See [What's on your phone](/docs/mobile-app/whats-on-your-phone).\n- The **Windows desktop app** is for tills. The installer asks for your server address.\n\n## Languages and currency\n\nThe main app supports **English and Arabic**. Set your company currency once. Exchange rates use a USD base and refresh daily.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "add-ons-and-credits",
+    "categorySlug": "settings",
+    "title": "Add-ons and credits",
+    "summary": "How credits for SEO audits and Lead Generation reveals work, and where to buy them.",
+    "order": 5,
+    "body": "\n## What uses credits\n\n**SEO audits** and **Lead Generation reveals** use credits. Credits are separate from your plan. Each add-on keeps its **own balance**, shown in credits.\n\n## Buy credits\n\nGo to **Settings, Billing, Add-ons and credits** and pay by card through **Stripe or PayPal**. Bulk purchases get a discount. Prices are shown in Billing. Credits can be bought once your workspace has a subscription, not during the free trial.\n\n## Good to know\n\n- Credits **do not expire** and are **not refundable**.\n- You can **swap unused credits** from one add-on to another at their relative value, at no charge.\n- You see the cost before you run anything.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "help-and-support",
+    "categorySlug": "settings",
+    "title": "Help and Support",
+    "summary": "Video guides, and how to raise a ticket with the Vrodux team.",
+    "order": 6,
+    "body": "\n## Video guides\n\nHelp and Support has **video guides** for the modules. The same walkthroughs are on the [demos page](/demos).\n\n## Raise a ticket\n\nIf you need help from the team, **raise a ticket** from Help and Support.\n",
     "readTime": 2,
     "placeholder": false
   },

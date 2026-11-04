@@ -1,4 +1,5 @@
 import { Check, Minus } from "lucide-react";
+import { AI_ALLOWANCE_CONFIRMED } from "@/lib/owner-flags";
 
 type Row = {
   feature: string;
@@ -9,20 +10,21 @@ type Row = {
 };
 type Category = { name: string; rows: Row[] };
 
+// Tiering confirmed by the owner on 4 November 2026.
 const categories: Category[] = [
   {
     name: "Platform",
     rows: [
       {
         feature:
-          "All modules (ERP, CRM, Sales, Purchasing, Inventory, Finance, HR, POS, Restaurant, Hospitality, Manufacturing, Library, Import & Export and every industry pack)",
+          "All modules (ERP, CRM, Sales, Purchasing, Inventory, Finance, HR, POS, Restaurant, Hospitality, Manufacturing, Library, Import & Export, E-commerce, SEO, Lead Generation and every industry pack)",
         micro: true,
         starter: true,
         professional: true,
         enterprise: true,
       },
       {
-        feature: "AI assistant (pay-as-you-go, bring your own key)",
+        feature: AI_ALLOWANCE_CONFIRMED ? "Vrodux AI (your own provider key, or the shared allowance where enabled; monthly message limit applies)" : "Vrodux AI (connect your own AI provider key)", // see owner-flags.ts
         micro: true,
         starter: true,
         professional: true,
@@ -34,19 +36,18 @@ const categories: Category[] = [
   {
     name: "Business Management",
     rows: [
-      { feature: "Multi-company", micro: false, starter: false, professional: true, enterprise: true },
-      { feature: "Multi-currency", micro: false, starter: false, professional: true, enterprise: true },
-      { feature: "Advanced workflows", micro: false, starter: false, professional: true, enterprise: true },
+            { feature: "Multi-currency", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Advanced workflows", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Advanced permissions", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Advanced reporting", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "Advanced reporting", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Analytics", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "BI", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "BI", micro: false, starter: false, professional: false, enterprise: true },
     ],
   },
   {
     name: "Integrations & Technology",
     rows: [
-      { feature: "API", micro: false, starter: false, professional: true, enterprise: true },
+      { feature: "API", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Custom integrations", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Cloud hosting", micro: true, starter: true, professional: true, enterprise: true },
       { feature: "Automatic updates", micro: true, starter: true, professional: true, enterprise: true },
@@ -59,7 +60,8 @@ const categories: Category[] = [
       { feature: "Standard support", micro: true, starter: true, professional: false, enterprise: false },
       { feature: "Priority support", micro: false, starter: false, professional: true, enterprise: true },
       { feature: "Dedicated support", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "SLA", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Uptime SLA", micro: "99.9%", starter: "99.9%", professional: "99.9%", enterprise: "99.9%" },
+      { feature: "Custom SLA", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Account management", micro: false, starter: false, professional: false, enterprise: true },
     ],
   },

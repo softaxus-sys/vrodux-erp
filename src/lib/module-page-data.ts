@@ -89,6 +89,8 @@ const MENTIONS: [RegExp, string][] = [
   [/Real Estate/i, "real-estate"],
   [/Hospitality|Hotel/i, "hospitality"],
   [/Lead Generation/i, "lead-generation"],
+  [/E-commerce|online store/i, "ecommerce"],
+  [/SEO/, "seo"],
   [/Project/i, "project-management"],
   [/Reports hub/i, "reports"],
 ];

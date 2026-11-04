@@ -317,6 +317,40 @@ export const moduleVisuals: Record<string, ModuleVisual> = {
     ],
     photo: { src: "/images/industries/import-export.jpg", alt: "Port coordinator tracking shipments" },
   },
+  ecommerce: {
+    tone: 5,
+    docsCategory: "ecommerce",
+    seoTitle: "E-commerce: Sell Online From Your Inventory",
+    seoDescription:
+      "Open an online store built on Vrodux Inventory: list products in one click, design pages, take card, cash on delivery or bank transfer orders, and manage fulfilment.",
+    flowTitle: "From stock to delivered order",
+    flow: [
+      { icon: "Package", title: "List", text: "List stock from Inventory as drafts or published. Each variant is a normal Inventory product." },
+      { icon: "Layers", title: "Design", text: "Build pages from sections with a live preview, then add menus, collections and discount codes." },
+      { icon: "ShoppingCart", title: "Checkout", text: "Customers check out with or without an account. The server works out totals, stock and prices." },
+      { icon: "CreditCard", title: "Pay", text: "Card payments through your own Stripe or PayPal account, cash on delivery, or bank transfer." },
+      { icon: "Truck", title: "Fulfil", text: "Stock is reserved at order time. Mark paid, pack, ship, deliver or refund, and customers are emailed at each step." },
+    ],
+    shots: [],
+    photo: { src: "/images/industries/retail.jpg", alt: "Retail checkout counter with a barcode scanner" },
+  },
+  seo: {
+    tone: 3,
+    docsCategory: "seo",
+    seoTitle: "SEO AI Agent: Site Audits, Fixes and Content Plan",
+    seoDescription:
+      "Connect your website, run a technical SEO audit with a 0 to 100 health score, approve the fixes an AI agent proposes, and plan 30 days of content from competitor gaps.",
+    flowTitle: "From audit to approved fix",
+    flow: [
+      { icon: "Plug", title: "Connect", text: "Connect your website, and optionally Google Search Console to bring in your real queries." },
+      { icon: "Search", title: "Audit", text: "Crawl up to 500 pages against more than 30 rules and get a 0 to 100 health score." },
+      { icon: "CheckCircle2", title: "Approve", text: "The agent proposes fixes for new issues. Nothing changes until you approve it." },
+      { icon: "Target", title: "Compare", text: "Add up to five competitors and see topics they cover that you do not." },
+      { icon: "CalendarDays", title: "Plan", text: "Turn the gaps into a 30-day content calendar and send drafts to a review queue." },
+    ],
+    shots: [],
+    photo: { src: "/images/industries/b2b-services.jpg", alt: "Team in a meeting room reviewing a dashboard on a wall screen" },
+  },
   "lead-generation": {
     tone: 2,
     docsCategory: "lead-generation",
@@ -335,13 +369,13 @@ export const moduleVisuals: Record<string, ModuleVisual> = {
   "ai-assistant": {
     tone: 1,
     docsCategory: "ai-assistant",
-    seoTitle: "AI Assistant for ERP — Ask, Act and Confirm",
+    seoTitle: "Vrodux AI for ERP: Ask, Act and Confirm",
     seoDescription:
-      "Ask your ERP a question or tell it what to do across modules. Every change is held for your confirmation, and it respects each user's permissions.",
+      "Ask Vrodux AI a question or tell it what to do across modules. Every change is held for your confirmation, and it respects each user's permissions.",
     flowTitle: "Ask, review, confirm",
     flow: [
       { icon: "MessageSquare", title: "Ask", text: "Chat in a side panel or full page, in plain language." },
-      { icon: "Search", title: "Look up", text: "The assistant finds the right module and reads your live data." },
+      { icon: "Search", title: "Look up", text: "Vrodux AI finds the right module and reads your live data." },
       { icon: "FileText", title: "Review", text: "Any create or modify is held with a field-by-field summary." },
       { icon: "BadgeCheck", title: "Confirm", text: "You confirm or reject. There are no delete tools." },
     ],

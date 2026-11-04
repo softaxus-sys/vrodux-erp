@@ -34,7 +34,8 @@ const tiles = [
   },
 ];
 
-const trust = ["GDPR Compliant", "ISO 27001", "SOC 2 Type II — In Progress", "99.9% Uptime SLA"];
+// SOC 2 audit and the 99.9% SLA were confirmed by the owner on 4 November 2026.
+const trust = ["Built on ISO 27001-aligned practices", "SOC 2 Type II: audit in progress", "99.9% uptime SLA", "Every plan includes every module"];
 
 export function HomeHero({ shots }: { shots: HomeShots }) {
   return (

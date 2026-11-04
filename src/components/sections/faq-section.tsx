@@ -17,27 +17,29 @@ export const faqs = [
   },
   {
     q: "Does Vrodux support Arabic and RTL languages?",
-    a: "Absolutely. Vrodux ERP has full RTL (Right-to-Left) support for Arabic. The interface, reports, and documents can all be displayed in Arabic. We also support multiple languages simultaneously per user preference.",
+    a: "The app has English and Arabic, with right-to-left support. Some customer-facing pages, such as the library member portal and quotation links, and some emails are English only for now.",
   },
   {
-    q: "Is VAT and GST compliance included?",
-    a: "Yes. Vrodux ERP includes country-specific VAT configuration for UAE, Saudi Arabia, and other GCC countries, with built-in tax reports. GST support for India and e-invoicing frameworks are on our roadmap.",
+    q: "Does Vrodux handle UAE VAT?",
+    a: "Vrodux prepares your UAE VAT 201 return from your ledger, checks it, and exports the files. You file on the FTA portal and record the reference in Vrodux. It does not file with the FTA for you.",
   },
   {
     q: "Can Vrodux handle multiple companies and branches?",
-    a: "Yes. Multi-company and multi-branch setup is a core feature. You can manage multiple legal entities, consolidate financial reporting, and maintain separate books of accounts while sharing master data.",
+    a: "Yes. Professional supports up to 3 companies and Enterprise supports unlimited companies, and you can set up multiple branches in one workspace.",
   },
   {
     q: "What kind of support do you offer?",
-    a: "We offer tiered support based on your plan: email support for Starter, priority support with faster SLAs for Professional, and 24/7 dedicated support with a named account manager for Enterprise customers.",
+    // TODO(owner): confirm the current support offer by plan.
+    a: "Help and Support inside the app has video guides and lets you raise a ticket with the Vrodux team. Priority and dedicated support levels are listed on the pricing page.",
   },
   {
     q: "Can we migrate data from our existing system?",
-    a: "Yes. Our implementation team handles data migration from virtually any source — Excel, QuickBooks, Tally, SAP, Odoo, or any other ERP. We provide data validation and reconciliation to ensure accuracy.",
+    // TODO(owner): confirm the current data migration offer.
+    a: "Data migration can be provided as a separate, quoted service. You can also import your own data from Excel or CSV where a module supports it. Contact the team to discuss your source system.",
   },
   {
     q: "Is there a free trial available?",
-    a: "We offer a personalized demo rather than a generic free trial. This gives you a hands-on experience with your actual business scenarios. Book a demo session and we'll configure a test environment for your team.",
+    a: "Yes. Every new workspace gets a 14-day free trial with unlimited users and no credit card. You can also book a demo and we will walk you through it.",
   },
 ];
 

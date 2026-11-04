@@ -9,7 +9,7 @@ Lead Generation is live for the **UAE**.
 
 ## Reveal a contact
 
-Spend **credits** to reveal a contact. If the contact turns out to be unusable or bounces, the credit is **refunded**. Credit packs are bought by Stripe or PayPal.
+Spend **credits** to reveal a contact. If the contact turns out to be unusable or bounces, the credit is **refunded**. Buy credits in **Settings, Billing, Add-ons and credits**, by card through Stripe or PayPal. The same credits system covers SEO audits, and unused credits can be swapped between add-ons.
 
 ## Manage prospects
 

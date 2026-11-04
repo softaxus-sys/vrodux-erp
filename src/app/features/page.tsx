@@ -7,7 +7,7 @@ import { totalModuleCount } from "@/lib/modules-data";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet, Flame, Lock, Plug } from "lucide-react";
+import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet, Flame, Lock, Plug, Smartphone, Bell, Bot } from "lucide-react";
 
 export const metadata: Metadata = pageMeta({
   title: "Features — Complete ERP Platform",
@@ -48,18 +48,21 @@ const crmFeatures = [
 const platformCapabilities = [
   { icon: Layers, title: "Multi-Company & Branch", description: "Manage multiple legal entities and branches with consolidated reporting" },
   { icon: Globe, title: "Multi-Currency & Language", description: "Full multi-currency support with automatic exchange rate updates" },
-  { icon: RefreshCw, title: "RTL & Arabic Support", description: "Native right-to-left support with complete Arabic language interface" },
+  { icon: RefreshCw, title: "RTL & Arabic Support", description: "Right-to-left support with an Arabic interface in the main app. Some customer-facing pages are English only" },
   { icon: Shield, title: "Role-Based Access Control", description: "Granular permission management with custom roles and access levels" },
   { icon: Zap, title: "Workflow Automation", description: "Build approval workflows, automated alerts, and business process automation" },
   { icon: BarChart3, title: "Full Audit Trail", description: "Complete audit log of all system activities for compliance and security" },
-  { icon: CheckCircle2, title: "VAT Compliance & Tax Reporting", description: "Country-specific VAT frameworks for UAE, Saudi Arabia, and other GCC countries with built-in tax reports" },
+  { icon: CheckCircle2, title: "VAT Compliance & Tax Reporting", description: "Prepare, check and export your UAE VAT 201 return from the ledger. You file on the FTA portal" },
   { icon: Globe, title: "API Access", description: "RESTful API for connecting Vrodux ERP with your other business systems" },
+  { icon: Smartphone, title: "Mobile App", description: "A companion app for approvals, CRM, your own HR, barcode scanning and Vrodux AI, with push notifications" },
+  { icon: Bell, title: "Real-Time Notifications", description: "Alerts in the bell and as pop-ups the moment something needs you, stored so you see what you missed" },
+  { icon: Bot, title: "Vrodux AI", description: "Ask questions or request changes across your modules. Every change needs your confirmation first" },
 ];
 
 const workspaceAdmin = [
   { icon: UserCog, title: "User Management & Roles", description: "Create custom roles with field-level permissions and assign them across your team" },
   { icon: Building2, title: "Multi-Branch Management", description: "Set up and manage multiple branches or outlets from a single workspace" },
-  { icon: FileCheck, title: "WPS-Compliant Payroll", description: "Generate UAE Wages Protection System (WPS) salary files directly from payroll, ready for bank submission" },
+  { icon: FileCheck, title: "WPS-Compliant Payroll", description: "Prepare UAE Wages Protection System (WPS) salary files from payroll, ready to take to your bank. Vrodux does not submit them for you" },
   { icon: ClipboardList, title: "Complete Audit Logs", description: "Every create, update, and delete action is logged with user, timestamp, and details" },
   { icon: SlidersHorizontal, title: "Master Data & General Settings", description: "Centralized control over currencies, tax rates, numbering series, and system-wide defaults" },
   { icon: Wallet, title: "Regional Payment Methods", description: "Configure local payment gateways and methods to match each region you operate in" },

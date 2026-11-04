@@ -83,12 +83,7 @@ export function TestimonialsSection() {
             Don't take our word for it. Hear from the businesses that have transformed
             their operations with Vrodux ERP.
           </p>
-          <div className="flex items-center justify-center gap-2 mt-4">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-            ))}
-            <span className="text-sm font-medium ml-2">4.9/5 from 200+ reviews</span>
-          </div>
+          {/* TODO(owner): "4.9/5 from 200+ reviews" removed until it can be backed by evidence. */}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

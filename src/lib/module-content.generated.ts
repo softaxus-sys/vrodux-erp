@@ -49,7 +49,14 @@ export const moduleContent: Record<string, ModuleContent> = {
         "title": "Quotations from CRM",
         "items": [
           "(needs the Sales module)",
-          "Create a quotation for a lead or account from a Sales template, preview the branded document, email it, copy the customer link or download a PDF."
+          "Send quotations from a lead or account using your Sales templates: preview the exact branded document, email it, copy the customer link or download a PDF. The customer can accept or decline online, and you are alerted when they answer."
+        ]
+      },
+      {
+        "title": "Tell Meta which leads became customers",
+        "items": [
+          "(off until you switch it on)",
+          "When a lead that came from a Meta ad changes stage or its deal is won, Vrodux can tell Meta through its Conversions API for CRM, so Meta can learn which leads were good. Needs a Dataset ID and token from Meta Events Manager. Vrodux sends the signal; no change in ad results is promised."
         ]
       },
       {
@@ -161,6 +168,8 @@ export const moduleContent: Record<string, ModuleContent> = {
           "**Stock movements** — receipts, write-offs, adjustments, count corrections (plus production issue/receipt from Manufacturing).",
           "**Stock transfers** — create → submit → approve → receive between warehouses.",
           "**Reports** — 17 inventory reports in the Reports hub; low-stock view.",
+          "**Online listings** (with E-commerce) — a listing is what online customers see: name, description, photos, options such as size and colour (up to three) and search details. Each variant is an ordinary Inventory product with its own SKU, barcode, price and stock. List stock online in one click from the stock list or from a \"Not yet listed\" worklist, as drafts or published; photos stay with the stock item.",
+          "**Import stock with pictures** — upload an Excel or CSV with picture links; photos are fetched in the background; running the file twice does not duplicate items.",
           "**Stock in transit** (with Import/Export) — an \"On its way\" box on a product shows incoming cargo."
         ]
       }
@@ -209,7 +218,7 @@ export const moduleContent: Record<string, ModuleContent> = {
       {
         "title": "Tax",
         "items": [
-          "VAT screens and a **UAE VAT 201 return preparation** workspace: boxes computed from your ledger, validation, reconciliation to the VAT control account, FAF CSV and XML export, workflow draft → approved → ready, and \"filed via portal\" with your EmaraTax reference."
+          "VAT screens and a **UAE VAT 201 return preparation** workspace: boxes computed from your ledger, validation, reconciliation to the VAT control account, FAF CSV and XML export, workflow draft → approved → ready, and \"filed via portal\" with your EmaraTax reference. Vrodux prepares your VAT return and exports the files; you file on the FTA portal."
         ]
       },
       {
@@ -225,7 +234,7 @@ export const moduleContent: Record<string, ModuleContent> = {
   },
   "hr": {
     "title": "HR, Attendance, Leave & Payroll",
-    "headline": "Run people operations — from hiring to a bank-ready salary file.",
+    "headline": "Run people operations — from hiring to a WPS salary file ready to take to your bank.",
     "tagline": "Employees, attendance with office hours, leave entitlements, payroll with Finance approval, UAE WPS, and employee self-service.",
     "access": "Permissions for employees (incl. create-login), attendance, leaves, payroll (approve/print), performance, recruitment, and separate self-service keys.",
     "worksWith": "Finance (payroll approval and posting), notifications (leave requests, payroll approvals), mobile app (self-service), AI assistant.",
@@ -342,6 +351,12 @@ export const moduleContent: Record<string, ModuleContent> = {
           "**Hotel settings** — check-in/out times, weekend days, service %, tax %.",
           "Hotel payments can be posted to Finance (Finance Posting)."
         ]
+      },
+      {
+        "title": "Travel agency",
+        "items": [
+          "Tour packages with itineraries, dated departures with seats, bookings with travellers, supplier bookings, instalments and payments, and posting to Finance. See [Tourism](/features/tourism)."
+        ]
       }
     ]
   },
@@ -357,7 +372,8 @@ export const moduleContent: Record<string, ModuleContent> = {
           "**Tour packages** — name, duration, price per adult/child, single-room supplement, active/inactive.",
           "**Departures** — scheduled dates with seats, per-departure prices, seats-left, open/closed.",
           "**Tour bookings** — book onto a departure (dates and prices come from it) or as a custom-dated trip; adults, children, single rooms, price overrides, discount, tax, source; refuses more travellers than seats left; confirm now or save as an enquiry.",
-          "Services, instalments and payments on a booking; printable documents.",
+          "**Itineraries** on packages, **travellers** on bookings, and **supplier bookings** for the services you buy in.",
+          "Services, instalments and payments on a booking, posting to Finance; printable documents.",
           "Tourism dashboard and package views."
         ]
       }
@@ -498,7 +514,7 @@ export const moduleContent: Record<string, ModuleContent> = {
         "title": "What's included",
         "items": [
           "**Find** — search real businesses by category and area (Google Places + website enrichment); discovery is free.",
-          "**Reveal with credits** — pay credits only to reveal a contact; credits are refunded for unusable or bounced contacts. Buy credit packs by Stripe or PayPal.",
+          "**Reveal with credits** — pay credits only to reveal a contact; credits are refunded for unusable or bounced contacts. Buy credits in Settings, Billing, Add-ons and credits, by card through Stripe or PayPal. The same credits system covers SEO audits, and unused credits can be swapped between add-ons.",
           "**Prospects** — list, edit, import/export, push to your CRM.",
           "**Campaigns** — multi-step cold-email sequences sent from **your own connected mailbox** (Google, Microsoft or SMTP/IMAP), with warm-up limits, send window in your time zone, unsubscribe link and sender address on every email, suppression lists, auto-pause on bounces/complaints. Line breaks in templates are reflowed so sentences don't break mid-line.",
           "**Inbox** — replies in one place, classified.",
@@ -510,20 +526,21 @@ export const moduleContent: Record<string, ModuleContent> = {
     ]
   },
   "ai-assistant": {
-    "title": "AI Assistant",
+    "title": "Vrodux AI",
     "headline": "Ask your ERP a question, or tell it what to do — and confirm before anything changes.",
-    "tagline": "An assistant that reads and writes across your modules, with a confirmation step for every change.",
+    "tagline": "Vrodux AI reads and writes across your modules, with a confirmation step for every change.",
     "groups": [
       {
         "title": "What's included",
         "items": [
           "Chat in a side panel or full page; replies render formatted (tables, lists, bold).",
-          "**Auto mode** works across modules; naming an agent (CRM, Finance, HR, Restaurant, Visa, Trade, etc.) focuses it. The assistant discovers the right module's tools on demand.",
-          "**About 250+ tools across all modules** — list, look up, create and modify records (e.g. log a bug in a project, raise a purchase requisition, create a quotation, add a shipment cost).",
+          "**Auto mode** works across modules; the picker lists a specialist for each module you use (CRM, Sales, Purchase, Finance, HR, Inventory, POS, Restaurant, Hospitality, Real Estate, Library, Lead Generation, SEO, E-commerce, Visa, Trade, Projects, Manufacturing, Construction, Recipe, B2B, Education, Healthcare, Insurance), and Auto mode picks the right one. The assistant discovers the right module's tools on demand.",
+          "**More than 300 tools across 20+ modules** — list, look up, create and modify records (e.g. log a bug in a project, raise a purchase requisition, create a quotation, add a shipment cost, check a guest in, issue a library book, approve a purchase requisition, change an SEO fix status). It can also run steps such as approvals and status changes.",
           "**Every create/modify is held for confirmation** with a field-by-field summary; reject or confirm.",
           "Respects the signed-in user's permissions and your enabled modules.",
           "Deliberately **no delete tools** and no POS sale/void/refund from chat.",
-          "Bring your own AI provider key."
+          "Connect your own AI provider key, or use the shared allowance included with your workspace (a monthly message limit applies).",
+          "Voice: push-to-talk in the chat, with spoken replies where voice is enabled for the workspace. Telegram is also supported."
         ]
       }
     ]
@@ -532,6 +549,86 @@ export const moduleContent: Record<string, ModuleContent> = {
     "title": "Platform (applies to every module)",
     "headline": "",
     "tagline": ""
+  },
+  "ecommerce": {
+    "title": "E-commerce",
+    "headline": "Sell online from the stock you already hold.",
+    "tagline": "Your own online store, built on Inventory.",
+    "overview": "Your own online store, built on Inventory. Products, prices and stock come straight from Inventory, so nothing is entered twice. Build pages with a visual page builder, take orders and payments, and manage fulfilment in Vrodux.",
+    "who": "Retailers, wholesalers and brands that already hold stock in Vrodux and want to sell it online.",
+    "access": "Separate permissions for listings, store settings and orders, customisable per role.",
+    "worksWith": "Inventory (products, stock, photos), POS, Purchase, Finance, Reports hub, Vrodux AI, SEO (product listing SEO).",
+    "groups": [
+      {
+        "title": "Listings and stock",
+        "items": [
+          "**Online listings in Inventory.** A listing is what customers see: name, description, photos, options such as size and colour (up to three), and search details. Each variant is an ordinary Inventory product with its own SKU, barcode, price and stock, so POS, purchasing and reports stay correct.",
+          "**List stock online in one click.** From the stock list, or from a \"Not yet listed\" worklist, select items and list them as drafts or published. Photos stay with the stock item.",
+          "**Import stock with pictures.** Upload an Excel or CSV with picture links; photos are fetched in the background; running the file twice does not duplicate items."
+        ]
+      },
+      {
+        "title": "Your store",
+        "items": [
+          "**Your own store.** One store per workspace, on a web address you choose (or your own domain, set up with DNS). Private preview until you launch.",
+          "**Page builder.** Pages built from sections (hero, product grid, text, images, call to action) with a live preview. Menus, collections and discount codes.",
+          "**Languages.** The storefront supports English and Arabic (right-to-left)."
+        ]
+      },
+      {
+        "title": "Checkout and orders",
+        "items": [
+          "**Checkout.** Customers check out with or without an account. Delivery zones and rates, a free-delivery threshold, tax and discount codes. Totals, stock and prices are always worked out by the server, never trusted from the browser.",
+          "**Payments.** Card payments through your own Stripe or PayPal account, cash on delivery, or bank transfer.",
+          "**Orders.** Stock is reserved when the order is placed and released if it is cancelled or never paid. Mark paid, pack, ship, deliver and refund. Customers are emailed at each step.",
+          "**Customer accounts.** Customers sign in to the store, with password reset by email."
+        ]
+      },
+      {
+        "title": "Shopify",
+        "items": [
+          "Connect a Shopify store: publish products from Inventory, keep stock in step both ways, and bring its orders into Vrodux."
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "title": "SEO AI Agent",
+    "headline": "Find what holds your site back, and fix it.",
+    "tagline": "Technical audits, approved fixes, competitor gaps and a 30-day content plan. Included with every workspace.",
+    "overview": "Connect your website, run a technical audit, and review the fixes an AI agent proposes. Add competitors to see what they cover that you do not, and turn the gaps into a 30-day content plan. SEO is included with every workspace.",
+    "who": "Businesses with a website or an online store who want to find and fix technical SEO problems without a separate tool.",
+    "access": "Separate permissions for viewing audits, approving fixes and managing competitors, customisable per role.",
+    "worksWith": "E-commerce (product listing SEO), Lead Generation (shared credits system), Vrodux AI (an SEO specialist), Reports hub.",
+    "groups": [
+      {
+        "title": "Audit",
+        "items": [
+          "**Site audit.** Crawls up to 500 pages and checks more than 30 rules: titles, descriptions, headings, canonical tags, structured data, images and alt text, speed, redirects, broken links, duplicates, orphan pages, sitemap and robots. Gives a 0 to 100 health score and a history of audits. Issues are remembered, so a re-run updates them and closes the ones you fixed.",
+          "**Fixes you approve.** The agent proposes fixes for new issues; nothing changes until you approve it."
+        ]
+      },
+      {
+        "title": "Your store and Search Console",
+        "items": [
+          "**Product listing SEO.** For stores on Vrodux, review and edit the title, description and photo alt text of each online listing and publish the change to your store.",
+          "**Search Console.** Connect Google Search Console to bring in the queries your site already gets."
+        ]
+      },
+      {
+        "title": "Competitors and content",
+        "items": [
+          "**Competitor analysis.** Add up to five competitor websites and a search market. See topics they cover that you do not, and, where keyword data is available, search terms they rank for that you do not.",
+          "**30-day content plan and drafts.** A calendar of article ideas from the gaps. Write a draft with one click into a review queue; publishing to WordPress is a separate step you choose."
+        ]
+      },
+      {
+        "title": "Credits",
+        "items": [
+          "An audit costs 1 credit per 25 pages crawled; every workspace starts with 20 credits; competitor analysis costs credits per website. Buy more in Billing. You see the cost before you run anything."
+        ]
+      }
+    ]
   },
   "b2b-services": {
     "title": "b2b-services",

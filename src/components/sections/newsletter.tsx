@@ -12,7 +12,10 @@ import type { TurnstileInstance } from "@marsidev/react-turnstile";
 import { CaptchaField, captchaEnabled } from "@/components/shared/captcha-field";
 import { HoneypotField } from "@/components/shared/honeypot-field";
 
-export function NewsletterSection() {
+export function NewsletterSection({
+  heading = "Stay Ahead of the Curve",
+  text = "Get ERP insights, product updates, and industry trends delivered to your inbox.",
+}: { heading?: string; text?: string } = {}) {
   const [submitted, setSubmitted] = useState(false);
   const [captchaToken, setCaptchaToken] = useState<string>("");
   const captchaRef = useRef<TurnstileInstance>(null);
@@ -55,9 +58,9 @@ export function NewsletterSection() {
         <div className="w-12 h-12 rounded-2xl bg-brand-500/10 flex items-center justify-center mx-auto mb-4">
           <Mail className="w-6 h-6 text-brand-500" />
         </div>
-        <h2 className="text-2xl font-semibold mb-2">Stay Ahead of the Curve</h2>
+        <h2 className="text-2xl font-semibold mb-2">{heading}</h2>
         <p className="text-muted-foreground mb-6">
-          Get ERP insights, product updates, and industry trends delivered to your inbox.
+          {text}
         </p>
         {submitted ? (
           <p className="text-emerald-500 font-medium">You're subscribed! Welcome to the Vrodux community.</p>

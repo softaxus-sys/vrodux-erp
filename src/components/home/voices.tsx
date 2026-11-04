@@ -1,6 +1,5 @@
 "use client";
 
-import { Star } from "lucide-react";
 import { testimonials } from "@/components/sections/testimonials";
 import { SectionHeading, tone, WRAP } from "@/components/home/ui";
 import { cn } from "@/lib/utils";
@@ -15,14 +14,7 @@ export function HomeVoices() {
           description={
             <span className="flex flex-col gap-3">
               <span>Hear from the teams that have changed how they run their operations with Vrodux ERP.</span>
-              <span className="flex items-center gap-2 text-sm font-medium text-foreground">
-                <span className="flex">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </span>
-                4.9/5 from 200+ reviews
-              </span>
+              {/* TODO(owner): "4.9/5 from 200+ reviews" removed until it can be backed by evidence. */}
             </span>
           }
         />

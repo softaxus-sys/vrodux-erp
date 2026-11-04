@@ -39,14 +39,40 @@ See [Your plan](/docs/settings/users-security-plan) and [pricing](/pricing).
 @@ notifications-and-apps | Notifications, mobile app and desktop app | Real-time alerts, installing the web app, the mobile app and the Windows till app.
 ## Notifications
 
-Alerts appear in real time as a **bell** and a toast, with optional sound and desktop notifications. They are **stored**, so you can read them later. They cover things like CRM assignments, leave and payroll approvals, purchase approvals, project assignments, rent and vacancy alerts, trade alerts and quotation responses.
+An alert appears in the **bell** and as a pop-up the moment something needs you, with a soft sound you can mute and optional desktop notifications. Alerts are **stored**, so you see what you missed while offline.
+
+Examples: a lead, opportunity or account assigned to you; a leave request to approve; a payroll run awaiting Finance approval; a purchase requisition to approve; a project issue assigned to you; a rented property about to fall vacant; trade shipments and payments needing attention; a customer answering a quotation. Team leads are also told when work lands on one of their team members. Only modules your plan and role can open appear.
 
 ## Web, phone and till
 
 - The **web app** can be **installed to your home screen** and works on phones and tablets.
-- The **mobile app** covers sign-in with two-factor, CRM, HR self-service, approvals and more. See [What's on your phone](/docs/mobile-app/whats-on-your-phone).
+- The **mobile app** covers sign-in with two-factor, CRM, HR, one approvals inbox, Lead Generation, master data, camera barcode scanning, push notifications and Vrodux AI. See [What's on your phone](/docs/mobile-app/whats-on-your-phone).
 - The **Windows desktop app** is for tills. The installer asks for your server address.
 
 ## Languages and currency
 
 The main app supports **English and Arabic**. Set your company currency once. Exchange rates use a USD base and refresh daily.
+
+@@ add-ons-and-credits | Add-ons and credits | How credits for SEO audits and Lead Generation reveals work, and where to buy them.
+## What uses credits
+
+**SEO audits** and **Lead Generation reveals** use credits. Credits are separate from your plan. Each add-on keeps its **own balance**, shown in credits.
+
+## Buy credits
+
+Go to **Settings, Billing, Add-ons and credits** and pay by card through **Stripe or PayPal**. Bulk purchases get a discount. Prices are shown in Billing. Credits can be bought once your workspace has a subscription, not during the free trial.
+
+## Good to know
+
+- Credits **do not expire** and are **not refundable**.
+- You can **swap unused credits** from one add-on to another at their relative value, at no charge.
+- You see the cost before you run anything.
+
+@@ help-and-support | Help and Support | Video guides, and how to raise a ticket with the Vrodux team.
+## Video guides
+
+Help and Support has **video guides** for the modules. The same walkthroughs are on the [demos page](/demos).
+
+## Raise a ticket
+
+If you need help from the team, **raise a ticket** from Help and Support.

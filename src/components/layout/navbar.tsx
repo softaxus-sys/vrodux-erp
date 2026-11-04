@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import {
-  Menu, Sun, Moon, ChevronDown, ExternalLink,
+  Menu, Store, TrendingUp, Sun, Moon, ChevronDown, ExternalLink,
   LayoutDashboard, DollarSign, Users, Package, ShoppingCart,
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
@@ -29,6 +29,8 @@ const coreModules = [
   { name: "Project Management", href: "/features/project-management", icon: ListChecks, desc: "Kanban Boards, Sprints, Issues" },
   { name: "Reports", href: "/features/reports", icon: BarChart3, desc: "Dashboards, KPIs, Reports" },
   { name: "Lead Generation", href: "/features/lead-generation", icon: Search, desc: "Find businesses, cold-email outreach" },
+  { name: "E-commerce", href: "/features/ecommerce", icon: Store, desc: "Online store built on Inventory" },
+  { name: "SEO AI Agent", href: "/features/seo", icon: TrendingUp, desc: "Site audits, fixes, content plan" },
 ];
 
 const industryModules = [
@@ -100,7 +102,7 @@ interface MegaMenuProps {
 function MegaMenu({ type, onClose }: MegaMenuProps) {
   if (type === "features") {
     return (
-      <div className="fixed top-20 left-1/2 -translate-x-1/2 mt-2 w-[900px] max-w-[calc(100vw-2rem)] p-6 bg-background/95 backdrop-blur-xl border rounded-2xl shadow-premium z-50">
+      <div className="fixed top-20 left-1/2 -translate-x-1/2 mt-2 w-[900px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain p-6 bg-background border rounded-2xl shadow-premium z-50">
         <div className="mb-3">
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Core Business Modules</p>
         </div>
@@ -154,7 +156,7 @@ function MegaMenu({ type, onClose }: MegaMenuProps) {
   }
 
   return (
-    <div className="fixed top-20 left-1/2 -translate-x-1/2 mt-2 w-[600px] max-w-[calc(100vw-2rem)] p-6 bg-background/95 backdrop-blur-xl border rounded-2xl shadow-premium z-50">
+    <div className="fixed top-20 left-1/2 -translate-x-1/2 mt-2 w-[600px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain p-6 bg-background border rounded-2xl shadow-premium z-50">
       <div className="mb-4 pb-4 border-b">
         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Industry Solutions</p>
       </div>

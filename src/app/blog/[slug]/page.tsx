@@ -195,7 +195,7 @@ A cloud workspace is ready without installing anything, so the time goes into im
 
 Vrodux ERP is available as a cloud service (SaaS) or deployed on-premise, with the same features in both. Finance, HR, CRM, inventory, purchasing, manufacturing, project management and POS share one platform, and the main app supports English and Arabic. Finance includes UAE VAT return preparation, and HR supports UAE WPS salary files.
 
-On the security side, data is encrypted at rest (AES-256) and in transit (TLS), users can enable two-factor authentication, and backups run daily. Details are on the [security page](/security). Because the workspace is cloud-based, it is ready to use immediately, and moving data across is typically a matter of days for most businesses. You can try everything free for 14 days with no credit card. See [pricing](/pricing), the [implementation services](/implementation) and the [full feature list](/features).
+On the security side, connections use TLS, sensitive values such as API tokens and two-factor secrets are stored encrypted, users can enable two-factor authentication, and backups run daily. Details are on the [security page](/security). Because the workspace is cloud-based, it is ready to use immediately, and moving data across is typically a matter of days for most businesses. You can try everything free for 14 days with no credit card. See [pricing](/pricing), the [implementation services](/implementation) and the [full feature list](/features).
 
 ## Frequently Asked Questions About Cloud ERP in the UAE
 

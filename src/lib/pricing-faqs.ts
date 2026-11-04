@@ -1,4 +1,5 @@
 import { TRIAL_DAYS } from "@/lib/trial";
+import { AI_KEY_TEXT } from "@/lib/owner-flags";
 
 export const pricingFaqs = [
   {
@@ -26,8 +27,9 @@ export const pricingFaqs = [
     a: "No. Every module is included on every plan.",
   },
   {
-    q: "Is the AI assistant included, and what does it cost?",
-    a: "The AI assistant is included on every plan. It is pay-as-you-go and bring-your-own (BYO): you connect your own AI provider key and pay only for what you use, directly to that provider, so there is no AI fee in your Vrodux subscription.",
+    q: "Is Vrodux AI included, and what does it cost?",
+    // see owner-flags.ts: the shared allowance is only mentioned once the owner confirms it.
+    a: `Vrodux AI is on every plan. ${AI_KEY_TEXT}.`,
   },
   {
     q: "Can Vrodux support multiple companies?",
@@ -35,7 +37,11 @@ export const pricingFaqs = [
   },
   {
     q: "Does Vrodux support custom integrations?",
-    a: "Professional supports API access and custom workflows. Enterprise includes advanced/custom integrations.",
+    a: "API access and custom workflows are part of the Enterprise plan, which also includes custom integrations. Every plan can connect other tools through webhooks, Zapier and Make.",
+  },
+  {
+    q: "Are there other costs besides the plan?",
+    a: "There are no per-module fees. Add-ons such as SEO audits and Lead Generation reveals use credits you buy yourself in Settings, Billing, Add-ons and credits. Optional services such as data migration, implementation and custom development are quoted separately.",
   },
   {
     q: "Do you provide implementation services?",

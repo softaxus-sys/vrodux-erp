@@ -14,6 +14,9 @@
 - **Hotel settings** — check-in/out times, weekend days, service %, tax %.
 - Hotel payments can be posted to Finance (Finance Posting).
 
+**Travel agency**
+- Tour packages with itineraries, dated departures with seats, bookings with travellers, supplier bookings, instalments and payments, and posting to Finance. See [Tourism](/features/tourism).
+
 ## Access control
 Permissions for bookings, rooms, rates, guests, folio, housekeeping, settings.
 
