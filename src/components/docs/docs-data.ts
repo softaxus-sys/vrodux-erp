@@ -1117,7 +1117,7 @@ Two things are off-limits, on purpose. Vrodux AI doesn't delete records. And it 
 
 Vrodux AI is reachable from the "Ask Vrodux" button, available from anywhere in the product — on both the web app and the mobile app.
 
-[screenshot: The Ask Vrodux button, visible from anywhere in the app]
+[screenshot: The floating assistant button, visible from anywhere in the app]
     `,
   },
   {

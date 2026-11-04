@@ -5,6 +5,9 @@ interface ScreenshotPlaceholderProps {
 }
 
 export function ScreenshotPlaceholder({ label }: ScreenshotPlaceholderProps) {
+  // Visitors should never see an empty "Screenshot goes here" box. It only shows while developing, so missing
+  // images stay visible to the team. The missing ones are listed in content/DOCS-SCREENSHOTS-MISSING.md.
+  if (process.env.NODE_ENV === "production") return null;
   return (
     <div className="my-6 rounded-2xl border-2 border-dashed border-border bg-muted/30 py-12 px-6 flex flex-col items-center justify-center text-center gap-2">
       <div className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center">
