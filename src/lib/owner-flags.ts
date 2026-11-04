@@ -4,14 +4,14 @@
  * production, and see content/OWNER-TO-CONFIRM.md for the full list.
  */
 
-// TODO(owner): set true once the shared AI allowance is switched on in production.
-export const AI_ALLOWANCE_CONFIRMED = false;
+// Confirmed by the owner on 4 November 2026: the shared allowance is on for everyone.
+export const AI_ALLOWANCE_CONFIRMED = true;
 
-// TODO(owner): set true after a visual check of the Arabic (right-to-left) storefront.
-export const ECOMMERCE_ARABIC_CONFIRMED = false;
+// Confirmed by the owner on 4 November 2026: the Arabic storefront looks right.
+export const ECOMMERCE_ARABIC_CONFIRMED = true;
 
-// TODO(owner): set true once the platform voice is enabled in production.
-export const VOICE_CONFIRMED = false;
+// Confirmed by the owner on 4 November 2026: voice and Telegram are working.
+export const VOICE_CONFIRMED = true;
 
 /** How a customer powers Vrodux AI, worded for what is confirmed. */
 export const AI_KEY_TEXT = AI_ALLOWANCE_CONFIRMED

@@ -10,6 +10,10 @@ Each workspace has **one store**. Choose a web address for it, or use **your own
 
 Your store stays in a **private preview** until you launch it. Use it to check your pages, products and checkout first.
 
+## Languages
+
+The storefront supports **English and Arabic** (right to left).
+
 ## Before you start
 
 Put the products you want to sell in Inventory first. See [Publish products from Inventory](/docs/ecommerce/publish-products-from-inventory).

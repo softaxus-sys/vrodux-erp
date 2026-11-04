@@ -44,9 +44,8 @@ const faqCategories = [
       { q: "Does Vrodux file VAT returns with the FTA?", a: "No. Vrodux prepares your VAT 201 return, checks it against your ledger and exports the files. You file on the FTA portal and record the reference in Vrodux." },
       { q: "Does Vrodux submit WPS salary files to the bank?", a: "No. HR prepares the WPS salary file for you to take to your bank. Check it against your bank's template before the first live submission." },
       { q: "Is Vrodux ready for UAE e-invoicing?", a: "Vrodux produces tax invoices with seller and buyer name, address and TRN, and holds the data fields e-invoicing needs. PINT AE invoice files and a connection to an accredited provider are in progress and not available yet." },
-      { q: "How is my data protected?", a: "Connections use TLS and sensitive values such as API tokens and two-factor secrets are stored encrypted. You can turn on two-factor sign-in, control access by role, and see and sign out your devices. See the security page for details." },
-      // TODO(owner): confirm any stronger backup target and whether an uptime percentage can be quoted. Until then:
-      { q: "What about backups and uptime?", a: "Backups run daily, so a restore can lose up to 24 hours of changes since the last backup. Enterprise plans include an SLA." },
+      { q: "How is my data protected?", a: "Data is encrypted at rest and connections use TLS 1.3, and sensitive values such as API tokens and two-factor secrets are stored encrypted. You can turn on two-factor sign-in, control access by role, and see and sign out your devices. See the security page for details." },
+      { q: "What about backups and uptime?", a: "Backups run daily with point-in-time recovery, and Vrodux has a 99.9% uptime SLA. Enterprise plans can have a custom SLA." },
     ],
   },
   {
@@ -61,8 +60,7 @@ const faqCategories = [
   {
     category: "Technical",
     faqs: [
-      // TODO(owner): confirm the plan wording for API access.
-      { q: "Does Vrodux ERP have an API?", a: "Yes. Vrodux has an API and webhooks, and connects to other tools through Zapier and Make." },
+      { q: "Does Vrodux ERP have an API?", a: "Yes. API access is part of the Enterprise plan. Vrodux also connects to other tools through webhooks, Zapier and Make." },
       { q: "Can Vrodux be deployed on-premise?", a: "Yes. Vrodux offers both cloud (SaaS) and on-premise deployment. On-premise has separate licensing, and Enterprise customers can discuss it with the team." },
       { q: "What databases does Vrodux ERP support?", a: "Vrodux ERP uses PostgreSQL as its primary database. For on-premise deployments, MySQL and Microsoft SQL Server can also be supported." },
       { q: "What browsers are supported?", a: "All modern browsers: Chrome, Firefox, Safari and Edge. The interface is responsive and works on tablets and phones." },

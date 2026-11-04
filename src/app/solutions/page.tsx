@@ -11,7 +11,7 @@ import { ArrowRight, CheckCircle2, Cloud, Server, Globe, Shield, Zap, BarChart3 
 export const metadata: Metadata = pageMeta({
   title: "Solutions — ERP Deployment & Business Solutions",
   description:
-    "Vrodux ERP solutions for SaaS, On-Premise, multi-company, multi-currency, and global businesses. Discover the right deployment model for your needs.",
+    "Vrodux ERP solutions for cloud (SaaS) and on-premise deployment, with multi-currency, role-based security and reporting. Discover the right deployment model for your needs.",
   path: "/solutions",
 });
 
@@ -24,7 +24,7 @@ const deploymentOptions = [
     benefits: [
       "Zero infrastructure management",
       "Automatic backups & updates",
-      "Enterprise plans include an SLA",
+      "99.9% uptime SLA",
       "Pay-as-you-grow pricing",
       "Setup in minutes, not months",
       "Access from any device",
@@ -55,27 +55,28 @@ const deploymentOptions = [
 const capabilities = [
   {
     icon: Globe,
-    title: "Global Multi-Company",
-    description: "Manage multiple legal entities across different countries from a single Vrodux ERP instance with consolidated financial reporting.",
-    features: ["Multi-company ledger", "Inter-company transactions", "Consolidated P&L", "Group reporting"],
+    // TODO(owner): inter-company transactions and consolidated P&L were removed because they are unconfirmed.
+    title: "Multi-Company and Branches",
+    description: "Run several companies from one workspace: up to 3 on Professional and unlimited on Enterprise. Set up branches, and keep one base currency with live daily exchange rates.",
+    features: ["Several companies in one workspace", "Branch management", "Role-based access", "Reports across modules"],
   },
   {
     icon: Shield,
     title: "Security & Compliance",
-    description: "Enterprise-grade security with role-based access, full audit trails, and compliance with GDPR, VAT, and local regulations.",
-    features: ["RBAC with custom roles", "Full audit trail", "Data encryption", "2FA authentication"],
+    description: "Role-based access, a full audit log, and two-factor sign-in, designed to support GDPR and UAE PDPL requirements. UAE VAT returns are prepared for you to file.",
+    features: ["RBAC with custom roles", "Full audit log", "Encryption at rest and TLS", "2FA authentication"],
   },
   {
     icon: Zap,
-    title: "Workflow Automation",
-    description: "Automate your business processes with custom approval workflows, automated alerts, and business rules engine.",
-    features: ["Custom approval workflows", "Email/SMS notifications", "Business rules engine", "API triggers"],
+    title: "Approvals and Notifications",
+    description: "Approval steps for leave, purchases, sales returns and payroll, real-time alerts in the app, and integrations through API, webhooks, Zapier and Make.",
+    features: ["Approval inbox", "Real-time notifications", "API and webhooks", "Zapier and Make"],
   },
   {
     icon: BarChart3,
     title: "Analytics & Reporting",
-    description: "Real-time dashboards, custom reports, and business intelligence tools to help you make data-driven decisions.",
-    features: ["Executive dashboards", "Custom report builder", "KPI tracking", "Data export (Excel/PDF)"],
+    description: "A Reports hub that gathers the reports of every module you use, with filters and export.",
+    features: ["Module-wise reports", "Dashboards", "CSV and PDF export", "Lead and sales reports in CRM"],
   },
 ];
 

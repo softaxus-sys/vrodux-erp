@@ -10,8 +10,7 @@ type Row = {
 };
 type Category = { name: string; rows: Row[] };
 
-// TODO(owner): multi-company, multi-currency, BI, API, workflows and advanced reporting tiering is unconfirmed.
-// They work on every plan in the product, so they are shown as included on all plans until you confirm.
+// Tiering confirmed by the owner on 4 November 2026.
 const categories: Category[] = [
   {
     name: "Platform",
@@ -37,18 +36,18 @@ const categories: Category[] = [
   {
     name: "Business Management",
     rows: [
-            { feature: "Multi-currency", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "Advanced workflows", micro: true, starter: true, professional: true, enterprise: true },
+            { feature: "Multi-currency", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Advanced workflows", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Advanced permissions", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "Advanced reporting", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "Advanced reporting", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Analytics", micro: true, starter: true, professional: true, enterprise: true },
-      { feature: "BI", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "BI", micro: false, starter: false, professional: false, enterprise: true },
     ],
   },
   {
     name: "Integrations & Technology",
     rows: [
-      { feature: "API", micro: true, starter: true, professional: true, enterprise: true },
+      { feature: "API", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Custom integrations", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Cloud hosting", micro: true, starter: true, professional: true, enterprise: true },
       { feature: "Automatic updates", micro: true, starter: true, professional: true, enterprise: true },
@@ -61,7 +60,8 @@ const categories: Category[] = [
       { feature: "Standard support", micro: true, starter: true, professional: false, enterprise: false },
       { feature: "Priority support", micro: false, starter: false, professional: true, enterprise: true },
       { feature: "Dedicated support", micro: false, starter: false, professional: false, enterprise: true },
-      { feature: "SLA", micro: false, starter: false, professional: false, enterprise: true },
+      { feature: "Uptime SLA", micro: "99.9%", starter: "99.9%", professional: "99.9%", enterprise: "99.9%" },
+      { feature: "Custom SLA", micro: false, starter: false, professional: false, enterprise: true },
       { feature: "Account management", micro: false, starter: false, professional: false, enterprise: true },
     ],
   },

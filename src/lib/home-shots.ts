@@ -1,4 +1,5 @@
 import { getHomeManifestShots, getShotRefs, type ShotRef } from "@/lib/docs-screenshots";
+import { DEMO_BASE_URL } from "@/lib/demos";
 
 /**
  * Home-page screenshots, one slot per tab / marquee tile, each with an optional
@@ -18,6 +19,7 @@ export interface ThemedShot {
 type Ref =
   | { docs: [article: string, index: number] }
   | { home: string }
+  | { poster: string }
   | { local: string };
 
 const LOCAL_DIR = "/Verdux-erp-app-ss/";
@@ -26,6 +28,8 @@ const LOCAL_SIZE = { width: 1910, height: 913 };
 const docs = (article: string, index: number): Ref => ({ docs: [article, index] });
 const home = (key: string): Ref => ({ home: key });
 const local = (file: string): Ref => ({ local: file });
+/** A demo-video poster frame in the Contabo bucket (a real app screen, 1280x720, light theme). */
+const poster = (slug: string): Ref => ({ poster: slug });
 
 const SLOTS = {
   hero: { light: [docs("/docs/start-here/your-dashboard", 1), local("dashboard-light.png")], dark: [home("dashboard-dark"), local("dashboardDark.png")] },
@@ -50,6 +54,10 @@ const SLOTS = {
   "roles-permissions": { light: [docs("/docs/start-here/users-roles-teams-permissions", 1)], dark: [home("roles-dark"), local("roles-and-permissions.png")] },
   branches: { light: [home("branches")], dark: [home("branches-dark"), local("branch-managment.png")] },
   integrations: { light: [home("integrations")], dark: [home("integrations-dark"), local("integrations-comming-soon.png")] },
+  // Poster frames from the demo videos; light theme only, so dark mode falls back to the same image.
+  ecommerce: { light: [poster("ecommerce")], dark: [poster("ecommerce")] },
+  "vrodux-ai": { light: [poster("vrodux-ai")], dark: [poster("vrodux-ai")] },
+  "lead-generation": { light: [poster("lead-generation")], dark: [poster("lead-generation")] },
   "audit-logs": { light: [home("audit-logs")], dark: [home("audit-logs-dark"), local("complete-audit-logs.png")] },
 } satisfies Record<string, { light: Ref[]; dark: Ref[] }>;
 
@@ -69,6 +77,7 @@ export async function getHomeShots(): Promise<HomeShots> {
   const resolve = (r: Ref): Shot | undefined => {
     if ("docs" in r) return docShots[`${r.docs[0]}#${r.docs[1]}`];
     if ("home" in r) return homeShots[r.home];
+    if ("poster" in r) return { src: `${DEMO_BASE_URL}/posters/${r.poster}.jpg`, width: 1280, height: 720 };
     return { src: LOCAL_DIR + r.local, ...LOCAL_SIZE };
   };
   const first = (refs: Ref[]) => {

@@ -53,6 +53,13 @@ export const moduleContent: Record<string, ModuleContent> = {
         ]
       },
       {
+        "title": "Tell Meta which leads became customers",
+        "items": [
+          "(off until you switch it on)",
+          "When a lead that came from a Meta ad changes stage or its deal is won, Vrodux can tell Meta through its Conversions API for CRM, so Meta can learn which leads were good. Needs a Dataset ID and token from Meta Events Manager. Vrodux sends the signal; no change in ad results is promised."
+        ]
+      },
+      {
         "title": "Documents",
         "items": [
           "attach files to leads, opportunities and accounts."
@@ -532,7 +539,8 @@ export const moduleContent: Record<string, ModuleContent> = {
           "**Every create/modify is held for confirmation** with a field-by-field summary; reject or confirm.",
           "Respects the signed-in user's permissions and your enabled modules.",
           "Deliberately **no delete tools** and no POS sale/void/refund from chat.",
-          "Connect your own AI provider key."
+          "Connect your own AI provider key, or use the shared allowance included with your workspace (a monthly message limit applies).",
+          "Voice: push-to-talk in the chat, with spoken replies where voice is enabled for the workspace. Telegram is also supported."
         ]
       }
     ]
@@ -563,7 +571,8 @@ export const moduleContent: Record<string, ModuleContent> = {
         "title": "Your store",
         "items": [
           "**Your own store.** One store per workspace, on a web address you choose (or your own domain, set up with DNS). Private preview until you launch.",
-          "**Page builder.** Pages built from sections (hero, product grid, text, images, call to action) with a live preview. Menus, collections and discount codes."
+          "**Page builder.** Pages built from sections (hero, product grid, text, images, call to action) with a live preview. Menus, collections and discount codes.",
+          "**Languages.** The storefront supports English and Arabic (right-to-left)."
         ]
       },
       {

@@ -13,7 +13,7 @@ Use this as a shared "Platform" page and as the common footer block on every mod
 ## Plans, trial and billing
 - **14-day free trial with unlimited users.** After the trial, the only dimension is the number of users (3 / 10 / 50; Enterprise via sales). **All modules are available on every plan.**
 - Subscribe by card via Stripe or PayPal; billing portal; checkout refuses a plan smaller than your active user count; access is restored immediately on payment; data is never deleted on lapse.
-- **Add-ons and credits** — SEO audits and Lead Generation reveals use credits you buy in Settings, Billing, Add-ons and credits, by card (Stripe or PayPal). Each add-on keeps its own balance. Credits do not expire and are not refundable, and can be swapped between add-ons at their relative value. Credits can be bought once the workspace has a subscription (not during the trial).
+- **Add-ons and credits** — SEO audits and Lead Generation reveals use credits you buy in Settings, Billing, Add-ons and credits, by card (Stripe or PayPal). Each add-on keeps its own balance. Credits do not expire and are not refundable, and can be swapped between add-ons at their relative value at no charge. Credits can be bought once the workspace has a subscription (not during the trial).
 - Reminder emails at 7, 3 and 1 days before the trial ends.
 
 ## Reports hub

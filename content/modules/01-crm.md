@@ -31,6 +31,9 @@ Sales teams, agencies, real-estate brokers, service businesses — anyone with i
 **Quotations from CRM** (needs the Sales module)
 - Send quotations from a lead or account using your Sales templates: preview the exact branded document, email it, copy the customer link or download a PDF. The customer can accept or decline online, and you are alerted when they answer.
 
+**Tell Meta which leads became customers** (off until you switch it on)
+- When a lead that came from a Meta ad changes stage or its deal is won, Vrodux can tell Meta through its Conversions API for CRM, so Meta can learn which leads were good. Needs a Dataset ID and token from Meta Events Manager. Vrodux sends the signal; no change in ad results is promised.
+
 **Documents** — attach files to leads, opportunities and accounts.
 
 **Teams and visibility**
@@ -53,4 +56,3 @@ Separate permissions for leads, pipeline, customers, reports (view/export), inte
 - Automatic assignment of integration-captured leads to a specific user by routing rules is name-based only (admins reassign).
 - Workflow/automation engine, configurable pipelines, renewals/health scores, cases/tickets, AI scoring — planned, not built.
 - Stage history for reports accrues from the date the feature was deployed; older closed deals use approximate dates.
-- Tell Meta which leads became customers (Conversions API for CRM): hold until the owner confirms it has been tested with a real Meta dataset. Say only that Vrodux sends the signal; do not claim any improvement in ad results.

@@ -25,8 +25,7 @@ export const faqs = [
   },
   {
     q: "Can Vrodux handle multiple companies and branches?",
-    // TODO(owner): confirm multi-company wording and limits per plan.
-    a: "Talk to the Vrodux team about multi-company and multi-branch setups and we will confirm what fits your plan.",
+    a: "Yes. Professional supports up to 3 companies and Enterprise supports unlimited companies, and you can set up multiple branches in one workspace.",
   },
   {
     q: "What kind of support do you offer?",

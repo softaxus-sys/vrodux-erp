@@ -16,6 +16,7 @@ Anything that **creates or changes** data is held for your confirmation. You see
 - It respects the **signed-in user's permissions** and your enabled modules.
 - There are **no delete tools**.
 - It cannot make, void or refund a **POS sale** from chat.
-- You can connect **your own AI provider key**.
+- You can connect **your own AI provider key**, or use the shared allowance included with your workspace (a monthly message limit applies).
+- **Voice**: push-to-talk in the chat, with spoken replies where voice is enabled for your workspace.
 
 Answers can be wrong, so check the summary before you confirm.

@@ -1,8 +1,7 @@
 import { Coins } from "lucide-react";
 
-// TODO(owner): confirm the swap fee and the "not refundable" wording, then set this to true.
-// Until then those two statements are not shown to visitors.
-const ADDON_POLICY_CONFIRMED = false;
+// Confirmed by the owner on 4 November 2026: credits are not refundable, and swapping credits is free.
+const ADDON_POLICY_CONFIRMED = true;
 
 export function PricingAddons() {
   return (
@@ -21,7 +20,7 @@ export function PricingAddons() {
           <li>Buy credits in <strong className="text-foreground">Settings, Billing, Add-ons and credits</strong> by card (Stripe or PayPal).</li>
           <li>Each add-on keeps its own balance, shown in credits. Bulk purchases get a discount.</li>
           <li>Credits do not expire{ADDON_POLICY_CONFIRMED ? " and are not refundable" : ""}.</li>
-          {ADDON_POLICY_CONFIRMED && <li>You can swap credits from one add-on to another at their relative value (a small fee may apply).</li>}
+          {ADDON_POLICY_CONFIRMED && <li>You can swap credits from one add-on to another at their relative value.</li>}
           <li>Credits can be bought once your workspace has a subscription, not during the free trial.</li>
         </ul>
       </div>

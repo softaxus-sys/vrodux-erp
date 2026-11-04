@@ -19,9 +19,8 @@ export function savingsPercent(monthly: number, annual: number) {
   return Math.round((1 - annual / monthly) * 100);
 }
 
-// TODO(owner): the tiering of multi-company (up to 3), multi-currency, advanced BI, API access, custom workflows and
-// advanced reporting is unconfirmed. In the product they work on every plan (only seats and storage are limited),
-// so they are shown as included on all plans and "up to 3 companies" is removed until you confirm.
+// Tiering confirmed by the owner on 4 November 2026: multi-company (3 on Professional, unlimited on Enterprise);
+// multi-currency, API access, advanced BI, custom workflows and advanced reporting are Enterprise only.
 export const pricingTiers: PricingTier[] = [
   {
     id: "micro",
@@ -36,7 +35,6 @@ export const pricingTiers: PricingTier[] = [
       "Up to 3 users",
       "Every module included",
       `Vrodux AI on every plan: ${AI_KEY_TEXT.charAt(0).toLowerCase()}${AI_KEY_TEXT.slice(1)}`, // see owner-flags.ts
-      "Multi-currency, API access and reporting on every plan",
       "Cloud hosting & automatic updates",
       "Standard support",
     ],
@@ -54,7 +52,6 @@ export const pricingTiers: PricingTier[] = [
       "Up to 10 users",
       "Every module included",
       `Vrodux AI on every plan: ${AI_KEY_TEXT.charAt(0).toLowerCase()}${AI_KEY_TEXT.slice(1)}`, // see owner-flags.ts
-      "Multi-currency, API access and reporting on every plan",
       "Cloud hosting & automatic updates",
       "Standard support",
     ],
@@ -72,9 +69,9 @@ export const pricingTiers: PricingTier[] = [
       "Up to 50 users",
       "Every module included",
       `Vrodux AI on every plan: ${AI_KEY_TEXT.charAt(0).toLowerCase()}${AI_KEY_TEXT.slice(1)}`, // see owner-flags.ts
-      "Multi-currency, API access and reporting on every plan",
       "Cloud hosting & automatic updates",
-      "Priority support", // OWNER DECISION
+      "Priority support",
+      "Multi-company: up to 3 companies",
     ],
   },
   {
@@ -89,10 +86,15 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Everything in Professional",
       "Unlimited users",
+      "Unlimited companies",
+      "Multi-currency",
+      "API access",
+      "Advanced BI and reporting",
+      "Custom workflows",
       "Advanced permissions",
       "Custom integrations",
       "Dedicated support",
-      "SLA",
+      "Custom SLA",
       "Dedicated infrastructure options",
       "On-premise deployment option",
       "Data migration assistance",

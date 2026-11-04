@@ -19,6 +19,8 @@ Retailers, wholesalers and brands that already hold stock in Vrodux and want to 
 - **Your own store.** One store per workspace, on a web address you choose (or your own domain, set up with DNS). Private preview until you launch.
 - **Page builder.** Pages built from sections (hero, product grid, text, images, call to action) with a live preview. Menus, collections and discount codes.
 
+- **Languages.** The storefront supports English and Arabic (right-to-left).
+
 **Checkout and orders**
 - **Checkout.** Customers check out with or without an account. Delivery zones and rates, a free-delivery threshold, tax and discount codes. Totals, stock and prices are always worked out by the server, never trusted from the browser.
 - **Payments.** Card payments through your own Stripe or PayPal account, cash on delivery, or bank transfer.
@@ -35,7 +37,6 @@ Inventory (products, stock, photos), POS, Purchase, Finance, Reports hub, Vrodux
 Separate permissions for listings, store settings and orders, customisable per role.
 
 ## Do not claim yet
-- English and Arabic (right-to-left) storefront: hold until the owner confirms it after a visual check.
 - WooCommerce (shown as coming soon in the app), reviews, wishlists, abandoned-cart emails, gift cards, courier-rate quotes.
 - Store orders creating sales orders, invoices or ledger entries automatically.
 - A tested connection to a live Shopify store.

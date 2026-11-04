@@ -202,7 +202,7 @@ export default function FeaturesPage() {
               {
                 title: "SaaS (Cloud)",
                 badge: "Recommended",
-                features: ["Zero infrastructure management", "Automatic updates", "Enterprise plans include an SLA", "Pay as you grow", "Instant setup"],
+                features: ["Zero infrastructure management", "Automatic updates", "99.9% uptime SLA", "Pay as you grow", "Instant setup"],
                 color: "border-brand-500 bg-brand-500/5",
               },
               {

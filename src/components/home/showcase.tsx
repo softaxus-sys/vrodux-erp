@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { DollarSign, Users, Zap, BarChart3, CreditCard, UtensilsCrossed, KeyRound } from "lucide-react";
+import { DollarSign, Users, Zap, BarChart3, CreditCard, UtensilsCrossed, KeyRound, Store, Sparkles, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SectionHeading, WRAP, tone } from "@/components/home/ui";
 import { BrowserFrame } from "@/components/home/panel-art";
@@ -49,6 +49,24 @@ const tabs: {
     label: "Restaurant POS & KDS",
     icon: UtensilsCrossed,
     description: "From table orders to the kitchen display, run your restaurant floor and kitchen in perfect sync.",
+  },
+  {
+    id: "ecommerce",
+    label: "E-commerce",
+    icon: Store,
+    description: "List stock from Inventory as an online store: products, prices and stock come straight from Inventory, so nothing is entered twice.",
+  },
+  {
+    id: "vrodux-ai",
+    label: "Vrodux AI",
+    icon: Sparkles,
+    description: "Ask about your business in plain language, with a specialist for each module. Every change is shown for your confirmation first.",
+  },
+  {
+    id: "lead-generation",
+    label: "Lead Generation",
+    icon: Search,
+    description: "Search real businesses by area and type. Finding them is free, and you pay credits only to reveal contact details.",
   },
   {
     id: "login",

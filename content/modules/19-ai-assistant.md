@@ -10,9 +10,9 @@
 - **Every create/modify is held for confirmation** with a field-by-field summary; reject or confirm.
 - Respects the signed-in user's permissions and your enabled modules.
 - Deliberately **no delete tools** and no POS sale/void/refund from chat.
-- Connect your own AI provider key.
+- Connect your own AI provider key, or use the shared allowance included with your workspace (a monthly message limit applies).
+- Voice: push-to-talk in the chat, with spoken replies where voice is enabled for the workspace. Telegram is also supported.
 
 ## Do not claim yet
-- Hold until the owner confirms they are switched on in production: the shared AI allowance (monthly message limit), and voice (push-to-talk with spoken replies).
 - Voice, Telegram, automations and autopilot are tiered features with separate gating — confirm current availability before advertising.
 - Not tested end to end against every live model; answers can be wrong, so keep the confirmation language prominent.

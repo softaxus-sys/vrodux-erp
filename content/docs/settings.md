@@ -64,8 +64,8 @@ Go to **Settings, Billing, Add-ons and credits** and pay by card through **Strip
 
 ## Good to know
 
-- Credits **do not expire**.
-- You can **swap unused credits** from one add-on to another.
+- Credits **do not expire** and are **not refundable**.
+- You can **swap unused credits** from one add-on to another at their relative value, at no charge.
 - You see the cost before you run anything.
 
 @@ help-and-support | Help and Support | Video guides, and how to raise a ticket with the Vrodux team.

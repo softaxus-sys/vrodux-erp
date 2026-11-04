@@ -49,8 +49,8 @@ const importFlow = [
   { icon: "Trophy", title: "Follow-up and conversion", text: "Sales representatives review the lead, update its status, record interactions and move opportunities through the sales pipeline." },
 ] as const;
 
-// TODO(owner): set to true after testing with a real Meta dataset. No improvement in ad results is promised, only that Vrodux sends the signal.
-const META_CAPI_CONFIRMED = false;
+// Confirmed by the owner on 4 November 2026: tested with a real Meta dataset. No improvement in ad results is promised, only that Vrodux sends the signal.
+const META_CAPI_CONFIRMED = true;
 
 const leadFeatures = [
   "Lead profiles and contact information.",
@@ -87,7 +87,6 @@ const followUpFeatures = [
   "Contact information management.",
   "Customer history across leads, deals and accounts.",
   "Send quotations from a lead or account using your Sales templates (needs the Sales module). Preview the exact branded document, email it or share a link the customer can accept or decline online, and get an alert when they answer.",
-  // TODO(owner): confirm the Meta Conversions API signal has been tested with a real Meta dataset before this is shown.
   ...(META_CAPI_CONFIRMED
     ? ["Tell Meta which leads became customers: when a lead from a Meta ad changes stage or its deal is won, Vrodux can send that signal through Meta's Conversions API for CRM. Off until you switch it on; needs a Dataset ID and token from Meta Events Manager."]
     : []),

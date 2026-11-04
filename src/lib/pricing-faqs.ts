@@ -33,12 +33,11 @@ export const pricingFaqs = [
   },
   {
     q: "Can Vrodux support multiple companies?",
-    // TODO(owner): the multi-company limit per plan is unconfirmed, so no number is stated. Restore "up to 3" only once confirmed.
-    a: "Talk to the Vrodux team about multi-company setups and we will confirm what fits your plan.",
+    a: "Yes. Professional supports up to 3 companies, while Enterprise supports unlimited companies.",
   },
   {
     q: "Does Vrodux support custom integrations?",
-    a: "API access and workflows are available on every plan. Enterprise adds custom integrations.",
+    a: "API access and custom workflows are part of the Enterprise plan, which also includes custom integrations. Every plan can connect other tools through webhooks, Zapier and Make.",
   },
   {
     q: "Are there other costs besides the plan?",

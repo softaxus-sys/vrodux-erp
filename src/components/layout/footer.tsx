@@ -13,11 +13,16 @@ const products = [
   { label: "CRM", href: "/features/crm" },
   { label: "Point of Sale", href: "/features/pos" },
   { label: "Purchase Management", href: "/features/purchase" },
-  { label: "Analytics & BI", href: "/features/reports" },
+  { label: "Reports", href: "/features/reports" },
   { label: "Restaurant POS & KDS", href: "/features/restaurant" },
   { label: "Hospitality Management", href: "/features/hospitality" },
   { label: "Real Estate Management", href: "/features/real-estate" },
   { label: "Construction Management", href: "/features/construction" },
+  { label: "Manufacturing", href: "/features/manufacturing" },
+  { label: "Lead Generation", href: "/features/lead-generation" },
+  { label: "E-commerce", href: "/features/ecommerce" },
+  { label: "SEO AI Agent", href: "/features/seo" },
+  { label: "Vrodux AI Workforce", href: "/ai-workforce" },
 ];
 
 const solutions = [
