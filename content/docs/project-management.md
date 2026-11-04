@@ -22,6 +22,6 @@ Create **issues** in the **backlog**. Use **labels** to categorise them and **co
 
 The **kanban board** shows issues as cards in **columns**. Drag a card to move it, and manage the columns to match your process.
 
-## AI assistant
+## Vrodux AI
 
-The AI assistant can list and create issues for you, and asks you to confirm before it creates anything. See [AI assistant](/docs/ai-assistant/ask-it-confirm-it).
+Vrodux AI can list and create issues for you, and asks you to confirm before it creates anything. See [AI assistant](/docs/ai-assistant/ask-it-confirm-it).

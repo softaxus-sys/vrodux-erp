@@ -3,6 +3,7 @@ import { pageMeta } from "@/lib/seo";
 import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
 import { AiChatSection } from "@/components/sections/ai-chat";
+import { AI_KEY_TEXT, VOICE_CONFIRMED } from "@/lib/owner-flags";
 import { TelegramBotSection } from "@/components/sections/telegram-bot";
 import { VoiceAgentSection } from "@/components/sections/voice-agent";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -11,7 +12,7 @@ import { CheckCircle2, DollarSign, Users, ShoppingCart, Package, Layers, BarChar
 export const metadata: Metadata = pageMeta({
   title: "Vrodux AI Workforce — AI Agents Built Into Your ERP",
   description:
-    "Meet the Vrodux AI Workforce: AI agents for Finance, HR, Sales, Inventory and Operations that work inside your ERP and answer questions in plain language.",
+    "Meet Vrodux AI: a specialist for each module you use, working inside your ERP on your live data. Ask questions in plain language and confirm every change before it is saved.",
   path: "/ai-workforce", brand: false,
 });
 
@@ -108,6 +109,14 @@ const guardrails = [
   },
 ];
 
+const limits = [
+  "More than 300 tools across 20+ modules: it can list, look up, create and change records, and run steps such as approvals and status changes.",
+  "Every change is shown as a field-by-field summary and needs your confirmation before it is saved.",
+  "It has no delete tools, and it cannot make, void or refund a POS sale.",
+  "It respects the signed-in user's permissions and the modules you have enabled.",
+  `${AI_KEY_TEXT}.`,
+];
+
 export default function AiWorkforcePage() {
   return (
     <>
@@ -124,11 +133,11 @@ export default function AiWorkforcePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4">
-              An AI Agent for Every <span className="text-gradient">Part of Your Business</span>
+              A Specialist for Every <span className="text-gradient">Module You Use</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              Each agent is purpose-built for its module, working directly on your live data —
-              not a generic chatbot bolted on top.
+              Vrodux AI has a specialist for each module you use, plus an Auto mode that picks the right one.
+              These six roles are examples of what the specialists do, working directly on your live data.
             </p>
           </div>
 
@@ -194,6 +203,24 @@ export default function AiWorkforcePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* What Vrodux AI can and cannot do */}
+      <section className="py-16 bg-muted/20">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-3">What Vrodux AI can and cannot do</h2>
+          <p className="text-muted-foreground text-center mb-8">
+            Open it from the &quot;Ask Vrodux&quot; button in the app. Answers can be wrong, so check what it proposes before you confirm.
+          </p>
+          <ul className="space-y-3 text-muted-foreground list-disc pl-6">
+            {limits.map((l) => (
+              <li key={l}>{l}</li>
+            ))}
+            {VOICE_CONFIRMED && (
+              <li>Voice: push-to-talk in the chat, with spoken replies where voice is enabled for your workspace.</li>
+            )}
+          </ul>
         </div>
       </section>
 

@@ -22,6 +22,8 @@ import {
   Library,
   Ship,
   Search,
+  Store,
+  TrendingUp,
   type LucideIcon,
 } from "lucide-react";
 import { guideArticles, guideCategories } from "@/components/docs/docs-guides.generated";
@@ -139,7 +141,7 @@ const baseCategories: DocsCategory[] = [
   },
   {
     slug: "ai-assistant",
-    name: "AI Assistant",
+    name: "Vrodux AI",
     description: "Ask questions or request changes — always with a confirmation step.",
     icon: Sparkles,
   },
@@ -432,8 +434,8 @@ Reporting tools that work across your modules. [Go to Reports →](/docs/reports
 ### File Manager
 Where your workspace's documents are stored. [Go to File Manager →](/docs/file-manager)
 
-### AI Assistant
-Look things up or make changes in your workspace — it always asks for your confirmation before saving anything. [Go to AI Assistant →](/docs/ai-assistant)
+### Vrodux AI
+Look things up or make changes in your workspace — it always asks for your confirmation before saving anything. [Go to Vrodux AI →](/docs/ai-assistant)
 
 ### Mobile App
 Access your workspace from your phone. [Go to Mobile App →](/docs/mobile-app)
@@ -1081,41 +1083,41 @@ More record types will get their own document storage over time, expanding what 
   {
     slug: "ask-it-confirm-it",
     categorySlug: "ai-assistant",
-    title: "AI Assistant: Ask It, Confirm It",
-    summary: "What the AI Assistant can do, and why nothing is ever saved without you confirming it first.",
+    title: "Vrodux AI: Ask It, Confirm It",
+    summary: "What Vrodux AI can do, and why nothing is ever saved without you confirming it first.",
     readTime: 5,
     order: 1,
     placeholder: false,
     body: `
-The AI Assistant is a chat you can ask questions or give instructions to, right inside VroduxERP.
+Vrodux AI is a chat you can ask questions or give instructions to, right inside VroduxERP.
 
-## What the assistant does
+## What Vrodux AI does
 
-The assistant is a chat interface that understands your workspace's own data — across every module you use. You can ask it questions, or ask it to do something, and it works from your actual records, not generic answers.
+Vrodux AI is a chat interface that understands your workspace's own data — across every module you use. You can ask it questions, or ask it to do something, and it works from your actual records, not generic answers.
 
 ## Looking things up vs. making changes
 
-There's a clear line between the two things the assistant can do. Asking it a question — how many leads came in this week, for example — never touches your data. It just looks things up and answers you. Creating or changing something, on the other hand, always goes through a confirmation step first. Nothing gets saved just because you asked for it.
+There's a clear line between the two things Vrodux AI can do. Asking it a question — how many leads came in this week, for example — never touches your data. It just looks things up and answers you. Creating or changing something, on the other hand, always goes through a confirmation step first. Nothing gets saved just because you asked for it.
 
 ## The confirmation step, in detail
 
-This is the part worth understanding properly. Before the assistant creates or changes anything, it shows you exactly what it's about to do — as a plain, reviewable list of the fields and values involved. You can look it over like you would any form. Nothing happens until you explicitly approve it. And if it's not right, you can reject it instead, and nothing changes.
+This is the part worth understanding properly. Before Vrodux AI creates or changes anything, it shows you exactly what it's about to do — as a plain, reviewable list of the fields and values involved. You can look it over like you would any form. Nothing happens until you explicitly approve it. And if it's not right, you can reject it instead, and nothing changes.
 
-[screenshot: The assistant showing a field-by-field summary awaiting confirmation]
+[screenshot: Vrodux AI showing a field-by-field summary awaiting confirmation]
 
 ## It only does what you're allowed to do
 
-The assistant works within your own role and permissions — the same ones that apply to you everywhere else in VroduxERP. It can't do anything on your behalf that you couldn't do yourself if you were doing it manually.
+Vrodux AI works within your own role and permissions — the same ones that apply to you everywhere else in VroduxERP. It can't do anything on your behalf that you couldn't do yourself if you were doing it manually.
 
 ## What it won't do
 
-Two things are off-limits, on purpose. The assistant doesn't delete records. And it doesn't perform point-of-sale actions — things like ringing up a sale, processing a void, or issuing a refund all stay at the till, where they belong.
+Two things are off-limits, on purpose. Vrodux AI doesn't delete records. And it doesn't perform point-of-sale actions — things like ringing up a sale, processing a void, or issuing a refund all stay at the till, where they belong.
 
 ## Where to find it
 
-The assistant is reachable from a floating button, available from anywhere in the product — on both the web app and the mobile app.
+Vrodux AI is reachable from the "Ask Vrodux" button, available from anywhere in the product — on both the web app and the mobile app.
 
-[screenshot: The floating assistant button, visible from anywhere in the app]
+[screenshot: The Ask Vrodux button, visible from anywhere in the app]
     `,
   },
   {
@@ -1144,7 +1146,12 @@ The mobile app covers a lot of ground:
 - CRM — your leads and your pipeline
 - HR — your own attendance, leave, and payslips; if you're HR staff, also the employee directory, recruitment, and performance reviews
 - Approvals — a combined inbox covering leave, purchase, sales returns, and payroll, all in one place
+- Lead Generation — find businesses and work your prospects
+- Master Data — look up and manage your master data
 - Read-access lookups across Inventory, Sales, Purchase, Finance, Project Management, Visa Services, Real Estate, and Reports
+- Push notifications for assignments and approvals
+- Vrodux AI, from the Ask Vrodux button
+
 
 [screenshot: The combined Approvals inbox showing pending requests across modules]
 
@@ -1152,7 +1159,7 @@ The mobile app covers a lot of ground:
 
 Two things exist because they genuinely make sense on a phone, not just as a smaller web screen:
 
-- Scanning a barcode with your camera to check out a Point of Sale sale or receive a delivery
+- Scanning a barcode with your camera to check out a Point of Sale sale or receive a delivery (the camera barcode scanner)
 - Working through your pending approvals without needing a laptop
 
 [screenshot: Scanning a barcode with the phone's camera]
@@ -1167,9 +1174,9 @@ Your own account settings travel with you: your profile, your password, and two-
 
 [screenshot: The My Devices screen listing active sessions]
 
-## The AI Assistant on mobile
+## Vrodux AI on mobile
 
-The AI Assistant is available on mobile too, from the same floating button as on web — and it works the same way: nothing is created or changed without you confirming it first.
+Vrodux AI is available on mobile too, from the same floating button as on web — and it works the same way: nothing is created or changed without you confirming it first.
 
 ## Where to go deeper
 
@@ -1229,7 +1236,7 @@ Every plan includes every module; plans differ only by how many users they inclu
   },
 ];
 
-const GUIDE_ICONS: Record<string, LucideIcon> = { UtensilsCrossed, Hotel, Factory, Library, Ship, Search };
+const GUIDE_ICONS: Record<string, LucideIcon> = { UtensilsCrossed, Hotel, Factory, Library, Ship, Search, Store, TrendingUp };
 
 const guideCategoriesResolved: DocsCategory[] = guideCategories.map((c) => ({
   slug: c.slug,

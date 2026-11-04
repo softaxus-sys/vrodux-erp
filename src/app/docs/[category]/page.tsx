@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WatchDemo } from "@/components/demos/watch-demo";
-import { demoSlugForDocsCategory } from "@/lib/demos";
+import { demoForDocsPage } from "@/lib/demos";
 import { ArticleCard } from "@/components/docs/article-card";
 import { JsonLd } from "@/components/demos/json-ld";
 import { SITE, breadcrumbLd, fitDescription, pageMeta } from "@/lib/seo";
@@ -83,9 +83,9 @@ export default async function DocsCategoryPage({ params }: Props) {
         </div>
       </div>
 
-      {demoSlugForDocsCategory(category.slug) && (
+      {demoForDocsPage(category.slug) && (
         <div className="mb-10 -mx-4">
-          <WatchDemo slug={demoSlugForDocsCategory(category.slug)!} />
+          <WatchDemo slug={demoForDocsPage(category.slug)!.slug} />
         </div>
       )}
 

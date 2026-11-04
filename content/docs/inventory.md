@@ -36,3 +36,23 @@ The Reports hub has 17 inventory reports, and a low-stock view shows what to reo
 If you also use Import & Export, an "On its way" box on a product shows incoming cargo.
 
 Permissions cover stock, warehouses, movements and transfers separately.
+
+@@ online-listings-and-photos | How online listings and photos work | A listing is what online customers see. Each variant is an ordinary Inventory product.
+## One listing, many variants
+
+A **listing** is what customers see: name, description, photos, options such as **size and colour (up to three)**, and search details. Each **variant is an ordinary Inventory product** with its own SKU, barcode, price and stock, so POS, purchasing and reports stay correct.
+
+## List stock online
+
+From the stock list, or from a **Not yet listed** worklist, select items and list them as **drafts** or **published**. Photos stay with the stock item.
+
+See [Open your online store](/docs/ecommerce/open-your-online-store).
+
+@@ import-stock-with-pictures | How to import stock with pictures | Upload an Excel or CSV with picture links. Photos are fetched in the background.
+## Import
+
+Upload an **Excel or CSV** file with picture links. The photos are **fetched in the background**.
+
+## Safe to run twice
+
+Running the same file twice **does not duplicate** items.

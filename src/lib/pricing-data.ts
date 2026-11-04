@@ -1,3 +1,4 @@
+import { AI_KEY_TEXT } from "@/lib/owner-flags";
 import { Building2, Feather, LucideIcon, Rocket, Zap } from "lucide-react";
 
 export type Billing = "monthly" | "annual";
@@ -18,6 +19,9 @@ export function savingsPercent(monthly: number, annual: number) {
   return Math.round((1 - annual / monthly) * 100);
 }
 
+// TODO(owner): the tiering of multi-company (up to 3), multi-currency, advanced BI, API access, custom workflows and
+// advanced reporting is unconfirmed. In the product they work on every plan (only seats and storage are limited),
+// so they are shown as included on all plans and "up to 3 companies" is removed until you confirm.
 export const pricingTiers: PricingTier[] = [
   {
     id: "micro",
@@ -31,7 +35,8 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Up to 3 users",
       "Every module included",
-      "AI assistant included – pay-as-you-go, bring your own key",
+      `Vrodux AI on every plan: ${AI_KEY_TEXT.charAt(0).toLowerCase()}${AI_KEY_TEXT.slice(1)}`, // see owner-flags.ts
+      "Multi-currency, API access and reporting on every plan",
       "Cloud hosting & automatic updates",
       "Standard support",
     ],
@@ -48,7 +53,8 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Up to 10 users",
       "Every module included",
-      "AI assistant included – pay-as-you-go, bring your own key",
+      `Vrodux AI on every plan: ${AI_KEY_TEXT.charAt(0).toLowerCase()}${AI_KEY_TEXT.slice(1)}`, // see owner-flags.ts
+      "Multi-currency, API access and reporting on every plan",
       "Cloud hosting & automatic updates",
       "Standard support",
     ],
@@ -65,15 +71,10 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Up to 50 users",
       "Every module included",
-      "AI assistant included – pay-as-you-go, bring your own key",
+      `Vrodux AI on every plan: ${AI_KEY_TEXT.charAt(0).toLowerCase()}${AI_KEY_TEXT.slice(1)}`, // see owner-flags.ts
+      "Multi-currency, API access and reporting on every plan",
       "Cloud hosting & automatic updates",
       "Priority support", // OWNER DECISION
-      "Multi-company — up to 3 companies", // OWNER DECISION
-      "Multi-currency", // OWNER DECISION
-      "Advanced analytics & BI", // OWNER DECISION
-      "API access", // OWNER DECISION
-      "Custom workflows", // OWNER DECISION
-      "Advanced reporting", // OWNER DECISION (not on the owner's list; kept as-is)
     ],
   },
   {
@@ -88,17 +89,13 @@ export const pricingTiers: PricingTier[] = [
     features: [
       "Everything in Professional",
       "Unlimited users",
-      "Unlimited companies",
       "Advanced permissions",
-      "Enterprise reporting",
-      "Advanced BI",
       "Custom integrations",
       "Dedicated support",
       "SLA",
       "Dedicated infrastructure options",
       "On-premise deployment option",
       "Data migration assistance",
-      "Custom workflows",
       "Custom development",
       "Enterprise security",
       "Enterprise onboarding",

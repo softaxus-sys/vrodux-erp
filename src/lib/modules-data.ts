@@ -22,6 +22,8 @@ import {
   Ship,
   Plane,
   Search,
+  Store,
+  TrendingUp,
   type LucideIcon,
 } from "lucide-react";
 
@@ -91,7 +93,7 @@ export const coreModules: ModuleTile[] = [
       { title: "Expense Management & Budgeting" },
       {
         title: "VAT / Tax Compliance",
-        description: "Built-in compliance for UAE, Saudi Arabia, and other GCC tax frameworks.",
+        description: "UAE VAT 201 return preparation and export from your ledger, plus tax settings for GCC frameworks. You file on the FTA portal.",
       },
       {
         title: "Purchase Invoices (AP Bills)",
@@ -128,7 +130,7 @@ export const coreModules: ModuleTile[] = [
       },
       {
         title: "UAE WPS-Compliant Salary Export",
-        description: "Wages Protection System salary file export, ready for direct bank submission.",
+        description: "Wages Protection System salary file export, ready to take to your bank. Vrodux does not submit it for you.",
       },
       {
         title: "Employee Self-Service",
@@ -684,10 +686,37 @@ export const industryModules: ModuleTile[] = [
   },
 ];
 
-export const allModules: ModuleTile[] = [...coreModules, ...industryModules];
+/** "Grow online": sell online and improve search visibility. Counted in the module total. */
+export const growModules: ModuleTile[] = [
+  {
+    id: "ecommerce",
+    name: "E-commerce",
+    description: "Sell online from the stock you already hold: your own store built on Inventory, with a page builder, checkout, payments and order management.",
+    icon: Store,
+    color: "from-rose-500 to-pink-600",
+    bg: "bg-rose-500/10",
+    features: ["Online Listings from Inventory", "Page Builder", "Checkout & Payments", "Shopify Connection"],
+    href: "/features/ecommerce",
+    related: ["inventory", "pos", "seo"],
+  },
+  {
+    id: "seo",
+    name: "SEO AI Agent",
+    description: "Audit your site, review the fixes an AI agent proposes, see what competitors cover that you do not, and plan 30 days of content.",
+    icon: TrendingUp,
+    color: "from-teal-500 to-cyan-600",
+    bg: "bg-teal-500/10",
+    features: ["Site Audit & Health Score", "Fixes You Approve", "Competitor Analysis", "30-Day Content Plan"],
+    href: "/features/seo",
+    related: ["ecommerce", "lead-generation", "reports"],
+  },
+];
+
+export const allModules: ModuleTile[] = [...coreModules, ...industryModules, ...growModules];
 
 export function getModuleBySlug(slug: string): ModuleTile | undefined {
   return allModules.find((m) => m.id === slug);
 }
 
-export const totalModuleCount = coreModules.length + industryModules.length;
+/** 8 core + 15 industry + E-commerce + SEO = 25. */
+export const totalModuleCount = coreModules.length + industryModules.length + growModules.length;

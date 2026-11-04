@@ -5,7 +5,7 @@
 
 ## Features
 - **Find** — search real businesses by category and area (Google Places + website enrichment); discovery is free.
-- **Reveal with credits** — pay credits only to reveal a contact; credits are refunded for unusable or bounced contacts. Buy credit packs by Stripe or PayPal.
+- **Reveal with credits** — pay credits only to reveal a contact; credits are refunded for unusable or bounced contacts. Buy credits in Settings, Billing, Add-ons and credits, by card through Stripe or PayPal. The same credits system covers SEO audits, and unused credits can be swapped between add-ons.
 - **Prospects** — list, edit, import/export, push to your CRM.
 - **Campaigns** — multi-step cold-email sequences sent from **your own connected mailbox** (Google, Microsoft or SMTP/IMAP), with warm-up limits, send window in your time zone, unsubscribe link and sender address on every email, suppression lists, auto-pause on bounces/complaints. Line breaks in templates are reflowed so sentences don't break mid-line.
 - **Inbox** — replies in one place, classified.

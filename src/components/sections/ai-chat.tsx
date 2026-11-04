@@ -272,7 +272,7 @@ export function AiChatSection({ plain = true }: { plain?: boolean } = {}) {
                     <span className="truncate">
                       {thinkingAgent
                         ? `${agents[thinkingAgent].name} is working…`
-                        : "6 agents connected to your live ERP data"}
+                        : "Specialists connected to your live ERP data"}
                     </span>
                   </p>
                 </div>

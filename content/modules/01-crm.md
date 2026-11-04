@@ -29,7 +29,7 @@ Sales teams, agencies, real-estate brokers, service businesses — anyone with i
 - Calls, meetings, emails, notes and tasks; meeting/call time; assign tasks to a teammate (they get a notification).
 
 **Quotations from CRM** (needs the Sales module)
-- Create a quotation for a lead or account from a Sales template, preview the branded document, email it, copy the customer link or download a PDF.
+- Send quotations from a lead or account using your Sales templates: preview the exact branded document, email it, copy the customer link or download a PDF. The customer can accept or decline online, and you are alerted when they answer.
 
 **Documents** — attach files to leads, opportunities and accounts.
 
@@ -53,3 +53,4 @@ Separate permissions for leads, pipeline, customers, reports (view/export), inte
 - Automatic assignment of integration-captured leads to a specific user by routing rules is name-based only (admins reassign).
 - Workflow/automation engine, configurable pipelines, renewals/health scores, cases/tickets, AI scoring — planned, not built.
 - Stage history for reports accrues from the date the feature was deployed; older closed deals use approximate dates.
+- Tell Meta which leads became customers (Conversions API for CRM): hold until the owner confirms it has been tested with a real Meta dataset. Say only that Vrodux sends the signal; do not claim any improvement in ad results.

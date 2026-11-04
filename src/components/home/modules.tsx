@@ -1,8 +1,16 @@
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
-import { coreModules, industryModules, totalModuleCount } from "@/lib/modules-data";
+import { coreModules, growModules, industryModules, totalModuleCount } from "@/lib/modules-data";
+import { Bot, Bell, Languages, Smartphone } from "lucide-react";
 import { SectionHeading, tone, WRAP } from "@/components/home/ui";
 import { cn } from "@/lib/utils";
+
+const platformCapabilities = [
+  { icon: Smartphone, title: "Mobile app", text: "Approvals, CRM, your own HR and Vrodux AI on your phone." },
+  { icon: Bot, title: "Vrodux AI", text: "Ask about your business, or let it act, with your confirmation first." },
+  { icon: Bell, title: "Real-time notifications", text: "Alerts in the bell the moment something needs you." },
+  { icon: Languages, title: "English and Arabic", text: "The main app supports right-to-left Arabic." },
+];
 
 export function HomeModules() {
   return (
@@ -13,6 +21,9 @@ export function HomeModules() {
           title="Everything your business needs, in one platform"
           description="From finance to hospitality, retail to construction, Vrodux covers every part of your operations with deep, industry-specific functionality."
         />
+        <p className="mt-4 text-sm font-medium text-brand-700 dark:text-white">
+          Every plan includes every module, plus SEO and Lead Generation.
+        </p>
 
         <h3 className="mb-5 mt-14 text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
           Core business modules
@@ -82,6 +93,48 @@ export function HomeModules() {
             <ArrowRight className="h-5 w-5 flex-none transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>
+
+        <h3 className="mb-5 mt-14 text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+          Grow online
+        </h3>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {growModules.map((m, i) => {
+            const t = tone(i + 4);
+            return (
+              <Link
+                key={m.id}
+                href={m.href}
+                className="group flex items-start gap-4 rounded-2xl border bg-white p-5 transition-colors hover:border-brand-500/50 dark:border-white/10 dark:bg-card"
+              >
+                <span className={cn("flex h-10 w-10 flex-none items-center justify-center rounded-xl", t.card)}>
+                  <m.icon className={cn("h-5 w-5", t.icon)} strokeWidth={1.75} />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="flex items-center justify-between gap-2">
+                    <span className="font-medium">{m.name}</span>
+                    <ArrowUpRight className="h-4 w-4 flex-none text-muted-foreground transition-colors group-hover:text-foreground" />
+                  </span>
+                  <span className="mt-1 line-clamp-2 block text-sm leading-snug text-muted-foreground">{m.description}</span>
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+
+        <h3 className="mb-5 mt-14 text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+          Across the platform
+        </h3>
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {platformCapabilities.map((c) => (
+            <li key={c.title} className="flex items-start gap-3 rounded-2xl border bg-white p-5 dark:border-white/10 dark:bg-card">
+              <c.icon className="mt-0.5 h-5 w-5 flex-none text-brand-600 dark:text-white" strokeWidth={1.75} />
+              <span>
+                <span className="block font-medium">{c.title}</span>
+                <span className="mt-1 block text-sm leading-snug text-muted-foreground">{c.text}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { formatDuration, type DemoVideo } from "@/lib/demos";
 
 /** Native player + chapter list. No autoplay; chapter clicks seek and play. */
-export function DemoPlayer({ video }: { video: DemoVideo }) {
+export function DemoPlayer({ video, startAt }: { video: DemoVideo; startAt?: number }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [activeIndex, setActiveIndex] = useState(-1);
   const { chapters } = video;
@@ -19,6 +19,14 @@ export function DemoPlayer({ video }: { video: DemoVideo }) {
     }
     setActiveIndex((prev) => (prev === idx ? prev : idx));
   }, [chapters]);
+
+  // Open at the requested second (still paused: no autoplay).
+  const onLoadedMetadata = useCallback(() => {
+    const el = ref.current;
+    if (el && startAt && startAt < (el.duration || Infinity)) {
+      el.currentTime = startAt;
+    }
+  }, [startAt]);
 
   const seekTo = (start: number, index: number) => {
     const el = ref.current;
@@ -38,6 +46,7 @@ export function DemoPlayer({ video }: { video: DemoVideo }) {
         preload="metadata"
         playsInline
         poster={video.posterUrl}
+        onLoadedMetadata={onLoadedMetadata}
         onTimeUpdate={syncActive}
         onSeeked={syncActive}
         className="w-full aspect-video rounded-lg bg-black"

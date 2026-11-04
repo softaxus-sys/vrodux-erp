@@ -34,7 +34,8 @@ const tiles = [
   },
 ];
 
-const trust = ["GDPR Compliant", "ISO 27001", "SOC 2 Type II — In Progress", "99.9% Uptime SLA"];
+// TODO(owner): "SOC 2 Type II - In Progress" and "99.9% Uptime SLA" removed until confirmed. See the security page.
+const trust = ["Built on ISO 27001-aligned practices", "Designed to support GDPR and UAE PDPL requirements", "Every plan includes every module"];
 
 export function HomeHero({ shots }: { shots: HomeShots }) {
   return (

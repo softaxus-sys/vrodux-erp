@@ -12,7 +12,7 @@ import { DemoPlayer } from "@/components/demos/demo-player";
 import { formatDuration, type DemoVideo } from "@/lib/demos";
 
 /** Poster card (lazy image); clicking opens the player in a dialog. */
-export function DemoCard({ video }: { video: DemoVideo }) {
+export function DemoCard({ video, startAt }: { video: DemoVideo; startAt?: number }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -54,7 +54,7 @@ export function DemoCard({ video }: { video: DemoVideo }) {
         <DialogDescription className="sr-only">
           {video.description || `${video.title} demo video`}
         </DialogDescription>
-        <DemoPlayer video={video} />
+        <DemoPlayer video={video} startAt={startAt} />
       </DialogContent>
     </Dialog>
   );

@@ -3,7 +3,7 @@ Purchase approvals let a manager decide before money is committed.
 
 ## Where requisitions come from
 
-Requisitions are raised from **Manufacturing material shortages** and through the **AI assistant**. (The approvals screen in the web app lists and decides them; it does not have a "new request" button.)
+Requisitions are raised from **Manufacturing material shortages** and through **Vrodux AI**. (The approvals screen in the web app lists and decides them; it does not have a "new request" button.)
 
 ## Approve or reject
 

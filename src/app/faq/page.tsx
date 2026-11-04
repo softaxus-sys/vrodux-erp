@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Script from "next/script";
 import { totalModuleCount } from "@/lib/modules-data";
+import { AI_KEY_TEXT } from "@/lib/owner-flags";
 
 export const metadata: Metadata = pageMeta({
   title: "FAQ — Frequently Asked Questions about Vrodux ERP",
@@ -16,48 +17,56 @@ export const metadata: Metadata = pageMeta({
   path: "/faq", brand: false,
 });
 
+// Answers below follow the product brief of November 2026. Items marked TODO(owner) are unconfirmed
+// and are worded conservatively until the owner confirms them.
 const faqCategories = [
   {
     category: "General",
     faqs: [
-      { q: "What is Vrodux ERP?", a: `Vrodux ERP is a comprehensive enterprise resource planning platform developed by SoftAxis Technologies LLC. It includes ${totalModuleCount} integrated modules covering Finance, HR, Inventory, Sales, CRM, Purchase, Project Management, Reports, POS, Restaurant, Hospitality, Real Estate, Construction, Healthcare, Education, Insurance, B2B & Professional Services, Visa Services, Manufacturing, Library, and Import & Export.` },
-      { q: "Who is Vrodux ERP designed for?", a: "Vrodux ERP is designed for small to enterprise-level businesses across various industries including retail, restaurants, hospitality, real estate, construction, healthcare, education, insurance, B2B services, visa services, manufacturing, libraries, and import/export." },
-      { q: "Is Vrodux ERP available in Arabic?", a: "Yes. Vrodux ERP has full Arabic language support with RTL (Right-to-Left) interface. Users can switch between Arabic and English interfaces per their preference." },
+      { q: "What is Vrodux ERP?", a: `Vrodux ERP is an enterprise resource planning platform developed by SoftAxis Technologies LLC in Dubai. It includes ${totalModuleCount} integrated modules, from Finance, HR, Inventory, Sales, CRM and Purchase to POS, Restaurant, Hospitality, Real Estate, Manufacturing and more, plus E-commerce and an SEO AI Agent.` },
+      { q: "Who is Vrodux ERP designed for?", a: "Small and mid-sized businesses and growing organizations across retail, restaurants, hospitality, real estate, construction, healthcare, education, insurance, B2B services, visa services, manufacturing, libraries and import/export." },
+      { q: "Is it available in Arabic?", a: "The app has Arabic and right-to-left support. Some customer-facing pages, such as the library member portal and quotation links, and some emails are English only for now." },
+      { q: "Is it mobile-friendly?", a: "The web app works on phones and tablets, and there is a companion mobile app for approvals, CRM, your own HR and Vrodux AI. Administration stays on the web. See the mobile app guide in the docs." },
     ],
   },
   {
     category: "Pricing & Plans",
     faqs: [
-      { q: "What are the pricing tiers?", a: "Vrodux ERP offers three tiers: Starter ($299/month), Professional ($799/month), and Enterprise (custom pricing). Every plan includes every module; the tiers differ by the number of users they cover." },
-      { q: "Is there a free trial?", a: "We offer a personalized demo session rather than a generic free trial. This gives you a hands-on experience with your specific business scenarios configured in Vrodux ERP." },
-      { q: "Are there any hidden fees?", a: "No hidden fees. Our pricing is transparent and all-inclusive. You pay for your plan and get access to all included modules. On-premise deployment has separate one-time licensing costs." },
-      { q: "Can I change plans?", a: "Yes. You can upgrade or downgrade your plan at any time. Upgrades take effect immediately; downgrades apply at the next billing cycle." },
+      { q: "What are the pricing tiers?", a: "Plans are based on the number of users: 3, 10 or 50 users, plus Enterprise through sales. Every plan includes every module. Prices are on the pricing page." },
+      { q: "Is there a free trial?", a: "Yes. Every new workspace gets a 14-day free trial with unlimited users and no credit card. Reminder emails arrive 7, 3 and 1 days before it ends." },
+      { q: "Are there any hidden fees?", a: "There are no per-module fees. Add-ons such as SEO audits and Lead Generation reveals use credits that you buy yourself. Optional services such as data migration, implementation and custom development are quoted separately." },
+      { q: "Can I change plans?", a: "Yes, in Settings, Billing. Checkout will not let you choose a plan smaller than your active user count. If a subscription lapses, your data is never deleted." },
+    ],
+  },
+  {
+    category: "Compliance & Security",
+    faqs: [
+      { q: "Does Vrodux file VAT returns with the FTA?", a: "No. Vrodux prepares your VAT 201 return, checks it against your ledger and exports the files. You file on the FTA portal and record the reference in Vrodux." },
+      { q: "Does Vrodux submit WPS salary files to the bank?", a: "No. HR prepares the WPS salary file for you to take to your bank. Check it against your bank's template before the first live submission." },
+      { q: "Is Vrodux ready for UAE e-invoicing?", a: "Vrodux produces tax invoices with seller and buyer name, address and TRN, and holds the data fields e-invoicing needs. PINT AE invoice files and a connection to an accredited provider are in progress and not available yet." },
+      { q: "How is my data protected?", a: "Connections use TLS and sensitive values such as API tokens and two-factor secrets are stored encrypted. You can turn on two-factor sign-in, control access by role, and see and sign out your devices. See the security page for details." },
+      // TODO(owner): confirm any stronger backup target and whether an uptime percentage can be quoted. Until then:
+      { q: "What about backups and uptime?", a: "Backups run daily, so a restore can lose up to 24 hours of changes since the last backup. Enterprise plans include an SLA." },
     ],
   },
   {
     category: "Implementation",
     faqs: [
-      { q: "How long does implementation take?", a: "Vrodux ERP is cloud-based, so your workspace works instantly. The only time involved is exporting your data from your current system, importing it, and adjusting settings, which is usually a day or two for most businesses, such as real estate, POS and restaurants. On-premises deployments take a few days because of installation and training." },
-      { q: "Do you migrate data from our existing system?", a: "Yes. Our implementation team handles data migration from any source — Excel, QuickBooks, Tally, SAP, Odoo, or other ERP systems. We provide data validation and reconciliation." },
-      { q: "Do you provide training?", a: "Yes. Comprehensive role-based training is included in all implementations. We offer online and on-site training sessions, training videos, and documentation." },
-      { q: "What is your implementation methodology?", a: "We follow a 5-phase methodology: Discovery & Planning, Configuration & Setup, Data Import & Training, Go-Live, and Post-Launch Support. Each phase has clear milestones and deliverables." },
+      { q: "How long does implementation take?", a: "Vrodux ERP is cloud-based, so your workspace works instantly. The time goes into exporting your data from your current system, importing it and adjusting settings, which is usually a day or two for most businesses, such as real estate, POS and restaurants. On-premises deployments take a few days because of installation and training." },
+      // TODO(owner): confirm the current implementation, migration, training and support offer.
+      { q: "Do you provide implementation, data migration and training?", a: "Implementation, data migration, integrations and custom development can be provided separately and are quoted on request. Contact the team to discuss what you need." },
+      { q: "What support is available?", a: "Help and Support inside the app has video guides and lets you raise a ticket with the Vrodux team. Priority and dedicated support levels are listed on the pricing page." },
     ],
   },
   {
     category: "Technical",
     faqs: [
-      { q: "What databases does Vrodux ERP support?", a: "Vrodux ERP uses PostgreSQL as its primary database. For on-premise deployments, we can also support MySQL and Microsoft SQL Server." },
-      { q: "Does Vrodux ERP have an API?", a: "Yes. Vrodux ERP includes a comprehensive RESTful API available on Professional and Enterprise plans. API documentation is provided for integration with third-party systems." },
-      { q: "What browsers are supported?", a: "Vrodux ERP works on all modern browsers: Chrome, Firefox, Safari, Edge. The interface is fully responsive and works on tablets and mobile devices." },
-      { q: "Is Vrodux ERP mobile-friendly?", a: "Yes. The web interface is fully responsive and works on mobile browsers. A native mobile app for iOS and Android is available on Enterprise plans." },
-    ],
-  },
-  {
-    category: "Support",
-    faqs: [
-      { q: "What support options are available?", a: "Support options vary by plan. Starter includes email support (48h response), Professional includes priority email support (24h response), Enterprise includes 24/7 phone, email, and chat support." },
-      { q: "Do you have a knowledge base?", a: "Yes. Vrodux ERP includes comprehensive documentation, video tutorials, and a knowledge base. Enterprise customers also get access to a dedicated customer success manager." },
-      { q: "What is your uptime SLA?", a: "Vrodux ERP SaaS maintains a 99.9% uptime SLA. Historical uptime data is available on our status page. Maintenance windows are scheduled outside business hours." },
+      // TODO(owner): confirm the plan wording for API access.
+      { q: "Does Vrodux ERP have an API?", a: "Yes. Vrodux has an API and webhooks, and connects to other tools through Zapier and Make." },
+      { q: "Can Vrodux be deployed on-premise?", a: "Yes. Vrodux offers both cloud (SaaS) and on-premise deployment. On-premise has separate licensing, and Enterprise customers can discuss it with the team." },
+      { q: "What databases does Vrodux ERP support?", a: "Vrodux ERP uses PostgreSQL as its primary database. For on-premise deployments, MySQL and Microsoft SQL Server can also be supported." },
+      { q: "What browsers are supported?", a: "All modern browsers: Chrome, Firefox, Safari and Edge. The interface is responsive and works on tablets and phones." },
+      { q: "Is the AI assistant included?", a: `Vrodux AI is on every plan. ${AI_KEY_TEXT}. Every change it proposes needs your confirmation first.` },
     ],
   },
 ];

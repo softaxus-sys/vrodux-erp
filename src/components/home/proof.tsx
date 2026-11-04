@@ -5,12 +5,15 @@ import { useEffect, useRef, useState } from "react";
 import { animate, useInView } from "framer-motion";
 import { clients } from "@/components/sections/clients";
 import { Eyebrow, WRAP } from "@/components/home/ui";
+import { totalModuleCount } from "@/lib/modules-data";
 
+// TODO(owner): "500+ businesses powered", "40+ countries served" and "99.9% uptime SLA" were removed
+// because nothing in the product repository backs them. Restore each one only with evidence.
 const stats = [
-  { value: 500, suffix: "+", label: "Businesses powered" },
-  { value: 40, suffix: "+", label: "Countries served" },
-  { value: 12, suffix: "", label: "ERP modules" },
-  { value: 99.9, suffix: "%", label: "Uptime SLA" },
+  { value: totalModuleCount, suffix: "", label: "Integrated ERP modules" },
+  { value: 14, suffix: "-day", label: "Free trial, unlimited users" },
+  { value: 2, suffix: "", label: "Languages: English and Arabic" },
+  { value: 300, suffix: "+", label: "Tools in Vrodux AI" },
 ];
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {

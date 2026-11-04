@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import {
-  Menu, Sun, Moon, ChevronDown, ExternalLink,
+  Menu, Store, TrendingUp, Sun, Moon, ChevronDown, ExternalLink,
   LayoutDashboard, DollarSign, Users, Package, ShoppingCart,
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
@@ -29,6 +29,8 @@ const coreModules = [
   { name: "Project Management", href: "/features/project-management", icon: ListChecks, desc: "Kanban Boards, Sprints, Issues" },
   { name: "Reports", href: "/features/reports", icon: BarChart3, desc: "Dashboards, KPIs, Reports" },
   { name: "Lead Generation", href: "/features/lead-generation", icon: Search, desc: "Find businesses, cold-email outreach" },
+  { name: "E-commerce", href: "/features/ecommerce", icon: Store, desc: "Online store built on Inventory" },
+  { name: "SEO AI Agent", href: "/features/seo", icon: TrendingUp, desc: "Site audits, fixes, content plan" },
 ];
 
 const industryModules = [

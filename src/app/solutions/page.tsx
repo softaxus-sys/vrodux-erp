@@ -24,7 +24,7 @@ const deploymentOptions = [
     benefits: [
       "Zero infrastructure management",
       "Automatic backups & updates",
-      "99.9% uptime SLA guarantee",
+      "Enterprise plans include an SLA",
       "Pay-as-you-grow pricing",
       "Setup in minutes, not months",
       "Access from any device",

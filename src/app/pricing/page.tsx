@@ -5,6 +5,7 @@ import { PageHero } from "@/components/shared/page-hero";
 import { PricingTrialBanner } from "@/components/sections/pricing-trial-banner";
 import { PricingValueProps } from "@/components/sections/pricing-value-props";
 import { PricingPlans } from "@/components/sections/pricing-plans";
+import { PricingAddons } from "@/components/sections/pricing-addons";
 import { PricingComparison } from "@/components/sections/pricing-comparison";
 import { PricingServices } from "@/components/sections/pricing-services";
 import { PricingFaq } from "@/components/sections/pricing-faq";
@@ -52,6 +53,7 @@ export default function PricingPage() {
       <PricingValueProps />
       <PricingPlans />
       <PricingComparison />
+      <PricingAddons />
       <PricingServices />
       <PricingFaq />
       <PricingFinalCta />

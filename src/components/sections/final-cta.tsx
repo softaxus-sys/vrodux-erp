@@ -23,7 +23,8 @@ export function FinalCTA() {
               Start your ERP journey today
             </h2>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
-              Join 500+ businesses running on Vrodux ERP. Get a personalised demo built around your industry and your
+              {/* TODO(owner): "500+ businesses" removed until it can be backed by evidence. */}
+              Get a personalised demo built around your industry and your
               processes.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
