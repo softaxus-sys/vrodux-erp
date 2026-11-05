@@ -23,6 +23,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    slug: "erp-trading-distribution-dubai",
+    title: "Best ERP Software for Trading & Distribution in Dubai",
+    excerpt: "What to look for in ERP software for trading and distribution companies in Dubai: UAE VAT and WPS, stock, purchasing, sales, import and export, and a rollout plan.",
+    category: "UAE Market",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-05",
+    featured: false,
+    tags: ["Trading ERP", "Distribution ERP", "Dubai", "UAE VAT"],
+  },
+  {
     slug: "erp-solutions-transform-business",
     title: "How ERP Solutions Transform the Modern Business Landscape",
     excerpt: "How ERP solutions transform business: break down data silos, automate routine work, gain real-time visibility and scale, plus an 8-step implementation plan.",
