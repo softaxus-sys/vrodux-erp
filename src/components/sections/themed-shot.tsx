@@ -109,12 +109,12 @@ export function ThemedShotImage({
   const image =
     light.src === dark.src ? (
       <div style={style} className={frame}>
-        <FallbackImage src={light.src} fallbackSrc={light.src} alt={alt} fill sizes={sizes} priority={priority} className={fit} />
+        <FallbackImage src={light.src} fallbackSrc={light.src} alt={alt} fill sizes={sizes} priority={priority} fetchPriority={priority ? "high" : undefined} className={fit} />
       </div>
     ) : (
       <div style={style} className={frame}>
-        <FallbackImage src={light.src} fallbackSrc={dark.src} alt={alt} fill sizes={sizes} priority={priority} className={`${fit} dark:hidden`} />
-        <FallbackImage src={dark.src} fallbackSrc={light.src} alt={alt} fill sizes={sizes} priority={priority} className={`hidden ${fit} dark:block`} />
+        <FallbackImage src={light.src} fallbackSrc={dark.src} alt={alt} fill sizes={sizes} priority={priority} fetchPriority={priority ? "high" : undefined} className={`${fit} dark:hidden`} />
+        <FallbackImage src={dark.src} fallbackSrc={light.src} alt={alt} fill sizes={sizes} priority={priority} fetchPriority={priority ? "high" : undefined} className={`hidden ${fit} dark:block`} />
       </div>
     );
 

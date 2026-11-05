@@ -63,10 +63,10 @@ export function HomeProof() {
               >
                 {c.dark ? (
                   <span className="flex h-14 w-14 items-center justify-center rounded-xl bg-neutral-900">
-                    <Image src={c.logo} alt={`${c.name} logo`} width={c.width} height={c.height} className="h-8 w-auto object-contain" />
+                    <Image src={c.logo} alt={`${c.name} logo`} width={c.width} height={c.height} sizes="56px" className="h-8 w-auto object-contain" />
                   </span>
                 ) : (
-                  <Image src={c.logo} alt={`${c.name} logo`} width={c.width} height={c.height} className="max-h-14 w-auto max-w-full object-contain" />
+                  <Image src={c.logo} alt={`${c.name} logo`} width={c.width} height={c.height} sizes="(min-width: 1024px) 230px, 45vw" className="max-h-14 w-auto max-w-full object-contain" />
                 )}
               </a>
             ))}
