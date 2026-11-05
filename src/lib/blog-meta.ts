@@ -16,6 +16,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "drive-business-growth-with-erp",
+    title: "How to Drive Business Growth Using ERP Systems",
+    excerpt: "How to drive business growth with ERP: pick the right goals and modules, map processes, use reporting, automate routine work and measure results, with a practical roadmap.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-05",
+    featured: false,
+    tags: ["ERP Growth", "Business Growth", "ERP Strategy"],
+  },
+  {
     slug: "erp-trading-distribution-dubai",
     title: "Best ERP Software for Trading & Distribution in Dubai",
     excerpt: "What to look for in ERP software for trading and distribution companies in Dubai: UAE VAT and WPS, stock, purchasing, sales, import and export, and a rollout plan.",

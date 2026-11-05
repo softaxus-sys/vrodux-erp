@@ -1,4 +1,5 @@
 export const blogCovers: Record<string, { src: string; alt: string }> = {
+  "drive-business-growth-with-erp": { src: "/images/blog/drive-business-growth-with-erp.jpg", alt: "Four steps to grow with ERP: measure, connect, automate and improve" },
   "erp-trading-distribution-dubai": { src: "/images/blog/erp-trading-distribution-dubai.jpg", alt: "Four steps of a trading business in Dubai: buy, store, sell and comply, connected in one ERP" },
   "erp-solutions-transform-business": { src: "/images/blog/erp-solutions-transform-business.jpg", alt: "Separate finance, sales, inventory and HR tools merging into one connected ERP platform" },
   "cloud-erp-uae-business-growth": { src: "/images/blog/cloud-erp-uae-business-growth.jpg", alt: "Illustration of cloud ERP for UAE businesses with benefits: lower cost, scalable, real-time and secure" },
