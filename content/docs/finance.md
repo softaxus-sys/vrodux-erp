@@ -72,6 +72,7 @@ Vrodux **prepares** your VAT 201 return. It does **not** submit it to the FTA. Y
 
 - The FTA publishes no VAT-return API, so submission is manual.
 - The XML export is not FTA-certified. Use it as a preparation aid and check it against the portal.
+- See [UAE VAT, WPS payroll and e-invoicing preparation](/uae-vat-payroll-e-invoicing) for the whole picture.
 
 @@ integration-center-and-finance-posting | How the Integration Center posts other modules to the ledger | See how POS, restaurant, rent, library fines and payroll reach the ledger, and choose off, review or auto per source.
 The Integration Center is where you control how each module's transactions become accounting entries.

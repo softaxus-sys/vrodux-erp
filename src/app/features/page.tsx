@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 import { PageJsonLd } from "@/components/shared/page-jsonld";
 import { PageHero } from "@/components/shared/page-hero";
@@ -7,7 +8,7 @@ import { totalModuleCount } from "@/lib/modules-data";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { FinalCTA } from "@/components/sections/final-cta";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet, Flame, Lock, Plug, Smartphone, Bell, Bot } from "lucide-react";
+import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet, Flame, Lock, Plug, Smartphone, Bell, Bot, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = pageMeta({
   title: "Features — Complete ERP Platform",
@@ -78,6 +79,25 @@ export default function FeaturesPage() {
         highlightedWord="All in One Platform"
         description="Vrodux ERP brings Finance, HR, Inventory, Sales, CRM, Project Management, POS, Restaurant, Hospitality, Real Estate, Construction, Healthcare, Education, and more together in a single, unified platform."
       />
+
+      <section className="pb-4">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link
+            href="/uae-vat-payroll-e-invoicing"
+            className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 rounded-2xl border bg-card p-5 transition-shadow hover:shadow-md"
+          >
+            <span>
+              <span className="block font-semibold">UAE VAT, WPS payroll and e-invoicing preparation</span>
+              <span className="mt-1 block text-sm text-muted-foreground">
+                Prepare your VAT 201 return, export your WPS salary file and prepare e-invoice data. You file on EmaraTax yourself.
+              </span>
+            </span>
+            <span className="flex items-center gap-1 text-sm font-medium text-brand-600 dark:text-brand-300">
+              See how it works <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            </span>
+          </Link>
+        </div>
+      </section>
 
       <HomeModules />
 
@@ -167,8 +187,8 @@ export default function FeaturesPage() {
               Workspace, Admin <span className="text-gradient">& Security</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Stay in control of your data, your people, and your compliance — including UAE WPS payroll
-              submissions — with administration tools built into every workspace.
+              Stay in control of your data, your people, and your compliance records, including UAE WPS salary
+              files, with administration tools built into every workspace.
             </p>
           </div>
 

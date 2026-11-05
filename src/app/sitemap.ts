@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, priority: 1.0, changeFrequency: "weekly" as const },
     { url: `${baseUrl}/features`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/solutions`, priority: 0.9, changeFrequency: "monthly" as const },
+    { url: `${baseUrl}/uae-vat-payroll-e-invoicing`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/e-invoicing`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/industries`, priority: 0.9, changeFrequency: "monthly" as const },
     { url: `${baseUrl}/ai-workforce`, priority: 0.9, changeFrequency: "monthly" as const },

@@ -44,7 +44,9 @@ export default async function DemosPage() {
                   <h2 className="text-2xl font-semibold mb-6">{g.category}</h2>
                   <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     {g.videos.map((v) => (
-                      <DemoCard key={v.slug} video={v} />
+                      <div key={v.slug} id={v.slug} className="scroll-mt-24">
+                        <DemoCard video={v} />
+                      </div>
                     ))}
                   </div>
                 </div>

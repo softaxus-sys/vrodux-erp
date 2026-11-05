@@ -17,16 +17,18 @@ export const metadata: Metadata = pageMeta({
 // Scope follows the owner's brief. Never describe Vrodux as "e-invoicing ready" or "FTA approved", and never say
 // it submits to the FTA. The dates below are as currently reported.
 // TODO(owner): verify the dates with the Ministry of Finance before release, then update the note below.
+// TODO(owner): the "what Vrodux does today" list follows the landing page brief of 5 November 2026; confirm it matches production.
 
 const today = [
   "Tax invoices with the seller's and buyer's name, address and TRN, with a TAX INVOICE title when a TRN is set.",
+  "Credit notes linked to the invoice they correct, with a required reason. Issued invoices are never edited.",
+  "A tax category and reason on each line, and customer records with TRN, structured address, emirate and network ID.",
+  "A readiness check that lists invoices and customers with missing data, and download as a PINT AE XML file, prepared in the PINT AE structure.",
   "UAE VAT 201 return preparation from your ledger, with validation and export. You file on the FTA portal.",
-  "The data fields that e-invoicing needs, held on your invoices and customer records.",
 ];
 
 const inProgress = [
-  "PINT AE invoice files.",
-  "A connection to an accredited service provider.",
+  "A connection to an accredited service provider. The send queue is built and waiting for it.",
 ];
 
 export default function EInvoicingPage() {
@@ -103,6 +105,9 @@ export default function EInvoicingPage() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <Button asChild>
+              <Link href="/uae-vat-payroll-e-invoicing">UAE VAT, WPS and e-invoicing preparation</Link>
+            </Button>
+            <Button variant="outline" asChild>
               <Link href="/features/finance">See Finance and VAT</Link>
             </Button>
             <Button variant="outline" asChild>

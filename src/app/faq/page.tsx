@@ -43,7 +43,7 @@ const faqCategories = [
     faqs: [
       { q: "Does Vrodux file VAT returns with the FTA?", a: "No. Vrodux prepares your VAT 201 return, checks it against your ledger and exports the files. You file on the FTA portal and record the reference in Vrodux." },
       { q: "Does Vrodux submit WPS salary files to the bank?", a: "No. HR prepares the WPS salary file for you to take to your bank. Check it against your bank's template before the first live submission." },
-      { q: "Is Vrodux ready for UAE e-invoicing?", a: "Vrodux produces tax invoices with seller and buyer name, address and TRN, and holds the data fields e-invoicing needs. PINT AE invoice files and a connection to an accredited provider are in progress and not available yet." },
+      { q: "Does Vrodux support UAE e-invoicing?", a: "Vrodux prepares invoices and credit notes for e-invoicing: tax categories, customer TRN and address data, a readiness check, and PINT AE XML downloads. Sending to an accredited provider is not live yet. See the UAE VAT, WPS and e-invoicing page for details." },
       { q: "How is my data protected?", a: "Data is encrypted at rest and connections use TLS 1.3, and sensitive values such as API tokens and two-factor secrets are stored encrypted. You can turn on two-factor sign-in, control access by role, and see and sign out your devices. See the security page for details." },
       { q: "What about backups and uptime?", a: "Backups run daily with point-in-time recovery, and Vrodux has a 99.9% uptime SLA. Enterprise plans can have a custom SLA." },
     ],

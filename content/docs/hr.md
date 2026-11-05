@@ -84,6 +84,8 @@ Vrodux **generates** the file. It does not send it to your bank.
 
 Check the file against your bank or exchange house template before the first live submission, then submit it through them.
 
+See [UAE VAT, WPS payroll and e-invoicing preparation](/uae-vat-payroll-e-invoicing) for how this fits with VAT and e-invoicing.
+
 @@ recruitment-and-performance | How to use recruitment and performance reviews | Post jobs to a public careers page and record performance reviews.
 ## Recruitment
 

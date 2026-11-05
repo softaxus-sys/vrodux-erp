@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 import Script from "next/script";
 import { PageHero } from "@/components/shared/page-hero";
@@ -51,6 +52,10 @@ export default function PricingPage() {
 
       <PricingTrialBanner />
       <PricingValueProps />
+      <p className="container mx-auto px-4 pb-2 text-center text-sm text-muted-foreground">
+        Every plan includes UAE VAT 201 preparation, WPS salary files and e-invoicing preparation.{" "}
+        <Link href="/uae-vat-payroll-e-invoicing" className="text-brand-600 underline underline-offset-4 dark:text-brand-300">See how it works</Link>.
+      </p>
       <PricingPlans />
       <PricingComparison />
       <PricingAddons />

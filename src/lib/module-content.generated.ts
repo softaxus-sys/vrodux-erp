@@ -222,6 +222,15 @@ export const moduleContent: Record<string, ModuleContent> = {
         ]
       },
       {
+        "title": "UAE e-invoicing preparation",
+        "items": [
+          "Credit notes linked to the invoice they correct, with a required reason; an issued invoice is never edited.",
+          "Tax category and a reason on each line; customer records with TRN, structured address, emirate and network ID.",
+          "A readiness check listing invoices and customers with missing data; download an invoice or credit note as a PINT AE XML file (prepared in the PINT AE structure, not certified).",
+          "A send queue is built and waiting for a provider connection. Sending to an accredited provider is not live yet."
+        ]
+      },
+      {
         "title": "Integration Center / Finance Posting",
         "items": [
           "See how each module reaches the ledger. Seven sources queue documents (POS sales/refunds, restaurant orders/refunds, real-estate rent, library fines, payroll) plus sales returns, wallet top-ups, POS cash in/out and hotel payments.",

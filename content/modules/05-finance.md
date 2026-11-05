@@ -21,6 +21,12 @@
 **Tax**
 - VAT screens and a **UAE VAT 201 return preparation** workspace: boxes computed from your ledger, validation, reconciliation to the VAT control account, FAF CSV and XML export, workflow draft → approved → ready, and "filed via portal" with your EmaraTax reference. Vrodux prepares your VAT return and exports the files; you file on the FTA portal.
 
+**UAE e-invoicing preparation**
+- Credit notes linked to the invoice they correct, with a required reason; an issued invoice is never edited.
+- Tax category and a reason on each line; customer records with TRN, structured address, emirate and network ID.
+- A readiness check listing invoices and customers with missing data; download an invoice or credit note as a PINT AE XML file (prepared in the PINT AE structure, not certified).
+- A send queue is built and waiting for a provider connection. Sending to an accredited provider is not live yet.
+
 **Integration Center / Finance Posting**
 - See how each module reaches the ledger. Seven sources queue documents (POS sales/refunds, restaurant orders/refunds, real-estate rent, library fines, payroll) plus sales returns, wallet top-ups, POS cash in/out and hotel payments.
 - Modes per source: off, **review** (queue and post manually) or **auto** (with start date and explicit acknowledgement).
@@ -37,5 +43,5 @@ Fine-grained keys for invoicing, expenses, accounting, journals, GL, budgeting, 
 - **No direct submission to the FTA.** The FTA publishes no VAT-return API; Vrodux prepares and exports files. XML is not FTA-certified.
 - Bank statement file import and one-to-many matching.
 - Inventory valuation / goods receipts / stock adjustments / production cost posting to the ledger automatically.
-- E-invoicing submission (groundwork only).
+- Sending e-invoices to an accredited provider (not live), and any certification of the XML.
 - Tips, payroll withholdings default to a liability account — an accountant should confirm mappings before switching any source to automatic.

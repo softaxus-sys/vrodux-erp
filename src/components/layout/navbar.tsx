@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import {
-  Menu, Store, TrendingUp, Sun, Moon, ChevronDown, ExternalLink,
+  Menu, Store, TrendingUp, FileCheck, Sun, Moon, ChevronDown, ExternalLink,
   LayoutDashboard, DollarSign, Users, Package, ShoppingCart,
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
@@ -31,6 +31,7 @@ const coreModules = [
   { name: "Lead Generation", href: "/features/lead-generation", icon: Search, desc: "Find businesses, cold-email outreach" },
   { name: "E-commerce", href: "/features/ecommerce", icon: Store, desc: "Online store built on Inventory" },
   { name: "SEO AI Agent", href: "/features/seo", icon: TrendingUp, desc: "Site audits, fixes, content plan" },
+  { name: "UAE VAT, WPS & e-invoicing", href: "/uae-vat-payroll-e-invoicing", icon: FileCheck, desc: "VAT 201, WPS file, e-invoice prep" },
 ];
 
 const industryModules = [
@@ -66,8 +67,9 @@ const industries = [
   { name: "Import & Export", href: "/industries/import-export", icon: Ship },
 ];
 
-const navLinks = [
+const navLinks: { label: string; href: string; hasMega?: "features" | "industries"; mobileOnly?: boolean }[] = [
   { label: "Features", href: "/features", hasMega: "features" as const },
+  { label: "UAE VAT, WPS & e-invoicing", href: "/uae-vat-payroll-e-invoicing", mobileOnly: true },
   { label: "Solutions", href: "/solutions" },
   { label: "Industries", href: "/industries", hasMega: "industries" as const },
   { label: "AI Workforce", href: "/ai-workforce" },
@@ -227,7 +229,7 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-1" ref={megaRef}>
-          {navLinks.map((link) => (
+          {navLinks.filter((l) => !l.mobileOnly).map((link) => (
             <div
               key={link.label}
               className="relative"

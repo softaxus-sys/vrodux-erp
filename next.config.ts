@@ -49,7 +49,7 @@ const nextConfig: NextConfig = {
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' data: blob: https:",
               "media-src 'self' https://sin1.contabostorage.com",
-              "connect-src 'self' https://www.google-analytics.com https://api.resend.com https://calendly.com https://challenges.cloudflare.com https://www.facebook.com https://demo-1.conversionsapigateway.com https://v5-b75ccb2b73c54aa4a5098ab7f8533696.ecs.us-east-2.on.aws",
+              "connect-src 'self' https://www.google-analytics.com https://api.resend.com https://calendly.com https://challenges.cloudflare.com https://www.facebook.com https://erp.vrodux.com https://demo-1.conversionsapigateway.com https://v5-b75ccb2b73c54aa4a5098ab7f8533696.ecs.us-east-2.on.aws",
               "frame-src https://calendly.com https://challenges.cloudflare.com",
             ].join("; "),
           },

@@ -30,3 +30,10 @@ Search the repo for `TODO(owner)` to find anything still open. Flags live in `sr
 ## Videos
 11. The demos page reads `manifest.json` from Contabo, so durations and the 31 videos need no code change. Videos are cached for a day.
 12. There is no `file-manager` docs category, so the File Manager video offset (0:48) is not linked from any page.
+
+## UAE VAT, WPS and e-invoicing landing page (`/uae-vat-payroll-e-invoicing`)
+13. Screenshots still needed: the VAT 201 return screen, the WPS export dialog (with excluded employees), the e-invoicing readiness page, and an invoice with a linked credit note. Only a payroll run screenshot (from the docs library) is shown.
+14. Verify the e-invoicing deadline wording and the Ministry of Finance link before running ads (`TODO(owner)` in the page).
+15. Confirm the network ID field, the PINT AE XML download, the readiness check and the PDF payslip download are live for all customers.
+16. The brief had a few garbled lines. I read the nav label as "UAE VAT, WPS & e-invoicing" and the pricing strip as figures taken from the pricing page's own data.
+
