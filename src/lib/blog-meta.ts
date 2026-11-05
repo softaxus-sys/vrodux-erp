@@ -1,0 +1,161 @@
+/**
+ * Blog post metadata (data only, so server code such as the sitemap and related-posts block can use it).
+ * Add each new post here, in blog-covers.ts and in app/blog/[slug]/page.tsx.
+ */
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  author: string;
+  readTime: number;
+  publishedAt: string;
+  featured: boolean;
+  tags: string[];
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "erp-trading-distribution-dubai",
+    title: "Best ERP Software for Trading & Distribution in Dubai",
+    excerpt: "What to look for in ERP software for trading and distribution companies in Dubai: UAE VAT and WPS, stock, purchasing, sales, import and export, and a rollout plan.",
+    category: "UAE Market",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-05",
+    featured: false,
+    tags: ["Trading ERP", "Distribution ERP", "Dubai", "UAE VAT"],
+  },
+  {
+    slug: "erp-solutions-transform-business",
+    title: "How ERP Solutions Transform the Modern Business Landscape",
+    excerpt: "How ERP solutions transform business: break down data silos, automate routine work, gain real-time visibility and scale, plus an 8-step implementation plan.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-03",
+    featured: false,
+    tags: ["ERP Solutions", "Digital Transformation", "ERP Benefits"],
+  },
+  {
+    slug: "cloud-erp-uae-business-growth",
+    title: "How Cloud-Based ERP Boosts UAE Business Growth",
+    excerpt: "Why cloud ERP suits UAE businesses: lower upfront cost, easy scaling, real-time visibility and VAT and WPS support, plus how to migrate from on-premise.",
+    category: "UAE Market",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-03",
+    featured: false,
+    tags: ["Cloud ERP", "UAE", "ERP Migration"],
+  },
+  {
+    slug: "marketing-overview-guide",
+    title: "Marketing Overview: A Practical Guide for Modern Businesses",
+    excerpt: "A marketing overview aligns strategy, channels, measurement and optimization. Learn how to build one, with a channel matrix, KPI dashboard and a 4 to 6 week plan.",
+    category: "Marketing",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-03",
+    featured: false,
+    tags: ["Marketing Overview", "Marketing Strategy", "Lead Generation"],
+  },
+  {
+    slug: "what-is-an-erp-system",
+    title: "What Is an ERP System? A Practical Guide",
+    excerpt: "What is an ERP system? Learn the core modules, the benefits, how to choose the right ERP and how to implement it, with practical tips for UAE businesses.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-02",
+    featured: false,
+    tags: ["ERP System", "What Is ERP", "ERP Selection"],
+  },
+  {
+    slug: "erp-systems-uae-evolution",
+    title: "The Evolution of ERP Systems in the UAE Tech Ecosystem",
+    excerpt: "How ERP systems in the UAE evolved from on-premise platforms to cloud and AI, what drove adoption, and what to look for when choosing one today.",
+    category: "UAE Market",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-02",
+    featured: false,
+    tags: ["ERP UAE", "UAE Business", "Digital Transformation"],
+  },
+  {
+    slug: "next-gen-erp-guide",
+    title: "Next-Gen ERP: What It Means for Modern Businesses",
+    excerpt: "What a next-gen ERP really is: cloud-first, modular and connected. How it differs from traditional ERP, what to look for and how to roll it out.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-10-30",
+    featured: false,
+    tags: ["Next-Gen ERP", "Cloud ERP", "Digital Transformation"],
+  },
+  {
+    slug: "erp-implementation-guide-2025",
+    title: "The Complete ERP Implementation Guide for 2025",
+    excerpt: "Everything you need to know about planning and executing a successful ERP implementation — from vendor selection to go-live.",
+    category: "ERP Guide",
+    author: "Hassan",
+    readTime: 12,
+    publishedAt: "2025-05-15",
+    featured: true,
+    tags: ["ERP", "Implementation", "Guide"],
+  },
+  {
+    slug: "restaurant-pos-kds-integration",
+    title: "How Restaurant POS + KDS Integration Reduces Kitchen Errors by 60%",
+    excerpt: "A deep dive into how Kitchen Display Systems connected with your POS transforms restaurant operations.",
+    category: "Restaurant",
+    author: "Shahbaz",
+    readTime: 8,
+    publishedAt: "2025-05-10",
+    featured: false,
+    tags: ["Restaurant", "POS", "KDS"],
+  },
+  {
+    slug: "vat-compliance-uae-erp",
+    title: "VAT Compliance in UAE: What Your ERP Must Handle",
+    excerpt: "UAE VAT requirements are complex. Here's exactly what your ERP system needs to handle to stay compliant.",
+    category: "Finance",
+    author: "Iraj",
+    readTime: 10,
+    publishedAt: "2025-05-05",
+    featured: false,
+    tags: ["VAT", "UAE", "Finance", "Compliance"],
+  },
+  {
+    slug: "construction-erp-cost-tracking",
+    title: "Why Construction Companies Lose Money Without Proper Cost Tracking",
+    excerpt: "Construction project cost overruns average 30%. Discover how the right ERP eliminates budget overruns.",
+    category: "Construction",
+    author: "Iqra",
+    readTime: 9,
+    publishedAt: "2025-04-28",
+    featured: false,
+    tags: ["Construction", "Cost Management", "ERP"],
+  },
+  {
+    slug: "hotel-pms-erp-integration",
+    title: "Why Standalone Hotel PMS Systems Are Failing Modern Hoteliers",
+    excerpt: "The case for an integrated Hotel + Finance + HR solution versus standalone PMS systems.",
+    category: "Hospitality",
+    author: "Hassan",
+    readTime: 7,
+    publishedAt: "2025-04-20",
+    featured: false,
+    tags: ["Hospitality", "Hotels", "PMS"],
+  },
+  {
+    slug: "multi-currency-erp-guide",
+    title: "Managing Multi-Currency Operations in a Global ERP",
+    excerpt: "How Vrodux ERP handles real-time exchange rates, multi-currency accounting, and consolidated reporting.",
+    category: "Finance",
+    author: "Iraj",
+    readTime: 8,
+    publishedAt: "2025-04-15",
+    featured: false,
+    tags: ["Multi-Currency", "Finance", "Global"],
+  },
+];

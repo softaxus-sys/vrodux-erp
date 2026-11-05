@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { industries } from "@/lib/industries-data";
 import { docsArticles, docsCategories } from "@/components/docs/docs-data";
 import { allModules } from "@/lib/modules-data";
-import { blogCovers } from "@/lib/blog-covers";
+import { blogPosts } from "@/lib/blog-meta";
 
 const baseUrl = "https://vrodux.com";
 
@@ -56,15 +56,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
   }));
 
-  const blogPostPages = Object.keys(blogCovers).map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
+  // Real publish dates for posts. Other pages have no reliable modified date, so they carry none: a made-up
+  // "now" on every URL teaches Google to ignore lastmod.
+  const blogPostPages = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
     priority: 0.7,
     changeFrequency: "monthly" as const,
   }));
 
   return [...staticPages, ...featureModulePages, ...industryPages, ...blogPostPages, ...docsCategoryPages, ...docsArticlePages].map((page) => ({
     url: page.url,
-    lastModified: new Date(),
+    lastModified: (page as { lastModified?: Date }).lastModified,
     changeFrequency: page.changeFrequency,
     priority: page.priority,
   }));

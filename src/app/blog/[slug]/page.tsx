@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/demos/json-ld";
 import { BlogContent } from "@/components/blog/blog-content";
+import { RelatedPosts } from "@/components/blog/related-posts";
 import { SITE, breadcrumbLd, fitDescription, pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
@@ -1169,6 +1170,8 @@ export default async function BlogPostPage({ params }: Props) {
             ))}
           </div>
         </div>
+
+        <RelatedPosts slug={slug} />
 
         <div className="mt-10 p-6 rounded-2xl border bg-brand-500/5 border-brand-500/20 text-center">
           <h3 className="font-semibold text-lg mb-2">Ready to Transform Your Business?</h3>
