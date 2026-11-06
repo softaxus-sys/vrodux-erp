@@ -69,21 +69,38 @@ export function generateJsonLd(type: "organization" | "product" | "faq", data?: 
   if (type === "organization") {
     return {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      name: siteConfig.company,
-      url: siteConfig.url,
-      logo: `${siteConfig.url}/images/vrodux_logo.png`,
-      description: siteConfig.description,
-      contactPoint: {
-        "@type": "ContactPoint",
-        email: "vrodux@softaxis.ae",
-        contactType: "customer support",
-        availableLanguage: ["English", "Arabic"],
-      },
-      sameAs: [
-        "https://x.com/AxusSoft",
-        "https://www.facebook.com/profile.php?id=61593996783081",
-        "https://www.youtube.com/channel/UCLjmPTXsvhowyfAMKSmTSCQ",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": `${siteConfig.url}/#organization`,
+          // The brand name people search for; the legal entity is kept separately.
+          name: "Vrodux ERP",
+          alternateName: ["Vrodux", "Vrodux.com"],
+          legalName: siteConfig.company,
+          url: siteConfig.url,
+          logo: `${siteConfig.url}/images/vrodux_logo.png`,
+          description: siteConfig.description,
+          contactPoint: {
+            "@type": "ContactPoint",
+            email: "vrodux@softaxis.ae",
+            contactType: "customer support",
+            availableLanguage: ["English", "Arabic"],
+          },
+          sameAs: [
+            "https://x.com/AxusSoft",
+            "https://www.facebook.com/profile.php?id=61593996783081",
+            "https://www.youtube.com/channel/UCLjmPTXsvhowyfAMKSmTSCQ",
+          ],
+        },
+        {
+          "@type": "WebSite",
+          "@id": `${siteConfig.url}/#website`,
+          url: siteConfig.url,
+          name: "Vrodux ERP",
+          alternateName: ["Vrodux", "Vrodux.com"],
+          publisher: { "@id": `${siteConfig.url}/#organization` },
+          inLanguage: "en",
+        },
       ],
     };
   }
