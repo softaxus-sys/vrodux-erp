@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RelatedGuides } from "@/components/shared/related-guides";
 import {
   ArrowRight, BookOpen, Building2, Calendar, CheckCircle2, ChevronDown, Code2, FileSpreadsheet, Globe2, History, Inbox,
   LayoutDashboard, ListChecks, Megaphone, MessageSquare, Table2, Target, UserCheck, Users, Webhook, type LucideIcon,
@@ -634,6 +635,8 @@ export async function CrmPage({ shots, docsCategory }: { shots: GalleryShot[]; d
             </div>
           </section>
         )}
+
+        <RelatedGuides path="/features/crm" />
 
         {/* 15. FAQ */}
         <section aria-labelledby="faq-h" className="py-14 md:py-20">

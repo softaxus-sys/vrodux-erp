@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RelatedGuides } from "@/components/shared/related-guides";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Bell, Fingerprint, Globe2, Lock, Smartphone, UserRound, Users } from "lucide-react";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -338,6 +339,8 @@ export async function ModulePageLayout({ module: mod }: { module: ModuleTile }) 
           </div>
         </section>
       )}
+
+      <RelatedGuides path={mod.href} />
 
       <FinalCTA />
     </>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RelatedGuides } from "@/components/shared/related-guides";
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -270,6 +271,8 @@ export async function IndustryPage({ industry }: { industry: Industry }) {
           </ul>
         </div>
       </section>
+
+      <RelatedGuides path={industry.href} />
 
       <FinalCTA />
     </>

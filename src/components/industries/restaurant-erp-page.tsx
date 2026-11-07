@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RelatedGuides } from "@/components/shared/related-guides";
 import Link from "next/link";
 import {
   ArrowRight, Boxes, Calculator, Calendar, CheckCircle2, ChefHat, ChevronDown, LineChart, MessageSquare,
@@ -618,6 +619,8 @@ export function RestaurantErpPage({ shots, image }: { shots: GalleryShot[]; imag
             </div>
           </div>
         </section>
+
+        <RelatedGuides path="/industries/restaurants" />
       </div>
     </>
   );
