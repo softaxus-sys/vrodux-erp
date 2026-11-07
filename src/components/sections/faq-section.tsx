@@ -17,7 +17,7 @@ export const faqs = [
   },
   {
     q: "Does Vrodux support Arabic and RTL languages?",
-    a: "The app has English and Arabic, with right-to-left support. Some customer-facing pages, such as the library member portal and quotation links, and some emails are English only for now.",
+    a: "The app has English and Arabic, with right-to-left support. Some customer-facing pages, such as the library and gym member portals and quotation links, and some emails are English only for now.",
   },
   {
     q: "Does Vrodux handle UAE VAT?",

@@ -103,3 +103,64 @@ Account mapping per role is customisable. Before switching any source to automat
 ## Permissions
 
 Integrations have view, submit, approve and approve-high keys, so different people can prepare and approve.
+
+@@ e-invoicing-credit-notes-and-the-send-queue | UAE e-invoicing: credit notes and the send queue | Issue a credit note, download the e-invoice file and see how the send queue works. Vrodux prepares the data. It does not submit it.
+Vrodux **prepares and validates** your e-invoice data. It does **not** submit invoices to the tax authority. In the UAE, e-invoices must be sent through an **accredited provider**, and the connection to a provider is **not live yet**.
+
+## Issue a credit note
+
+1. Open the invoice you need to correct.
+2. Choose to create a **credit note**.
+3. Enter the **reason**. It is required.
+4. Save. The credit note is **linked to the original invoice**.
+
+An issued invoice is never edited or made negative. A credit note is how you correct it.
+
+[screenshot: A credit note linked to its original invoice]
+
+## Check and download the data
+
+Run the readiness check on an invoice or credit note, then download it as a **PINT AE XML** file. The file is prepared in the PINT AE structure.
+
+[screenshot: The e-invoicing readiness check]
+
+## The send queue
+
+Documents that are ready wait in a **send queue**. The queue is built and waiting for a provider connection. Nothing is sent from it today, and Vrodux does not file or submit e-invoices for you.
+
+See [UAE VAT, WPS payroll and e-invoicing preparation](/uae-vat-payroll-e-invoicing) for the overall picture.
+
+@@ recurring-expenses-review-or-auto-post | Recurring expenses (review or auto-post) | Set up a recurring expense and choose whether each one is reviewed first or posted automatically.
+Use a recurring expense for costs that repeat, such as rent.
+
+## Create the template
+
+1. Open recurring expenses and create a **template**.
+2. Set its **schedule**, for example monthly.
+3. Choose the **debit and credit accounts**.
+
+[screenshot: A recurring expense template]
+
+## Choose how it runs
+
+- **Review each one.** Every time the template comes due, an expense is created for you to check before it is posted.
+- **Auto-post.** The template approves the expense, pays it and posts it to the ledger without you doing anything.
+
+Start with review, and switch a template to auto-post once you trust it.
+
+@@ currency-and-exchange-rates | Currency and exchange rates | How the company currency and daily exchange rates work in Finance.
+## Company currency
+
+Each company has **one base currency**, which is its operating currency. The currency on new records follows it. Set it once when you set up the workspace.
+
+## Exchange rates
+
+Exchange rates use a **USD base** and **refresh daily**. A posting in another currency is converted into your company currency using the daily rate.
+
+## Foreign-currency bills
+
+Purchase bills can be entered in a **foreign currency**. They are converted into your company currency when they are posted.
+
+[screenshot: A purchase bill in a foreign currency]
+
+Multi-currency is part of the Enterprise plan. See [pricing](/pricing).

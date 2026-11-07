@@ -4,6 +4,7 @@
 **Tagline:** Dine-in, takeaway and delivery with split bills, tips, modifiers and rider tracking.
 
 ## Features
+- **Recipe costing** — record the ingredients in each dish and see the cost and margin per dish, from your recorded ingredient costs.
 - **Floor & tables** — floors, dining areas, tables, floor designer.
 - **Order screen** — dine-in/takeaway/delivery, categories, structured **modifiers** (priced, required/optional, min/max), special instructions, hold/recall.
 - **Kitchen Display** — tickets with mark ready / served; kitchen configuration.

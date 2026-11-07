@@ -1,6 +1,6 @@
 import {
-  Building2, Factory, GraduationCap, HardHat, Home as HomeIcon, Hotel, Library, ShieldCheck, ShoppingBag,
-  Ship, Stamp, Stethoscope, UtensilsCrossed,
+  Building2, Factory, GraduationCap, HardHat, Home as HomeIcon, Hotel, Library, Dumbbell, ShieldCheck, ShoppingBag,
+  Ship, Stamp, Stethoscope, UtensilsCrossed, Plane, Search, Store,
 } from "lucide-react";
 
 const industryList = [
@@ -187,6 +187,54 @@ const industryList = [
     modules: ["Catalogue", "Members", "Lending", "Fines", "Multi-Branch"],
   },
   {
+    id: "tourism",
+    image: { src: "/images/industries/tourism.jpg", alt: "Illustration for Vrodux Tourism" },
+    icon: Plane,
+    name: "Tourism",
+    status: "live" as const,
+    headline: "Tour Packages, Departures, Travellers & Instalments",
+    description: "Run a travel agency or tour operation: tour packages with itineraries, scheduled departures, bookings with travellers, supplier bookings and instalments, posting to Finance.",
+    color: "from-cyan-500 to-sky-600",
+    bg: "bg-cyan-500/10",
+    modules: ["Tour Packages", "Departures", "Travellers", "Supplier Bookings", "Instalments"],
+  },
+  {
+    id: "lead-generation",
+    image: { src: "/images/industries/lead-generation.jpg", alt: "Illustration for Vrodux Lead Generation" },
+    icon: Search,
+    name: "Lead Generation",
+    status: "live" as const,
+    headline: "Find UAE Businesses, Reveal Contacts, Email Them",
+    description: "Find businesses by category and area, reveal contacts with credits, and run cold-email outreach from your own mailbox with a reply inbox. Live for the UAE.",
+    color: "from-violet-500 to-purple-600",
+    bg: "bg-violet-500/10",
+    modules: ["Find Businesses", "Reveal Contacts", "Campaigns", "Reply Inbox", "Push to CRM"],
+  },
+  {
+    id: "ecommerce",
+    image: { src: "/images/industries/ecommerce.jpg", alt: "Illustration for Vrodux E-commerce" },
+    icon: Store,
+    name: "E-commerce",
+    status: "live" as const,
+    headline: "Your Own Online Store, Built on Inventory",
+    description: "Sell online from the stock you already hold: your own store, a page builder, payments, orders and fulfilment, and Shopify sync.",
+    color: "from-emerald-500 to-teal-600",
+    bg: "bg-emerald-500/10",
+    modules: ["Online Store", "Page Builder", "Payments", "Orders", "Shopify Sync"],
+  },
+  {
+    id: "fitness-gym",
+    image: { src: "/images/industries/fitness-gym.jpg", alt: "Dumbbell illustration for Vrodux Fitness & Gym" },
+    icon: Dumbbell,
+    name: "Fitness & Gym",
+    status: "live" as const,
+    headline: "Members, Memberships, Check-in, Classes & Personal Training",
+    description: "Run a gym or fitness club in the UAE and GCC: members, memberships, front desk check-in, classes, personal training and payments in one system, with Finance and CRM connected when you use them.",
+    color: "from-rose-500 to-orange-600",
+    bg: "bg-rose-500/10",
+    modules: ["Members", "Memberships", "Check-in", "Classes", "Personal Training"],
+  },
+  {
     id: "import-export",
     image: { src: "/images/industries/import-export.jpg", alt: "Logistics coordinator at a port office overlooking container cranes" },
     icon: Ship,
@@ -220,6 +268,10 @@ const SLUGS: Record<string, string> = {
   "visa-services": "visa-services",
   manufacturing: "manufacturing",
   library: "library",
+  tourism: "tourism",
+  "lead-generation": "lead-generation",
+  ecommerce: "ecommerce",
+  "fitness-gym": "fitness-gym",
   "import-export": "import-export",
 };
 
@@ -237,6 +289,10 @@ const MODULES: Record<string, string[]> = {
   "visa-services": ["visa-services", "crm", "finance"],
   manufacturing: ["manufacturing", "inventory", "purchase", "sales", "finance"],
   library: ["library", "finance", "reports"],
+  "fitness-gym": ["fitness-gym", "crm", "finance", "hr", "reports"],
+  tourism: ["tourism", "crm", "finance", "hr"],
+  "lead-generation": ["lead-generation", "crm"],
+  ecommerce: ["ecommerce", "inventory", "finance", "reports"],
   "import-export": ["import-export", "inventory", "purchase", "sales", "finance"],
 };
 

@@ -25,8 +25,8 @@ const faqCategories = [
     faqs: [
       { q: "What is Vrodux ERP?", a: `Vrodux ERP is an enterprise resource planning platform developed by SoftAxis Technologies LLC in Dubai. It includes ${totalModuleCount} integrated modules, from Finance, HR, Inventory, Sales, CRM and Purchase to POS, Restaurant, Hospitality, Real Estate, Manufacturing and more, plus E-commerce and an SEO AI Agent.` },
       { q: "Who is Vrodux ERP designed for?", a: "Small and mid-sized businesses and growing organizations across retail, restaurants, hospitality, real estate, construction, healthcare, education, insurance, B2B services, visa services, manufacturing, libraries and import/export." },
-      { q: "Is it available in Arabic?", a: "The app has Arabic and right-to-left support. Some customer-facing pages, such as the library member portal and quotation links, and some emails are English only for now." },
-      { q: "Is it mobile-friendly?", a: "The web app works on phones and tablets, and there is a companion mobile app for approvals, CRM, your own HR and Vrodux AI. Administration stays on the web. See the mobile app guide in the docs." },
+      { q: "Is it available in Arabic?", a: "The app has Arabic and right-to-left support. Some customer-facing pages, such as the library and gym member portals and quotation links, and some emails are English only for now." },
+      { q: "Is it mobile-friendly?", a: "The web app works on phones and tablets, and there is a companion mobile app for approvals, CRM, your own HR and Vrodux AI. It is available on Google Play now, and the App Store version is coming soon. Administration stays on the web. See the mobile app guide in the docs." },
     ],
   },
   {

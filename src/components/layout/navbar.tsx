@@ -13,7 +13,7 @@ import {
   BarChart3, Building2, UtensilsCrossed, Hotel, Home as HomeIcon,
   HardHat, Stethoscope, GraduationCap, ShoppingBag, Truck,
   CreditCard, ShieldCheck, ArrowRight, Rocket, ListChecks, Stamp,
-  Factory, Library, Ship, Search, Plane,
+  Factory, Library, Ship, Search, Plane, Dumbbell,
 } from "lucide-react";
 import { totalModuleCount } from "@/lib/modules-data";
 
@@ -48,6 +48,7 @@ const industryModules = [
   { name: "Visa Services", href: "/features/visa-services", icon: Stamp, desc: "Case Mgmt, Document Checklists" },
   { name: "Manufacturing", href: "/features/manufacturing", icon: Factory, desc: "BOM, Production Orders, Costing" },
   { name: "Library", href: "/features/library", icon: Library, desc: "Catalogue, Members, Lending" },
+  { name: "Fitness & Gym", href: "/features/fitness-gym", icon: Dumbbell, desc: "Members, Check-in, Classes" },
   { name: "Import & Export", href: "/features/import-export", icon: Ship, desc: "Shipments, Trade Docs, Landed Cost" },
 ];
 
@@ -64,6 +65,10 @@ const industries = [
   { name: "Visa Services", href: "/industries/visa-services", icon: Stamp },
   { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },
   { name: "Library", href: "/industries/library", icon: Library },
+  { name: "Tourism", href: "/industries/tourism", icon: Plane },
+  { name: "Lead Generation", href: "/industries/lead-generation", icon: Search },
+  { name: "E-commerce", href: "/industries/ecommerce", icon: Store },
+  { name: "Fitness & Gym", href: "/industries/fitness-gym", icon: Dumbbell },
   { name: "Import & Export", href: "/industries/import-export", icon: Ship },
 ];
 

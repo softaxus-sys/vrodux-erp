@@ -4,10 +4,22 @@ export interface GuideArticle { slug: string; categorySlug: string; title: strin
 
 export const guideCategories: GuideCategory[] = [
   {
+    "slug": "construction",
+    "name": "Construction",
+    "description": "Projects, bills of quantities, contractors and progress for construction businesses.",
+    "icon": "HardHat"
+  },
+  {
     "slug": "ecommerce",
     "name": "E-commerce",
     "description": "Open an online store on top of Inventory, take orders and payments, and connect Shopify.",
     "icon": "Store"
+  },
+  {
+    "slug": "fitness-gym",
+    "name": "Fitness & Gym",
+    "description": "Members, memberships, front desk check-in, classes, personal training, payments and the member portal.",
+    "icon": "Dumbbell"
   },
   {
     "slug": "hospitality",
@@ -61,6 +73,36 @@ export const guideArticles: GuideArticle[] = [
     "summary": "The scope of Vrodux AI across modules, how confirmation works, and the limits built in.",
     "order": 2,
     "body": "\n## Where it works\n\nChat with Vrodux AI in a **side panel** or on a **full page**. Replies are formatted, with tables and lists. Open it from the **Ask Vrodux** button.\n\n## Across modules\n\nThe picker lists a **specialist for each module you use**: CRM, Sales, Purchase, Finance, HR, Inventory, POS, Restaurant, Hospitality, Real Estate, Library, Lead Generation, SEO, E-commerce, Visa, Trade, Projects, Manufacturing, Construction, Recipe, B2B, Education, Healthcare and Insurance. **Auto mode** picks the right one. It finds the right tools when it needs them, from **more than 300 tools** across 20+ modules, to list, look up, create and change records and to run steps such as approvals and status changes. Examples: log a bug in a project, create a quotation, check a guest in, issue a library book, approve a purchase requisition, change an SEO fix status.\n\n## Every change is confirmed\n\nAnything that **creates or changes** data is held for your confirmation. You see a **field-by-field summary** and choose to confirm or reject.\n\n## Safeguards\n\n- It respects the **signed-in user's permissions** and your enabled modules.\n- There are **no delete tools**.\n- It cannot make, void or refund a **POS sale** from chat.\n- You can connect **your own AI provider key**, or use the shared allowance included with your workspace (a monthly message limit applies).\n- **Voice**: push-to-talk in the chat, with spoken replies where voice is enabled for your workspace.\n\nAnswers can be wrong, so check the summary before you confirm.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "construction-projects-and-boq",
+    "categorySlug": "construction",
+    "title": "Construction projects and bills of quantities",
+    "summary": "Track construction projects and their bills of quantities (BOQ).",
+    "order": 2,
+    "body": "\nThe Construction module is built for construction businesses. It tracks **construction projects**, **bills of quantities** and the **contractors** working on them.\n\n## Projects\n\nCreate a project and keep its details in one place. Follow the progress of the site or project.\n\n[screenshot: The construction projects list]\n\n## Bill of quantities (BOQ)\n\nBuild the **bill of quantities** for a project and keep it with the project.\n\n[screenshot: A bill of quantities]\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "contractors-bidding-and-contracts",
+    "categorySlug": "construction",
+    "title": "Contractors, bidding and contracts",
+    "summary": "Keep your contractors, bids and contracts together.",
+    "order": 3,
+    "body": "\n## Contractors\n\nKeep a list of the **contractors** you work with and the projects they are on.\n\n## Bidding and contracts\n\nManage **bids** and **contracts** alongside your projects.\n\n[screenshot: The contractors list]\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "construction-costs-and-connected-modules",
+    "categorySlug": "construction",
+    "title": "Project costs and connected modules",
+    "summary": "See how project costs and contractor payments flow through Purchase, HR and Finance.",
+    "order": 4,
+    "body": "\nConstruction works **with** other modules instead of tracking costs separately. **Project costs and contractor payments flow through Purchase, HR and Finance.**\n\n- Use [Purchase](/docs/purchase) for what you buy for a project.\n- Use [HR](/docs/hr) for the people on it.\n- Use [Finance](/docs/finance) for payments and the ledger.\n\nRead about [construction cost tracking](/blog/construction-erp-cost-tracking) for why this matters.\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -121,6 +163,26 @@ export const guideArticles: GuideArticle[] = [
     "summary": "Eight built-in reports for pipeline, wins and losses, team performance, lead sources, conversion, velocity, activities and account revenue.",
     "order": 7,
     "body": "\nCRM has eight built-in reports, available from the Reports hub.\n\n## The reports\n\n- **Sales pipeline**\n- **Win/Loss**\n- **Team performance**, grouped by team\n- **Lead source ROI**\n- **Lead conversion**\n- **Sales velocity**\n- **Activities**\n- **Account revenue**\n\n## How to run one\n\n1. Open the Reports hub and choose CRM.\n2. Pick a report.\n3. Filter by date range, owner or stage.\n4. Export the result as CSV or PDF if you need to share it.\n\n## Good to know\n\n- Results respect each person's access tier, so a rep sees only their own numbers.\n- Stage history for reports builds up from the date the feature was deployed, so older closed deals use approximate dates.\n\nSee [Reports hub](/docs/reports/overview) for how the hub works across modules.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "connect-lead-sources",
+    "categorySlug": "crm",
+    "title": "Connect lead sources",
+    "summary": "Connect Meta lead ads, Property Finder, Bayut, webhooks and website forms so leads arrive in CRM on their own.",
+    "order": 8,
+    "body": "\nEvery source feeds the same lead list and follows the same duplicate and assignment rules.\n\n## Choose a source\n\n- **Meta lead ads** from Facebook and Instagram.\n- **Property Finder** and **Bayut**, for property businesses.\n- **Webhooks and the API**, plus Zapier and Make.\n- **Website forms**. CRM hosts a form you can embed on your own site.\n\n## Connect one\n\n1. Open the CRM **integrations** area.\n2. Choose the source.\n3. Follow the **setup guide** shown for it.\n4. Send a **test lead** and check that it appears in the lead list.\n\n[screenshot: The CRM integrations area]\n\n## If a feed stops\n\nIf a portal feed stops working, administrators get an **email and an in-app alert**, and another when it recovers.\n\nFor importing a spreadsheet instead, see [How to capture and import leads](/docs/crm/capture-and-import-leads).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "send-lead-quality-back-to-meta",
+    "categorySlug": "crm",
+    "title": "Send lead quality back to Meta",
+    "summary": "Tell Meta which of your leads became customers, using the Conversions API for CRM.",
+    "order": 9,
+    "body": "\nWhen a lead that came from a **Meta ad** changes stage or its deal is won, Vrodux can tell Meta through its **Conversions API for CRM**, so Meta can learn which leads were good.\n\nThis is **off until you switch it on**.\n\n## Set it up\n\n1. In **Meta Events Manager**, get your **Dataset ID** and an access **token**.\n2. In the CRM integrations area, open the Meta connection and enter them.\n3. Switch the feature on.\n\n[screenshot: The Meta Conversions API settings in CRM]\n\n## Good to know\n\n- Vrodux **sends the signal**. It does not promise any change in your ad results.\n- It applies only to leads that came from a Meta ad.\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -231,6 +293,136 @@ export const guideArticles: GuideArticle[] = [
     "summary": "See how POS, restaurant, rent, library fines and payroll reach the ledger, and choose off, review or auto per source.",
     "order": 6,
     "body": "\nThe Integration Center is where you control how each module's transactions become accounting entries.\n\n## What can post\n\nSeven sources queue documents for posting: **POS sales and refunds**, **restaurant orders and refunds**, **real-estate rent**, **library fines** and **payroll**. Also supported: sales returns, wallet top-ups, POS cash in and out, and hotel payments. Only the modules you are licensed for appear.\n\n## Choose a mode per source\n\n- **Off:** nothing is queued.\n- **Review:** documents queue up and you post them manually.\n- **Auto:** documents post themselves, from a start date you set. Switching to Auto needs your explicit acknowledgement.\n\n## Safeguards\n\n- A **check before posting** shows problems per document.\n- **Control totals** for each batch.\n- Unreadable data is **held for review**.\n- A **duplicate-posting guard**.\n- **Reversal** with a reason.\n- **Approval limits** and an optional second approver.\n\n## Account mapping\n\nAccount mapping per role is customisable. Before switching any source to automatic, ask an accountant to confirm the mappings. Tips, for example, and payroll withholdings default to a liability account.\n\n## Permissions\n\nIntegrations have view, submit, approve and approve-high keys, so different people can prepare and approve.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "e-invoicing-credit-notes-and-the-send-queue",
+    "categorySlug": "finance",
+    "title": "UAE e-invoicing: credit notes and the send queue",
+    "summary": "Issue a credit note, download the e-invoice file and see how the send queue works. Vrodux prepares the data. It does not submit it.",
+    "order": 7,
+    "body": "\nVrodux **prepares and validates** your e-invoice data. It does **not** submit invoices to the tax authority. In the UAE, e-invoices must be sent through an **accredited provider**, and the connection to a provider is **not live yet**.\n\n## Issue a credit note\n\n1. Open the invoice you need to correct.\n2. Choose to create a **credit note**.\n3. Enter the **reason**. It is required.\n4. Save. The credit note is **linked to the original invoice**.\n\nAn issued invoice is never edited or made negative. A credit note is how you correct it.\n\n[screenshot: A credit note linked to its original invoice]\n\n## Check and download the data\n\nRun the readiness check on an invoice or credit note, then download it as a **PINT AE XML** file. The file is prepared in the PINT AE structure.\n\n[screenshot: The e-invoicing readiness check]\n\n## The send queue\n\nDocuments that are ready wait in a **send queue**. The queue is built and waiting for a provider connection. Nothing is sent from it today, and Vrodux does not file or submit e-invoices for you.\n\nSee [UAE VAT, WPS payroll and e-invoicing preparation](/uae-vat-payroll-e-invoicing) for the overall picture.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "recurring-expenses-review-or-auto-post",
+    "categorySlug": "finance",
+    "title": "Recurring expenses (review or auto-post)",
+    "summary": "Set up a recurring expense and choose whether each one is reviewed first or posted automatically.",
+    "order": 8,
+    "body": "\nUse a recurring expense for costs that repeat, such as rent.\n\n## Create the template\n\n1. Open recurring expenses and create a **template**.\n2. Set its **schedule**, for example monthly.\n3. Choose the **debit and credit accounts**.\n\n[screenshot: A recurring expense template]\n\n## Choose how it runs\n\n- **Review each one.** Every time the template comes due, an expense is created for you to check before it is posted.\n- **Auto-post.** The template approves the expense, pays it and posts it to the ledger without you doing anything.\n\nStart with review, and switch a template to auto-post once you trust it.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "currency-and-exchange-rates",
+    "categorySlug": "finance",
+    "title": "Currency and exchange rates",
+    "summary": "How the company currency and daily exchange rates work in Finance.",
+    "order": 9,
+    "body": "\n## Company currency\n\nEach company has **one base currency**, which is its operating currency. The currency on new records follows it. Set it once when you set up the workspace.\n\n## Exchange rates\n\nExchange rates use a **USD base** and **refresh daily**. A posting in another currency is converted into your company currency using the daily rate.\n\n## Foreign-currency bills\n\nPurchase bills can be entered in a **foreign currency**. They are converted into your company currency when they are posted.\n\n[screenshot: A purchase bill in a foreign currency]\n\nMulti-currency is part of the Enterprise plan. See [pricing](/pricing).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "getting-started-with-fitness-and-gym",
+    "categorySlug": "fitness-gym",
+    "title": "Getting started with Fitness & Gym",
+    "summary": "Create a branch, set up your plans and add your first member.",
+    "order": 2,
+    "body": "\nFitness & Gym works on its own and does not need other modules. If you also use Finance or CRM, it connects to them.\n\n## Create a branch\n\n1. Open **Fitness & Gym** and go to settings.\n2. Add your first **branch**. If you run a gym group, add each branch the same way.\n\n[screenshot: The branch list in Fitness & Gym settings]\n\n## Set up your plans\n\n1. Open **Plans** and add a plan. You can create gym, classes, combo, personal training and day-pass plans.\n2. Set the price and the **joining fee**.\n3. Add the rules that apply: **class credits**, **visit limits**, **freeze rules**, **guest passes** and **off-peak hours**.\n\n[screenshot: A membership plan with its price, joining fee and rules]\n\n## Add your first member\n\n1. Open **Members** and choose to add a member.\n2. Enter the name, contact details, **emergency contact** and a **photo**.\n3. Record whether the **waiver** is signed.\n4. Save. The member gets a **member number**.\n\n[screenshot: A new member profile]\n\nNext, [sell their first membership](/docs/fitness-gym/selling-and-renewing-memberships).\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "selling-and-renewing-memberships",
+    "categorySlug": "fitness-gym",
+    "title": "Selling and renewing memberships",
+    "summary": "Sell a plan, renew it, freeze it, and understand why later price changes never alter existing members.",
+    "order": 3,
+    "body": "\n## Sell a membership\n\n1. Open the member and choose **Sell membership**.\n2. Pick a plan and a start date.\n3. Take the payment, or record a part payment and keep a balance. See [taking payments](/docs/fitness-gym/taking-payments).\n\n[screenshot: Selling a membership to a member]\n\n## The membership keeps its terms\n\nA membership keeps the terms it was sold under. If you change a plan's price or rules later, **existing members are not affected**. Only new sales use the new terms.\n\n## Renew\n\nOpen the membership and choose **Renew**. A daily alert lists memberships that are about to expire so the front desk can follow up.\n\n## Freeze\n\nIf a member needs to pause, **freeze** the membership within the plan's freeze rules. A frozen member is refused at check-in until the freeze ends.\n\n## Blacklist\n\nYou can **blacklist** a member. They are refused at check-in until you remove the blacklist.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "front-desk-check-in",
+    "categorySlug": "fitness-gym",
+    "title": "Front desk check-in",
+    "summary": "Scan or type a member number, see why a member is refused, override with permission and watch who is inside.",
+    "order": 4,
+    "body": "\n## Check a member in\n\n1. Open **Check-in** at the front desk.\n2. **Scan** the member number, or type it.\n3. The member is let in, and the visit is logged.\n\n[screenshot: The front desk check-in screen]\n\n## When a member is refused\n\nCheck-in **refuses** a member who is:\n\n- expired\n- frozen\n- blacklisted\n- unpaid\n- missing a signed waiver (this check is configurable)\n\nThe screen shows the reason, so the front desk can explain it.\n\n## Override\n\nA staff member with the right permission can **override** a refusal. Overrides are not available to everyone, so give this permission only to the roles that need it.\n\n## Every scan is logged\n\nEvery scan, allowed or refused, is recorded. The **who's inside** view shows current occupancy live.\n\n[screenshot: The who's inside view]\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "classes-and-waitlists",
+    "categorySlug": "fitness-gym",
+    "title": "Classes and waitlists",
+    "summary": "Set up class types and a timetable, take bookings, and let the waitlist fill empty places automatically.",
+    "order": 5,
+    "body": "\n## Class types and timetable\n\n1. Open **Classes** and add a **class type**, such as yoga or spinning.\n2. Add the class to the **timetable** with a day, time, trainer and capacity.\n\n[screenshot: The class timetable]\n\n## Bookings\n\nStaff can book a member at the desk. Members can book online through the [member portal](/docs/fitness-gym/member-portal-setup). Booking uses a **class credit** when the plan has credits.\n\n## Waitlist\n\nWhen a class is full, the member joins the **waitlist**. If someone cancels, the next person on the waitlist is **promoted automatically**.\n\n## Late cancellation\n\nSet **late-cancel rules** for bookings that are cancelled too close to the start of a class.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "personal-training",
+    "categorySlug": "fitness-gym",
+    "title": "Personal training",
+    "summary": "Add trainers, sell session packages, book sessions without clashes and track completed and no-show sessions.",
+    "order": 6,
+    "body": "\n## Trainers\n\nAdd your trainers and the days they work.\n\n## Session packages\n\nCreate a **session package**, for example ten sessions, and sell it to a member like any other plan.\n\n## Book a session\n\n1. Open **Personal training** and choose to book a session.\n2. Pick the member, the trainer and a time.\n3. The booking stops you double-booking a trainer.\n\n[screenshot: Booking a personal training session]\n\n## Completed and no-shows\n\nAfter the session, mark it **completed** or **no-show**, so you can see what was delivered.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "taking-payments",
+    "categorySlug": "fitness-gym",
+    "title": "Taking payments",
+    "summary": "Take full or part payments, track balances, void with a reason and optionally post to Finance.",
+    "order": 7,
+    "body": "\n## Take a payment\n\n1. Open the member and choose **Take payment**.\n2. Enter the amount and how it was paid.\n3. A **receipt** is created.\n\n[screenshot: Taking a payment and the receipt]\n\n## Part payments and balances\n\nA member can pay in parts. The **balance** stays on the membership until it is paid.\n\n## Void a payment\n\nIf a payment was entered by mistake, **void** it. You must give a **reason**, which is kept on the record.\n\n## Post to Finance\n\nIf you use Finance, you can switch on **posting to Finance** so payments reach the ledger. It is optional. Fitness & Gym works without Finance.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "programs-and-measurements",
+    "categorySlug": "fitness-gym",
+    "title": "Programs and measurements",
+    "summary": "Build reusable workout and diet programs, assign them to members and track body measurements over time.",
+    "order": 8,
+    "body": "\n## Programs\n\n1. Open **Programs** and create a **workout** or **diet** template.\n2. Reuse the template for any number of members.\n\n[screenshot: A workout program template]\n\n## Assign a program\n\nOpen the member and **assign** a program. Each member can have their own.\n\n## Body measurements\n\nRecord a member's **body measurements** on each visit that matters. The member profile shows how they **change over time**.\n\n[screenshot: A member's body measurements over time]\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "member-portal-setup",
+    "categorySlug": "fitness-gym",
+    "title": "Member portal setup",
+    "summary": "Switch on the member portal so members can see their membership and book classes.",
+    "order": 9,
+    "body": "\nThe member portal is **off until you switch it on**.\n\n## Switch it on\n\n1. Open Fitness & Gym settings.\n2. Turn on the **member portal** for your gym.\n\n## What members can do\n\nMembers sign in with their **member number and PIN**. They can see:\n\n- their membership and its balance\n- their payments\n- their visits\n\nThey can also **book or cancel classes**.\n\n[screenshot: The member portal after sign-in]\n\nThe member portal is in English for now.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "roles-and-permissions",
+    "categorySlug": "fitness-gym",
+    "title": "Roles and permissions",
+    "summary": "Give front desk, trainers and managers access to the right areas only.",
+    "order": 10,
+    "body": "\nPermissions are set **per area**, so each role sees and does only what it needs.\n\n## A common way to set it up\n\n- **Front desk:** members, check-in, class bookings and payments.\n- **Trainers:** classes, personal training, programs and measurements.\n- **Managers:** everything, including reports.\n\n## Override permission\n\nStaff can override a refused check-in only if they have permission. Give it to the roles that should be able to let a refused member in.\n\n[screenshot: Role permissions for Fitness & Gym]\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "reports",
+    "categorySlug": "fitness-gym",
+    "title": "Reports",
+    "summary": "Use the nine Fitness & Gym reports and the daily expiry alert.",
+    "order": 11,
+    "body": "\nFitness & Gym adds **nine reports** to the Reports hub. The hub shows only the modules and reports you have access to, and you can export to CSV or PDF.\n\n[screenshot: The Fitness & Gym reports in the Reports hub]\n\n## Expiry alerts\n\nA **daily alert** lists memberships about to expire, so your team can contact those members before they lapse.\n\n## Ask the assistant\n\nYou can also ask the Vrodux AI assistant in plain language about members, classes, payments and check-ins. It can take a payment, check someone in or book a class, and always asks you to confirm first.\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -441,6 +633,16 @@ export const guideArticles: GuideArticle[] = [
     "summary": "Upload an Excel or CSV with picture links. Photos are fetched in the background.",
     "order": 5,
     "body": "\n## Import\n\nUpload an **Excel or CSV** file with picture links. The photos are **fetched in the background**.\n\n## Safe to run twice\n\nRunning the same file twice **does not duplicate** items.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "scan-a-barcode-or-qr-to-add-stock",
+    "categorySlug": "inventory",
+    "title": "Scan a barcode or QR to add stock",
+    "summary": "Scan to find a product you already hold and add a received quantity, or fill in a new product from public product databases.",
+    "order": 6,
+    "body": "\nScanning identifies a product you **already hold** and lets you add a **received quantity**. For a product you have not entered yet, it fills in the details from public product databases such as **Open Food Facts**. You check and edit them before saving.\n\n## Ways to scan\n\n- **On the web app:** a **USB or Bluetooth scanner**, or the **camera** in **Chrome or Edge**.\n- **On the mobile app:** the phone's **camera scanner**.\n\n[screenshot: Scanning a barcode on the web app]\n\n## Add stock for a product you hold\n\n1. Scan the barcode or QR code.\n2. Vrodux finds the product.\n3. Enter the **quantity received** and save.\n\n## Add a product you have not entered yet\n\n1. Scan the barcode or QR code.\n2. If Vrodux does not hold the product, it looks it up in public product databases and fills in the details it finds.\n3. **Check and edit** the details, then save.\n\n[screenshot: A new product filled in from a scan, ready to check and edit]\n\n## Good to know\n\n- Coverage is strongest for **food and branded goods**.\n- Some products are **not found**. Enter those by hand.\n- Always review what was filled in before you save.\n",
     "readTime": 2,
     "placeholder": false
   },
@@ -735,6 +937,16 @@ export const guideArticles: GuideArticle[] = [
     "placeholder": false
   },
   {
+    "slug": "recipe-costing",
+    "categorySlug": "restaurant",
+    "title": "Recipe costing",
+    "summary": "Record the ingredients in each dish and see the cost and margin per dish.",
+    "order": 8,
+    "body": "\nRecipe costing shows what each dish **costs to make** and what **margin** it earns.\n\n## Build a recipe\n\n1. Open the dish and add its **ingredients** and the **quantity** of each.\n2. The cost uses the **ingredient costs** you have recorded.\n\n[screenshot: A recipe with ingredients, quantities and cost]\n\n## Read the cost and margin\n\nThe recipe shows the **cost per dish** from the ingredient costs. Compare it with the menu price to see the **margin**.\n\n## Keep it accurate\n\nWhen your supplier prices change, update the ingredient costs so the recipe cost stays current.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
     "slug": "create-and-send-a-quotation",
     "categorySlug": "sales",
     "title": "How to create and send a quotation",
@@ -861,6 +1073,26 @@ export const guideArticles: GuideArticle[] = [
     "summary": "Video guides, and how to raise a ticket with the Vrodux team.",
     "order": 6,
     "body": "\n## Video guides\n\nHelp and Support has **video guides** for the modules. The same walkthroughs are on the [demos page](/demos).\n\n## Raise a ticket\n\nIf you need help from the team, **raise a ticket** from Help and Support.\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "api-keys-and-connections",
+    "categorySlug": "settings",
+    "title": "API keys and connections",
+    "summary": "Connect Vrodux to your other systems with the API, webhooks, and the services you already use.",
+    "order": 7,
+    "body": "\nVrodux can exchange data with your other systems.\n\n## What you can connect\n\n- The **API** and **webhooks**, for systems you or your developers build.\n- **Zapier** and **Make**, for tools that do not have a direct connection.\n- **Meta**, **Property Finder**, **Bayut** and **website forms**, for leads. See [Connect lead sources](/docs/crm/connect-lead-sources).\n- **Stripe** or **PayPal**, for card payments you take on your own store.\n- Your own **mailbox** (Google, Microsoft or SMTP and IMAP), for Lead Generation emails.\n- Your own **AI provider key**, for Vrodux AI.\n\n## Keep keys private\n\nTreat any key or token like a password. Do not share it in chat or email, and replace it if you think it has been seen.\n\n[screenshot: Where connections are managed in settings]\n",
+    "readTime": 2,
+    "placeholder": false
+  },
+  {
+    "slug": "ai-allowance-and-voice",
+    "categorySlug": "settings",
+    "title": "Platform AI allowance and voice",
+    "summary": "Use the shared AI allowance that comes with your workspace, or connect your own AI key. Turn on voice.",
+    "order": 8,
+    "body": "\n## The AI allowance\n\nVrodux AI works in two ways:\n\n- Use the **shared allowance** included with your workspace. A **monthly message limit** applies.\n- Connect **your own AI provider key**.\n\n[screenshot: The Vrodux AI settings]\n\n## Voice\n\nWhere **voice** is enabled for your workspace, you can speak to Vrodux AI with **push-to-talk** in the chat and hear **spoken replies**.\n\n## Telegram\n\nVrodux AI is also supported through **Telegram**.\n\nAs always, Vrodux AI asks you to confirm before it changes anything.\n",
     "readTime": 2,
     "placeholder": false
   },

@@ -85,6 +85,7 @@ const MENTIONS: [RegExp, string][] = [
   [/\bHR\b|payroll/i, "hr"],
   [/Import\/Export|\bTrade\b/i, "import-export"],
   [/\bLibrary\b/i, "library"],
+  [/Fitness|\bGym\b/i, "fitness-gym"],
   [/\bVisa\b/i, "visa-services"],
   [/Real Estate/i, "real-estate"],
   [/Hospitality|Hotel/i, "hospitality"],

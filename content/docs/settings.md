@@ -76,3 +76,41 @@ Help and Support has **video guides** for the modules. The same walkthroughs are
 ## Raise a ticket
 
 If you need help from the team, **raise a ticket** from Help and Support.
+
+@@ api-keys-and-connections | API keys and connections | Connect Vrodux to your other systems with the API, webhooks, and the services you already use.
+Vrodux can exchange data with your other systems.
+
+## What you can connect
+
+- The **API** and **webhooks**, for systems you or your developers build.
+- **Zapier** and **Make**, for tools that do not have a direct connection.
+- **Meta**, **Property Finder**, **Bayut** and **website forms**, for leads. See [Connect lead sources](/docs/crm/connect-lead-sources).
+- **Stripe** or **PayPal**, for card payments you take on your own store.
+- Your own **mailbox** (Google, Microsoft or SMTP and IMAP), for Lead Generation emails.
+- Your own **AI provider key**, for Vrodux AI.
+
+## Keep keys private
+
+Treat any key or token like a password. Do not share it in chat or email, and replace it if you think it has been seen.
+
+[screenshot: Where connections are managed in settings]
+
+@@ ai-allowance-and-voice | Platform AI allowance and voice | Use the shared AI allowance that comes with your workspace, or connect your own AI key. Turn on voice.
+## The AI allowance
+
+Vrodux AI works in two ways:
+
+- Use the **shared allowance** included with your workspace. A **monthly message limit** applies.
+- Connect **your own AI provider key**.
+
+[screenshot: The Vrodux AI settings]
+
+## Voice
+
+Where **voice** is enabled for your workspace, you can speak to Vrodux AI with **push-to-talk** in the chat and hear **spoken replies**.
+
+## Telegram
+
+Vrodux AI is also supported through **Telegram**.
+
+As always, Vrodux AI asks you to confirm before it changes anything.

@@ -56,3 +56,33 @@ Upload an **Excel or CSV** file with picture links. The photos are **fetched in 
 ## Safe to run twice
 
 Running the same file twice **does not duplicate** items.
+
+@@ scan-a-barcode-or-qr-to-add-stock | Scan a barcode or QR to add stock | Scan to find a product you already hold and add a received quantity, or fill in a new product from public product databases.
+Scanning identifies a product you **already hold** and lets you add a **received quantity**. For a product you have not entered yet, it fills in the details from public product databases such as **Open Food Facts**. You check and edit them before saving.
+
+## Ways to scan
+
+- **On the web app:** a **USB or Bluetooth scanner**, or the **camera** in **Chrome or Edge**.
+- **On the mobile app:** the phone's **camera scanner**.
+
+[screenshot: Scanning a barcode on the web app]
+
+## Add stock for a product you hold
+
+1. Scan the barcode or QR code.
+2. Vrodux finds the product.
+3. Enter the **quantity received** and save.
+
+## Add a product you have not entered yet
+
+1. Scan the barcode or QR code.
+2. If Vrodux does not hold the product, it looks it up in public product databases and fills in the details it finds.
+3. **Check and edit** the details, then save.
+
+[screenshot: A new product filled in from a scan, ready to check and edit]
+
+## Good to know
+
+- Coverage is strongest for **food and branded goods**.
+- Some products are **not found**. Enter those by hand.
+- Always review what was filled in before you save.

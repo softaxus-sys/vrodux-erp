@@ -6,7 +6,7 @@ import {
   Plane, Plug, Receipt, RefreshCcw, Rocket, Route, Scale, ScanBarcode, Search, Send, Settings2, Ship,
   ShieldCheck, ShoppingCart, Sparkles, Stamp, Store, Tag, Target, Timer, Trophy, Truck, UserPlus, UserRound,
   Users, Wallet, Warehouse, Wifi, Wrench, Zap, UtensilsCrossed, ChefHat, Kanban, Bell, Smartphone, Lock,
-  GraduationCap, Stethoscope, ShieldPlus, FolderOpen, Fingerprint, Calculator, Factory, Library, Home,
+  GraduationCap, Stethoscope, ShieldPlus, FolderOpen, Fingerprint, Calculator, Factory, Library, Home, Dumbbell,
   type LucideIcon,
 } from "lucide-react";
 
@@ -19,7 +19,7 @@ export const ICONS = {
   Plane, Plug, Receipt, RefreshCcw, Rocket, Route, Scale, ScanBarcode, Search, Send, Settings2, Ship,
   ShieldCheck, ShoppingCart, Sparkles, Stamp, Store, Tag, Target, Timer, Trophy, Truck, UserPlus, UserRound,
   Users, Wallet, Warehouse, Wifi, Wrench, Zap, UtensilsCrossed, ChefHat, Kanban, Bell, Smartphone, Lock,
-  GraduationCap, Stethoscope, ShieldPlus, FolderOpen, Fingerprint, Calculator, Factory, Library, Home,
+  GraduationCap, Stethoscope, ShieldPlus, FolderOpen, Fingerprint, Calculator, Factory, Library, Home, Dumbbell,
 } satisfies Record<string, LucideIcon>;
 
 export type IconName = keyof typeof ICONS;

@@ -20,6 +20,8 @@ import {
   Hotel,
   Factory,
   Library,
+  Dumbbell,
+  HardHat,
   Ship,
   Search,
   Store,
@@ -1131,6 +1133,8 @@ Vrodux AI is reachable from the "Ask Vrodux" button, available from anywhere in 
     body: `
 The mobile app puts VroduxERP in your pocket — not a full copy of the web app, but a companion built for what actually makes sense away from a desk.
 
+[Get it on Google Play](https://play.google.com/store/apps/details?id=com.softaxis.vroduxerp). The App Store version is coming soon.
+
 ## What the mobile app is for
 
 Think of it as a companion: looking things up, approving requests, and handling the specific actions that genuinely make sense when you're on the go. It's not trying to be a smaller version of every web screen — it's built around what you actually need on your phone.
@@ -1147,6 +1151,7 @@ The mobile app covers a lot of ground:
 - HR — your own attendance, leave, and payslips; if you're HR staff, also the employee directory, recruitment, and performance reviews
 - Approvals — a combined inbox covering leave, purchase, sales returns, and payroll, all in one place
 - Lead Generation — find businesses and work your prospects
+- Hotel front desk — arrivals, in-house guests and departures
 - Master Data — look up and manage your master data
 - Read-access lookups across Inventory, Sales, Purchase, Finance, Project Management, Visa Services, Real Estate, and Reports
 - Push notifications for assignments and approvals
@@ -1161,6 +1166,8 @@ Two things exist because they genuinely make sense on a phone, not just as a sma
 
 - Scanning a barcode with your camera to check out a Point of Sale sale or receive a delivery (the camera barcode scanner)
 - Working through your pending approvals without needing a laptop
+- Scanning a barcode or QR code to add received stock (see [Scan a barcode or QR to add stock](/docs/inventory/scan-a-barcode-or-qr-to-add-stock))
+- Push notifications that tell you when something needs your approval
 
 [screenshot: Scanning a barcode with the phone's camera]
 
@@ -1236,7 +1243,7 @@ Every plan includes every module; plans differ only by how many users they inclu
   },
 ];
 
-const GUIDE_ICONS: Record<string, LucideIcon> = { UtensilsCrossed, Hotel, Factory, Library, Ship, Search, Store, TrendingUp };
+const GUIDE_ICONS: Record<string, LucideIcon> = { UtensilsCrossed, Hotel, Factory, Library, Dumbbell, HardHat, Ship, Search, Store, TrendingUp };
 
 const guideCategoriesResolved: DocsCategory[] = guideCategories.map((c) => ({
   slug: c.slug,

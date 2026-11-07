@@ -28,7 +28,7 @@ const industries = [
   "Retail", "Restaurants & F&B", "Hospitality & Hotels", "Real Estate",
   "Construction", "Healthcare", "Education", "Insurance",
   "B2B & Professional Services", "Visa Services", "Manufacturing",
-  "Library", "Import & Export", "Other",
+  "Library", "Fitness & Gym", "Travel & Tourism", "Lead Generation", "E-commerce", "Import & Export", "Other",
 ];
 
 const timeSlots = [

@@ -301,6 +301,30 @@ export const moduleVisuals: Record<string, ModuleVisual> = {
     ],
     photo: { src: "/images/industries/library.jpg", alt: "Librarian scanning a book at the circulation desk" },
   },
+  "fitness-gym": {
+    tone: 4,
+    docsCategory: "fitness-gym",
+    seoTitle: "Gym Management Software: Members, Check-in & Classes",
+    seoDescription:
+      "Gym and fitness-club management software for the UAE and GCC: members, memberships, front desk check-in, classes, personal training and payments in one system.",
+    flowTitle: "How a member moves through your gym",
+    flow: [
+      { icon: "UserRound", title: "Join", text: "Create the member profile with photo, emergency contact and waiver status, and get a member number." },
+      { icon: "Tag", title: "Sell", text: "Sell a gym, classes, combo, personal training or day-pass plan. A membership keeps the terms it was sold under." },
+      { icon: "ScanBarcode", title: "Check in", text: "Scan or type the member number. Expired, frozen, blacklisted and unpaid members are refused." },
+      { icon: "CalendarDays", title: "Train", text: "Book classes with a waitlist, or personal training sessions without clashes." },
+      { icon: "Wallet", title: "Pay & renew", text: "Receipts, part payments and balances, plus a daily alert for memberships about to expire." },
+    ],
+    photo: { src: "/images/industries/fitness-gym.jpg", alt: "Dumbbell illustration for Vrodux Fitness & Gym" },
+    faqs: [
+      { q: "Does Fitness & Gym need other Vrodux modules?", a: "No. It works on its own. If you also use Finance or CRM, payments can post to Finance and trial or enquiry leads can use the sales pipeline." },
+      { q: "Can it open turnstiles or doors?", a: "Not at the moment. Check-in happens at the front desk by scanning or typing a member number, and every scan is logged." },
+      { q: "Can members pay online by card?", a: "Not yet. Members can sign in to the member portal to see their membership, balance, payments and visits, and to book or cancel classes. Staff record payments." },
+      { q: "Is Fitness & Gym available in Arabic?", a: "Not yet. The main Vrodux app has English and Arabic, but the screens for this module are in English for now." },
+      { q: "Does it support more than one branch?", a: "Yes. You can run one gym group with several branches." },
+      { q: "How is it priced?", a: "Fitness & Gym is included on every plan, like every Vrodux module. Pricing is based on the number of users only." },
+    ],
+  },
   "import-export": {
     tone: 0,
     docsCategory: "import-export",
@@ -450,6 +474,7 @@ export const moduleVisuals: Record<string, ModuleVisual> = {
   },
   construction: {
     tone: 3,
+    docsCategory: "construction",
     seoTitle: "Construction Management Software",
     seoDescription: "Project planning, resource allocation, cost tracking and BOQ management for construction companies in Vrodux ERP.",
     photo: { src: "/images/industries/construction.jpg", alt: "Site manager reviewing plans on a tablet" },

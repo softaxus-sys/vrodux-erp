@@ -7,8 +7,9 @@ import { HomeModules } from "@/components/home/modules";
 import { totalModuleCount } from "@/lib/modules-data";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { FinalCTA } from "@/components/sections/final-cta";
+import { HomeMobileApp } from "@/components/home/mobile-app";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet, Flame, Lock, Plug, Smartphone, Bell, Bot, ArrowRight } from "lucide-react";
+import { CheckCircle2, Globe, Shield, Zap, RefreshCw, BarChart3, Layers, UserCog, Building2, FileCheck, ClipboardList, SlidersHorizontal, Wallet, Flame, Lock, Plug, Smartphone, Bell, Bot, LifeBuoy, CalendarDays, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = pageMeta({
   title: "Features — Complete ERP Platform",
@@ -55,9 +56,11 @@ const platformCapabilities = [
   { icon: BarChart3, title: "Full Audit Trail", description: "Complete audit log of all system activities for compliance and security" },
   { icon: CheckCircle2, title: "VAT Compliance & Tax Reporting", description: "Prepare, check and export your UAE VAT 201 return from the ledger. You file on the FTA portal" },
   { icon: Globe, title: "API Access", description: "RESTful API for connecting Vrodux ERP with your other business systems" },
-  { icon: Smartphone, title: "Mobile App", description: "A companion app for approvals, CRM, your own HR, barcode scanning and Vrodux AI, with push notifications" },
+  { icon: Smartphone, title: "Mobile App", description: "A companion app on Google Play for approvals, CRM, your own HR, barcode scanning and Vrodux AI, with push notifications. App Store coming soon" },
   { icon: Bell, title: "Real-Time Notifications", description: "Alerts in the bell and as pop-ups the moment something needs you, stored so you see what you missed" },
-  { icon: Bot, title: "Vrodux AI", description: "Ask questions or request changes across your modules. Every change needs your confirmation first" },
+  { icon: Bot, title: "Vrodux AI", description: "Ask questions or request changes across your modules. Every change needs your confirmation first" },
+  { icon: LifeBuoy, title: "Help & Support", description: "Raise a ticket with the Vrodux team and watch the Video Guides, module walkthroughs inside the app" },
+  { icon: CalendarDays, title: "Calendar", description: "A calendar built into the app" },
 ];
 
 const workspaceAdmin = [
@@ -250,6 +253,8 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
+
+      <HomeMobileApp location="features" />
 
       <FinalCTA />
     </>

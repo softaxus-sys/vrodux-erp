@@ -30,6 +30,8 @@ const DEMO_SLUG: Record<string, string> = {
   "visa-services": "visa-services",
   manufacturing: "manufacturing",
   library: "library",
+  "lead-generation": "lead-generation",
+  ecommerce: "ecommerce",
   "import-export": "import-export",
 };
 

@@ -18,7 +18,7 @@ FILES = {
     "12-project-management.md": "project-management", "13-visa-services.md": "visa-services",
     "14-manufacturing.md": "manufacturing", "15-library.md": "library", "16-import-export.md": "import-export",
     "17-lead-generation.md": "lead-generation", "19-ai-assistant.md": "ai-assistant", "20-platform.md": "platform",
-    "21-ecommerce.md": "ecommerce", "22-seo.md": "seo",
+    "21-ecommerce.md": "ecommerce", "22-seo.md": "seo", "23-fitness-gym.md": "fitness-gym",
 }
 DROP = ("do not claim yet", "verification status")
 

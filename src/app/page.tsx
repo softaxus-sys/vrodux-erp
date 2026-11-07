@@ -12,6 +12,7 @@ import { FinalCTA } from "@/components/sections/final-cta";
 import { CANVAS } from "@/components/home/ui";
 import { AiChatSection } from "@/components/sections/ai-chat";
 import { HomeGoLive, HomePricing } from "@/components/home/golive-pricing";
+import { HomeMobileApp } from "@/components/home/mobile-app";
 import { generateJsonLd } from "@/lib/seo";
 import { getHomeShots } from "@/lib/home-shots";
 import Script from "next/script";
@@ -44,6 +45,7 @@ export default async function HomePage() {
         <HomeWhy />
         <AiChatSection plain />
         <HomeVoices />
+        <HomeMobileApp />
         <HomeGoLive />
         <HomePricing />
         <HomeFaq />

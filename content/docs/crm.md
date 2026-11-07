@@ -170,3 +170,46 @@ CRM has eight built-in reports, available from the Reports hub.
 - Stage history for reports builds up from the date the feature was deployed, so older closed deals use approximate dates.
 
 See [Reports hub](/docs/reports/overview) for how the hub works across modules.
+
+@@ connect-lead-sources | Connect lead sources | Connect Meta lead ads, Property Finder, Bayut, webhooks and website forms so leads arrive in CRM on their own.
+Every source feeds the same lead list and follows the same duplicate and assignment rules.
+
+## Choose a source
+
+- **Meta lead ads** from Facebook and Instagram.
+- **Property Finder** and **Bayut**, for property businesses.
+- **Webhooks and the API**, plus Zapier and Make.
+- **Website forms**. CRM hosts a form you can embed on your own site.
+
+## Connect one
+
+1. Open the CRM **integrations** area.
+2. Choose the source.
+3. Follow the **setup guide** shown for it.
+4. Send a **test lead** and check that it appears in the lead list.
+
+[screenshot: The CRM integrations area]
+
+## If a feed stops
+
+If a portal feed stops working, administrators get an **email and an in-app alert**, and another when it recovers.
+
+For importing a spreadsheet instead, see [How to capture and import leads](/docs/crm/capture-and-import-leads).
+
+@@ send-lead-quality-back-to-meta | Send lead quality back to Meta | Tell Meta which of your leads became customers, using the Conversions API for CRM.
+When a lead that came from a **Meta ad** changes stage or its deal is won, Vrodux can tell Meta through its **Conversions API for CRM**, so Meta can learn which leads were good.
+
+This is **off until you switch it on**.
+
+## Set it up
+
+1. In **Meta Events Manager**, get your **Dataset ID** and an access **token**.
+2. In the CRM integrations area, open the Meta connection and enter them.
+3. Switch the feature on.
+
+[screenshot: The Meta Conversions API settings in CRM]
+
+## Good to know
+
+- Vrodux **sends the signal**. It does not promise any change in your ad results.
+- It applies only to leads that came from a Meta ad.

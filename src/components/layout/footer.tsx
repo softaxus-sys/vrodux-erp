@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, MessageCircle, Youtube, Facebook, ExternalLink } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { AppStoreButtons } from "@/components/shared/app-store-buttons";
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || "https://erp.vrodux.com";
 
@@ -38,6 +39,10 @@ const solutions = [
   { label: "Visa Services", href: "/industries/visa-services" },
   { label: "Manufacturing", href: "/industries/manufacturing" },
   { label: "Library", href: "/industries/library" },
+  { label: "Tourism", href: "/industries/tourism" },
+  { label: "Lead Generation", href: "/industries/lead-generation" },
+  { label: "E-commerce", href: "/industries/ecommerce" },
+  { label: "Fitness & Gym", href: "/industries/fitness-gym" },
   { label: "Import & Export", href: "/industries/import-export" },
   { label: "Implementation Services", href: "/implementation" },
   { label: "Partners & Resellers", href: "/partners" },
@@ -132,6 +137,10 @@ export function Footer() {
                   <s.icon className="w-4 h-4" />
                 </a>
               ))}
+            </div>
+            <div className="mt-5">
+              <p className="mb-2 text-xs font-medium uppercase tracking-wide text-muted-foreground">Get the app</p>
+              <AppStoreButtons location="footer" className="gap-2" />
             </div>
           </div>
 

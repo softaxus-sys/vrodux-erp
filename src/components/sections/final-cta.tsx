@@ -39,9 +39,8 @@ export function FinalCTA() {
               </Link>
             </div>
             <ul className="mt-9 flex flex-wrap gap-x-7 gap-y-2 text-sm text-white/85">
-              <li>No credit card required</li>
+              <li>14-day free trial, no credit card required</li>
               <li>Free implementation consultation</li>
-              <li>30-day money-back guarantee</li>
             </ul>
           </div>
           <div className="p-3 pt-0 lg:p-4">

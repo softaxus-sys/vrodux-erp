@@ -13,6 +13,8 @@ Vrodux supports UAE VAT return preparation, UAE WPS salary files, English and Ar
 - [Purchase management](https://vrodux.com/features/purchase)
 - [Point of sale](https://vrodux.com/features/pos)
 - [Restaurant POS and kitchen display](https://vrodux.com/features/restaurant)
+- [Fitness and gym management](https://vrodux.com/features/fitness-gym): members, memberships, front desk check-in, classes, personal training and payments
+- [Mobile app](https://play.google.com/store/apps/details?id=com.softaxis.vroduxerp): Android companion app for approvals, CRM, your own HR, barcode scanning and Vrodux AI. iOS coming soon
 - [AI Workforce](https://vrodux.com/ai-workforce)
 - [Deployment options](https://vrodux.com/solutions)
 - [Pricing](https://vrodux.com/pricing)
@@ -25,6 +27,10 @@ Vrodux supports UAE VAT return preparation, UAE WPS salary files, English and Ar
 - [Hospitality](https://vrodux.com/industries/hospitality)
 - [Real estate](https://vrodux.com/industries/real-estate)
 - [Construction](https://vrodux.com/industries/construction)
+- [Fitness and gyms](https://vrodux.com/industries/fitness-gym)
+- [Tourism](https://vrodux.com/industries/tourism)
+- [Lead generation](https://vrodux.com/industries/lead-generation)
+- [E-commerce](https://vrodux.com/industries/ecommerce)
 
 ## Learn
 - [Documentation](https://vrodux.com/docs): step-by-step guides for every module

@@ -17,7 +17,7 @@ const categories: Category[] = [
     rows: [
       {
         feature:
-          "All modules (ERP, CRM, Sales, Purchasing, Inventory, Finance, HR, POS, Restaurant, Hospitality, Manufacturing, Library, Import & Export, E-commerce, SEO, Lead Generation and every industry pack)",
+          "All modules (ERP, CRM, Sales, Purchasing, Inventory, Finance, HR, POS, Restaurant, Hospitality, Manufacturing, Library, Fitness & Gym, Import & Export, E-commerce, SEO, Lead Generation and every industry pack)",
         micro: true,
         starter: true,
         professional: true,

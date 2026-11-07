@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight, ArrowUpRight, Building2, Factory, GraduationCap, HardHat, Home, Hotel, Library,
-  ShieldCheck, ShoppingBag, Stamp, Stethoscope, Ship, UtensilsCrossed,
+  ArrowRight, ArrowUpRight, Building2, Factory, GraduationCap, HardHat, Home, Hotel, Library, Dumbbell,
+  ShieldCheck, ShoppingBag, Stamp, Stethoscope, Ship, UtensilsCrossed, Plane, Search, Store,
 } from "lucide-react";
 import { SectionHeading, pill, WRAP } from "@/components/home/ui";
 import { cn } from "@/lib/utils";
@@ -20,6 +20,10 @@ const industries = [
   { name: "Visa Services", icon: Stamp, href: "/industries/visa-services" },
   { name: "Manufacturing", icon: Factory, href: "/industries/manufacturing" },
   { name: "Library", icon: Library, href: "/industries/library" },
+  { name: "Tourism", icon: Plane, href: "/industries/tourism" },
+  { name: "Lead Generation", icon: Search, href: "/industries/lead-generation" },
+  { name: "E-commerce", icon: Store, href: "/industries/ecommerce" },
+  { name: "Fitness & Gym", icon: Dumbbell, href: "/industries/fitness-gym" },
   { name: "Import & Export", icon: Ship, href: "/industries/import-export" },
 ];
 

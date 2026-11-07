@@ -71,3 +71,21 @@ Orders attach to the cashier's open shift so payments land in the Z-report. See 
 ## Reports and QR
 
 The restaurant has reports and dashboards. QR table ordering and tracking links are available. Restaurant orders and refunds can also be posted to the ledger through the Finance Integration Center.
+
+@@ recipe-costing | Recipe costing | Record the ingredients in each dish and see the cost and margin per dish.
+Recipe costing shows what each dish **costs to make** and what **margin** it earns.
+
+## Build a recipe
+
+1. Open the dish and add its **ingredients** and the **quantity** of each.
+2. The cost uses the **ingredient costs** you have recorded.
+
+[screenshot: A recipe with ingredients, quantities and cost]
+
+## Read the cost and margin
+
+The recipe shows the **cost per dish** from the ingredient costs. Compare it with the menu price to see the **margin**.
+
+## Keep it accurate
+
+When your supplier prices change, update the ingredient costs so the recipe cost stays current.

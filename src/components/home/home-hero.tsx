@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AppStoreButtons } from "@/components/shared/app-store-buttons";
 import { ArrowRight, ArrowUpRight, Cloud, Languages, Layers, PlayCircle, ShieldCheck } from "lucide-react";
 import { ThemedShotImage } from "@/components/sections/themed-shot";
 import { totalModuleCount } from "@/lib/modules-data";
@@ -83,6 +84,11 @@ export function HomeHero({ shots }: { shots: HomeShots }) {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-8">
+              <p className="mb-3 text-sm font-medium text-white/85">Also on your phone</p>
+              <AppStoreButtons onDark location="home_hero" />
+            </div>
           </div>
 
           <div className="relative pb-10 lg:pb-16">
