@@ -15,6 +15,9 @@ import { SectionHeading, WRAP, pill } from "@/components/home/ui";
 import { TRIAL_DAYS } from "@/lib/trial";
 import { cn } from "@/lib/utils";
 
+// Re-check the screenshot manifest on Contabo every 5 minutes.
+export const revalidate = 300;
+
 export const metadata: Metadata = pageMeta({
   title: "Vrodux ERP Mobile App for Android",
   description:
