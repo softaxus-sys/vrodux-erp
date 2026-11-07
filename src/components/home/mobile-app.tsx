@@ -2,6 +2,10 @@ import Link from "next/link";
 import { CheckCircle2, Smartphone } from "lucide-react";
 import { AppStoreButtons } from "@/components/shared/app-store-buttons";
 import { SectionHeading, WRAP } from "@/components/home/ui";
+import { PhoneShot } from "@/components/mobile/phone-shot";
+import { getPhoneScreens } from "@/lib/phone-screens";
+
+const SHOW = ["dashboard", "approvals", "pipeline"];
 
 const points = [
   "Approvals in one inbox: leave, purchase, sales returns and payroll",
@@ -13,7 +17,9 @@ const points = [
 ];
 
 /** "Take Vrodux with you" band: used on the home page and the features page. */
-export function HomeMobileApp({ location = "home" }: { location?: string }) {
+export async function HomeMobileApp({ location = "home" }: { location?: string }) {
+  const all = await getPhoneScreens();
+  const shots = SHOW.map((slug) => all.find((s) => s.slug === slug)).filter((s) => !!s);
   return (
     <section id="mobile-app" className="py-16 md:py-24" aria-labelledby="mobile-app-h">
       <div className={WRAP}>
@@ -37,6 +43,10 @@ export function HomeMobileApp({ location = "home" }: { location?: string }) {
               <Link href="/docs/mobile-app/whats-on-your-phone" className="underline underline-offset-4">
                 mobile app guide
               </Link>
+              {" "}or the{" "}
+              <Link href="/mobile" className="underline underline-offset-4">
+                mobile app page
+              </Link>
               .
             </p>
           </div>
@@ -47,6 +57,16 @@ export function HomeMobileApp({ location = "home" }: { location?: string }) {
             <p className="font-medium">Download the Vrodux ERP app</p>
             <AppStoreButtons location={location} />
           </div>
+          {shots.length > 0 && (
+            <ul className="col-span-full mt-4 grid grid-cols-3 gap-3 sm:gap-6" aria-label="Vrodux ERP mobile app screens">
+              {shots.map((s) => (
+                <li key={s.slug}>
+                  <PhoneShot src={s.imageUrl} alt={s.alt} width={s.width} height={s.height} className="mx-auto max-w-[13rem] rounded-[1.5rem] border-4" />
+                  <p className="mt-3 text-center text-xs font-medium text-muted-foreground">{s.title}</p>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </section>
