@@ -42,7 +42,7 @@ function parse(raw: unknown): PhoneScreen | null {
 
 export async function getPhoneScreens(): Promise<PhoneScreen[]> {
   try {
-    const res = await fetch(PHONE_MANIFEST_URL, { next: { revalidate: 300 }, signal: AbortSignal.timeout(5000) });
+    const res = await fetch(`${PHONE_MANIFEST_URL}?v=${Math.floor(Date.now() / 300000)}`, { next: { revalidate: 300 }, signal: AbortSignal.timeout(5000) });
     if (!res.ok) return [];
     const json = (await res.json()) as { screens?: unknown };
     if (!Array.isArray(json.screens)) return [];
