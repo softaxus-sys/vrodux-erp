@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { RelatedGuides } from "@/components/shared/related-guides";
+import { PageMobileScreens } from "@/components/mobile/page-mobile-screens";
 import Link from "next/link";
 import {
   ArrowRight, Boxes, Calculator, Calendar, CheckCircle2, ChefHat, ChevronDown, LineChart, MessageSquare,
@@ -620,6 +621,7 @@ export function RestaurantErpPage({ shots, image }: { shots: GalleryShot[]; imag
           </div>
         </section>
 
+        <PageMobileScreens path="/industries/restaurants" name="Restaurant ERP" />
         <RelatedGuides path="/industries/restaurants" />
       </div>
     </>

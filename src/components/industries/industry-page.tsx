@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { RelatedGuides } from "@/components/shared/related-guides";
+import { PageMobileScreens } from "@/components/mobile/page-mobile-screens";
 import Link from "next/link";
 import { ArrowRight, BookOpen } from "lucide-react";
 import { FinalCTA } from "@/components/sections/final-cta";
@@ -274,6 +275,7 @@ export async function IndustryPage({ industry }: { industry: Industry }) {
         </div>
       </section>
 
+      <PageMobileScreens path={industry.href} name={industry.name} />
       <RelatedGuides path={industry.href} />
 
       <FinalCTA />

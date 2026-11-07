@@ -83,7 +83,7 @@ export function AppStoreButtons({
           </span>
         </a>
       ) : (
-        <span className={soon} role="img" aria-disabled="true" aria-label="App Store, coming soon">
+        <span className={soon} role="img" aria-label="App Store, coming soon">
           <AppleLogo className="h-6 w-6 shrink-0" />
           <span className="leading-tight">
             <span className="block text-[10px] uppercase tracking-wide">Coming soon on the</span>

@@ -16,6 +16,10 @@ export interface PhoneScreen {
   imageUrl: string;
   width: number;
   height: number;
+  /** Shown in the main gallery on /mobile. */
+  featured: boolean;
+  /** Module and industry pages that show this screen. */
+  pages: string[];
 }
 
 function parse(raw: unknown): PhoneScreen | null {
@@ -31,6 +35,8 @@ function parse(raw: unknown): PhoneScreen | null {
     imageUrl: `${DEMO_BASE_URL}/${s.image.replace(/^\/+/, "")}`,
     width: typeof s.width === "number" ? s.width : 720,
     height: typeof s.height === "number" ? s.height : 1600,
+    featured: s.featured === true,
+    pages: Array.isArray(s.pages) ? s.pages.filter((p): p is string => typeof p === "string") : [],
   };
 }
 

@@ -83,6 +83,8 @@ const faqLd = {
 
 export default async function MobilePage() {
   const screens = await getPhoneScreens();
+  const featured = screens.filter((s) => s.featured);
+  const more = screens.filter((s) => !s.featured);
   const hero = screens.find((s) => s.slug === "dashboard") ?? screens[0];
   return (
     <>
@@ -123,7 +125,7 @@ export default async function MobilePage() {
       </section>
 
       {/* Screens */}
-      {screens.length > 0 && (
+      {featured.length > 0 && (
       <section className="py-16 md:py-24" aria-labelledby="screens-h">
         <div className={WRAP}>
           <SectionHeading
@@ -135,7 +137,7 @@ export default async function MobilePage() {
             className="-mx-9 mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto px-9 pb-4 sm:-mx-[68px] sm:px-[68px] lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-8 lg:overflow-visible lg:px-0"
             aria-label="Vrodux ERP mobile app screenshots"
           >
-            {screens.map((s) => (
+            {featured.map((s) => (
               <li key={s.slug} className="w-[11.5rem] shrink-0 snap-center sm:w-[13rem] lg:w-auto">
                 <PhoneShot src={s.imageUrl} alt={s.alt} width={s.width} height={s.height} />
                 <p className="mt-4 font-medium">{s.title}</p>
@@ -145,6 +147,33 @@ export default async function MobilePage() {
           </ul>
         </div>
       </section>
+      )}
+
+      {more.length > 0 && (
+        <section className="py-16 md:py-24" aria-labelledby="more-screens-h">
+          <div className={WRAP}>
+            <SectionHeading
+              eyebrow="Modules"
+              title={<span id="more-screens-h">More screens, module by module</span>}
+              description="The app shows the modules and permissions your role has. Screenshots show demo data."
+            />
+            <ul className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
+              {more.map((s) => (
+                <li key={s.slug}>
+                  <PhoneShot src={s.imageUrl} alt={s.alt} width={s.width} height={s.height} className="rounded-[1.5rem] border-4" />
+                  <p className="mt-3 text-sm font-medium">
+                    {s.pages[0] ? (
+                      <Link href={s.pages[0]} className="underline-offset-4 hover:underline">{s.title}</Link>
+                    ) : (
+                      s.title
+                    )}
+                  </p>
+                  <p className="mt-0.5 text-xs text-muted-foreground">{s.caption}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
       )}
 
       {/* What you can do */}
