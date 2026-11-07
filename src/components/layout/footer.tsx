@@ -50,6 +50,7 @@ const solutions = [
 ];
 
 const resources = [
+  { label: "Mobile App", href: "/mobile" },
   { label: "Demos", href: "/demos" },
   { label: "Blog", href: "/blog" },
   { label: "Docs", href: "/docs" },

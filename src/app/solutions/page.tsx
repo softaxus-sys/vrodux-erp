@@ -4,14 +4,15 @@ import { PageJsonLd } from "@/components/shared/page-jsonld";
 import Link from "next/link";
 import { PageHero } from "@/components/shared/page-hero";
 import { FinalCTA } from "@/components/sections/final-cta";
+import { HomeMobileApp } from "@/components/home/mobile-app";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, CheckCircle2, Cloud, Server, Globe, Shield, Zap, BarChart3 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Cloud, Server, Globe, Shield, Zap, BarChart3, Smartphone } from "lucide-react";
 
 export const metadata: Metadata = pageMeta({
   title: "Solutions — ERP Deployment & Business Solutions",
   description:
-    "Vrodux ERP solutions for cloud (SaaS) and on-premise deployment, with multi-currency, role-based security and reporting. Discover the right deployment model for your needs.",
+    "Vrodux ERP solutions for cloud (SaaS), on-premise and mobile, with multi-currency, role-based security and reporting. Discover the right deployment model for your needs.",
   path: "/solutions",
 });
 
@@ -78,6 +79,12 @@ const capabilities = [
     description: "A Reports hub that gathers the reports of every module you use, with filters and export.",
     features: ["Module-wise reports", "Dashboards", "CSV and PDF export", "Lead and sales reports in CRM"],
   },
+  {
+    icon: Smartphone,
+    title: "Mobile App",
+    description: "A companion app on Google Play for approvals, CRM, your own HR, camera barcode scanning and Vrodux AI, with push notifications. The App Store version is coming soon.",
+    features: ["Approvals inbox", "CRM", "Barcode scanning", "Push notifications", "Vrodux AI"],
+  },
 ];
 
 export default function SolutionsPage() {
@@ -88,7 +95,7 @@ export default function SolutionsPage() {
         badge="ERP Solutions"
         title="The Right ERP Solution "
         highlightedWord="for Your Business"
-        description="Whether you need cloud ERP or on-premise, a single company or a multinational group — Vrodux ERP has the deployment model and capabilities to match your needs."
+        description="Whether you need cloud ERP, on-premise or a mobile app for your team, a single company or a multinational group — Vrodux ERP has the deployment model and capabilities to match your needs."
       />
 
       {/* Deployment Options */}
@@ -156,6 +163,8 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
+
+      <HomeMobileApp location="solutions" />
 
       <FinalCTA />
     </>

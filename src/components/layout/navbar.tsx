@@ -78,6 +78,7 @@ const navLinks: { label: string; href: string; hasMega?: "features" | "industrie
   { label: "Solutions", href: "/solutions" },
   { label: "Industries", href: "/industries", hasMega: "industries" as const },
   { label: "AI Workforce", href: "/ai-workforce" },
+  { label: "Mobile App", href: "/mobile" },
   { label: "Pricing", href: "/pricing" },
   { label: "Demos", href: "/demos" },
   { label: "Blog", href: "/blog" },
@@ -244,7 +245,7 @@ export function Navbar() {
               <Link
                 href={link.href}
                 className={cn(
-                  "flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted hover:text-foreground text-muted-foreground",
+                  "flex items-center gap-1 whitespace-nowrap px-2 xl:px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted hover:text-foreground text-muted-foreground",
                   activeMega === link.hasMega && "bg-muted text-foreground"
                 )}
               >
