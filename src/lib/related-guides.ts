@@ -36,6 +36,26 @@ const G = {
     title: "Construction ERP and project cost tracking",
     desc: "Why construction companies lose margin without cost tracking, and what to check in an ERP.",
   },
+  constructionGuide: {
+    href: "/blog/construction-erp-uae-guide",
+    title: "Construction ERP in the UAE: what contractors should look for",
+    desc: "Projects, BOQs, contractors, costs, UAE VAT and WPS payroll, and the questions to ask any vendor.",
+  },
+  constructionCost: {
+    href: "/blog/construction-erp-cost-uae",
+    title: "How much does construction ERP cost in the UAE?",
+    desc: "Pricing models, the costs beyond the subscription and a budget worksheet for 10 to 30 users.",
+  },
+  erpPricing: {
+    href: "/blog/erp-pricing-uae",
+    title: "ERP pricing in the UAE: models, costs and what to budget",
+    desc: "Subscription, licence and custom pricing, hidden costs such as maintenance, and how to compare quotes.",
+  },
+  implChecklist: {
+    href: "/blog/erp-implementation-uae-checklist",
+    title: "ERP implementation in the UAE: checklist and vendor questions",
+    desc: "A readiness checklist and the steps from vendor selection and data migration to go-live.",
+  },
   wps: {
     href: "/docs/hr/generate-the-wps-salary-file",
     title: "Generate the UAE WPS salary information file (SIF)",
@@ -65,8 +85,8 @@ export const RELATED_GUIDES: Record<string, Guide[]> = {
   "/features/restaurant": [G.kds],
   "/features/pos": [G.kds],
   "/industries/restaurants": [G.kds],
-  "/features/construction": [G.construction],
-  "/industries/construction": [G.construction],
+  "/features/construction": [G.constructionGuide, G.constructionCost, G.construction],
+  "/industries/construction": [G.constructionGuide, G.constructionCost, G.construction],
   "/features/hr": [G.wps, G.uaeCompliance],
   "/features/lead-generation": [G.leadImport],
   "/features/crm": [G.leadImport],

@@ -7,6 +7,11 @@ import { SITE, fitDescription, pageMeta } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/** Search-led titles for industries where people search for a specific phrase. */
+const INDUSTRY_TITLES: Record<string, string> = {
+  construction: "Construction ERP Software in the UAE and Dubai",
+};
+
 export function generateStaticParams() {
   // "restaurants" has its own route (app/industries/restaurants); skipping it here avoids a prerender collision.
   return industries.filter((i) => i.slug !== "restaurants").map((i) => ({ slug: i.slug }));
@@ -20,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Led by the industry's own description so it never duplicates the module page's description.
   const description = fitDescription([industry.description, primary?.seoDescription]);
   return pageMeta({
-    title: `ERP Software for ${industry.name}`,
+    title: INDUSTRY_TITLES[slug] ?? `ERP Software for ${industry.name}`,
     description,
     path: industry.href,
     image: { url: `${SITE}${industry.image.src}`, alt: industry.image.alt },

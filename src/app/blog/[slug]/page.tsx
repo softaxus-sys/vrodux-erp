@@ -21,6 +21,340 @@ const posts: Record<string, {
   publishedAt: string;
   tags: string[];
 }> = {
+  "construction-erp-uae-guide": {
+    title: "Construction ERP in the UAE: What Contractors Should Look For",
+    excerpt: "What a construction ERP in the UAE should cover for contractors and contracting companies: projects and BOQs, contractors, cost visibility, UAE VAT and WPS payroll, plus questions to ask any vendor.",
+    category: "Construction",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-08",
+    tags: ["Construction ERP", "Contractors", "UAE", "Dubai"],
+    content: `
+A contracting business in the UAE runs on many moving parts at once: projects at different stages, subcontractors and suppliers to pay, site labour on payroll, and clients who expect accurate numbers. **Construction ERP software in the UAE** brings those parts into one system, so that project costs, contractor payments, purchasing and people are not tracked in separate spreadsheets. This guide explains what to look for, written for contractors and contracting companies in Dubai, Abu Dhabi and the rest of the UAE.
+
+## Why Generic ERP Often Falls Short for Contractors
+
+A general-purpose ERP is built around products and orders. A contractor sells **projects**: long jobs with a budget, a bill of quantities, several contractors and costs that arrive over months. If the ERP has no concept of a project, the work moves back into spreadsheets, and the ledger only tells you what happened after the fact.
+
+## What a Construction ERP Should Cover
+
+### 1. Projects and progress
+- A **project record** that keeps its details, budget and progress in one place.
+- A view of **sites and phases**, so you can see which jobs are running and how far along they are.
+
+### 2. Bills of quantities (BOQ)
+A bill of quantities lays out what a project needs and what it should cost before work starts. Look for a BOQ you can keep with the project and check actual spend against, rather than a one-time estimate that lives in a file.
+
+### 3. Contractors, bidding and contracts
+- A list of the **contractors and trade partners** you work with and the projects they are on.
+- **Bids and contracts** kept alongside the projects they belong to.
+
+### 4. Costs that flow through the rest of the business
+Project costs rarely start in the construction module. Materials are bought through purchasing, site labour sits in payroll, and payments go through the ledger. A construction ERP should let those modules work together so project costs and contractor payments flow through **Purchase, HR and Finance** instead of being re-typed.
+
+### 5. UAE VAT and payroll
+- **UAE VAT.** Tax invoices that carry the required details, and VAT figures that come from your records. Be careful with any vendor who says it "files with the FTA": in practice you prepare and export the return, then file it on the FTA portal yourself. See our guide to [VAT compliance in the UAE](/blog/vat-compliance-uae-erp).
+- **WPS salary files.** Site labour is a large part of a contractor's payroll. Look for payroll that prepares the Wage Protection System file from an approved run, and check the file against your bank's template before the first live submission. See how to [generate the WPS salary file](/docs/hr/generate-the-wps-salary-file).
+
+### 6. Access from the site
+Project managers spend most of their day away from a desk. A mobile app that shows the modules your role has makes approvals and lookups quicker. See the [Vrodux ERP mobile app](/mobile).
+
+## Questions to Ask Any Construction ERP Vendor
+
+Construction has its own vocabulary. Before you choose, ask each vendor, including us, to show these in a demo rather than describe them:
+
+| Question | Why it matters |
+| **How do I track a project against its budget and BOQ?** | Overruns are caught while they are still small only if actual spend sits next to the plan. |
+| **How are subcontractor payments handled?** | Subcontractor cost is often the least visible part of a project budget. |
+| **How do purchases, payroll and payments reach the project?** | Costs should flow in from other modules, not be re-entered. |
+| **How are variations, retention and progress claims handled?** | Contracts differ, so confirm exactly what is supported today and what is on a roadmap. |
+| **What does the app show on site?** | Check which screens and approvals work on a phone. |
+| **What is the price for my team size?** | See [how construction ERP is priced](/blog/construction-erp-cost-uae). |
+
+## How Vrodux ERP Fits
+
+Vrodux ERP's [Construction module](/features/construction) tracks **projects, bills of quantities and contractors**, with bidding and contracts kept alongside, and project costs and contractor payments flowing through Purchase, HR and Finance. It runs in the cloud, includes every module on every plan, and is priced by team size. You can read the [construction industry page](/industries/construction), the [Construction docs](/docs/construction), or [start a free trial](/pricing) to see it with your own data.
+
+If your needs go beyond that, such as a particular claim or retention process, tell us in a [demo](/book-demo) and we will tell you honestly whether it is covered.
+
+## Frequently Asked Questions
+
+### What is the best ERP for construction companies in the UAE?
+The best fit is the one that handles projects, BOQs, contractors and your costs in one place, supports UAE VAT and WPS payroll, and matches your team size and budget. Use the questions above to compare vendors on the same demo script.
+
+### Is there a difference between ERP for contractors and ERP for contracting companies?
+In practice the terms describe the same need: managing projects, subcontractors, materials and site labour. What matters is the features, not the label.
+
+### Can a construction ERP run in the cloud in the UAE?
+Yes. Cloud ERP removes the server to maintain and gives site teams access from anywhere. Read our guide to [cloud ERP in the UAE](/blog/cloud-erp-uae-business-growth).
+
+### How do I get started?
+Start with one or two live projects, set up the module with their BOQs and contractors, and expand from there. Our [ERP implementation checklist for the UAE](/blog/erp-implementation-uae-checklist) covers the steps.
+`,
+  },
+  "construction-erp-cost-uae": {
+    title: "How Much Does Construction ERP Cost in the UAE? A Guide for 10 to 30 Users",
+    excerpt: "How construction ERP is priced in the UAE for a contractor with 10 to 30 users: pricing models, the costs beyond the subscription, and a budget worksheet, using Vrodux ERP's published plans.",
+    category: "Construction",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-08",
+    tags: ["Construction ERP", "ERP Pricing", "UAE", "Budgeting"],
+    content: `
+If you are budgeting for a construction ERP in the UAE, the honest answer to "how much does it cost?" is that it depends on how the system is priced and what you need around it. This guide explains the pricing models, shows what Vrodux ERP's published plans cost for a contractor with **10 to 30 users**, and gives you a worksheet to compare quotes. We do not quote a "market average", because published averages vary widely and we cannot verify them.
+
+## The Short Version
+
+- Construction ERP is usually priced in one of three ways: a **subscription per user or per tier**, a **one-time licence plus yearly maintenance**, or a **custom quote**.
+- The subscription or licence is only part of the cost. Implementation, data migration, training, integrations and support can add to it.
+- With Vrodux ERP, **every module is included on every plan**, and you pay by team size.
+
+## What Vrodux ERP Costs for 10 to 30 Users
+
+Vrodux ERP's plans are priced by the number of users, and all modules, including Construction, are included. At the time of writing, the published prices are:
+
+| Plan | Users | Monthly price | Billed annually |
+| **Starter** | Up to 10 users | $299 per month | $249 per month |
+| **Professional** | Up to 50 users | $849 per month | $699 per month |
+| **Enterprise** | Unlimited users | Custom quote | Custom quote |
+
+So a contractor with **up to 10 users** fits Starter, and a contractor with **11 to 30 users** fits Professional, which covers up to 50. Always check the live [pricing page](/pricing) before you decide, as prices can change.
+
+Two details matter for construction firms. **Multi-currency** is part of the Enterprise plan, so if you invoice or pay suppliers in several currencies, ask about Enterprise. **API access and custom workflows** are also Enterprise features. You can try Vrodux free for 14 days with unlimited users and no credit card, so you can test your own projects before paying.
+
+## What Else Goes Into the Budget
+
+The subscription is the number everyone asks for, but it is rarely the whole bill. Use this list when comparing quotes:
+
+| Cost | What to ask |
+| **Subscription or licence** | Is it per user, per tier or a one-time licence? What happens when you add users? |
+| **Implementation** | Is setup included, or charged by the day? |
+| **Data migration** | Who moves your projects, contractors and ledger balances, and what does it cost? |
+| **Customisation** | Which changes are configuration, and which need development? |
+| **Training** | Is it included for site and office teams? |
+| **Integrations** | Do you need connections to other tools, and are they extra? |
+| **Support and maintenance** | What does the yearly fee cover, and what is the response time? |
+| **Mobile access** | Is the mobile app included? |
+
+For Vrodux ERP, implementation, data migration and custom development are described on our [implementation page](/implementation) and in the [pricing FAQ](/pricing). Ask us in a demo for the current terms for your project.
+
+## A Budget Worksheet for a 20-User Contractor
+
+Instead of guessing a total, build one from known pieces:
+
+1. **Users.** Count everyone who needs a login: office, project managers, site supervisors, finance and HR. For example, 20.
+2. **Plan.** Match the count to a tier. For 20 users on Vrodux ERP, that is Professional.
+3. **Billing.** Compare the monthly and annual prices over 12 months.
+4. **Services.** Add the quote for implementation, data migration and training from each vendor.
+5. **Extras.** Add any integrations or Enterprise features you need.
+6. **Three-year view.** Multiply recurring costs by three and add one-off costs once. This is the figure to compare across vendors.
+
+## Why the Cheapest Quote Is Not Always the Cheapest System
+
+A low licence price can hide high maintenance fees or paid add-ons. A per-module price can grow quickly if you need Purchase, HR, Finance and Construction together. Pricing by team size with all modules included makes the monthly cost easier to predict.
+
+## Next Steps
+
+- Read what a construction ERP should cover in [Construction ERP in the UAE: what contractors should look for](/blog/construction-erp-uae-guide).
+- See the [Construction module](/features/construction) and [plans](/pricing).
+- [Book a demo](/book-demo) and bring your own project list.
+
+## Frequently Asked Questions
+
+### How much does ERP for a construction company cost in the UAE?
+It depends on the pricing model, the number of users and the services you need. For Vrodux ERP, a team of up to 10 users is on Starter and up to 50 users is on Professional, with every module included. See the pricing page for the current figures.
+
+### Is there a free trial?
+Yes. Vrodux ERP has a 14-day free trial with unlimited users and no credit card.
+
+### Are implementation and data migration included?
+Optional services are quoted separately in our pricing FAQ, and our implementation page describes what we offer. Confirm the current terms for your project in a demo.
+
+### Does the price include VAT?
+Check how the vendor quotes: with or without VAT. Ask for it in writing.
+`,
+  },
+  "erp-pricing-uae": {
+    title: "ERP Pricing in the UAE: Models, Costs and What to Budget",
+    excerpt: "How ERP software is priced in the UAE: subscription, licence and custom models, the costs beyond the price tag including maintenance and support, and the questions to ask before you sign.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-08",
+    tags: ["ERP Pricing", "UAE", "ERP Cost", "Budgeting"],
+    content: `
+"How much does ERP cost?" is the first question most buyers ask and the hardest to answer in one number. **ERP pricing in the UAE** depends on the pricing model, how many people use the system, which features you need and what services you buy around it. This guide explains the common models, the costs that sit outside the price tag, and how to compare quotes fairly. We have deliberately avoided quoting a market average: figures published online vary widely and are hard to verify.
+
+## The Common ERP Pricing Models
+
+### Subscription per user or per tier
+You pay a monthly or yearly fee, often based on the number of users. This is typical for cloud ERP. Costs are predictable, updates are included, and you can usually add users as you grow. Check whether modules are priced separately.
+
+### One-time licence plus maintenance
+You pay a large amount up front for the licence and a yearly fee for maintenance and support. This is more common for on-premise systems. Compare the licence and the yearly fee over three to five years, not just the first invoice.
+
+### Custom quote
+Larger or more complex projects are often quoted individually, with a mix of licence, services and support. Insist on an itemised quote.
+
+## How Vrodux ERP Is Priced
+
+Vrodux ERP is a cloud ERP priced **by team size**. **Every module is included on every plan**, so you do not pay per module. At the time of writing:
+
+| Plan | Users | Monthly price | Billed annually |
+| **Micro** | Up to 3 users | $159 per month | $129 per month |
+| **Starter** | Up to 10 users | $299 per month | $249 per month |
+| **Professional** | Up to 50 users | $849 per month | $699 per month |
+| **Enterprise** | Unlimited users | Custom quote | Custom quote |
+
+Check the live [pricing page](/pricing) for the current figures and for what each plan adds. You can try it free for 14 days with unlimited users and no credit card.
+
+## The Costs Beyond the Price Tag
+
+| Cost | What to check |
+| **Implementation** | Is setup included, or charged by the day? |
+| **Data migration** | Who cleans and moves your data, and what is the cost? |
+| **Customisation** | What is configuration, and what needs development? |
+| **Training** | Is it included, and for how many people? |
+| **Integrations** | Are connections to other tools extra? |
+| **Support and maintenance** | See below. |
+| **Upgrades** | Are version upgrades included in the subscription? |
+
+### What about ERP maintenance and support costs?
+With a licence model, the yearly maintenance fee is a real cost: it usually covers support and updates. Ask what it covers, how it is calculated and whether it rises each year. With a cloud subscription, updates and hosting are normally part of the fee, but check which support level each plan includes. For Vrodux ERP, support tiers are listed on the pricing page.
+
+## How to Compare Quotes
+
+1. Ask every vendor for the same scenario: your users, modules and services.
+2. Convert everything to a **three-year total**: recurring costs times three, plus one-off costs.
+3. Separate what is included from what is optional.
+4. Check how users are counted and what happens when you grow.
+5. Ask for terms in writing, including whether prices include VAT.
+
+## Pricing Questions to Ask Before You Sign
+
+- What is included in the base price, and what is extra?
+- How are additional users charged?
+- What does the support level include, and what is the response time?
+- What happens to my data and my price if I leave or the contract ends?
+- Which features are limited to a higher plan, such as multi-currency, API access or advanced reporting?
+
+## Related Reading
+
+- [ERP implementation in the UAE: checklist and vendor questions](/blog/erp-implementation-uae-checklist)
+- [How construction ERP is priced](/blog/construction-erp-cost-uae)
+- [What is an ERP system?](/blog/what-is-an-erp-system)
+- [Cloud ERP for UAE businesses](/blog/cloud-erp-uae-business-growth)
+
+## Frequently Asked Questions
+
+### What is the price of ERP software in the UAE?
+There is no single price. It depends on the model, the number of users and the services you need. For Vrodux ERP, plans start with Micro for up to 3 users and every module is included.
+
+### Is cloud ERP cheaper than on-premise?
+Cloud ERP usually has a lower upfront cost and includes hosting and updates. On-premise can suit strict data-control needs. Compare the three-year total for each, as the right answer depends on your size and requirements.
+
+### Does an ERP subscription include support?
+Usually some level of support is included. Confirm which support level your plan includes and what response times apply.
+
+### Can I try ERP before paying?
+Many vendors offer a trial. Vrodux ERP has a 14-day free trial with unlimited users and no credit card.
+`,
+  },
+  "erp-implementation-uae-checklist": {
+    title: "ERP Implementation in the UAE: Steps, Readiness Checklist and Questions for Vendors",
+    excerpt: "A practical ERP implementation guide for UAE companies: a readiness checklist, vendor selection questions, blueprinting, data migration, UAE VAT and WPS set-up, go-live and support.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 10,
+    publishedAt: "2026-11-08",
+    tags: ["ERP Implementation", "UAE", "Dubai", "Checklist"],
+    content: `
+An ERP project succeeds or fails long before go-live. **ERP implementation in the UAE** follows the same broad path as anywhere else, with extra care for UAE VAT, WPS payroll and the way your team already works. This guide gives you the steps, a readiness checklist and the questions to ask vendors, whether you are in Dubai, Abu Dhabi or elsewhere in the UAE. For a wider overview, read our [complete ERP implementation guide](/blog/erp-implementation-guide-2025).
+
+## Step 1: Check Your Readiness
+
+Before you talk to vendors, answer these questions honestly. This is an **ERP readiness assessment** you can do in an afternoon.
+
+- Can you describe, in a sentence, the problems you want the ERP to solve?
+- Who owns the project, and who will approve decisions quickly?
+- Do you know your main processes: quote to cash, procure to pay, hire to pay?
+- Where does your data live today, and how clean is it?
+- Which modules do you need now, and which can wait?
+- Do your people have time to test and learn the system?
+- What will count as success, for example faster month-end close or fewer stock differences?
+
+## Step 2: Choose a Vendor
+
+A good **ERP vendor selection** compares vendors on the same script. Ask each one:
+
+| Question | Why it matters |
+| **Do you handle UAE VAT and WPS?** | Check what is prepared and exported, and what you still file yourself. |
+| **What is included in the price?** | See our guide to [ERP pricing in the UAE](/blog/erp-pricing-uae). |
+| **Who does the implementation?** | A named team and a clear scope reduce surprises. |
+| **How do you migrate data?** | Ask for the steps, who is responsible and how it is tested. |
+| **How long does a project like mine take?** | Ask for a plan with milestones, not a single number. |
+| **What support is available after go-live?** | Confirm the support level and response times. |
+| **Can I see my own scenario in a demo?** | Bring real examples from your business. |
+
+## Step 3: Blueprint Your Processes
+
+**ERP blueprinting** means writing down how the business will run in the new system before you configure it. Map each process, decide what changes, and agree on roles and approvals. Keep the first version small: a lean blueprint you can finish beats a perfect one that never ends.
+
+## Step 4: Migrate Your Data
+
+**ERP data migration** is where many projects slip. A sensible order is:
+
+1. **Decide what to move.** Opening balances, customers, suppliers, products and open orders. Do not move years of dead records.
+2. **Clean it first.** Remove duplicates, fix names and tax numbers, and agree on codes.
+3. **Map the fields.** Match each source column to a field in the new system.
+4. **Test with a sample.** Import a small set, check it against the source, then run the full load.
+5. **Reconcile.** Compare totals, such as ledger balances and stock quantities, before and after.
+
+## Step 5: Configure for the UAE
+
+- **UAE VAT.** Set up tax codes and tax invoices with seller and buyer details and TRN. The ERP helps you prepare the return, and you file it on the FTA portal. See [VAT compliance in the UAE](/blog/vat-compliance-uae-erp).
+- **WPS payroll.** Set up employees and bank details so the WPS file can be prepared from an approved payroll run. Check the file against your bank's template before the first live submission.
+- **Currencies and languages.** Decide which currencies you transact in and which languages your team needs.
+
+## Step 6: Train and Test
+
+Let the people who will use the system test it with real transactions. Train by role, so each person learns only what they need. Keep a short list of issues and fix them before go-live.
+
+## Step 7: Go Live and Support
+
+Choose a quiet period. Run the old and new systems side by side if you can, for a short time. Have named support contacts, and plan a review after the first month. Audit readiness improves when the ledger, VAT records and payroll files come from one system, so keep your documents and approvals in it from day one.
+
+## Questions Executives Should Ask Before an ERP Project
+
+- What problem are we solving, and how will we measure it?
+- Who is accountable for the project on our side?
+- What is the total cost over three years, not just the first year?
+- What do we do if the project slips?
+- How will our people be trained and supported?
+
+## Why ERP Projects Fail and How to Avoid It
+
+Typical causes are unclear goals, too much customisation, messy data and not enough user involvement. Start with the standard features, migrate clean data and involve users early. If a previous project failed, an **ERP re-implementation** works best when you first find out why: unused features, poor data or missing training.
+
+## How Vrodux ERP Helps
+
+Vrodux ERP is a cloud ERP with every module included on every plan, priced by team size, with a 14-day free trial. Our [implementation page](/implementation) describes the services we offer, and our [pricing page](/pricing) lists the plans. You can start with a trial on your own data, then plan the rollout.
+
+## Frequently Asked Questions
+
+### How long does an ERP implementation take in the UAE?
+It depends on the scope, data and how quickly your team makes decisions. Ask each vendor for a milestone plan for your scenario rather than a single number.
+
+### What is an ERP readiness assessment?
+A short review of your goals, processes, data and people before you choose a vendor, so you buy and configure the right thing.
+
+### Who should lead an ERP project?
+A business owner who can decide quickly, supported by a project lead and a user from each department.
+
+### Can I implement ERP in stages?
+Yes. Start with the modules that matter most, such as finance and inventory, then add others once the first ones are stable.
+`,
+  },
   "drive-business-growth-with-erp": {
     title: "How to Drive Business Growth Using ERP Systems",
     excerpt: "How to drive business growth with ERP: pick the right goals and modules, map processes, use reporting, automate routine work and measure results, with a practical roadmap.",
@@ -467,7 +801,7 @@ Usually the upfront cost is lower, because you skip servers and installation. Ov
 
 For UAE businesses that want to stay competitive in a fast-moving market, cloud-based ERP is a practical advantage: lower upfront costs, easy scaling, real-time insight and a vendor that carries the update burden. Start by writing down your requirements, then shortlist vendors that understand the UAE market, document their security clearly and offer a pricing model that fits your growth. For the fundamentals, read [What Is an ERP System?](/blog/what-is-an-erp-system). Ready to see it in action? [Book a demo](/book-demo) or [contact the Vrodux team](/contact).
 
-**Related reading:** [Next-gen ERP: what it means](/blog/next-gen-erp-guide), [how ERP systems evolved in the UAE](/blog/erp-systems-uae-evolution) and the [multi-currency ERP guide](/blog/multi-currency-erp-guide).
+**Related reading:** [Next-gen ERP: what it means](/blog/next-gen-erp-guide), [how ERP systems evolved in the UAE](/blog/erp-systems-uae-evolution) and the [multi-currency ERP guide](/blog/multi-currency-erp-guide). On cost, see [ERP pricing in the UAE](/blog/erp-pricing-uae).
 `,
   },
   "marketing-overview-guide": {
@@ -768,7 +1102,7 @@ Write down the processes you want to improve, shortlist vendors that fit your in
 
 An ERP system is more than software. It is a platform that aligns people, processes and data. By understanding the core modules, judging options against clear criteria and following a disciplined implementation plan, businesses can improve efficiency, strengthen compliance and scale with confidence.
 
-To go deeper, read about [next-gen ERP](/blog/next-gen-erp-guide), [how ERP systems evolved in the UAE](/blog/erp-systems-uae-evolution) and [cloud ERP for UAE business growth](/blog/cloud-erp-uae-business-growth). For specific industries, see [restaurant POS and KDS integration](/blog/restaurant-pos-kds-integration) and [construction cost tracking](/blog/construction-erp-cost-tracking).
+To go deeper, read about [next-gen ERP](/blog/next-gen-erp-guide), [how ERP systems evolved in the UAE](/blog/erp-systems-uae-evolution) and [cloud ERP for UAE business growth](/blog/cloud-erp-uae-business-growth). For specific industries, see [restaurant POS and KDS integration](/blog/restaurant-pos-kds-integration) and [construction cost tracking](/blog/construction-erp-cost-tracking). For a UAE-specific checklist, read [ERP implementation in the UAE](/blog/erp-implementation-uae-checklist), and for budgeting see [ERP pricing in the UAE](/blog/erp-pricing-uae).
 
 Whether you are a small importer-exporter, a growing restaurant group or an insurance provider, the right ERP can become the central nervous system of your organization. Ready to see it in action? [Book a demo](/book-demo) or [contact the Vrodux team](/contact).
 `,
@@ -1041,7 +1375,7 @@ For a mid-sized business (50-200 users): 6-12 weeks. Complex multi-company, mult
 
 A well-executed ERP implementation is one of the most transformative investments a business can make. With the right preparation, the right partner, and the right mindset — your ERP will be a competitive advantage for years to come.
 
-**Related reading:** [Next-gen ERP: what it means](/blog/next-gen-erp-guide), [construction ERP and cost tracking](/blog/construction-erp-cost-tracking) and [What Is an ERP System?](/blog/what-is-an-erp-system).
+**Related reading:** [Next-gen ERP: what it means](/blog/next-gen-erp-guide), [construction ERP and cost tracking](/blog/construction-erp-cost-tracking) and [What Is an ERP System?](/blog/what-is-an-erp-system). Planning a project? Read [ERP implementation in the UAE: checklist and vendor questions](/blog/erp-implementation-uae-checklist).
     `,
   },
   "restaurant-pos-kds-integration": {
@@ -1146,7 +1480,7 @@ Construction margins are thin enough that cost tracking can't be an end-of-proje
 
 ## Where This Fits in Vrodux
 
-See how the [Construction module](/features/construction) and the [Finance module](/features/finance) work together, or read about [construction ERP](/industries/construction) for contractors. For rollout advice, see the [ERP implementation guide](/blog/erp-implementation-guide-2025).
+See how the [Construction module](/features/construction) and the [Finance module](/features/finance) work together, or read about [construction ERP](/industries/construction) for contractors. For rollout advice, see the [ERP implementation guide](/blog/erp-implementation-guide-2025). Choosing a system? Read [Construction ERP in the UAE: what contractors should look for](/blog/construction-erp-uae-guide) and [how much construction ERP costs](/blog/construction-erp-cost-uae).
     `,
   },
   "hotel-pms-erp-integration": {
@@ -1241,6 +1575,10 @@ type Props = {
 
 /** Shorter <title> text for posts whose headline is too long for search results; the on-page H1 is unchanged. */
 const SEO_TITLES: Record<string, string> = {
+  "construction-erp-uae-guide": "Construction ERP in the UAE: What Contractors Should Look For",
+  "construction-erp-cost-uae": "How Much Does Construction ERP Cost in the UAE? 10-30 Users",
+  "erp-pricing-uae": "ERP Pricing in the UAE: Models, Costs and What to Budget",
+  "erp-implementation-uae-checklist": "ERP Implementation in the UAE: Checklist and Vendor Questions",
   "erp-systems-uae-evolution": "ERP Systems in the UAE: How They Evolved and What's Next",
   "restaurant-pos-kds-integration": "How Restaurant POS + KDS Integration Reduces Kitchen Errors",
   "construction-erp-cost-tracking": "Why Construction Companies Lose Money Without Cost Tracking",

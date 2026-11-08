@@ -36,6 +36,10 @@ Vrodux supports UAE VAT return preparation, UAE WPS salary files, English and Ar
 ## Learn
 - [Documentation](https://vrodux.com/docs): step-by-step guides for every module
 - [Blog](https://vrodux.com/blog): ERP guides and UAE business articles
+- [Construction ERP in the UAE](https://vrodux.com/blog/construction-erp-uae-guide): what contractors should look for
+- [How much construction ERP costs in the UAE](https://vrodux.com/blog/construction-erp-cost-uae)
+- [ERP pricing in the UAE](https://vrodux.com/blog/erp-pricing-uae): models, costs and what to budget
+- [ERP implementation in the UAE](https://vrodux.com/blog/erp-implementation-uae-checklist): checklist and vendor questions
 - [FAQ](https://vrodux.com/faq)
 - [Product demo videos](https://vrodux.com/demos)
 

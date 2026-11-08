@@ -9,10 +9,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Clock, Users, Award } from "lucide-react";
 
 export const metadata: Metadata = pageMeta({
-  title: "Implementation Services",
+  title: "ERP Implementation in Dubai and the UAE | Implementation Services",
   description:
-    "Free ERP implementation, customization and data migration by SoftAxis Technologies. Get your Vrodux ERP up and running quickly with our proven methodology.",
-  path: "/implementation",
+    "ERP implementation, customization and data migration for Vrodux ERP by SoftAxis Technologies in Dubai, UAE. See the packages and read our implementation checklist.",
+  path: "/implementation", brand: false,
 });
 
 const packages = [
@@ -67,6 +67,20 @@ export default function ImplementationPage() {
       </section>
 
       <HomeGoLive />
+
+      <section className="py-10">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl font-semibold tracking-tight">Planning an ERP implementation in the UAE?</h2>
+          <p className="mt-3 text-muted-foreground">
+            Before you choose a vendor or a package, work through the steps: readiness, vendor selection, blueprinting, data migration, UAE VAT and WPS set-up, training and go-live.
+          </p>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li><Link href="/blog/erp-implementation-uae-checklist" className="font-medium text-brand-600 underline-offset-4 hover:underline dark:text-brand-300">ERP implementation in the UAE: steps, readiness checklist and vendor questions</Link></li>
+            <li><Link href="/blog/erp-implementation-guide-2025" className="font-medium text-brand-600 underline-offset-4 hover:underline dark:text-brand-300">The complete ERP implementation guide</Link></li>
+            <li><Link href="/blog/erp-pricing-uae" className="font-medium text-brand-600 underline-offset-4 hover:underline dark:text-brand-300">ERP pricing in the UAE: models, costs and what to budget</Link></li>
+          </ul>
+        </div>
+      </section>
 
       <section className="py-16 bg-muted/20">
         <div className="container mx-auto px-4">

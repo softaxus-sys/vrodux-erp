@@ -475,8 +475,8 @@ export const moduleVisuals: Record<string, ModuleVisual> = {
   construction: {
     tone: 3,
     docsCategory: "construction",
-    seoTitle: "Construction Management Software",
-    seoDescription: "Project planning, resource allocation, cost tracking and BOQ management for construction companies in Vrodux ERP.",
+    seoTitle: "Construction ERP Software UAE: Projects, BOQ & Contractors",
+    seoDescription: "Construction ERP software for contractors in the UAE and Dubai: projects, bills of quantities, contractors, bidding and contracts, with costs flowing through Purchase, HR and Finance.",
     photo: { src: "/images/industries/construction.jpg", alt: "Site manager reviewing plans on a tablet" },
   },
 };

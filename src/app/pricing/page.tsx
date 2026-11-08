@@ -64,6 +64,20 @@ export default function PricingPage() {
       <PricingComparison />
       <PricingAddons />
       <PricingServices />
+      <section className="py-10" aria-labelledby="uae-pricing-h">
+        <div className="container mx-auto max-w-3xl px-4">
+          <h2 id="uae-pricing-h" className="text-2xl font-semibold tracking-tight sm:text-3xl">ERP Pricing in the UAE</h2>
+          <p className="mt-3 leading-relaxed text-muted-foreground">
+            Vrodux ERP pricing is the same in every region, including the UAE. You choose a plan by team size, every module is included, and there are no per-module fees. For UAE businesses, UAE VAT 201 preparation, WPS salary files and e-invoicing preparation are part of every plan.
+          </p>
+          <p className="mt-3 leading-relaxed text-muted-foreground">
+            Want to understand how ERP software is priced before you compare vendors? Read{" "}
+            <Link href="/blog/erp-pricing-uae" className="text-brand-600 underline underline-offset-4 dark:text-brand-300">ERP pricing in the UAE: models, costs and what to budget</Link>
+            , or{" "}
+            <Link href="/blog/construction-erp-cost-uae" className="text-brand-600 underline underline-offset-4 dark:text-brand-300">how much construction ERP costs in the UAE</Link>.
+          </p>
+        </div>
+      </section>
       <PricingFaq />
       <PricingFinalCta />
     </>
