@@ -1,4 +1,8 @@
 export const blogCovers: Record<string, { src: string; alt: string }> = {
+  "construction-erp-uae-guide": { src: "/images/blog/construction-erp-uae-guide.jpg", alt: "Four steps for a construction ERP in the UAE: projects and BOQ, contractors, costs, and VAT and WPS" },
+  "construction-erp-cost-uae": { src: "/images/blog/construction-erp-cost-uae.jpg", alt: "Four steps to budget a construction ERP in the UAE: pick the model, count users, add services and compare three years" },
+  "erp-pricing-uae": { src: "/images/blog/erp-pricing-uae.jpg", alt: "ERP pricing in the UAE: subscription, licence and custom quote models, and hidden costs to check" },
+  "erp-implementation-uae-checklist": { src: "/images/blog/erp-implementation-uae-checklist.jpg", alt: "Four steps of an ERP implementation in the UAE: readiness, vendor, data and go-live" },
   "drive-business-growth-with-erp": { src: "/images/blog/drive-business-growth-with-erp.jpg", alt: "Four steps to grow with ERP: measure, connect, automate and improve" },
   "erp-trading-distribution-dubai": { src: "/images/blog/erp-trading-distribution-dubai.jpg", alt: "Four steps of a trading business in Dubai: buy, store, sell and comply, connected in one ERP" },
   "erp-solutions-transform-business": { src: "/images/blog/erp-solutions-transform-business.jpg", alt: "Separate finance, sales, inventory and HR tools merging into one connected ERP platform" },
