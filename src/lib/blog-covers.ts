@@ -1,4 +1,8 @@
 export const blogCovers: Record<string, { src: string; alt: string }> = {
+  "wholesale-retail-erp-software-guide": { src: "/images/blog/wholesale-retail-erp-software-guide.jpg", alt: "Four steps to choose a wholesale retail ERP: map your processes, check pricing and stock, demo on your own data, pilot and go live" },
+  "food-industry-erp-guide": { src: "/images/blog/food-industry-erp-guide.jpg", alt: "Four steps to roll out a food industry ERP: audit processes, set up recipes and bills of materials, pilot one plant and track KPIs" },
+  "cloud-based-restaurant-pos-guide": { src: "/images/blog/cloud-based-restaurant-pos-guide.jpg", alt: "Four steps to choose a cloud restaurant POS: map your workflow, check features, test and train, and connect to ERP" },
+  "clean-manufacturing-lean-strategies": { src: "/images/blog/clean-manufacturing-lean-strategies.jpg", alt: "Four steps to clean, lean manufacturing: map the value stream, apply 5S, improve with Kaizen and measure results" },
   "construction-erp-uae-guide": { src: "/images/blog/construction-erp-uae-guide.jpg", alt: "Four steps for a construction ERP in the UAE: projects and BOQ, contractors, costs, and VAT and WPS" },
   "construction-erp-cost-uae": { src: "/images/blog/construction-erp-cost-uae.jpg", alt: "Four steps to budget a construction ERP in the UAE: pick the model, count users, add services and compare three years" },
   "erp-pricing-uae": { src: "/images/blog/erp-pricing-uae.jpg", alt: "ERP pricing in the UAE: subscription, licence and custom quote models, and hidden costs to check" },

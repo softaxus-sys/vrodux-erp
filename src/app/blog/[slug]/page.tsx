@@ -260,6 +260,475 @@ Usually some level of support is included. Confirm which support level your plan
 Many vendors offer a trial. Vrodux ERP has a 14-day free trial with unlimited users and no credit card.
 `,
   },
+  "clean-manufacturing-lean-strategies": {
+    title: "Clean Manufacturing: Lean Strategies for Waste-Free Production",
+    excerpt: "What clean manufacturing means and how lean tools such as value-stream mapping, 5S, Kaizen, JIT and standard work cut scrap, energy use and rework, with an implementation plan, common challenges and the KPIs to track.",
+    category: "Manufacturing",
+    author: "Vrodux Team",
+    readTime: 8,
+    publishedAt: "2026-11-10",
+    tags: ["Manufacturing", "Lean Manufacturing", "Waste Reduction", "KPIs"],
+    content: `
+Manufacturers are under pressure to deliver quality products faster, at lower cost and with less environmental impact. **Clean manufacturing** is the practice of producing goods with as little waste, emissions and wasted resource as possible. Combined with proven **lean** principles, it helps a factory remove hidden inefficiencies, improve quality and work towards sustainability goals without giving up profitability. This guide explains what clean manufacturing is, which lean tools power it, how to implement it and how to measure the results.
+
+## What Is Clean Manufacturing?
+
+Clean manufacturing is a systematic approach built on four ideas:
+
+1. **Eliminating waste.** Material, energy, time and motion that add no value to the product.
+2. **Reducing emissions.** Greenhouse gases, airborne particles and liquid effluents.
+3. **Optimising resource use.** Water, electricity, raw materials and tooling.
+4. **Protecting product integrity.** Consistent quality, and processes that follow the regulatory standards that apply to you.
+
+The aim is a production system where every step adds value to the finished product and little is left to chance. No factory reaches zero waste overnight, but treating it as the direction of travel changes the questions people ask on the shop floor.
+
+## Why Clean Manufacturing Matters
+
+| Benefit | Business impact |
+| **Cost savings** | Less scrap, lower energy use and fewer rework cycles go straight to margin. |
+| **Regulatory readiness** | Environmental rules keep tightening, and well-documented, low-waste processes make it easier to work within standards such as ISO 14001. |
+| **Brand reputation** | More buyers ask suppliers about sustainability, so a visible record can open doors to new contracts. |
+| **Employee engagement** | A clean, organised shop floor is safer and better to work in, which helps morale and retention. |
+| **Operational flexibility** | Lean, low-waste processes are easier to scale or change when you introduce new products. |
+
+## Lean Principles That Power Clean Manufacturing
+
+### 1. Value-stream mapping (VSM)
+VSM draws every step from raw material to finished product and highlights the steps that add no value. Mapping material flow and information flow together shows where waste hides: excess inventory, over-processing, waiting and unnecessary transport. You then design a shorter, cleaner path.
+
+### 2. 5S: Sort, Set in order, Shine, Standardise, Sustain
+A tidy workplace is the foundation. 5S reduces the chance of defects, improves safety and makes waste visible at once. Organised tool stations remove search time, and regular cleaning stops dust building up where it could contaminate product.
+
+### 3. Kaizen (continuous improvement)
+Kaizen asks every employee to suggest small changes: adjusting a machine guard to reduce scrap, or switching to a lower-energy motor. Small, frequent improvements add up to a much cleaner operation over time.
+
+### 4. Just-in-time (JIT) production
+JIT ties production closely to demand, so less work-in-process stock sits around becoming obsolete or needing extra handling. Less inventory means less handling, less floor space to heat or cool and fewer write-offs.
+
+### 5. Standard work
+Documented, repeatable procedures reduce variation, so every operator follows the most efficient method. Standard work also makes training simpler and audits against your own standards easier.
+
+## Implementing Clean Manufacturing in Your Facility
+
+1. **Leadership commitment.** Sponsors state the vision, assign resources and set measurable targets. For example, a target such as "reduce scrap by an agreed percentage within 12 months" gives the programme a clear finish line.
+2. **Baseline assessment.** Audit material flow, energy use and waste streams, and use the data to draw a current-state value-stream map.
+3. **Pilot project.** Pick a high-volume line or a process with known waste. Apply 5S and Kaizen, then measure the effect on waste, cycle time and quality.
+4. **Scale up.** Repeat what worked across the plant, adjusting for different equipment and product mix.
+5. **Technology enablement.** Capture energy use, machine uptime and waste in a system rather than on paper. Bring that data together with your production, stock and cost records so that thresholds and trends are visible to managers.
+6. **Training and culture.** Run hands-on workshops on lean tools, and celebrate quick wins to reinforce the new habits.
+7. **Continuous review.** Hold regular Gemba walks (go and see the work where it happens), update your value-stream maps and refine standards from the latest results.
+
+## Common Challenges and How to Overcome Them
+
+| Challenge | What helps |
+| **Resistance to change** | Involve shop-floor staff early, let them own Kaizen ideas and recognise measurable improvements. |
+| **Data gaps** | Start with simple energy meters and waste logbooks, then move towards automated data capture. |
+| **Initial cost** | Begin with low-capital work such as 5S and standard work, and reinvest the savings in larger upgrades. |
+| **Complex supply chains** | Work with suppliers on shared practices, so waste is not simply moved upstream. |
+| **Regulatory ambiguity** | Get advice on how the standards that apply to you should be reflected in your procedures. |
+
+## Measuring Success: KPIs for Clean Manufacturing
+
+- **Overall equipment effectiveness (OEE).** Combines availability, performance and quality.
+- **Scrap rate.** Scrapped material as a share of material used; a direct measure of waste.
+- **Energy intensity.** Energy used per unit produced.
+- **CO2 emissions per unit.** Links production to your sustainability goals.
+- **First-pass yield.** The share of units that are right first time, which reflects quality and rework.
+- **Lead time.** How long an order takes from start to finish; shorter flow shows lean working.
+
+Pick a few KPIs that match your biggest sources of waste, measure them the same way every month and show them where the team can see them.
+
+## Where ERP Software Helps
+
+Lean and clean manufacturing depend on accurate records: what went into each job, what came out, what was scrapped and what it cost. Without that, improvement is guesswork.
+
+Vrodux ERP's [Manufacturing module](/features/manufacturing) covers **bills of materials, production orders and costing**, tied to inventory, so material use and production cost sit in the same system as stock, purchasing and finance. Seeing planned material against actual use is a practical way to spot scrap and over-consumption. Read the [manufacturing industry page](/industries/manufacturing) or the [Manufacturing docs](/docs/manufacturing) for what is covered today.
+
+If your plan includes machine sensors or automatic energy and emissions capture, ask any vendor, including us, to show exactly how that data reaches the system in a [demo](/book-demo). Every module is included on every plan, pricing is by team size, and you can test it with your own data in a [14-day free trial](/pricing).
+
+## Frequently Asked Questions
+
+### What is clean manufacturing?
+Clean manufacturing is an approach that aims to produce goods with minimal waste, emissions and resource use, while keeping quality consistent. It is closely related to lean manufacturing.
+
+### How is clean manufacturing different from lean manufacturing?
+Lean focuses on removing any activity that does not add value for the customer. Clean manufacturing adds an environmental lens: less material, energy and emissions per unit. In practice the two share most of their tools.
+
+### Where should a factory start?
+Start small: run a 5S audit on one work cell, capture baseline waste data, and use the results to choose your first improvement. Then scale what works.
+
+### Do I need an ERP system for clean manufacturing?
+You can start with spreadsheets and logbooks, but as volume grows an ERP keeps bills of materials, production orders, stock and costs consistent, which makes waste easier to measure. See our guide to [what an ERP system is](/blog/what-is-an-erp-system).
+`,
+  },
+  "cloud-based-restaurant-pos-guide": {
+    title: "Why Cloud-Based Restaurant POS Systems Are a Game Changer",
+    excerpt: "What a cloud-based restaurant POS is, how it differs from a traditional on-premise system, the benefits and features to look for, how to choose and roll one out, and how a POS connects to ERP for stock and accounts.",
+    category: "Restaurant",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-10",
+    tags: ["Restaurant POS", "Cloud POS", "Restaurants", "F&B"],
+    content: `
+Running a restaurant means juggling orders, staff, stock and guest expectations while watching the bottom line. A **cloud-based restaurant POS system** does more than ring up sales. It becomes the hub that connects the dining room, the kitchen and the back office. This guide explains what a cloud POS is, why it matters for restaurants of any size, and how to choose and introduce one.
+
+## What Is a POS System?
+
+A point-of-sale (POS) system is the hardware and software you use to take orders, process payments and track sales. A traditional on-premise POS runs on a local server or a single terminal, so updates are manual and the data stays in the building. A **cloud-based POS** keeps its data on remote servers and delivers updates over the internet, so you can see what is happening from any device that is signed in.
+
+## Why Move to the Cloud?
+
+| Traditional POS | Cloud-based POS |
+| Server and hardware maintained on site | No on-site server; the vendor handles upgrades |
+| Data reachable mainly on the local network | Reports available from any signed-in device |
+| Limited connections to other tools | Connects to accounting, stock and other systems |
+| Large upfront cost | Subscription spreads the cost over time |
+
+Moving to the cloud also removes much of the IT work of running your own server, and means every outlet runs the same version of the software.
+
+## Core Benefits for Restaurants
+
+### 1. Real-time sales and reporting
+Sales sync as they happen, so managers can check the day's numbers from a tablet or phone, spot trends and act the same day instead of waiting for an end-of-day report.
+
+### 2. Better order flow between floor and kitchen
+Orders taken at the table, at the counter or by QR go to the kitchen without being re-typed, which cuts mistakes and speeds up service. See how [POS and kitchen display integration reduces kitchen errors](/blog/restaurant-pos-kds-integration).
+
+### 3. Stock and recipe costing
+When each dish has a recipe, you can see what it costs to make and what margin it earns. Keeping ingredient costs current keeps those margins honest.
+
+### 4. A smoother guest experience
+Split bills, tips, takeaway, delivery, QR ordering and loyalty all happen in one place, which means less waiting for guests and fewer disputes at the bill.
+
+### 5. Control over cash and staff
+Shifts with a counted float, a Z-report and separate permissions for refunds, voids and discounts show who did what and keep till differences visible.
+
+### 6. Security and backups
+A reputable cloud vendor hosts your data on managed infrastructure with regular backups. Ask any vendor how data is protected and what happens if a device is lost.
+
+## Key Features to Look For
+
+| Feature | Why it matters |
+| **Tables and floor plan** | Servers see table status, and the screen can match your real room. |
+| **Menu with modifiers and special instructions** | Extras and changes reach the kitchen correctly the first time. |
+| **Hold and recall** | Park an order or sale and come back to it without losing it. |
+| **Kitchen display** | Replaces paper tickets; the kitchen marks tickets ready and service marks them served. |
+| **Split bills, tips and discounts** | Handles real dining-room situations without workarounds. |
+| **Shifts, cash float and Z-report** | Cash is counted against what the system expected at close. |
+| **Role-based permissions** | Refunds, voids and discounts can each be restricted to the right people. |
+| **Delivery and rider screen** | Dispatch orders and give riders the address and amount to collect. |
+| **QR table ordering** | Guests can order from the table without waiting for a server. |
+| **Customers, loyalty and credit** | Loyalty, vouchers, store credit and house accounts in one customer book. |
+| **Offline behaviour** | Ask exactly what still works if the internet drops, and how it syncs afterwards. |
+| **Reports and multi-outlet view** | Sales, refunds, voids and payment mix, exportable, for one outlet or several. |
+| **Integration with accounting and stock** | Stops sales being re-entered in another system. |
+
+## Choosing the Right Cloud POS
+
+1. **Map your workflow.** Write down how an order moves from guest to kitchen to bill. Choose a system that fits that flow, not one you must bend around.
+2. **Check how it connects.** If you already use an ERP, ask how sales, stock and payments reach it, and whether that is built in or needs custom work.
+3. **Understand the pricing.** Cloud POS is usually priced per terminal, per outlet or per user, with add-ons. Compare the total cost, including hardware, over three years rather than the headline monthly fee.
+4. **Test support.** Ask what support is available during your busiest hours.
+5. **Ask for a demo with your own menu.** A real menu with modifiers and a few tables shows quickly whether the system fits.
+
+## Implementation Tips for a Smooth Switch
+
+- **Start small.** Begin with one outlet or a few terminals before rolling out everywhere.
+- **Train early.** Run hands-on sessions and keep a short cheat sheet near the till.
+- **Migrate carefully.** Export your menu, prices and stock from the old system, then check them before go-live.
+- **Overlap briefly.** Keep the old system available for a short period so you can compare totals and catch gaps.
+- **Watch the first weeks.** Review order times, voids and refunds, and staff feedback, and adjust.
+
+## How a Cloud POS Works with ERP
+
+A restaurant that needs tighter financial control benefits from a POS that shares data with its ERP. Sales and refunds can flow to the ledger, stock and purchasing stay in step with what is sold, and shift cash is reconciled with a Z-report. That removes manual re-entry and makes reconciliation easier, because owners and accountants work from the same records.
+
+## What Vrodux ERP's POS Covers
+
+Vrodux ERP has two connected point-of-sale tools, both included on every plan.
+
+**[Restaurant POS](/features/restaurant)** covers:
+- **Floors and tables**, arranged in a floor designer, and a **menu** you build or import, with priced, required or optional modifiers.
+- **Orders** for dine-in, takeaway and delivery, with special instructions and hold and recall.
+- A **kitchen display** where tickets are marked ready and served.
+- **Split bills by item**, tips, discounts, and refunds and voids with an audit trail.
+- **Delivery** with a dispatcher board, a mobile rider screen with navigation and the amount to collect, and customer tracking links.
+- **QR table ordering**, customers with loyalty, and restaurant roles: manager, staff, cashier, waiter, kitchen staff and delivery rider.
+- **Recipe costing**, which shows the cost and margin of each dish from the ingredient costs you record.
+
+**[POS module](/features/pos)** (retail and general counter sales) covers:
+- **Shifts** opened with a cash float, with cash in and cash out by category, and a closing cash count compared with the expected amount, ending in a **Z-report**. Restaurant orders attach to the cashier's open shift, so their payments land in the same Z-report.
+- **Barcode scanning**, hold and recall, and **separate permissions** for refund, void and discount across cashier, supervisor and manager tiers. Voiding a sale returns stock correctly.
+- A **customer book** with wallet or store credit, loyalty and vouchers.
+- **Credit accounts**: a credit limit and payment terms per customer, statements, an ageing view (not due, 1-30, 31-60, 61-90 and 90+ days), the option to stop credit, WhatsApp reminder links and optional daily email reminders.
+- **Offline mode**, switched on per workspace, which works in the browser and the Windows desktop app. Sales, refunds, voids and cash movements are recorded locally and uploaded with Sync to Cloud at day end. Vouchers, loyalty and customer search are not available offline, and adding a product needs a connection. See the [offline mode docs](/docs/pos).
+- A **dashboard** with gross and net sales, refunds, voids, payment mix, top products and cashiers and open shifts, plus **19 POS reports** you can export as CSV or PDF.
+
+POS and restaurant sales, refunds and cash movements can be sent to the ledger through the Finance Integration Center, so they reach your accounts without re-typing. Read the [restaurants and F&B industry page](/industries/restaurants), the [restaurant docs](/docs/restaurant) and the [POS docs](/docs/pos) for the details.
+
+Pricing is by team size, and you can try it with your own menu in a [14-day free trial](/pricing) or ask for a [demo](/book-demo).
+
+## What to Watch Next
+
+- **Smarter menu analysis.** Using sales and cost data to see which dishes earn their place.
+- **QR and contactless ordering.** Guests order and pay from their own phones.
+- **Unified channels.** Dine-in, takeaway and delivery handled in one system.
+- **Better demand planning.** Using past sales to plan prep and staffing.
+
+## Frequently Asked Questions
+
+### What is a cloud-based restaurant POS?
+It is a point-of-sale system whose data and software live on remote servers rather than a local machine, so it updates automatically and can be viewed from any signed-in device.
+
+### Is a cloud POS better than an on-premise POS?
+For most restaurants, yes, because there is less IT to maintain and reporting is available anywhere. The key question is what happens if the internet drops, so ask each vendor to explain it.
+
+### Can a restaurant POS connect to accounting?
+Yes, if the vendor supports it. In an ERP such as Vrodux, restaurant and POS sales, refunds and cash movements can be posted to the ledger. Always confirm what is posted and how it is reconciled.
+
+### How do I get started?
+Map your workflow, shortlist two or three systems, test them with your own menu and start with one outlet. Read our [complete ERP guide](/blog/what-is-an-erp-system) if you are also weighing a wider system.
+`,
+  },
+  "food-industry-erp-guide": {
+    title: "Food Industry ERP: Benefits and Best Practices",
+    excerpt: "What a food manufacturer or processor should expect from ERP: recipes and bills of materials, perishable stock, production planning, costing and yield, traceability and quality, with an implementation plan and vendor questions.",
+    category: "Manufacturing",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-10",
+    tags: ["Food Industry ERP", "Food Manufacturing", "Manufacturing", "ERP Guide"],
+    content: `
+Food is one of the most demanding sectors to run. Manufacturers, processors and distributors deal with perishable stock, tight margins, recipes that change and strict safety rules, from farm to fork. A **food industry ERP** brings purchasing, stock, production, costing and finance into one system so the numbers agree. This guide covers why food businesses outgrow generic tools, the benefits to expect, the features to look for and how to implement well.
+
+## Why Food Businesses Need More Than Generic Tools
+
+Spreadsheets and basic accounting software struggle with the realities of food production:
+
+- **Perishable inventory.** Shelf life, batch dates and storage conditions need close visibility.
+- **Safety and traceability rules.** Standards such as HACCP and local food laws expect careful records. Requirements differ by country and product, so confirm what applies to you.
+- **Recipes and formulas.** A small change in an ingredient affects cost, yield and sometimes allergens and labelling.
+- **Seasonal demand.** Fresh produce and holiday products need purchasing, production and distribution planned together.
+
+An ERP gives you one set of records for all of this instead of separate files that disagree.
+
+## Core Benefits of a Food Industry ERP
+
+### 1. Better inventory control
+Perishables lose value quickly, so stock accuracy matters. A good system records every receipt, issue, transfer and adjustment, shows what is low, and ties stock to purchasing so reorders follow real consumption. If you need lot or batch tracking with expiry dates and FIFO or FEFO rotation, check that the vendor supports it and how, because not every ERP does.
+
+### 2. Streamlined production planning
+Food manufacturers often run several products from shared ingredients. ERP production tools help you:
+- Keep a **recipe (bill of materials)** for each product, with the quantity of each ingredient and an allowance for scrap.
+- Create production orders from the recipe, so ingredient quantities scale with the batch.
+- Check for **shortages** before production starts and raise a purchase request for what is missing.
+- See **material requirements** across open orders against current stock.
+
+### 3. Traceability and records
+When there is a quality issue, speed matters. Look for supplier receipts, stock movements and production orders linked in one place, with an audit trail of who did what. Be careful with any vendor who promises automatic compliance with a food standard: the system supports your records, and you remain responsible for your food safety programme.
+
+### 4. Quality discipline
+Quality checks work best when they are part of the process, not a separate paper trail. Ask how a vendor handles test records, failed batches and holds, and confirm whether sensor or lab data can be captured or must be entered by hand.
+
+### 5. True cost and margin
+Margins in food are thin. Linking production to finance lets you see:
+- The **cost per good unit**: materials issued plus labour and overhead based on actual operation time.
+- **Yield and scrap** by product, so waste shows up as a number.
+- Profitability by product, customer or channel, and cost posted to the ledger for review.
+
+## Key Features to Look For
+
+| Feature | Why it matters |
+| **Recipe or bill of materials management** | Keeps formulas, quantities and scrap allowances in one place. |
+| **Production orders with a shortage check** | Stops a batch starting without the ingredients. |
+| **Costing and yield reporting** | Shows the real cost per unit and where waste occurs. |
+| **Stock movements and transfers** | Tracks receipts, write-offs, corrections and moves between warehouses or sites. |
+| **Goods receipt against purchase orders** | Records what actually arrived, including partial deliveries. |
+| **Barcode and QR scanning** | Speeds up receiving and stock lookups. |
+| **Lot, batch and expiry tracking** | Essential for recall readiness. Ask each vendor exactly how it works. |
+| **Allergen and nutrition labelling** | Often needs specialist tools. Confirm what is included. |
+| **Multi-site and multi-currency** | Needed for groups operating across locations or borders. |
+
+When you compare vendors, ask for a demo using one of your own recipes rather than a generic example.
+
+## Implementation Best Practices
+
+1. **Audit your processes first.** Map procurement, production, quality and dispatch, and note where data is re-typed.
+2. **Define your KPIs.** Typical ones are waste percentage, yield, on-time order completion, cost per unit and stock accuracy.
+3. **Involve the whole team.** Bring in plant managers, quality, finance and purchasing early so requirements surface before go-live.
+4. **Pilot one product line or site.** Fine-tune the set-up and train users before rolling out further.
+5. **Clean your data before migrating.** Check item lists, units, recipes, supplier details and opening stock balances.
+6. **Plan change management.** Provide hands-on training, quick guides and support during the first weeks.
+7. **Review regularly.** Check KPI trends after go-live and adjust settings. See our [ERP implementation checklist](/blog/erp-implementation-uae-checklist) for a fuller plan.
+
+## What Vrodux ERP Covers for Food Producers
+
+Vrodux ERP's [Manufacturing module](/features/manufacturing) and Inventory work together:
+
+- **Bills of materials** with a finished product, batch size, components and a scrap percentage for each, with draft, active and archived status.
+- **Work centres and routing**, with labour and overhead rates, so cost reflects actual operation time.
+- **Production orders** that move from planned to released, in progress and completed, with a **shortage check** when materials are issued, optional backflush, and finished goods received into stock at actual unit cost.
+- A **planning view** of material requirements against stock, a **yield report** with scrap and average unit cost, and production cost posted to Finance as a draft journal entry for review.
+- **Inventory** with warehouses, barcodes, transfers with an approval step, write-offs, corrections, low-stock views and barcode or QR scanning, and **Purchase** with goods receipt notes for partial deliveries.
+
+For food retail and service, the [Restaurant POS](/features/restaurant) adds recipe costing by dish. Read the [manufacturing industry page](/industries/manufacturing) and the [Manufacturing docs](/docs/manufacturing) for the detail.
+
+If you rely on lot and expiry tracking, allergen labelling or food-safety record keeping, tell us in a [demo](/book-demo) and we will say plainly what is covered today and what is not. Every module is included on every plan, pricing is by team size, and you can test it with your own recipes in a [14-day free trial](/pricing).
+
+## Frequently Asked Questions
+
+### What is a food industry ERP?
+It is an ERP system used by food manufacturers, processors and distributors to manage purchasing, stock, recipes, production, costing and finance in one place, with attention to perishable goods and traceability.
+
+### Can an ERP handle both fresh and frozen product lines?
+It can, if stock is organised by warehouse or location and the vendor supports the storage and shelf-life rules you need. Ask for a demo of a fresh and a frozen product.
+
+### Is cloud ERP safe for confidential recipes?
+Ask any vendor about access controls, roles and how data is protected, and ask for evidence rather than a general statement. Read our [security page](/security).
+
+### How long does implementation take?
+It depends on the number of sites, products and the state of your data. A pilot on one product line is faster than a full rollout, and a vendor should give you a plan for your case, not a fixed number.
+`,
+  },
+  "wholesale-retail-erp-software-guide": {
+    title: "Wholesale Retail ERP Software: A Practical Guide",
+    excerpt: "A practical guide to ERP for wholesalers, distributors and cash-and-carry businesses: what makes wholesale different, the features to demand, how to choose a system, integrations, costs and an implementation plan.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-10",
+    tags: ["Wholesale ERP", "Distribution", "Inventory", "ERP Guide"],
+    content: `
+Running a wholesale business is a balancing act. You need tight control of stock, pricing that differs by customer, orders that ship in parts, and credit you have to collect, all while growing revenue. That is why **wholesale retail ERP software** matters to distributors, cash-and-carry stores and B2B merchants. This guide covers what makes wholesale different, the features to ask for, how to choose a system and how to roll it out.
+
+## What Makes Wholesale Different?
+
+A wholesaler sits between manufacturers and retailers. Compared with a shop that sells to consumers, a wholesaler typically:
+
+- Sells **larger volumes** to other businesses.
+- Offers **different prices or discounts** to different customers, often agreed in advance.
+- Sells through **several channels**: sales reps, quotations, counter sales, an online store and marketplaces.
+- Needs **tight stock control**, because stock is often promised to customers before it arrives.
+- Delivers in **bulk and in parts**, and sells **on credit**, so collections matter as much as sales.
+
+Generic accounting tools were not built for that mix, which is why wholesalers outgrow them.
+
+## Why Wholesale Needs an ERP
+
+An ERP joins purchasing, stock, sales and finance in one system, so the same record is used by everyone.
+
+| Benefit | How ERP helps |
+| **More accurate stock** | Receipts, sales, returns and transfers update one stock record, and low-stock views show what to reorder. |
+| **Faster order-to-cash** | A quotation becomes a sales order, then a delivery, then an invoice, without re-typing. |
+| **Better credit control** | Credit limits, terms, statements and ageing show who owes you and for how long. |
+| **Clearer purchasing** | Purchase requests, approvals and goods receipts keep what you ordered, received and paid in step. |
+| **Tax readiness** | Invoices carry the required details and tax figures come from your records. |
+| **Room to grow** | Add warehouses, channels or product lines without rebuilding your process. |
+
+## Core Features to Look For
+
+### Inventory management
+- **Multi-warehouse stock**, with transfers between warehouses and an approval step.
+- **Barcode and QR scanning** for receiving and lookups.
+- **Receipts, write-offs, adjustments and count corrections**, with low-stock views.
+- **Lot or batch tracking**, if you sell perishable or regulated goods. Not every ERP offers it, so ask exactly how it works.
+
+### Pricing
+Wholesale pricing is where systems differ most. Ask how each vendor handles:
+- Price lists or tiers by customer group or quantity.
+- Contract prices and discounts, and whether they are applied automatically at order entry.
+- Promotions and rebates.
+- Keeping a history of past prices.
+
+Do not assume these exist. Ask to see each one in a demo with one of your own price agreements.
+
+### Sales and fulfilment
+- **Quotations** that the customer can accept or decline online.
+- **Sales orders** created from quotations.
+- **Delivery records**, with partial deliveries handled correctly as quantities add up.
+- **Returns** with an approval step.
+- Pick, pack and ship steps, labels and back-order handling, if your warehouse needs them. Confirm what is built in.
+
+### Finance and credit
+- Invoicing, expenses and a ledger that sales and purchases feed into.
+- **Customer credit**: a limit, payment terms and a due date on each credit sale, statements, ageing buckets and payment reminders.
+- Multi-currency support if you buy or sell across borders, and your local tax requirements such as VAT.
+
+### Customer access and channels
+Check whether buyers can place orders themselves through a portal or online store, and how stock and orders flow back into the ERP.
+
+### Reporting
+Dashboards and reports for sales, margin and stock, and the ability to export to Excel, CSV or PDF.
+
+## Choosing the Right Wholesale ERP
+
+1. **Define your requirements.** Map procurement, sales, warehouse and finance, and note where you re-type data or wait for it.
+2. **Compare deployment options.** Cloud ERP means no server to maintain and automatic updates. Some businesses need on-premise for data residency, so check what is offered.
+3. **Check wholesale experience.** Ask for examples of distributors and how they handle pricing and partial deliveries.
+4. **Demo your own scenario.** Create a bulk quotation, apply a customer discount, confirm an order, deliver part of it and invoice it.
+5. **Count the full cost.** Include licences, implementation, data migration, training and support. Our guide to [ERP pricing](/blog/erp-pricing-uae) lists what to ask.
+6. **Talk to references.** Ask for customers of a similar size.
+
+## Implementation Best Practices
+
+| Phase | Key actions |
+| **Planning** | Name a project owner, form a cross-team group and set a realistic timeline for your size. |
+| **Data migration** | Clean product, customer and supplier lists and opening stock and balances before importing. |
+| **Configuration** | Set up warehouses, taxes, credit terms, approvals and user roles. |
+| **Testing** | Run real scenarios from purchase order to invoice with the people who will use the system. |
+| **Training** | Train by role: sales, warehouse and accounts. |
+| **Go-live and support** | Start with one warehouse or product line, and keep support close for the first weeks. |
+
+For a fuller plan, read our [ERP implementation checklist](/blog/erp-implementation-uae-checklist).
+
+## Integrations You May Need
+
+- **E-commerce:** an online store or a Shopify connection that keeps products, stock and orders in step.
+- **Carriers and delivery:** label printing and tracking, if you ship by courier.
+- **Banking:** payment reconciliation.
+- **BI tools:** deeper analytics, if built-in reports are not enough.
+- **Barcode hardware:** scanners on the warehouse floor and at the counter.
+
+Ask each vendor which of these are built in, which need a connector and which need custom work.
+
+## Cost Considerations
+
+Prices vary widely, so compare these cost drivers rather than a headline number:
+
+- **Licensing model:** per user, per module or by tier.
+- **Implementation:** configuration, data migration and any custom development.
+- **Training and support:** what is included and what is extra.
+- **Growth:** what happens to the price when you add users or modules.
+
+## What Vrodux ERP Covers for Wholesalers
+
+Vrodux ERP's modules are included on every plan and share one set of records:
+
+- **Sales:** branded quotations that customers accept or decline from a link, sales orders converted from quotations, delivery challans with partial deliveries, and returns with approval.
+- **Inventory:** products with barcodes, multiple warehouses, transfers with an approval step, write-offs and corrections, low-stock views and barcode or QR scanning.
+- **Purchase:** requisitions and approvals, and goods receipt notes that handle partial deliveries and add stock.
+- **Finance:** invoicing, expenses and the ledger, with UAE VAT return preparation. Vrodux prepares the figures, and you file on the tax authority's portal.
+- **Credit control:** a credit limit and payment terms per customer, statements, ageing from not due to 90+ days, WhatsApp reminder links and optional daily email reminders.
+- **Counter and online sales:** [POS](/features/pos) with shifts and barcode scanning, and an e-commerce store with Shopify connection.
+- **Import and export:** shipments, trade documents and landed cost, for wholesalers who bring goods in from abroad.
+
+If you need tiered price lists, lot tracking or a self-service buyer portal, tell us in a [demo](/book-demo) and we will say plainly what is covered today. See the [trading and distribution guide for Dubai](/blog/erp-trading-distribution-dubai), the [Sales docs](/docs/sales) and the [Inventory docs](/docs/inventory). Pricing is by team size, and you can try it with your own data in a [14-day free trial](/pricing).
+
+## Frequently Asked Questions
+
+### Can a small wholesale business benefit from ERP?
+Yes. A small team that re-types orders, tracks stock in spreadsheets or chases payments by hand usually gains from one connected system. Choose one that is priced by team size and that you can try before paying.
+
+### Do I need to replace my accounting software?
+Not always, but running separate systems means re-entering data. Many ERP platforms include finance, so ask whether you can move to one system or must connect two.
+
+### How long does implementation take?
+It depends on the number of warehouses, products and customers and the state of your data. A pilot on one warehouse or product line is quicker than a full rollout, and a vendor should give you a plan for your case.
+
+### Is data migration risky?
+Less so with clean data and a staged plan. Check imported balances against your old system and run both for a short period before you switch over.
+`,
+  },
   "erp-implementation-uae-checklist": {
     title: "ERP Implementation in the UAE: Steps, Readiness Checklist and Questions for Vendors",
     excerpt: "A practical ERP implementation guide for UAE companies: a readiness checklist, vendor selection questions, blueprinting, data migration, UAE VAT and WPS set-up, go-live and support.",
@@ -1575,6 +2044,10 @@ type Props = {
 
 /** Shorter <title> text for posts whose headline is too long for search results; the on-page H1 is unchanged. */
 const SEO_TITLES: Record<string, string> = {
+  "clean-manufacturing-lean-strategies": "Clean Manufacturing: Lean Strategies for Waste-Free Production",
+  "cloud-based-restaurant-pos-guide": "Why Cloud-Based Restaurant POS Systems Are a Game Changer",
+  "food-industry-erp-guide": "Food Industry ERP: Benefits and Best Practices",
+  "wholesale-retail-erp-software-guide": "Wholesale Retail ERP Software: A Practical Guide",
   "construction-erp-uae-guide": "Construction ERP in the UAE: What Contractors Should Look For",
   "construction-erp-cost-uae": "How Much Does Construction ERP Cost in the UAE? 10-30 Users",
   "erp-pricing-uae": "ERP Pricing in the UAE: Models, Costs and What to Budget",
