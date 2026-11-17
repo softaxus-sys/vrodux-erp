@@ -16,6 +16,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "cloud-erp-small-business-uae",
+    title: "Cloud ERP for Small Businesses in the UAE: Where to Start",
+    excerpt: "How a small UAE business can start with cloud ERP: why spreadsheets stop working, which modules to switch on first, how pricing by team size works, how UAE VAT, WPS and e-invoicing are handled, and a simple rollout plan.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-16",
+    featured: false,
+    tags: ["Cloud ERP", "Small Business", "UAE", "ERP Guide"],
+  },
+  {
+    slug: "manufacturing-module-erp-guide",
+    title: "Manufacturing Module in ERP: A Complete Guide",
+    excerpt: "What a manufacturing module in ERP does and how to use it: bills of materials, routing and work centres, production orders, stock movements, costing and yield, with an implementation plan, common challenges and the questions to ask any vendor.",
+    category: "Manufacturing",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-16",
+    featured: false,
+    tags: ["Manufacturing Module", "ERP", "Bill of Materials", "Production Orders"],
+  },
+  {
     slug: "wholesale-retail-erp-software-guide",
     title: "Wholesale Retail ERP Software: A Practical Guide",
     excerpt: "A practical guide to ERP for wholesalers, distributors and cash-and-carry businesses: what makes wholesale different, the features to demand, how to choose a system, integrations, costs and an implementation plan.",

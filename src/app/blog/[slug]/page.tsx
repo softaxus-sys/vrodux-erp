@@ -21,6 +21,272 @@ const posts: Record<string, {
   publishedAt: string;
   tags: string[];
 }> = {
+  "cloud-erp-small-business-uae": {
+    title: "Cloud ERP for Small Businesses in the UAE: Where to Start",
+    excerpt: "How a small UAE business can start with cloud ERP: why spreadsheets stop working, which modules to switch on first, how pricing by team size works, how UAE VAT, WPS and e-invoicing are handled, and a simple rollout plan.",
+    category: "ERP Guide",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-16",
+    tags: ["Cloud ERP", "Small Business", "UAE", "ERP Guide"],
+    content: `
+A small business in the UAE usually runs on a mix of tools: a spreadsheet for stock, an invoicing app, a payroll file for the bank, and a folder of receipts that someone turns into a VAT return every quarter. It works while there are five of you. Then volume grows, a second person edits the same sheet, and the owner is the only one who knows where the numbers really are. **Cloud ERP for small businesses** puts those pieces into one system you open in a browser, with no server to buy and nobody to maintain it. This guide is for owners and managers in the UAE: how to tell when you need one, which parts to switch on first, what the pricing looks like, and how UAE VAT, payroll and e-invoicing fit in.
+
+## Signs a Small Business Has Outgrown Spreadsheets
+
+You do not need an ERP because you have a certain headcount. You need one when these start to happen:
+
+- **Two people, two versions.** Stock or customer lists exist in more than one file and they disagree.
+- **Month-end takes days.** Someone rebuilds sales, expenses and VAT from scratch every period.
+- **You cannot answer simple questions fast.** What is owed to us? What is in stock? What did that job really cost?
+- **Payroll is a monthly scramble.** Attendance, leave and the bank salary file are assembled by hand.
+- **Growth adds work, not control.** Every new customer, branch or employee makes the spreadsheets harder to trust.
+
+If two or three of these sound familiar, a connected system will save more time than it costs.
+
+## Why Cloud Suits a Small UAE Team
+
+A cloud ERP runs on the vendor's servers and you reach it through a browser. For a small team that changes a few things compared with software installed on your own machines:
+
+- **No hardware or IT project.** You sign up and start. There is no server room and no installation.
+- **Work from anywhere.** The owner can approve an invoice from home, and staff can work from the office, a site or a shop.
+- **Updates are not your job.** The vendor looks after the system, so nobody on your team has to.
+- **Your data stays separate.** In Vrodux ERP each customer's data is isolated from every other customer's, with roles you control and optional two-factor sign-in.
+
+We cover the cloud versus on-premise question in more depth in [How Cloud-Based ERP Boosts UAE Business Growth](/blog/cloud-erp-uae-business-growth), and the basics in [what an ERP system is](/blog/what-is-an-erp-system). If you are new to ERP, read that one first. The rest of this guide is about starting small.
+
+## Where to Start: Which Modules First
+
+The usual mistake is to switch everything on at once. A better rule: **start with the work that costs you the most time or money, get it running, then add the next part.** Because every module is included on every plan, adding one later costs nothing extra, so you can take it in stages without changing your plan.
+
+| If your business is mainly | Start with | Then add |
+| **Trading, wholesale or distribution** | [Inventory](/features/inventory), [Sales](/features/sales) and [Purchase](/features/purchase) | [Finance](/features/finance), then [CRM](/features/crm) |
+| **Services or consulting** | [CRM](/features/crm) and [Finance](/features/finance) | [HR and payroll](/features/hr), then [Project Management](/features/project-management) |
+| **Retail shop** | [Point of sale](/features/pos) and [Inventory](/features/inventory) | [Finance](/features/finance), then [HR and payroll](/features/hr) |
+| **Restaurant or cafe** | [Restaurant](/features/restaurant) and [Inventory](/features/inventory) | [Finance](/features/finance), then [HR and payroll](/features/hr) |
+| **Manufacturing** | [Inventory](/features/inventory) and [Manufacturing](/features/manufacturing) | [Purchase](/features/purchase), [Sales](/features/sales) and [Finance](/features/finance) |
+
+For almost every business, **Finance** ends up at the centre. In Vrodux ERP, the other modules can send their transactions to the ledger through the Integration Center, in review mode (you check and post them) or automatic mode, so you do not type the same sale twice.
+
+## UAE VAT, Payroll and E-Invoicing
+
+For a UAE business this is often the deciding part. Here is what a cloud ERP can and cannot do for you, in plain terms:
+
+- **VAT.** Invoices follow the tax invoice layout with your TRN, and Vrodux ERP prepares your **VAT 201 return** from your ledger, with validation and file exports. You then file it yourself on the FTA portal. The system prepares the return; it does not file it for you.
+- **Payroll and WPS.** HR and payroll covers employees, attendance, leave and payroll with a Finance approval step, and it produces a **WPS salary file** for your bank. Check the file against your bank or exchange house's template before your first live run, because the system does not submit it for you.
+- **E-invoicing.** Vrodux ERP prepares the groundwork: credit notes linked to the original invoice, tax categories on each line, customer details, a readiness check that shows what data is missing, and PINT AE XML downloads. That file is prepared in the PINT AE structure and is not certified, and sending to an accredited provider is not live yet.
+
+Any vendor can say "UAE ready". Ask exactly what is prepared, what is exported and what you still do yourself, as above. For the detail, see [UAE VAT, WPS payroll and e-invoicing](/uae-vat-payroll-e-invoicing) and our [e-invoicing page](/e-invoicing).
+
+## What It Costs: Pricing by Team Size
+
+ERP pricing can be confusing, so here is the simple version for Vrodux ERP:
+
+- **You pay by team size, not by module.** Plans cover 3, 10 or 50 users, and Enterprise supports unlimited users. There is no per-user fee inside a plan.
+- **Every module is included on every plan.** No module fees to unlock Finance, HR or Inventory.
+- **UAE VAT 201 preparation, WPS salary files and e-invoicing preparation are included** on every plan.
+- **A 14-day free trial** has every module and unlimited users, with no credit card needed.
+
+You can see current prices on the [pricing page](/pricing). To compare how ERP is priced across vendors and what costs sit outside the price tag, read [ERP pricing in the UAE](/blog/erp-pricing-uae).
+
+## A Simple Rollout Plan for a Small Team
+
+You do not need a long project. A small business can follow a short, staged plan:
+
+1. **Write down your three biggest time-wasters.** Pick the first module from the table above based on these.
+2. **Name one owner.** One person decides how things are set up, so there is no confusion.
+3. **Clean your lists first.** Remove duplicate customers, suppliers and products, and check opening stock and balances before you import anything.
+4. **Use the trial with real work.** Run a few real invoices, orders or payroll lines through the system in the 14 days, not made-up examples.
+5. **Set roles and approvals.** Decide who can create, who can approve and who can only view.
+6. **Go live with one area.** Run it for a month, check the numbers against your old method, then add the next module.
+7. **Review monthly.** Look at the reports, fix gaps and add the next piece when the team is ready.
+
+For a fuller checklist, see [ERP implementation in the UAE](/blog/erp-implementation-uae-checklist).
+
+## Common Worries, Answered
+
+| Worry | What helps |
+| **"We are too small for ERP."** | Start with one or two modules and a small plan, and add more only when you need them. |
+| **"It will take months."** | A staged start with one area keeps the first rollout short. Use the trial to test before you commit. |
+| **"Is my data safe in the cloud?"** | Ask about isolation, access control and sign-in security. Vrodux ERP isolates each customer's data, supports roles and permissions, and offers two-factor authentication. See the [security page](/security). |
+| **"My team will not use it."** | Train by role, keep the first rollout narrow and let each person see their own task get easier. |
+| **"I will be locked in."** | Ask how you can export your data and what happens if you stop paying. In Vrodux ERP, data is not deleted when a subscription lapses. |
+
+## Questions to Ask Any Vendor
+
+- Can I run my own invoices, stock or payroll in a trial before I pay?
+- Is the price by users, by module, or both, and what is included?
+- What exactly is prepared for UAE VAT, WPS and e-invoicing, and what do I still do myself?
+- How is my data separated and protected, and who can see it?
+- What happens to my data if I leave or stop paying?
+- What support do I get during the first month?
+
+Bring your own examples to a [demo](/book-demo) and ask to see them in the system.
+
+## Frequently Asked Questions
+
+### What is cloud ERP for a small business?
+It is business software that runs on the vendor's servers and is used through a browser. It connects finance, stock, sales, customers and payroll in one system, so a small team can stop maintaining separate spreadsheets and apps.
+
+### How many users does a small business need?
+Count everyone who will log in, including part-time staff. Vrodux ERP plans cover 3, 10 or 50 users, so a team of 8 would choose the 10-user plan. If you grow past a plan, you can move up.
+
+### Do I have to buy every module?
+No. Every module is included on every plan, so you simply switch on the ones you need first and add others later.
+
+### Does Vrodux file my VAT return?
+No. Vrodux ERP prepares your UAE VAT 201 return from your ledger and exports the files, and you file on the FTA portal yourself.
+
+### Can I try it before I pay?
+Yes. There is a 14-day free trial with all modules and unlimited users, and no credit card is needed. Start from the [pricing page](/pricing) or [book a demo](/book-demo).
+
+### Is ERP only for large companies?
+No. Cloud delivery and pricing by team size mean a small team can start with a small plan and one or two modules, then grow into more.
+`,
+  },
+  "manufacturing-module-erp-guide": {
+    title: "Manufacturing Module in ERP: A Complete Guide",
+    excerpt: "What a manufacturing module in ERP does and how to use it: bills of materials, routing and work centres, production orders, stock movements, costing and yield, with an implementation plan, common challenges and the questions to ask any vendor.",
+    category: "Manufacturing",
+    author: "Vrodux Team",
+    readTime: 9,
+    publishedAt: "2026-11-16",
+    tags: ["Manufacturing Module", "ERP", "Bill of Materials", "Production Orders"],
+    content: `
+Most factories start out tracking production in spreadsheets: a sheet for recipes or parts lists, another for stock, a third for what each job really cost. It works until volume grows, and then nobody can say with confidence what a finished product cost to make or why material ran short. The **manufacturing module in an ERP** replaces those sheets with one connected process, from the bill of materials to finished goods in stock, with the real cost attached. This guide explains what the module covers, the benefits, how to roll it out and what to ask any vendor before you buy.
+
+## What Is a Manufacturing Module?
+
+A manufacturing module is the part of an ERP (enterprise resource planning) system built for making things. The rest of the ERP handles stock, purchasing, sales and accounts. The manufacturing module adds the pieces specific to production:
+
+- **A bill of materials (BOM):** the list of components, and how much of each, needed to make one batch of a product.
+- **Routing and work centres:** the steps a product goes through, and the labour and overhead rate of each place it is made.
+- **Production orders:** the instruction to make a quantity of a product, tracked from plan to completion.
+- **Stock movements:** materials leaving inventory when production starts, and finished goods arriving when it ends.
+- **Costing:** what the batch actually cost, so you know the cost of each good unit.
+
+Because the module reads from the same inventory as the rest of the system, there is one set of stock numbers rather than a production copy and a warehouse copy. In Vrodux ERP, Inventory is the only hard requirement for the [Manufacturing module](/features/manufacturing). Purchase, Sales and Finance are optional links.
+
+## What a Manufacturing Module Covers
+
+### 1. Bills of materials
+A BOM names the finished product, the batch size it is defined for and every component with its quantity. Each component can carry a **scrap percentage**, so the system plans for material that is normally lost. A BOM has a status (draft, active or archived), which lets engineering or production prepare a new version without disturbing live work. Component details such as unit and cost basis are read from Inventory, so you do not maintain them twice.
+
+### 2. Routing and work centres
+A work centre is a place where work is done: a line, a machine group, a bench. Each has a **labour rate and an overhead rate per hour**. A routing lists the operations for a product, each with a setup time (charged once per order) and a run time (charged per batch). This is what turns "the job took four hours" into a cost.
+
+### 3. Production orders
+A production order moves through clear states: **planned, released, in progress and completed**, and it can be cancelled before materials are issued. When the order is created, the components are scaled from the BOM to the quantity you are making. They are then fixed on the order, so editing a BOM later never changes a job already on the floor.
+
+### 4. Stock issue and receipt
+When production starts, materials are issued from stock, with a **shortage check** so you find out before the line stops rather than after. On completion, components can be consumed automatically (backflush), scrapped units are not received, and **finished goods go into Inventory at their actual unit cost**.
+
+### 5. Costing
+The cost of a production order is the materials issued plus the labour and overhead calculated from the actual time recorded on each operation. Divide by the good units produced and you have a unit cost based on what really happened, not on a standard guess.
+
+### 6. Planning and yield
+A material requirements view compares what your open orders need against what you hold. A **yield report** shows output, scrap, yield percentage and average unit cost, which is where you see whether a product is quietly losing money.
+
+## How Production Flows Through the Module
+
+1. **Define the product.** Create the item in Inventory, then its BOM and routing.
+2. **Create the order.** Choose the product and quantity. Components and operations are copied onto the order.
+3. **Check material.** The planning view shows shortages across open orders against stock.
+4. **Release and issue.** Release the order and issue materials, with the shortage check.
+5. **Record the work.** Operation times feed labour and overhead cost.
+6. **Complete.** Good units are received into stock at actual cost and scrap is recorded.
+7. **Review.** The yield report and unit cost show how the run performed.
+
+## Connecting Manufacturing to the Rest of the Business
+
+The value of a module sitting inside an ERP is what it can talk to:
+
+- **Purchase:** raise a purchase requisition directly from a material shortage.
+- **Sales:** start "Plan production" from a sales order, so what you promised a customer becomes a production order.
+- **Finance:** post production cost to the accounts as a **draft journal entry** that someone reviews before it is final.
+
+These links are optional. The module works on its own with Inventory, and you switch on the others when your team is ready. For the full list of what is supported today, see the [Manufacturing docs](/docs/manufacturing) or the [manufacturing industry page](/industries/manufacturing).
+
+## Benefits of a Manufacturing Module
+
+| Benefit | How it helps |
+| **One set of numbers** | Production and stock share the same inventory, so there is no reconciling a production sheet against a warehouse sheet. |
+| **Known product cost** | Materials, labour and overhead are captured per order, so pricing decisions rest on real unit cost. |
+| **Fewer surprise shortages** | The shortage check and material requirements view show problems before a job is stuck. |
+| **Visible waste** | Scrap percentages and the yield report show where material and money are lost. |
+| **Stable live jobs** | Components are fixed on the order, so a BOM change does not rewrite work in progress. |
+| **Controlled access** | Manager and Staff roles keep planning and costing with the people who should see them. |
+
+## How to Implement a Manufacturing Module
+
+### Step 1: Clean up your item master
+Production depends on Inventory, so start there. Make sure every raw material and finished product exists once, with the right unit and a sensible cost. Duplicates here become duplicates in every BOM.
+
+### Step 2: Build BOMs for a pilot range
+Do not load every product at once. Pick one product line, enter its BOMs with realistic scrap percentages and keep them in draft until a production lead has checked them.
+
+### Step 3: Set up work centres and routing
+List the places work happens and set labour and overhead rates per hour. If you have never costed by the hour, start with simple rates and refine them after a month of real data.
+
+### Step 4: Run a pilot
+Run real orders for the pilot range through planned, released, in progress and completed. Compare the system's unit cost and yield with what the floor expected, and correct BOMs and rates where they differ.
+
+### Step 5: Train the team
+Planners need the order flow and the shortage view. Floor staff need to know how to record issue, time and completion. Short, role-based sessions work better than one long one.
+
+### Step 6: Roll out and review
+Add product lines in stages and review the yield report every month for the first quarter. Archive old BOM versions as you go.
+
+## Best Practices
+
+- **Keep BOMs accurate.** An inaccurate BOM produces inaccurate shortages and cost. Review the high-volume ones first.
+- **Set scrap percentages from evidence.** Start from the yield report rather than a round number.
+- **Use one status language.** Agree what planned, released, in progress and completed mean on your floor and stick to them.
+- **Review before posting to Finance.** The draft journal entry exists so a person checks production cost before it reaches the books.
+- **Start narrow.** One line live and trusted beats five lines half-entered.
+
+## Common Challenges and How to Overcome Them
+
+| Challenge | What helps |
+| **Messy item data** | Clean Inventory before loading BOMs, and merge duplicate parts first. |
+| **Resistance from the floor** | Show operators the shortage check and the time it saves them, and keep the entry steps few. |
+| **Unrealistic scrap or rates** | Treat the first month as calibration and adjust from the yield report. |
+| **Too much at once** | Pilot one product range, then expand. |
+| **Production cost not reaching the accounts** | Use the draft journal entry to Finance so cost flows through with a review step. |
+
+## What to Ask Any Vendor
+
+Not every manufacturing module covers the same ground, so put your real needs in front of the vendor in a [demo](/book-demo) using your own product, not theirs. Useful questions:
+
+- Can I see a BOM with scrap, a routing and a production order for one of **my** products?
+- How is unit cost calculated, and which costs are included?
+- What happens to a live order when the BOM changes?
+- Can a shortage become a purchase requisition, and a sales order become a production order?
+- If I need capacity scheduling, machine-sensor data or a dedicated production dashboard, how exactly is that handled today?
+
+Vrodux ERP includes every module on every plan, with pricing by team size, and you can test the Manufacturing module on your own data in a [14-day free trial](/pricing). If you are in food production, read our guide to [food industry ERP](/blog/food-industry-erp-guide); for lean and waste reduction, see [clean manufacturing](/blog/clean-manufacturing-lean-strategies). If ERP itself is new to you, start with [what an ERP system is](/blog/what-is-an-erp-system).
+
+## Frequently Asked Questions
+
+### What is a manufacturing module in ERP?
+It is the part of an ERP that manages production: bills of materials, routing and work centres, production orders, stock issue and receipt, and costing, all connected to the same inventory and accounts as the rest of the business.
+
+### What does a manufacturing module need to work?
+In Vrodux ERP it needs Inventory. Purchase, Sales and Finance are optional and add features such as purchase requisitions from shortages, planning production from a sales order and posting production cost to the accounts.
+
+### How does the module work out the cost of a product?
+It adds the materials issued to the labour and overhead calculated from the time recorded on each operation, then divides by the good units produced. Scrapped units are not received into stock.
+
+### Does changing a BOM affect jobs already in production?
+No. Components are scaled from the BOM when the order is created and then stay fixed on that order, so edits only apply to new orders.
+
+### Can small manufacturers use it?
+Yes. You can begin with one product, a handful of BOMs and simple work-centre rates, then grow into more lines as the data proves itself.
+
+### How do I try it?
+[Book a demo](/book-demo) to see it with your own product, or start the [14-day free trial](/pricing) with unlimited users and no credit card.
+`,
+  },
   "construction-erp-uae-guide": {
     title: "Construction ERP in the UAE: What Contractors Should Look For",
     excerpt: "What a construction ERP in the UAE should cover for contractors and contracting companies: projects and BOQs, contractors, cost visibility, UAE VAT and WPS payroll, plus questions to ask any vendor.",

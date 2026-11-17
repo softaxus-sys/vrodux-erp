@@ -1,4 +1,6 @@
 export const blogCovers: Record<string, { src: string; alt: string }> = {
+  "cloud-erp-small-business-uae": { src: "/images/blog/cloud-erp-small-business-uae.jpg", alt: "Three steps for a small UAE business adopting cloud ERP: start with finance and sales, add inventory and HR, then grow with CRM and POS" },
+  "manufacturing-module-erp-guide": { src: "/images/blog/manufacturing-module-erp-guide.jpg", alt: "Five stages of an ERP manufacturing module: bill of materials, routing, production orders, stock and costing" },
   "wholesale-retail-erp-software-guide": { src: "/images/blog/wholesale-retail-erp-software-guide.jpg", alt: "Four steps to choose a wholesale retail ERP: map your processes, check pricing and stock, demo on your own data, pilot and go live" },
   "food-industry-erp-guide": { src: "/images/blog/food-industry-erp-guide.jpg", alt: "Four steps to roll out a food industry ERP: audit processes, set up recipes and bills of materials, pilot one plant and track KPIs" },
   "cloud-based-restaurant-pos-guide": { src: "/images/blog/cloud-based-restaurant-pos-guide.jpg", alt: "Four steps to choose a cloud restaurant POS: map your workflow, check features, test and train, and connect to ERP" },
