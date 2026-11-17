@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { Play } from "lucide-react";
+import { trackEvent } from "@/lib/utils";
 import {
   Dialog,
   DialogContent,
@@ -13,6 +15,18 @@ import { formatDuration, type DemoVideo } from "@/lib/demos";
 
 /** Poster card (lazy image); clicking opens the player in a dialog. */
 export function DemoCard({ video, startAt }: { video: DemoVideo; startAt?: number }) {
+  const [posterFailed, setPosterFailed] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // An image that already failed before React attached its error handler would otherwise stay broken.
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth === 0) {
+      setPosterFailed(true);
+      trackEvent("demo_poster_error", { demo_slug: video.slug });
+    }
+  }, [video.slug]);
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -21,16 +35,28 @@ export function DemoCard({ video, startAt }: { video: DemoVideo; startAt?: numbe
           className="group flex h-full w-full flex-col overflow-hidden rounded-2xl border bg-card text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <div className="relative aspect-video w-full bg-muted">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={video.posterUrl}
-              alt={`${video.title} demo thumbnail`}
-              width={640}
-              height={360}
-              loading="lazy"
-              decoding="async"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+            {posterFailed ? (
+              // Shown instead of the browser's broken-image icon and alt text when the poster cannot load.
+              <span className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-brand-500/20 to-brand-700/30 px-4 text-center text-sm font-semibold">
+                {video.title}
+              </span>
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                ref={imgRef}
+                src={video.posterUrl}
+                alt={`${video.title} demo thumbnail`}
+                width={640}
+                height={360}
+                loading="lazy"
+                decoding="async"
+                onError={() => {
+                  setPosterFailed(true);
+                  trackEvent("demo_poster_error", { demo_slug: video.slug });
+                }}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            )}
             <span className="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/25">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-brand-600 shadow-lg">
                 <Play className="ml-0.5 h-5 w-5 fill-current" />

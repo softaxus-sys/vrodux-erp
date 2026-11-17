@@ -13,6 +13,17 @@ const nextConfig: NextConfig = {
     ],
     formats: ["image/avif", "image/webp"],
   },
+  // Demo videos and posters are served from our own domain (/demo-media/...) and proxied to the storage
+  // bucket. Some UAE networks cannot reach the bucket's host directly, but they can reach vrodux.com.
+  // The ":" in the bucket path is written as %3A, otherwise the rewrite reads ":demo-videos" as a route parameter.
+  async rewrites() {
+    return [
+      {
+        source: "/demo-media/:path*",
+        destination: "https://sin1.contabostorage.com/5eebb73791834c68aa89cf1633f74425%3Ademo-videos/:path*",
+      },
+    ];
+  },
   async redirects() {
     // Old docs addresses that were linked before the guides existed.
     return [
@@ -50,7 +61,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' data: blob: https:",
               "media-src 'self' https://sin1.contabostorage.com",
               "connect-src 'self' https://www.google-analytics.com https://*.clarity.ms https://c.bing.com https://api.resend.com https://calendly.com https://challenges.cloudflare.com https://www.facebook.com https://erp.vrodux.com https://demo-1.conversionsapigateway.com https://v5-b75ccb2b73c54aa4a5098ab7f8533696.ecs.us-east-2.on.aws",
-              "frame-src https://calendly.com https://challenges.cloudflare.com",
+              "frame-src https://calendly.com https://challenges.cloudflare.com https://www.youtube-nocookie.com",
             ].join("; "),
           },
           {
@@ -58,6 +69,11 @@ const nextConfig: NextConfig = {
             value: "max-age=63072000; includeSubDomains; preload",
           },
         ],
+      },
+      {
+        // Lets the CDN keep copies of the proxied videos and posters so repeat views do not hit the bucket.
+        source: "/demo-media/:path*",
+        headers: [{ key: "Cache-Control", value: "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800" }],
       },
     ];
   },

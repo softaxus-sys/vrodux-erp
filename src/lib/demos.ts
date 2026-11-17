@@ -11,6 +11,40 @@ export const DEMO_BASE_URL =
 export const DEMO_MANIFEST_URL = `${DEMO_BASE_URL}/manifest.json`;
 const REVALIDATE_SECONDS = 300;
 
+/**
+ * What the visitor's browser loads. next.config.ts proxies this path to the bucket, so a network that
+ * cannot reach the bucket's own host name can still load videos and posters from our domain.
+ * The manifest itself is fetched on the server and keeps using DEMO_BASE_URL.
+ */
+export const DEMO_PUBLIC_PATH = "/demo-media";
+
+export const YOUTUBE_CHANNEL_URL = "https://www.youtube.com/@VroduxERP";
+
+/**
+ * YouTube copies of the demos, used when the site player cannot load a video.
+ * `synced` means the YouTube cut is the same length as the site video, so chapter times and the
+ * "open at" second line up. Where the cuts differ, chapters are hidden in YouTube mode.
+ */
+export const DEMO_YOUTUBE: Record<string, { id: string; synced: boolean }> = {
+  "getting-started": { id: "CRIR3gfYiS0", synced: true },
+  crm: { id: "0khQiXq2EXg", synced: true },
+  sales: { id: "mt0jP4zgjfI", synced: true },
+  pos: { id: "oxdibyOx43k", synced: false },
+  restaurant: { id: "IAiQkahY2Qs", synced: false },
+  finance: { id: "XAdeQPMXF_4", synced: false },
+  hr: { id: "um1Wv_0hC88", synced: true },
+  purchase: { id: "7dOgokdb4tg", synced: true },
+  inventory: { id: "Pzo4fR_EY0I", synced: false },
+  manufacturing: { id: "YUq2pyF-Lsw", synced: true },
+  "import-export": { id: "V1bxa6F9uW4", synced: true },
+  library: { id: "eTsWlsyL_54", synced: false },
+  construction: { id: "bXba5w081n4", synced: true },
+  healthcare: { id: "bnp1OkuySO4", synced: true },
+  education: { id: "RJA-NEkODyk", synced: true },
+  "master-data": { id: "epDxg8sIFo4", synced: true },
+  calendar: { id: "e6U6WP6fx9o", synced: true },
+};
+
 export interface DemoChapter {
   start: number;
   title: string;
@@ -23,10 +57,17 @@ export interface DemoVideo {
   category: string;
   description: string;
   durationSeconds: number;
+  /** Same-origin URLs the browser plays and shows (proxied to the bucket). */
   videoUrl: string;
   posterUrl: string;
+  /** Direct bucket URLs, kept for schema.org markup so search engines see the real files. */
+  sourceVideoUrl: string;
+  sourcePosterUrl: string;
   language: string;
   chapters: DemoChapter[];
+  youtubeId?: string;
+  /** True when the YouTube cut matches the site video, so chapter seeking is safe there. */
+  youtubeSynced: boolean;
 }
 
 export interface DemoCatalog {
@@ -36,19 +77,29 @@ export interface DemoCatalog {
 
 const EMPTY: DemoCatalog = { updated: "", videos: [] };
 
-function resolveUrl(path: unknown): string | null {
+function resolveUrl(path: unknown, base: string): string | null {
   if (typeof path !== "string" || !path) return null;
-  return `${DEMO_BASE_URL}/${path.replace(/^\/+/, "")}`;
+  return `${base}/${path.replace(/^\/+/, "")}`;
 }
 
 function parseVideo(raw: unknown): DemoVideo | null {
   if (!raw || typeof raw !== "object") return null;
   const v = raw as Record<string, unknown>;
-  const videoUrl = resolveUrl(v.video);
-  const posterUrl = resolveUrl(v.poster);
-  if (typeof v.slug !== "string" || typeof v.title !== "string" || !videoUrl || !posterUrl) {
+  const videoUrl = resolveUrl(v.video, DEMO_PUBLIC_PATH);
+  const posterUrl = resolveUrl(v.poster, DEMO_PUBLIC_PATH);
+  const sourceVideoUrl = resolveUrl(v.video, DEMO_BASE_URL);
+  const sourcePosterUrl = resolveUrl(v.poster, DEMO_BASE_URL);
+  if (
+    typeof v.slug !== "string" ||
+    typeof v.title !== "string" ||
+    !videoUrl ||
+    !posterUrl ||
+    !sourceVideoUrl ||
+    !sourcePosterUrl
+  ) {
     return null;
   }
+  const yt = DEMO_YOUTUBE[v.slug];
   const chapters = (Array.isArray(v.chapters) ? v.chapters : [])
     .filter(
       (c): c is DemoChapter =>
@@ -66,8 +117,12 @@ function parseVideo(raw: unknown): DemoVideo | null {
     durationSeconds: typeof v.durationSeconds === "number" ? v.durationSeconds : 0,
     videoUrl,
     posterUrl,
+    sourceVideoUrl,
+    sourcePosterUrl,
     language: typeof v.language === "string" ? v.language : "en",
     chapters,
+    youtubeId: yt?.id,
+    youtubeSynced: yt?.synced ?? false,
   };
 }
 
@@ -133,14 +188,14 @@ export function videoObjectJsonLd(video: DemoVideo, uploadDate: string) {
     name: c.title,
     startOffset: c.start,
     endOffset: video.chapters[i + 1]?.start ?? video.durationSeconds,
-    url: `${video.videoUrl}#t=${c.start}`,
+    url: `${video.sourceVideoUrl}#t=${c.start}`,
   }));
   return {
     "@type": "VideoObject",
     name: `${video.title} — Vrodux ERP demo`,
     description: video.description || `${video.title} demo for Vrodux ERP.`,
-    thumbnailUrl: video.posterUrl,
-    contentUrl: video.videoUrl,
+    thumbnailUrl: video.sourcePosterUrl,
+    contentUrl: video.sourceVideoUrl,
     duration: isoDuration(video.durationSeconds),
     ...(uploadDate ? { uploadDate } : {}),
     inLanguage: video.language,
