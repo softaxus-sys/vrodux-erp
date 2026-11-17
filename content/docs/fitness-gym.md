@@ -201,7 +201,7 @@ Staff can override a refused check-in only if they have permission. Give it to t
 
 [screenshot: Role permissions for Fitness & Gym]
 
-@@ reports | Reports | Use the nine Fitness & Gym reports and the daily expiry alert.
+@@ reports | Fitness & Gym reports and the daily expiry alert | Use the nine Fitness & Gym reports and the daily expiry alert.
 Fitness & Gym adds **nine reports** to the Reports hub. The hub shows only the modules and reports you have access to, and you can export to CSV or PDF.
 
 [screenshot: The Fitness & Gym reports in the Reports hub]

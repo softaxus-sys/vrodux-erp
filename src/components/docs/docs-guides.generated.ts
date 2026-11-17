@@ -419,7 +419,7 @@ export const guideArticles: GuideArticle[] = [
   {
     "slug": "reports",
     "categorySlug": "fitness-gym",
-    "title": "Reports",
+    "title": "Fitness & Gym reports and the daily expiry alert",
     "summary": "Use the nine Fitness & Gym reports and the daily expiry alert.",
     "order": 11,
     "body": "\nFitness & Gym adds **nine reports** to the Reports hub. The hub shows only the modules and reports you have access to, and you can export to CSV or PDF.\n\n[screenshot: The Fitness & Gym reports in the Reports hub]\n\n## Expiry alerts\n\nA **daily alert** lists memberships about to expire, so your team can contact those members before they lapse.\n\n## Ask the assistant\n\nYou can also ask the Vrodux AI assistant in plain language about members, classes, payments and check-ins. It can take a payment, check someone in or book a class, and always asks you to confirm first.\n",
